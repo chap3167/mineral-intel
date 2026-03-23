@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .auth-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 60px;
+      position: relative;
+    }
+    .auth-container::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 30% 60%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .auth-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 80px rgba(0, 212, 170, 0.06);
+    }
+    .auth-card-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .auth-card-header .logo-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--accent), #0099ff);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 900;
+      color: #000;
+    }
+    .auth-card-header h1 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+    .auth-card-header p {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+    }
+    .auth-tabs {
+      display: flex;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 4px;
+      margin-bottom: 24px;
+    }
+    .auth-tab {
+      flex: 1;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: none;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .auth-tab.active {
+      background: var(--accent);
+      color: #000;
+    }
+    .auth-tab:not(.active):hover {
+      color: var(--text);
+    }
+    .auth-form {
+      display: none;
+    }
+    .auth-form.active {
+      display: block;
+    }
+    .auth-field {
+      margin-bottom: 16px;
+    }
+    .auth-field label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .auth-field input {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .auth-field input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-dim);
+    }
+    .auth-field input::placeholder {
+      color: var(--text-muted);
+    }
+    .auth-error {
+      color: var(--red);
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+      min-height: 20px;
+    }
+    .auth-success {
+      color: var(--green);
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+      min-height: 20px;
+    }
+    .auth-btn {
+      width: 100%;
+      padding: 14px 0;
+      background: var(--accent);
+      color: #000;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all var(--transition);
+    }
+    .auth-btn:hover {
+      background: #33e0be;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .auth-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .auth-links {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .auth-links a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .auth-links a:hover {
+      color: #33e0be;
+    }
+    .auth-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 20px 0;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+    .auth-divider::before,
+    .auth-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .auth-guest {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      text-align: center;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+    .auth-guest:hover {
+      border-color: var(--text-muted);
+      color: var(--text);
+    }
+    .forgot-link {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      cursor: pointer;
+    }
+    .forgot-link:hover {
+      color: var(--accent);
+    }
+    /* Reset password form */
+    .auth-reset-form {
+      display: none;
+    }
+    .auth-reset-form.active {
+      display: block;
+    }
+    .auth-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+    .auth-back-link:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="auth-page">
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-card-header">
+        <div class="logo-icon">M</div>
+        <h1>Welcome to MineralSearch</h1>
+        <p>Oil &amp; gas data for landmen.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs" id="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Log In</button>
+        <button class="auth-tab" data-tab="signup">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form active" id="login-form" onsubmit="return handleLogin(event)">
+        <div class="auth-field">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="jake@landmanpro.com" required autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required autocomplete="current-password">
+        </div>
+        <a class="forgot-link" onclick="showResetForm()">Forgot password?</a>
+        <div class="auth-error" id="login-error"></div>
+        <button type="submit" class="auth-btn" id="login-btn">Log In</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form class="auth-form" id="signup-form" onsubmit="return handleSignup(event)">
+        <div class="auth-field">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="Jake Reynolds" required autocomplete="name">
+        </div>
+        <div class="auth-field">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="jake@landmanpro.com" required autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Min 6 characters" required minlength="6" autocomplete="new-password">
+        </div>
+        <div class="auth-error" id="signup-error"></div>
+        <button type="submit" class="auth-btn" id="signup-btn">Create Account</button>
+        <p class="auth-links" style="margin-top:12px;font-size:0.75rem;">By signing up you agree to our Terms of Service and Privacy Policy.</p>
+      </form>
+
+      <!-- Reset Password Form -->
+      <div class="auth-reset-form" id="reset-form">
+        <a class="auth-back-link" onclick="hideResetForm()">&larr; Back to login</a>
+        <h3 style="font-size:1.1rem;margin-bottom:8px;">Reset Password</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:16px;">Enter your email and we'll send you a reset link.</p>
+        <form onsubmit="return handleReset(event)">
+          <div class="auth-field">
+            <label for="reset-email">Email</label>
+            <input type="email" id="reset-email" placeholder="jake@landmanpro.com" required>
+          </div>
+          <div class="auth-error" id="reset-error"></div>
+          <div class="auth-success" id="reset-success"></div>
+          <button type="submit" class="auth-btn" id="reset-btn">Send Reset Link</button>
+        </form>
+      </div>
+
+      <div class="auth-divider">or</div>
+      <a href="index.html" class="auth-guest">Continue as Guest</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  var SUPABASE_URL = 'https://bkyzxvetrguudtsqrvvq.supabase.co';
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJreXp4dmV0cmd1dWR0c3FydnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4ODcyNTUsImV4cCI6MjA4OTQ2MzI1NX0.FE2YEIk9pu6P5EUdQY7S7YRfQK0Q7ckSGuJDnWxSks8';
+
+  // If already logged in, redirect
+  (function() {
+    var token = localStorage.getItem('ms_auth_token');
+    var user = localStorage.getItem('ms_user');
+    if (token && user) {
+      window.location.href = 'wells.html';
+    }
+  })();
+
+  // Tab switching
+  document.getElementById('auth-tabs').addEventListener('click', function(e) {
+    var tab = e.target.closest('.auth-tab');
+    if (!tab) return;
+    var target = tab.dataset.tab;
+
+    document.querySelectorAll('.auth-tab').forEach(function(t) { t.classList.remove('active'); });
+    tab.classList.add('active');
+
+    document.querySelectorAll('.auth-form').forEach(function(f) { f.classList.remove('active'); });
+    document.getElementById(target + '-form').classList.add('active');
+
+    // Hide reset form when switching tabs
+    document.getElementById('reset-form').classList.remove('active');
+
+    // Clear errors
+    document.getElementById('login-error').textContent = '';
+    document.getElementById('signup-error').textContent = '';
+  });
+
+  // Check URL for tab param
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('tab') === 'signup') {
+      document.querySelector('[data-tab="signup"]').click();
+    }
+  })();
+
+  function showResetForm() {
+    document.querySelectorAll('.auth-form').forEach(function(f) { f.classList.remove('active'); });
+    document.getElementById('reset-form').classList.add('active');
+    document.getElementById('reset-error').textContent = '';
+    document.getElementById('reset-success').textContent = '';
+  }
+
+  function hideResetForm() {
+    document.getElementById('reset-form').classList.remove('active');
+    document.getElementById('login-form').classList.add('active');
+  }
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    var email = document.getElementById('login-email').value.trim();
+    var password = document.getElementById('login-password').value;
+    var errEl = document.getElementById('login-error');
+    var btn = document.getElementById('login-btn');
+
+    errEl.textContent = '';
+    btn.textContent = 'Logging in...';
+    btn.disabled = true;
+
+    try {
+      var resp = await fetch(SUPABASE_URL + '/auth/v1/token?grant_type=password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY
+        },
+        body: JSON.stringify({ email: email, password: password })
+      });
+
+      var data = await resp.json();
+
+      if (!resp.ok) {
+        errEl.textContent = data.error_description || data.msg || data.error || 'Invalid email or password.';
+        btn.textContent = 'Log In';
+        btn.disabled = false;
+        return false;
+      }
+
+      // Store auth
+      localStorage.setItem('ms_auth_token', data.access_token);
+      localStorage.setItem('ms_user', JSON.stringify(data.user));
+
+      // Fetch plan from user_profiles
+      try {
+        var profileResp = await fetch(SUPABASE_URL + '/rest/v1/user_profiles?id=eq.' + data.user.id + '&select=plan', {
+          headers: {
+            'Authorization': 'Bearer ' + data.access_token,
+            'apikey': SUPABASE_ANON_KEY
+          }
+        });
+        if (profileResp.ok) {
+          var profiles = await profileResp.json();
+          if (profiles[0] && profiles[0].plan) {
+            localStorage.setItem('ms_access', profiles[0].plan);
+          }
+        }
+      } catch(profileErr) {
+        // Non-critical
+      }
+
+      // Redirect
+      var params = new URLSearchParams(window.location.search);
+      var redirect = params.get('redirect') || 'wells.html';
+      window.location.href = redirect;
+
+    } catch(err) {
+      errEl.textContent = 'Connection error. Please try again.';
+      btn.textContent = 'Log In';
+      btn.disabled = false;
+    }
+
+    return false;
+  }
+
+  async function handleSignup(e) {
+    e.preventDefault();
+    var name = document.getElementById('signup-name').value.trim();
+    var email = document.getElementById('signup-email').value.trim();
+    var password = document.getElementById('signup-password').value;
+    var errEl = document.getElementById('signup-error');
+    var btn = document.getElementById('signup-btn');
+
+    errEl.textContent = '';
+    btn.textContent = 'Creating account...';
+    btn.disabled = true;
+
+    try {
+      var resp = await fetch(SUPABASE_URL + '/auth/v1/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+          data: { full_name: name }
+        })
+      });
+
+      var data = await resp.json();
+
+      if (!resp.ok) {
+        errEl.textContent = data.error_description || data.msg || data.error || 'Signup failed. Try again.';
+        btn.textContent = 'Create Account';
+        btn.disabled = false;
+        return false;
+      }
+
+      // If email confirmation is required, Supabase returns user but no access_token
+      if (data.access_token) {
+        localStorage.setItem('ms_auth_token', data.access_token);
+        localStorage.setItem('ms_user', JSON.stringify(data.user));
+        localStorage.setItem('ms_access', 'free');
+        window.location.href = 'wells.html';
+      } else if (data.user) {
+        // Email confirmation required — auto-login via token endpoint
+        try {
+          var loginResp = await fetch(SUPABASE_URL + '/auth/v1/token?grant_type=password', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_ANON_KEY
+            },
+            body: JSON.stringify({ email: email, password: password })
+          });
+          var loginData = await loginResp.json();
+          if (loginResp.ok && loginData.access_token) {
+            localStorage.setItem('ms_auth_token', loginData.access_token);
+            localStorage.setItem('ms_user', JSON.stringify(loginData.user));
+            localStorage.setItem('ms_access', 'free');
+            window.location.href = 'wells.html';
+            return false;
+          }
+        } catch(loginErr) {}
+
+        // If auto-login fails, show confirmation message
+        errEl.style.color = 'var(--green)';
+        errEl.textContent = 'Account created! Check your email to confirm, then log in.';
+        btn.textContent = 'Create Account';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      errEl.textContent = 'Connection error. Please try again.';
+      btn.textContent = 'Create Account';
+      btn.disabled = false;
+    }
+
+    return false;
+  }
+
+  async function handleReset(e) {
+    e.preventDefault();
+    var email = document.getElementById('reset-email').value.trim();
+    var errEl = document.getElementById('reset-error');
+    var successEl = document.getElementById('reset-success');
+    var btn = document.getElementById('reset-btn');
+
+    errEl.textContent = '';
+    successEl.textContent = '';
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      var resp = await fetch(SUPABASE_URL + '/auth/v1/recover', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY
+        },
+        body: JSON.stringify({ email: email })
+      });
+
+      if (resp.ok) {
+        successEl.textContent = 'Reset link sent! Check your email.';
+      } else {
+        var data = await resp.json();
+        errEl.textContent = data.error_description || data.msg || 'Failed to send reset link.';
+      }
+    } catch(err) {
+      errEl.textContent = 'Connection error. Please try again.';
+    }
+
+    btn.textContent = 'Send Reset Link';
+    btn.disabled = false;
+    return false;
+  }
+
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-mobile-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      if (links) links.classList.toggle('open');
+    });
+  }
+</script>
+</body>
+</html>

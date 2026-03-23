@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <style>
+    .account-page {
+      padding-top: 84px;
+      min-height: 100vh;
+    }
+    .account-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    .account-header {
+      margin-bottom: 32px;
+    }
+    .account-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+    .account-header p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    .account-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .account-section h3 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .account-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(30, 42, 66, 0.4);
+    }
+    .account-row:last-child {
+      border-bottom: none;
+    }
+    .account-row-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .account-row-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .plan-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .plan-free { background: rgba(100,116,139,0.15); color: var(--text-muted); }
+    .plan-basic { background: var(--blue-dim); color: var(--blue); }
+    .plan-pro { background: var(--accent-dim); color: var(--accent); }
+    .plan-enterprise { background: var(--gold-dim); color: var(--gold); }
+    .upgrade-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    @media (max-width: 640px) {
+      .upgrade-cards { grid-template-columns: 1fr; }
+    }
+    .upgrade-card {
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .upgrade-card:hover {
+      border-color: var(--accent);
+    }
+    .upgrade-card .plan-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .upgrade-card .plan-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .upgrade-card .plan-price span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+    .account-field {
+      margin-bottom: 14px;
+    }
+    .account-field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .account-field input {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .account-field input:focus {
+      border-color: var(--accent);
+    }
+    .account-error {
+      color: var(--red);
+      font-size: 0.8rem;
+      min-height: 20px;
+      margin-bottom: 8px;
+    }
+    .account-success {
+      color: var(--green);
+      font-size: 0.8rem;
+      min-height: 20px;
+      margin-bottom: 8px;
+    }
+    .logout-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .logout-section p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .btn-danger {
+      background: transparent;
+      border: 1px solid var(--red);
+      color: var(--red);
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+    }
+    .btn-danger:hover {
+      background: var(--red-dim);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="account.html" class="nav-cta" id="nav-auth-link">Account</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="account-page">
+  <div class="account-container">
+    <div class="account-header">
+      <h1>Account Settings</h1>
+      <p id="account-subtitle">Manage your subscription and account details.</p>
+    </div>
+
+    <!-- Profile Info -->
+    <div class="account-section">
+      <h3>Profile</h3>
+      <div class="account-row">
+        <span class="account-row-label">Email</span>
+        <span class="account-row-value" id="account-email">Loading...</span>
+      </div>
+      <div class="account-row">
+        <span class="account-row-label">Member Since</span>
+        <span class="account-row-value" id="account-since">-</span>
+      </div>
+    </div>
+
+    <!-- Subscription -->
+    <div class="account-section">
+      <h3>Subscription</h3>
+      <div class="account-row">
+        <span class="account-row-label">Current Plan</span>
+        <span class="account-row-value"><span class="plan-badge plan-free" id="account-plan-badge">Free</span></span>
+      </div>
+      <div class="account-row">
+        <span class="account-row-label">Status</span>
+        <span class="account-row-value" id="account-status">-</span>
+      </div>
+
+      <!-- Upgrade cards (shown for free users) -->
+      <div id="upgrade-section" style="display:none;">
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:16px;margin-bottom:8px;">Upgrade to unlock full data access:</p>
+        <div class="upgrade-cards">
+          <div class="upgrade-card">
+            <div class="plan-name">Basic</div>
+            <div class="plan-price">$99<span>/mo</span></div>
+            <button class="btn btn-secondary btn-sm btn-full" onclick="window.__subscribe('basic')">Upgrade</button>
+          </div>
+          <div class="upgrade-card" style="border-color:var(--accent);">
+            <div class="plan-name" style="color:var(--accent);">Pro</div>
+            <div class="plan-price">$299<span>/mo</span></div>
+            <button class="btn btn-primary btn-sm btn-full" onclick="window.__subscribe('pro')">Upgrade</button>
+          </div>
+          <div class="upgrade-card">
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-price">$999<span>/mo</span></div>
+            <button class="btn btn-secondary btn-sm btn-full" onclick="window.__subscribe('enterprise')">Upgrade</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manage subscription (shown for paid users) -->
+      <div id="manage-section" style="display:none;margin-top:16px;">
+        <a href="#" id="manage-sub-link" class="btn btn-secondary btn-sm">Manage Subscription</a>
+      </div>
+    </div>
+
+    <!-- Change Password -->
+    <div class="account-section">
+      <h3>Change Password</h3>
+      <form onsubmit="return handleChangePassword(event)">
+        <div class="account-field">
+          <label for="new-password">New Password</label>
+          <input type="password" id="new-password" placeholder="Min 6 characters" required minlength="6">
+        </div>
+        <div class="account-field">
+          <label for="confirm-password">Confirm New Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm new password" required minlength="6">
+        </div>
+        <div class="account-error" id="pw-error"></div>
+        <div class="account-success" id="pw-success"></div>
+        <button type="submit" class="btn btn-primary btn-sm" id="pw-btn">Update Password</button>
+      </form>
+    </div>
+
+    <!-- Logout -->
+    <div class="logout-section">
+      <p>Sign out of your account on this device.</p>
+      <button class="btn-danger" onclick="handleLogout()">Log Out</button>
+    </div>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+<script>
+  var SUPABASE_URL = 'https://bkyzxvetrguudtsqrvvq.supabase.co';
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJreXp4dmV0cmd1dWR0c3FydnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4ODcyNTUsImV4cCI6MjA4OTQ2MzI1NX0.FE2YEIk9pu6P5EUdQY7S7YRfQK0Q7ckSGuJDnWxSks8';
+
+  // Check auth state
+  (function() {
+    var token = localStorage.getItem('ms_auth_token');
+    var user = localStorage.getItem('ms_user');
+    if (!token || !user) {
+      window.location.href = 'login.html';
+      return;
+    }
+
+    var userData = JSON.parse(user);
+    loadAccountData(token, userData);
+  })();
+
+  async function loadAccountData(token, userData) {
+    // Set email
+    document.getElementById('account-email').textContent = userData.email || '-';
+
+    // Set member since
+    if (userData.created_at) {
+      var d = new Date(userData.created_at);
+      document.getElementById('account-since').textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    // Update nav
+    var navLink = document.getElementById('nav-auth-link');
+    if (navLink) {
+      navLink.textContent = userData.email.split('@')[0];
+      navLink.href = 'account.html';
+    }
+
+    // Fetch profile from Supabase
+    try {
+      var resp = await fetch(SUPABASE_URL + '/rest/v1/user_profiles?id=eq.' + userData.id + '&select=plan,stripe_customer_id,stripe_subscription_id,created_at', {
+        headers: {
+          'Authorization': 'Bearer ' + token,
+          'apikey': SUPABASE_ANON_KEY
+        }
+      });
+
+      if (resp.ok) {
+        var profiles = await resp.json();
+        if (profiles[0]) {
+          var profile = profiles[0];
+          var plan = profile.plan || 'free';
+
+          // Update plan badge
+          var badge = document.getElementById('account-plan-badge');
+          badge.textContent = plan.charAt(0).toUpperCase() + plan.slice(1);
+          badge.className = 'plan-badge plan-' + plan;
+
+          // Update status
+          var statusEl = document.getElementById('account-status');
+          if (plan === 'free') {
+            statusEl.textContent = 'No active subscription';
+            statusEl.style.color = 'var(--text-muted)';
+            document.getElementById('upgrade-section').style.display = 'block';
+          } else {
+            statusEl.textContent = 'Active';
+            statusEl.style.color = 'var(--green)';
+            document.getElementById('manage-section').style.display = 'block';
+          }
+
+          // Member since from profile
+          if (profile.created_at) {
+            var d = new Date(profile.created_at);
+            document.getElementById('account-since').textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+          }
+        }
+      }
+    } catch(e) {
+      console.error('Failed to load profile:', e);
+    }
+  }
+
+  async function handleChangePassword(e) {
+    e.preventDefault();
+    var newPw = document.getElementById('new-password').value;
+    var confirmPw = document.getElementById('confirm-password').value;
+    var errEl = document.getElementById('pw-error');
+    var successEl = document.getElementById('pw-success');
+    var btn = document.getElementById('pw-btn');
+
+    errEl.textContent = '';
+    successEl.textContent = '';
+
+    if (newPw !== confirmPw) {
+      errEl.textContent = 'Passwords do not match.';
+      return false;
+    }
+
+    var token = localStorage.getItem('ms_auth_token');
+    if (!token) {
+      errEl.textContent = 'Not logged in.';
+      return false;
+    }
+
+    btn.textContent = 'Updating...';
+    btn.disabled = true;
+
+    try {
+      var resp = await fetch(SUPABASE_URL + '/auth/v1/user', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token,
+          'apikey': SUPABASE_ANON_KEY
+        },
+        body: JSON.stringify({ password: newPw })
+      });
+
+      if (resp.ok) {
+        successEl.textContent = 'Password updated successfully.';
+        document.getElementById('new-password').value = '';
+        document.getElementById('confirm-password').value = '';
+      } else {
+        var data = await resp.json();
+        errEl.textContent = data.error_description || data.msg || 'Failed to update password.';
+      }
+    } catch(err) {
+      errEl.textContent = 'Connection error. Please try again.';
+    }
+
+    btn.textContent = 'Update Password';
+    btn.disabled = false;
+    return false;
+  }
+
+  function handleLogout() {
+    localStorage.removeItem('ms_auth_token');
+    localStorage.removeItem('ms_user');
+    localStorage.removeItem('ms_access');
+    window.location.href = 'login.html';
+  }
+
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-mobile-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      if (links) links.classList.toggle('open');
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url><loc>https://mineralsearch.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mineralsearch.io/wells.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mineralsearch.io/gom.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mineralsearch.io/calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mineralsearch.io/alerts.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/sitemap-page.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://mineralsearch.io/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mineralsearch.io/blog/how-to-run-title-texas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/rrc-data-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/permian-basin-well-data.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/eagle-ford-well-data.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/mineral-rights-ownership-texas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/enverus-alternative.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/what-is-a-landman.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/texas-drilling-permits-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/wolfcamp-production-data.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/how-to-read-oil-gas-lease.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/chain-of-title-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/gom-offshore-data-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/net-revenue-interest-explained.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/best-counties-permian-basin.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/decline-curve-analysis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/texas-oil-production-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/midland-basin-vs-delaware-basin.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/free-oil-gas-data-sources.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/how-to-value-mineral-rights.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mineralsearch.io/blog/spacing-units-texas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- County Pages -->
+  <url><loc>https://mineralsearch.io/seo-pages/counties/midland.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/ector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/andrews.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/reeves.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/howard.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/martin.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/ward.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/pecos.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/crane.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/upton.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/reagan.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/gaines.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/wichita.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/archer.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/young.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/crockett.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/jack.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/shackelford.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/yoakum.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/duval.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/webb.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/karnes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/dewitt.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/dimmit.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/loving.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/hockley.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/scurry.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/terry.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/glasscock.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/counties/lea.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Operator Pages -->
+  <url><loc>https://mineralsearch.io/seo-pages/operators/pioneer.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/diamondback.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/eog.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/devon.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/conoco.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/apache.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/chevron.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/exxon.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/occidental.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/marathon.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/callon.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/sm-energy.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/ovintiv.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/centennial.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/laredo.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/cimarex.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/ring-energy.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/conocophillips.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/bp.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mineralsearch.io/seo-pages/operators/shell.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

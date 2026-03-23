@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerts &amp; Monitoring — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <style>
+    .alert-setup-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+    @media (max-width: 900px) { .alert-setup-grid { grid-template-columns: 1fr; } }
+    .alert-type-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; cursor: pointer; transition: all var(--transition); position: relative;
+    }
+    .alert-type-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .alert-type-card.selected { border-color: var(--accent); background: var(--accent-dim); }
+    .alert-type-card .alert-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 14px; }
+    .alert-type-card h4 { font-size: 1rem; margin-bottom: 6px; }
+    .alert-type-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+    .alert-type-card .check { position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: transparent; transition: all var(--transition); }
+    .alert-type-card.selected .check { background: var(--accent); border-color: var(--accent); color: #000; }
+    .alert-feed { display: flex; flex-direction: column; gap: 12px; }
+    .alert-item {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 16px 20px; display: flex; gap: 14px; align-items: flex-start; transition: all var(--transition);
+    }
+    .alert-item:hover { background: var(--bg-card-hover); border-color: var(--border-accent); }
+    .alert-item-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .alert-item-content { flex: 1; }
+    .alert-item-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+    .alert-item-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+    .alert-item-meta { display: flex; gap: 12px; margin-top: 8px; font-size: 0.75rem; color: var(--text-muted); }
+    .alert-item-meta .tag { font-size: 0.7rem; }
+    .alert-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+    .alert-dot.new { background: var(--accent); animation: pulse 2s infinite; }
+    .alert-dot.read { background: var(--text-muted); opacity: 0.3; }
+    .email-signup { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; }
+    .email-signup h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .email-signup p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+    .email-row { display: flex; gap: 12px; }
+    .email-row input { flex: 1; padding: 12px 16px; background: var(--bg-input); border: 1px solid var(--border); border-radius: var(--radius-xs); color: var(--text); font-size: 0.9rem; outline: none; }
+    .email-row input:focus { border-color: var(--accent); }
+    .pro-banner { background: linear-gradient(135deg, rgba(0,212,170,0.1), rgba(59,130,246,0.1)); border: 1px solid rgba(0,212,170,0.2); border-radius: var(--radius); padding: 24px; text-align: center; margin-bottom: 32px; }
+    .pro-banner h3 { color: var(--accent); margin-bottom: 8px; }
+    .pro-banner p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px; }
+    .config-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 24px; display: none; }
+    .config-panel.open { display: block; }
+    .config-row { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+    .config-row select, .config-row input { padding: 8px 12px; background: var(--bg-input); border: 1px solid var(--border); border-radius: var(--radius-xs); color: var(--text); font-size: 0.85rem; outline: none; min-width: 160px; }
+    .config-row select option { background: var(--bg-card); }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">M</div> MineralSearch</a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html" class="active">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <div style="margin-bottom:8px;">
+      <span style="color:var(--accent);font-size:0.85rem;font-weight:600;">Tools</span>
+      <span style="color:var(--text-muted);margin:0 8px;font-size:0.85rem;">&rsaquo;</span>
+      <span style="color:var(--text);font-size:0.85rem;font-weight:600;">Alerts</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;padding:12px 0;border-bottom:1px solid var(--border);">
+      <a href="calculator.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Calculators</a>
+      <a href="alerts.html" class="btn btn-primary btn-sm" style="font-size:0.8rem;">Alerts</a>
+    </div>
+
+    <div class="page-header" style="padding-top:0;">
+      <h1>Alerts &amp; Monitoring</h1>
+      <p>Set up alerts for new permits, lease filings, production changes, and operator activity across your target areas.</p>
+    </div>
+
+    <!-- Pro Banner -->
+    <div class="pro-banner">
+      <h3>Pro Subscribers Get Real-Time Alerts</h3>
+      <p>Get instant email and SMS notifications when new permits are filed, leases are recorded, or production changes significantly in your monitored areas.</p>
+      <button class="btn btn-primary" data-modal-open>Upgrade to Pro — $299/mo</button>
+    </div>
+
+    <!-- Email Signup -->
+    <div class="email-signup">
+      <h3>Get Alert Notifications</h3>
+      <p>Enter your email to receive daily or weekly alert summaries for your monitored areas.</p>
+      <div class="email-row">
+        <input type="email" id="alert-email" placeholder="your@email.com">
+        <select id="alert-freq">
+          <option value="daily">Daily Digest</option>
+          <option value="weekly">Weekly Summary</option>
+          <option value="realtime">Real-time (Pro only)</option>
+        </select>
+        <button class="btn btn-primary" onclick="document.getElementById('alert-email').value?alert('Email alerts configured! (Demo)'):alert('Please enter an email address.')">Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Alert Types -->
+    <h3 style="margin-bottom:16px;">Set Up Alert Types</h3>
+    <div class="alert-setup-grid">
+      <div class="alert-type-card selected" onclick="toggleAlertType(this)" data-type="permits">
+        <div class="check">&#10003;</div>
+        <div class="alert-icon" style="background:var(--blue-dim);color:var(--blue);">&#9881;</div>
+        <h4>New Drilling Permits</h4>
+        <p>Get notified when new drilling permits are filed in your target counties. Track operator activity before wells are even drilled.</p>
+      </div>
+      <div class="alert-type-card selected" onclick="toggleAlertType(this)" data-type="leases">
+        <div class="check">&#10003;</div>
+        <div class="alert-icon" style="background:var(--gold-dim);color:var(--gold);">&#9830;</div>
+        <h4>New Lease Filings</h4>
+        <p>Monitor new oil and gas leases recorded in county clerk offices. See who is leasing and at what terms.</p>
+      </div>
+      <div class="alert-type-card" onclick="toggleAlertType(this)" data-type="production">
+        <div class="check">&#10003;</div>
+        <div class="alert-icon" style="background:var(--green-dim);color:var(--green);">&#9733;</div>
+        <h4>Production Changes</h4>
+        <p>Alert when wells have significant production increases or decreases. Track shut-ins and new completions.</p>
+      </div>
+      <div class="alert-type-card" onclick="toggleAlertType(this)" data-type="operator">
+        <div class="check">&#10003;</div>
+        <div class="alert-icon" style="background:var(--accent-dim);color:var(--accent);">&#9889;</div>
+        <h4>Operator Activity</h4>
+        <p>Track specific operators. Get notified when they file permits, record leases, or complete wells in any county.</p>
+      </div>
+      <div class="alert-type-card" onclick="toggleAlertType(this)" data-type="ownership">
+        <div class="check">&#10003;</div>
+        <div class="alert-icon" style="background:rgba(139,92,246,0.15);color:#8b5cf6;">&#128270;</div>
+        <h4>Ownership Changes</h4>
+        <p>Monitor deed recordings and mineral conveyances. Know when ownership changes hands in your area of interest.</p>
+      </div>
+      <div class="alert-type-card" onclick="toggleAlertType(this)" data-type="price">
+        <div class="check">&#10003;</div>
+        <div class="alert-icon" style="background:rgba(249,115,22,0.15);color:#f97316;">&#127793;</div>
+        <h4>Price Alerts</h4>
+        <p>Get notified when WTI crude or Henry Hub gas prices cross your threshold. Track commodity price movements.</p>
+      </div>
+    </div>
+
+    <!-- Config Panel -->
+    <div class="config-panel open" id="alert-config">
+      <h4 style="margin-bottom:12px;">Configure Alert Filters</h4>
+      <div class="config-row">
+        <select id="cfg-county">
+          <option value="">All Counties</option>
+          <option>MIDLAND</option><option>ECTOR</option><option>REEVES</option><option>LOVING</option>
+          <option>WARD</option><option>PECOS</option><option>HOWARD</option><option>MARTIN</option>
+          <option>KARNES</option><option>DEWITT</option><option>WEBB</option><option>DIMMIT</option>
+        </select>
+        <select id="cfg-operator">
+          <option value="">All Operators</option>
+          <option>Pioneer Natural Resources</option><option>Diamondback Energy</option>
+          <option>ConocoPhillips</option><option>EOG Resources</option><option>Devon Energy</option>
+          <option>Apache Corporation</option><option>Occidental Petroleum</option><option>Chevron USA</option>
+        </select>
+        <select id="cfg-formation">
+          <option value="">All Formations</option>
+          <option>Wolfcamp A</option><option>Wolfcamp B</option><option>Bone Spring</option>
+          <option>Spraberry</option><option>Eagle Ford Shale</option><option>Austin Chalk</option>
+        </select>
+        <button class="btn btn-primary btn-sm" onclick="alert('Alert filters saved! (Demo)')">Save Filters</button>
+      </div>
+    </div>
+
+    <!-- Recent Alert Feed -->
+    <div class="flex-between mb-2">
+      <h3>Recent Alerts</h3>
+      <span class="badge badge-live" style="font-size:0.8rem;">Live Demo Feed</span>
+    </div>
+    <div class="alert-feed" id="alert-feed"></div>
+
+  </div>
+</div>
+
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jake Reynolds"></div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="jake@landmanpro.com"></div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+  function rand(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
+
+  window.toggleAlertType = function(el) {
+    el.classList.toggle('selected');
+  };
+
+  const OPERATORS = ['Pioneer Natural Resources','Diamondback Energy','ConocoPhillips','EOG Resources','Devon Energy','Apache Corporation','Occidental Petroleum','Chevron USA','ExxonMobil','Marathon Oil','Endeavor Energy Resources','CrownQuest Operating'];
+  const COUNTIES = ['Midland','Ector','Reeves','Loving','Ward','Pecos','Howard','Martin','Karnes','DeWitt','Webb','Dimmit'];
+  const FORMATIONS = ['Wolfcamp A','Wolfcamp B','Bone Spring','Spraberry','Lower Spraberry','Eagle Ford Shale','Austin Chalk','Delaware Sand'];
+  const NAMES = ['Smith, John R.','Johnson Family Trust','Bass Enterprises','Williams, Robert T.','Martinez Family Trust'];
+
+  const alertTemplates = [
+    { type: 'permit', icon: '&#9881;', iconBg: 'var(--blue-dim)', iconColor: 'var(--blue)', gen: () => {
+      const op = pick(OPERATORS), county = pick(COUNTIES), fm = pick(FORMATIONS);
+      return { title: 'New Permit Filed', desc: op+' filed a new drilling permit in '+county+' County targeting the '+fm+' formation. Proposed depth: '+rand(8000,13000)+"'.", tags: [county, fm, 'Permit'] };
+    }},
+    { type: 'lease', icon: '&#9830;', iconBg: 'var(--gold-dim)', iconColor: 'var(--gold)', gen: () => {
+      const op = pick(OPERATORS), county = pick(COUNTIES), owner = pick(NAMES);
+      return { title: 'New Lease Recorded', desc: op+' recorded a new oil and gas lease with '+owner+' in '+county+' County. Royalty rate: '+pick(['1/4','3/16','25%'])+'.', tags: [county, 'Lease', op.split(' ')[0]] };
+    }},
+    { type: 'production', icon: '&#9733;', iconBg: 'var(--green-dim)', iconColor: 'var(--green)', gen: () => {
+      const op = pick(OPERATORS), county = pick(COUNTIES);
+      const change = pick(['+35%','+50%','+120%','-40%','-25%']);
+      const dir = change.startsWith('+') ? 'increased' : 'decreased';
+      return { title: 'Production Change Detected', desc: op+' well in '+county+' County production '+dir+' by '+change.replace(/[+-]/,'')+' from previous month. Current rate: '+rand(200,2000)+' bbl/day.', tags: [county, change, 'Production'] };
+    }},
+    { type: 'completion', icon: '&#9889;', iconBg: 'var(--accent-dim)', iconColor: 'var(--accent)', gen: () => {
+      const op = pick(OPERATORS), county = pick(COUNTIES), fm = pick(FORMATIONS);
+      return { title: 'Well Completion Reported', desc: op+' completed a new horizontal well in '+county+' County. '+fm+' formation, '+rand(5000,12000)+"' lateral. IP: "+rand(500,2500)+' bbl/day.', tags: [county, fm, 'Completion'] };
+    }},
+    { type: 'ownership', icon: '&#128270;', iconBg: 'rgba(139,92,246,0.15)', iconColor: '#8b5cf6', gen: () => {
+      const county = pick(COUNTIES), owner1 = pick(NAMES), owner2 = pick(NAMES);
+      return { title: 'Deed Transfer Recorded', desc: 'Mineral deed recorded in '+county+' County from '+owner1+' to '+owner2+'. Section '+rand(1,48)+', Block '+rand(1,45)+'.', tags: [county, 'Mineral Deed'] };
+    }},
+    { type: 'shutin', icon: '&#9888;', iconBg: 'var(--gold-dim)', iconColor: 'var(--gold)', gen: () => {
+      const op = pick(OPERATORS), county = pick(COUNTIES);
+      return { title: 'Well Shut-In Reported', desc: op+' reported shut-in status for a well in '+county+' County. Previous production: '+rand(100,800)+' bbl/day. Reason: '+pick(['Mechanical issue','Pipeline maintenance','Offset frac protection','Low pressure'])+'.', tags: [county, 'Shut-in', op.split(' ')[0]] };
+    }}
+  ];
+
+  function generateAlerts() {
+    const now = new Date();
+    const alerts = [];
+    for (let i = 0; i < 20; i++) {
+      const template = pick(alertTemplates);
+      const data = template.gen();
+      const minutesAgo = rand(2, 4320); // up to 3 days
+      const time = new Date(now.getTime() - minutesAgo * 60000);
+      let timeStr;
+      if (minutesAgo < 60) timeStr = minutesAgo + ' min ago';
+      else if (minutesAgo < 1440) timeStr = Math.floor(minutesAgo/60) + ' hours ago';
+      else timeStr = Math.floor(minutesAgo/1440) + ' days ago';
+
+      alerts.push({
+        ...data,
+        icon: template.icon,
+        iconBg: template.iconBg,
+        iconColor: template.iconColor,
+        time: timeStr,
+        minutesAgo: minutesAgo,
+        isNew: minutesAgo < 120
+      });
+    }
+    return alerts.sort((a,b) => a.minutesAgo - b.minutesAgo);
+  }
+
+  function renderAlerts() {
+    const alerts = generateAlerts();
+    const feed = document.getElementById('alert-feed');
+    feed.innerHTML = alerts.map(a =>
+      '<div class="alert-item">'+
+        '<div class="alert-dot '+(a.isNew?'new':'read')+'"></div>'+
+        '<div class="alert-item-icon" style="background:'+a.iconBg+';color:'+a.iconColor+';">'+a.icon+'</div>'+
+        '<div class="alert-item-content">'+
+          '<div class="alert-item-title">'+a.title+'</div>'+
+          '<div class="alert-item-desc">'+a.desc+'</div>'+
+          '<div class="alert-item-meta">'+
+            '<span>'+a.time+'</span>'+
+            a.tags.map(t => '<span class="tag">'+t+'</span>').join('')+
+          '</div>'+
+        '</div>'+
+      '</div>'
+    ).join('');
+  }
+
+  renderAlerts();
+
+  // Modal & Nav
+  document.querySelectorAll('[data-modal-open]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.add('open')));
+  document.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.remove('open')));
+  document.getElementById('modal-overlay').addEventListener('click', e => { if (e.target.id==='modal-overlay') e.target.classList.remove('open'); });
+  const toggle = document.querySelector('.nav-mobile-toggle');
+  if (toggle) toggle.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">M</div> MineralSearch</a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container" style="max-width:640px;padding-top:40px;padding-bottom:80px;">
+    <h1 style="font-size:2rem;margin-bottom:8px;">Contact Us</h1>
+    <p style="color:var(--text-muted);margin-bottom:32px;">Have a question, need help, or want to report an issue? We'll get back to you within 24 hours.</p>
+
+    <form id="contact-form" onsubmit="return submitContact(event)">
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-bottom:4px;">Your Name</label>
+        <input id="c-name" type="text" required placeholder="John Smith" style="width:100%;height:44px;padding:0 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95rem;font-family:inherit;outline:none;">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-bottom:4px;">Email Address</label>
+        <input id="c-email" type="email" required placeholder="john@example.com" style="width:100%;height:44px;padding:0 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95rem;font-family:inherit;outline:none;">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-bottom:4px;">Subject</label>
+        <select id="c-subject" style="width:100%;height:44px;padding:0 10px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95rem;font-family:inherit;outline:none;">
+          <option>General Question</option>
+          <option>Account / Billing</option>
+          <option>Data Issue</option>
+          <option>Feature Request</option>
+          <option>Bug Report</option>
+          <option>Partnership Inquiry</option>
+        </select>
+      </div>
+      <div style="margin-bottom:20px;">
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-bottom:4px;">Message</label>
+        <textarea id="c-message" required rows="5" placeholder="How can we help?" style="width:100%;padding:12px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95rem;font-family:inherit;outline:none;resize:vertical;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full" style="height:48px;font-size:1rem;">Send Message</button>
+      <div id="c-status" style="margin-top:12px;font-size:0.9rem;text-align:center;"></div>
+    </form>
+
+    <div style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border);text-align:center;">
+      <p style="color:var(--text-muted);font-size:0.85rem;">You can also reach us directly at</p>
+      <a href="mailto:websitesupport3167@gmail.com" style="color:var(--accent);font-weight:600;font-size:0.95rem;text-decoration:none;">websitesupport3167@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="contact.html">Contact</a></span>
+  </div>
+</footer>
+
+<script src="site.js?v=11"></script>
+<script>
+function submitContact(e) {
+  e.preventDefault();
+  const name = document.getElementById('c-name').value;
+  const email = document.getElementById('c-email').value;
+  const subject = document.getElementById('c-subject').value;
+  const message = document.getElementById('c-message').value;
+  const status = document.getElementById('c-status');
+
+  // Send via mailto as fallback (or could use EmailJS/Formspree later)
+  const body = 'Name: ' + name + '%0D%0AEmail: ' + email + '%0D%0ASubject: ' + subject + '%0D%0A%0D%0A' + encodeURIComponent(message);
+  window.location.href = 'mailto:websitesupport3167@gmail.com?subject=' + encodeURIComponent('[MineralSearch] ' + subject) + '&body=' + body;
+
+  status.style.color = '#00d4aa';
+  status.textContent = 'Opening your email client... If it doesn\'t open, email us at websitesupport3167@gmail.com';
+  return false;
+}
+</script>
+</body>
+</html>

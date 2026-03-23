@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landman Calculators — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; } }
+    .calc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+    .calc-card h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .calc-card .calc-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px; }
+    .calc-row { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-end; flex-wrap: wrap; }
+    .calc-field { flex: 1; min-width: 120px; }
+    .calc-field label { display: block; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; margin-bottom: 6px; }
+    .calc-field input, .calc-field select {
+      width: 100%; padding: 10px 14px; background: var(--bg-input); border: 1px solid var(--border);
+      border-radius: var(--radius-xs); color: var(--text); font-size: 0.9rem;
+      font-family: 'JetBrains Mono', monospace; outline: none;
+    }
+    .calc-field input:focus { border-color: var(--accent); }
+    .calc-result { margin-top: 16px; padding: 16px; background: var(--bg-secondary); border-radius: var(--radius-sm); border: 1px solid var(--border); }
+    .calc-result-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; margin-bottom: 4px; }
+    .calc-result-value { font-size: 1.8rem; font-weight: 800; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+    .calc-result-sub { font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; }
+    .calc-result-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(30,42,66,0.4); }
+    .calc-result-row:last-child { border-bottom: none; }
+    .calc-result-row .rl { font-size: 0.82rem; color: var(--text-secondary); }
+    .calc-result-row .rv { font-size: 0.9rem; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+    .calc-full { grid-column: span 2; }
+    @media (max-width: 900px) { .calc-full { grid-column: span 1; } }
+    .decline-chart-wrap { position: relative; height: 280px; margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">M</div> MineralSearch</a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html" class="active">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <div style="margin-bottom:8px;">
+      <span style="color:var(--accent);font-size:0.85rem;font-weight:600;">Tools</span>
+      <span style="color:var(--text-muted);margin:0 8px;font-size:0.85rem;">&rsaquo;</span>
+      <span style="color:var(--text);font-size:0.85rem;font-weight:600;">Calculators</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;padding:12px 0;border-bottom:1px solid var(--border);">
+      <a href="calculator.html" class="btn btn-primary btn-sm" style="font-size:0.8rem;">Calculators</a>
+      <a href="alerts.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Alerts</a>
+    </div>
+
+    <div class="page-header" style="padding-top:0;">
+      <h1>Landman Calculator Tools</h1>
+      <p>NRI, revenue, decline curves, mineral valuations, and lease bonus calculators. All results update instantly.</p>
+    </div>
+
+    <div class="calc-grid">
+
+      <!-- NRI Calculator -->
+      <div class="calc-card">
+        <h3>Net Revenue Interest (NRI)</h3>
+        <p class="calc-desc">Working Interest x (1 - Royalty Burden) = NRI. The interest that actually receives revenue.</p>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Working Interest (%)</label>
+            <input type="number" id="nri-wi" value="100" step="0.1" min="0" max="100" oninput="calcNRI()">
+          </div>
+          <div class="calc-field">
+            <label>Royalty (%)</label>
+            <input type="number" id="nri-royalty" value="25" step="0.1" min="0" max="100" oninput="calcNRI()">
+          </div>
+          <div class="calc-field">
+            <label>Overriding Royalty (%)</label>
+            <input type="number" id="nri-orri" value="2" step="0.1" min="0" max="100" oninput="calcNRI()">
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Net Revenue Interest</div>
+          <div class="calc-result-value" id="nri-result">73.0000%</div>
+          <div class="calc-result-sub" id="nri-detail">WI 100% x (1 - 0.25 - 0.02) = 73.00% NRI</div>
+        </div>
+      </div>
+
+      <!-- Revenue Estimator -->
+      <div class="calc-card">
+        <h3>Monthly Revenue Estimator</h3>
+        <p class="calc-desc">Estimate monthly revenue based on production, commodity prices, and your NRI.</p>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Oil Production (bbl/mo)</label>
+            <input type="number" id="rev-oil" value="1500" step="10" min="0" oninput="calcRevenue()">
+          </div>
+          <div class="calc-field">
+            <label>Oil Price ($/bbl)</label>
+            <input type="number" id="rev-oil-price" value="70" step="0.50" min="0" oninput="calcRevenue()">
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Gas Production (mcf/mo)</label>
+            <input type="number" id="rev-gas" value="5000" step="100" min="0" oninput="calcRevenue()">
+          </div>
+          <div class="calc-field">
+            <label>Gas Price ($/mcf)</label>
+            <input type="number" id="rev-gas-price" value="3.50" step="0.10" min="0" oninput="calcRevenue()">
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Your NRI (%)</label>
+            <input type="number" id="rev-nri" value="73" step="0.1" min="0" max="100" oninput="calcRevenue()">
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated Monthly Revenue</div>
+          <div class="calc-result-value" id="rev-result">$0</div>
+          <div class="calc-result-row"><span class="rl">Gross Oil Revenue</span><span class="rv text-green" id="rev-oil-total">$0</span></div>
+          <div class="calc-result-row"><span class="rl">Gross Gas Revenue</span><span class="rv text-accent" id="rev-gas-total">$0</span></div>
+          <div class="calc-result-row"><span class="rl">Total Gross</span><span class="rv" id="rev-gross">$0</span></div>
+          <div class="calc-result-row"><span class="rl">Your Net Revenue (NRI)</span><span class="rv text-accent" id="rev-net">$0</span></div>
+          <div class="calc-result-row"><span class="rl">Annual Estimate</span><span class="rv text-gold" id="rev-annual">$0</span></div>
+        </div>
+      </div>
+
+      <!-- Decline Curve Projector -->
+      <div class="calc-card calc-full">
+        <h3>Decline Curve Projector</h3>
+        <p class="calc-desc">Project monthly production for 60 months based on initial rate and exponential decline.</p>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Initial Rate (bbl/day)</label>
+            <input type="number" id="dc-ip" value="800" step="10" min="0" oninput="calcDecline()">
+          </div>
+          <div class="calc-field">
+            <label>Monthly Decline (%)</label>
+            <input type="number" id="dc-decline" value="5" step="0.1" min="0" max="50" oninput="calcDecline()">
+          </div>
+          <div class="calc-field">
+            <label>Oil Price ($/bbl)</label>
+            <input type="number" id="dc-price" value="70" step="0.50" min="0" oninput="calcDecline()">
+          </div>
+          <div class="calc-field">
+            <label>NRI (%)</label>
+            <input type="number" id="dc-nri" value="73" step="0.1" min="0" max="100" oninput="calcDecline()">
+          </div>
+        </div>
+        <div class="calc-result" style="display:flex;gap:24px;flex-wrap:wrap;">
+          <div><div class="calc-result-label">EUR (60 months)</div><div class="calc-result-value" id="dc-eur">0</div></div>
+          <div><div class="calc-result-label">Cumulative Revenue</div><div class="calc-result-value" style="color:var(--green);" id="dc-rev">$0</div></div>
+          <div><div class="calc-result-label">Rate at Month 60</div><div class="calc-result-value" style="color:var(--gold);" id="dc-m60">0</div></div>
+        </div>
+        <div class="decline-chart-wrap">
+          <canvas id="declineCurveCalc"></canvas>
+        </div>
+      </div>
+
+      <!-- Mineral Value Estimator -->
+      <div class="calc-card">
+        <h3>Mineral Value Estimator</h3>
+        <p class="calc-desc">Estimate $/acre mineral value based on current production, decline rate, and pricing.</p>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Current Oil Rate (bbl/day)</label>
+            <input type="number" id="mv-rate" value="500" step="10" min="0" oninput="calcMineralValue()">
+          </div>
+          <div class="calc-field">
+            <label>Net Acres</label>
+            <input type="number" id="mv-acres" value="640" step="1" min="1" oninput="calcMineralValue()">
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Monthly Decline (%)</label>
+            <input type="number" id="mv-decline" value="5" step="0.1" min="0" oninput="calcMineralValue()">
+          </div>
+          <div class="calc-field">
+            <label>Oil Price ($/bbl)</label>
+            <input type="number" id="mv-price" value="70" step="0.50" min="0" oninput="calcMineralValue()">
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Royalty Rate (%)</label>
+            <input type="number" id="mv-royalty" value="25" step="0.1" min="0" max="100" oninput="calcMineralValue()">
+          </div>
+          <div class="calc-field">
+            <label>Discount Rate (%)</label>
+            <input type="number" id="mv-discount" value="10" step="0.5" min="0" oninput="calcMineralValue()">
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated Mineral Value</div>
+          <div class="calc-result-value" id="mv-result">$0 /acre</div>
+          <div class="calc-result-row"><span class="rl">Total PV of Royalties</span><span class="rv text-green" id="mv-total-pv">$0</span></div>
+          <div class="calc-result-row"><span class="rl">Per Acre Value</span><span class="rv text-accent" id="mv-per-acre">$0</span></div>
+          <div class="calc-result-row"><span class="rl">Monthly Royalty Income (current)</span><span class="rv text-gold" id="mv-monthly">$0</span></div>
+        </div>
+      </div>
+
+      <!-- Lease Bonus Calculator -->
+      <div class="calc-card">
+        <h3>Lease Bonus Calculator</h3>
+        <p class="calc-desc">Calculate total lease bonus based on acreage and bonus per acre.</p>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Total Net Acres</label>
+            <input type="number" id="lb-acres" value="160" step="1" min="0" oninput="calcLeaseBonus()">
+          </div>
+          <div class="calc-field">
+            <label>Bonus per Acre ($)</label>
+            <input type="number" id="lb-bonus" value="500" step="25" min="0" oninput="calcLeaseBonus()">
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label>Royalty Rate (%)</label>
+            <input type="number" id="lb-royalty" value="25" step="0.1" min="0" max="100" oninput="calcLeaseBonus()">
+          </div>
+          <div class="calc-field">
+            <label>Lease Term (years)</label>
+            <input type="number" id="lb-term" value="3" step="1" min="1" max="10" oninput="calcLeaseBonus()">
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Total Lease Bonus</div>
+          <div class="calc-result-value" id="lb-result">$0</div>
+          <div class="calc-result-row"><span class="rl">Total Acres</span><span class="rv" id="lb-total-acres">0</span></div>
+          <div class="calc-result-row"><span class="rl">Bonus/Acre</span><span class="rv" id="lb-per-acre">$0</span></div>
+          <div class="calc-result-row"><span class="rl">Royalty Rate</span><span class="rv text-gold" id="lb-royalty-val">25%</span></div>
+          <div class="calc-result-row"><span class="rl">Primary Term</span><span class="rv" id="lb-term-val">3 years</span></div>
+          <div class="calc-result-row"><span class="rl">Delay Rental (est.)</span><span class="rv text-accent" id="lb-rental">$0</span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jake Reynolds"></div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="jake@landmanpro.com"></div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  let declineChartInstance = null;
+
+  function fmt(n) { return '$' + n.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0}); }
+  function fmtN(n) { return n.toLocaleString(); }
+
+  // NRI Calculator
+  window.calcNRI = function() {
+    const wi = parseFloat(document.getElementById('nri-wi').value) || 0;
+    const royalty = parseFloat(document.getElementById('nri-royalty').value) || 0;
+    const orri = parseFloat(document.getElementById('nri-orri').value) || 0;
+    const nri = wi / 100 * (1 - royalty/100 - orri/100);
+    document.getElementById('nri-result').textContent = (nri * 100).toFixed(4) + '%';
+    document.getElementById('nri-detail').textContent = 'WI ' + wi + '% x (1 - ' + (royalty/100).toFixed(2) + ' - ' + (orri/100).toFixed(2) + ') = ' + (nri*100).toFixed(2) + '% NRI';
+  };
+
+  // Revenue Estimator
+  window.calcRevenue = function() {
+    const oil = parseFloat(document.getElementById('rev-oil').value) || 0;
+    const oilPrice = parseFloat(document.getElementById('rev-oil-price').value) || 0;
+    const gas = parseFloat(document.getElementById('rev-gas').value) || 0;
+    const gasPrice = parseFloat(document.getElementById('rev-gas-price').value) || 0;
+    const nri = (parseFloat(document.getElementById('rev-nri').value) || 0) / 100;
+
+    const grossOil = oil * oilPrice;
+    const grossGas = gas * gasPrice;
+    const grossTotal = grossOil + grossGas;
+    const netRev = grossTotal * nri;
+
+    document.getElementById('rev-oil-total').textContent = fmt(grossOil);
+    document.getElementById('rev-gas-total').textContent = fmt(grossGas);
+    document.getElementById('rev-gross').textContent = fmt(grossTotal);
+    document.getElementById('rev-net').textContent = fmt(netRev);
+    document.getElementById('rev-result').textContent = fmt(netRev);
+    document.getElementById('rev-annual').textContent = fmt(netRev * 12);
+  };
+
+  // Decline Curve
+  window.calcDecline = function() {
+    const ip = parseFloat(document.getElementById('dc-ip').value) || 0;
+    const di = (parseFloat(document.getElementById('dc-decline').value) || 0) / 100;
+    const price = parseFloat(document.getElementById('dc-price').value) || 0;
+    const nri = (parseFloat(document.getElementById('dc-nri').value) || 0) / 100;
+
+    const months = [];
+    const rates = [];
+    const revenues = [];
+    let cumProd = 0, cumRev = 0;
+
+    for (let m = 0; m < 60; m++) {
+      const dailyRate = ip * Math.pow(1 - di, m);
+      const monthlyProd = dailyRate * 30;
+      cumProd += monthlyProd;
+      const monthlyRev = monthlyProd * price * nri;
+      cumRev += monthlyRev;
+      months.push('M' + (m + 1));
+      rates.push(Math.round(monthlyProd));
+      revenues.push(Math.round(monthlyRev));
+    }
+
+    const m60Rate = ip * Math.pow(1 - di, 59);
+    document.getElementById('dc-eur').textContent = fmtN(Math.round(cumProd)) + ' bbl';
+    document.getElementById('dc-rev').textContent = fmt(Math.round(cumRev));
+    document.getElementById('dc-m60').textContent = Math.round(m60Rate) + ' bbl/d';
+
+    // Chart
+    const ctx = document.getElementById('declineCurveCalc').getContext('2d');
+    if (declineChartInstance) declineChartInstance.destroy();
+    declineChartInstance = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: months,
+        datasets: [
+          { label: 'Monthly Production (bbl)', data: rates, borderColor: '#22c55e', backgroundColor: '#22c55e22', fill: true, tension: 0.3, borderWidth: 2, pointRadius: 0 },
+          { label: 'Monthly Revenue ($)', data: revenues, borderColor: '#00d4aa', backgroundColor: 'transparent', tension: 0.3, borderWidth: 1.5, pointRadius: 0, yAxisID: 'y1' }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: '#94a3b8', font: { size: 11, family: 'Inter' } } } },
+        scales: {
+          x: { ticks: { color: '#64748b', font: { size: 9 }, maxTicksLimit: 12 }, grid: { color: 'rgba(30,42,66,0.5)' } },
+          y: { position: 'left', title: { display: true, text: 'Production (bbl)', color: '#94a3b8' }, ticks: { color: '#64748b' }, grid: { color: 'rgba(30,42,66,0.5)' } },
+          y1: { position: 'right', title: { display: true, text: 'Revenue ($)', color: '#94a3b8' }, ticks: { color: '#64748b' }, grid: { display: false } }
+        }
+      }
+    });
+  };
+
+  // Mineral Value Estimator
+  window.calcMineralValue = function() {
+    const rate = parseFloat(document.getElementById('mv-rate').value) || 0;
+    const acres = parseFloat(document.getElementById('mv-acres').value) || 1;
+    const di = (parseFloat(document.getElementById('mv-decline').value) || 0) / 100;
+    const price = parseFloat(document.getElementById('mv-price').value) || 0;
+    const royalty = (parseFloat(document.getElementById('mv-royalty').value) || 0) / 100;
+    const discount = (parseFloat(document.getElementById('mv-discount').value) || 0) / 100;
+    const monthlyDiscount = discount / 12;
+
+    let totalPV = 0;
+    for (let m = 0; m < 360; m++) { // 30 year life
+      const monthlyProd = rate * 30 * Math.pow(1 - di, m);
+      if (monthlyProd < 1) break;
+      const royaltyIncome = monthlyProd * price * royalty;
+      const pv = royaltyIncome / Math.pow(1 + monthlyDiscount, m);
+      totalPV += pv;
+    }
+
+    const perAcre = totalPV / acres;
+    const currentMonthly = rate * 30 * price * royalty;
+
+    document.getElementById('mv-result').textContent = fmt(Math.round(perAcre)) + ' /acre';
+    document.getElementById('mv-total-pv').textContent = fmt(Math.round(totalPV));
+    document.getElementById('mv-per-acre').textContent = fmt(Math.round(perAcre));
+    document.getElementById('mv-monthly').textContent = fmt(Math.round(currentMonthly));
+  };
+
+  // Lease Bonus Calculator
+  window.calcLeaseBonus = function() {
+    const acres = parseFloat(document.getElementById('lb-acres').value) || 0;
+    const bonus = parseFloat(document.getElementById('lb-bonus').value) || 0;
+    const royalty = parseFloat(document.getElementById('lb-royalty').value) || 0;
+    const term = parseFloat(document.getElementById('lb-term').value) || 0;
+
+    const total = acres * bonus;
+    const delayRental = acres * Math.round(bonus * 0.15);
+
+    document.getElementById('lb-result').textContent = fmt(total);
+    document.getElementById('lb-total-acres').textContent = fmtN(acres) + ' acres';
+    document.getElementById('lb-per-acre').textContent = fmt(bonus);
+    document.getElementById('lb-royalty-val').textContent = royalty + '%';
+    document.getElementById('lb-term-val').textContent = term + ' years';
+    document.getElementById('lb-rental').textContent = fmt(delayRental) + '/year';
+  };
+
+  // Run all on load
+  calcNRI();
+  calcRevenue();
+  calcDecline();
+  calcMineralValue();
+  calcLeaseBonus();
+
+  // Modal & Nav
+  document.querySelectorAll('[data-modal-open]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.add('open')));
+  document.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.remove('open')));
+  document.getElementById('modal-overlay').addEventListener('click', e => { if (e.target.id==='modal-overlay') e.target.classList.remove('open'); });
+  const toggle = document.querySelector('.nav-mobile-toggle');
+  if (toggle) toggle.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

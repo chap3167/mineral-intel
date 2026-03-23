@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drilling Permits — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html" class="active">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Breadcrumb & Sub-Nav -->
+    <div style="margin-bottom:8px;">
+      <a href="wells.html" style="color:var(--accent);font-size:0.85rem;text-decoration:none;font-weight:600;">Texas</a>
+      <span style="color:var(--text-muted);margin:0 8px;font-size:0.85rem;">&rsaquo;</span>
+      <span style="color:var(--text);font-size:0.85rem;font-weight:600;">Permits</span>
+    </div>
+    <div class="texas-subnav" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;padding:12px 0;border-bottom:1px solid var(--border);">
+      <a href="wells.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Wells</a>
+      <a href="production.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Production</a>
+      <a href="permits.html" class="btn btn-primary btn-sm" style="font-size:0.8rem;">Permits</a>
+      <a href="runsheet.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Runsheet</a>
+      <a href="operators.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Operators</a>
+      <a href="map.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Map</a>
+      <a href="leases.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Leases</a>
+    </div>
+
+    <div class="page-header" style="padding-top:0;">
+      <h1>Drilling Permits</h1>
+      <p>Track new drilling permits filed with the Texas Railroad Commission. Showing <span id="permits-count">...</span>.</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-bar">
+      <div class="filter-group">
+        <label class="filter-label">Search</label>
+        <input type="text" id="search-input" class="filter-input" placeholder="Operator, lease, API#..." style="min-width:220px;">
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">County</label>
+        <div style="position:relative;">
+          <input type="text" id="filter-county" class="filter-input" placeholder="Search counties..." autocomplete="off" style="min-width:160px;">
+          <input type="hidden" id="filter-county-value">
+          <div id="county-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:240px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:100;margin-top:2px;"></div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Operator</label>
+        <div style="position:relative;">
+          <input type="text" id="filter-operator" class="filter-input" placeholder="Search operators..." autocomplete="off" style="min-width:180px;">
+          <input type="hidden" id="filter-operator-value">
+          <div id="operator-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:240px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:100;margin-top:2px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Permits Table -->
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>API #</th>
+            <th>Operator</th>
+            <th>Lease / Well</th>
+            <th>County</th>
+            <th>Field</th>
+            <th>Well Type</th>
+            <th>Total Depth</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="permits-tbody">
+          <tr><td colspan="8" class="text-center text-muted" style="padding:40px;">Loading well data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<!-- Trial Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jake Reynolds"></div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="jake@landmanpro.com"></div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+<script>
+(function() {
+  'use strict';
+
+  const SUPABASE_URL = 'https://bkyzxvetrguudtsqrvvq.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJreXp4dmV0cmd1dWR0c3FydnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4ODcyNTUsImV4cCI6MjA4OTQ2MzI1NX0.FE2YEIk9pu6P5EUdQY7S7YRfQK0Q7ckSGuJDnWxSks8';
+
+  function formatNumber(n){return n==null?'-':n.toLocaleString();}
+
+  let currentRequestId = 0;
+
+  async function loadWells() {
+    const requestId = ++currentRequestId;
+    const tbody = document.getElementById('permits-tbody');
+    const search = (document.getElementById('search-input').value || '').trim();
+    // Auto-resolve typed text
+    const countyInput = document.getElementById('filter-county');
+    const countyHidden = document.getElementById('filter-county-value');
+    if (countyInput && countyHidden && !countyHidden.value && countyInput.value.trim()) {
+      const term = countyInput.value.trim().toUpperCase();
+      countyHidden.value = term; countyInput.value = term;
+    }
+    const opInput = document.getElementById('filter-operator');
+    const opHidden = document.getElementById('filter-operator-value');
+    if (opInput && opHidden && !opHidden.value && opInput.value.trim()) {
+      opHidden.value = opInput.value.trim().toUpperCase();
+    }
+    const county = (countyHidden || countyInput || {}).value || '';
+    const operator = (opHidden || opInput || {}).value || '';
+
+    const params = ['select=api,operator,lease_name,well_number,county,well_type,total_depth,status,field_name', 'offshore=eq.false', 'order=id.desc'];
+
+    if (county) params.push('county=eq.' + encodeURIComponent(county));
+    if (operator) params.push('operator=eq.' + encodeURIComponent(operator));
+    if (search) {
+      const encoded = encodeURIComponent('%' + search + '%');
+      params.push('or=(operator.ilike.' + encoded + ',lease_name.ilike.' + encoded + ')');
+    }
+
+    // Cap results: 100 if no filters, 500 otherwise
+    if (!county && !operator && !search) {
+      params.push('limit=100');
+    } else {
+      params.push('limit=500');
+    }
+
+    const url = SUPABASE_URL + '/rest/v1/wells?' + params.join('&');
+    const hdrs = { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY };
+
+    try {
+      const resp = await fetch(url, { headers: hdrs });
+      if (!resp.ok) throw new Error('Supabase ' + resp.status);
+      const data = await resp.json();
+      if (requestId !== currentRequestId) return;
+      renderResults(data || []);
+      document.getElementById('permits-count').textContent = (data || []).length.toLocaleString() + ' wells';
+    } catch(e) {
+      console.error('[Permits] Failed to load data:', e.message);
+      tbody.innerHTML = '<tr><td colspan="8" class="text-center text-muted" style="padding:40px;">Unable to load data. Please try again.</td></tr>';
+      document.getElementById('permits-count').textContent = '0 wells';
+    }
+  }
+
+  function renderResults(data) {
+    document.getElementById('permits-count').textContent = data.length + ' recent wells';
+    const tbody = document.getElementById('permits-tbody');
+    const statusBadge = (s) => {
+      const upper = (s||'').toUpperCase();
+      const cls = {'PRODUCING':'badge-producing','SHUT IN':'badge-shutin','PLUGGED':'badge-plugged','COMPLETED':'badge-completed','PERMITTED':'badge-permitted','INJECTION':'badge-active'}[upper]||'badge-active';
+      return '<span class="badge '+cls+'">'+s+'</span>';
+    };
+    const typeLabel = (t) => t === 'O' ? 'Oil' : t === 'G' ? 'Gas' : t || '-';
+    tbody.innerHTML = data.map(w =>
+      '<tr>'+
+        '<td class="mono">'+(w.api||'-')+'</td>'+
+        '<td>'+(w.operator||'-')+'</td>'+
+        '<td>'+(w.lease_name||'-')+' #'+(w.well_number||'-')+'</td>'+
+        '<td><span class="tag tag-county">'+(w.county||'-')+'</span></td>'+
+        '<td>'+(w.field_name||'-')+'</td>'+
+        '<td>'+typeLabel(w.well_type)+'</td>'+
+        '<td class="mono">'+(w.total_depth ? formatNumber(w.total_depth)+"'" : '-')+'</td>'+
+        '<td>'+statusBadge(w.status||'-')+'</td>'+
+      '</tr>'
+    ).join('');
+    if (data.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="8" class="text-center text-muted" style="padding:40px;">No wells match your filters.</td></tr>';
+    }
+  }
+
+  function populateFilters() {
+    // No-op — county now uses search-as-you-type
+  }
+
+  function renderWells() { loadWells(); }
+
+  let searchTimeout;
+  document.getElementById('search-input').addEventListener('input', function() {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(loadWells, 400);
+  });
+  // County search-as-you-type
+  (function() {
+    const TX_COUNTIES = ["ANDERSON","ANDREWS","ANGELINA","ARANSAS","ARCHER","ARMSTRONG","ATASCOSA","AUSTIN","BAILEY","BANDERA","BASTROP","BAYLOR","BEE","BELL","BEXAR","BLANCO","BORDEN","BOSQUE","BOWIE","BRAZORIA","BRAZOS","BREWSTER","BRISCOE","BROOKS","BROWN","BURLESON","BURNET","CALDWELL","CALHOUN","CALLAHAN","CAMERON","CAMP","CARSON","CASS","CASTRO","CHAMBERS","CHEROKEE","CHILDRESS","CLAY","COCHRAN","COKE","COLEMAN","COLLIN","COLLINGSWORTH","COLORADO","COMAL","COMANCHE","CONCHO","COOKE","CORYELL","COTTLE","CRANE","CROCKETT","CROSBY","CULBERSON","DALLAM","DALLAS","DAWSON","DE WITT","DEAF SMITH","DELTA","DENTON","DICKENS","DIMMIT","DONLEY","DUVAL","EASTLAND","ECTOR","EDWARDS","EL PASO","ELLIS","ERATH","FALLS","FANNIN","FAYETTE","FISHER","FLOYD","FOARD","FORT BEND","FRANKLIN","FREESTONE","FRIO","GAINES","GALVESTON","GARZA","GILLESPIE","GLASSCOCK","GOLIAD","GONZALES","GRAY","GRAYSON","GREGG","GRIMES","GUADALUPE","HALE","HALL","HAMILTON","HANSFORD","HARDEMAN","HARDIN","HARRIS","HARRISON","HARTLEY","HASKELL","HAYS","HEMPHILL","HENDERSON","HIDALGO","HILL","HOCKLEY","HOOD","HOPKINS","HOUSTON","HOWARD","HUDSPETH","HUNT","HUTCHINSON","IRION","JACK","JACKSON","JASPER","JEFF DAVIS","JEFFERSON","JIM HOGG","JIM WELLS","JOHNSON","JONES","KARNES","KAUFMAN","KENDALL","KENEDY","KENT","KERR","KIMBLE","KING","KINNEY","KLEBERG","KNOX","LA SALLE","LAMAR","LAMB","LAMPASAS","LAVACA","LEE","LEON","LIBERTY","LIMESTONE","LIPSCOMB","LIVE OAK","LLANO","LOVING","LUBBOCK","LYNN","MADISON","MARION","MARTIN","MASON","MATAGORDA","MAVERICK","MCCULLOCH","MCLENNAN","MCMULLEN","MEDINA","MENARD","MIDLAND","MILAM","MILLS","MITCHELL","MONTAGUE","MONTGOMERY","MOORE","MORRIS","MOTLEY","NACOGDOCHES","NAVARRO","NEWTON","NOLAN","NUECES","OCHILTREE","OLDHAM","ORANGE","PALO PINTO","PANOLA","PARKER","PARMER","PECOS","POLK","POTTER","PRESIDIO","RAINS","RANDALL","REAGAN","REAL","RED RIVER","REEVES","REFUGIO","ROBERTS","ROBERTSON","ROCKWALL","RUNNELS","RUSK","SABINE","SAN AUGUSTINE","SAN JACINTO","SAN PATRICIO","SAN SABA","SCHLEICHER","SCURRY","SHACKELFORD","SHELBY","SHERMAN","SMITH","SOMERVELL","STARR","STEPHENS","STERLING","STONEWALL","SUTTON","SWISHER","TARRANT","TAYLOR","TERRELL","TERRY","THROCKMORTON","TITUS","TOM GREEN","TRAVIS","TRINITY","TYLER","UPSHUR","UPTON","UVALDE","VAL VERDE","VAN ZANDT","VICTORIA","WALKER","WALLER","WARD","WASHINGTON","WEBB","WHARTON","WHEELER","WICHITA","WILBARGER","WILLACY","WILLIAMSON","WILSON","WINKLER","WISE","WOOD","YOAKUM","YOUNG","ZAPATA","ZAVALA"];
+    const input = document.getElementById('filter-county');
+    const hidden = document.getElementById('filter-county-value');
+    const dropdown = document.getElementById('county-dropdown');
+    if (!input || !dropdown) return;
+    input.addEventListener('input', function() {
+      const term = input.value.trim().toUpperCase();
+      if (hidden) hidden.value = '';
+      if (term.length < 1) { dropdown.style.display = 'none'; loadWells(); return; }
+      const matches = TX_COUNTIES.filter(c => c.includes(term)).slice(0, 15);
+      if (!matches.length) { dropdown.style.display = 'none'; return; }
+      dropdown.innerHTML = matches.map(c =>
+        '<div style="padding:8px 12px;cursor:pointer;font-size:0.85rem;color:var(--text);border-bottom:1px solid var(--border);" onmousedown="event.preventDefault()" onclick="document.getElementById(\'filter-county\').value=this.textContent;document.getElementById(\'filter-county-value\').value=this.textContent;document.getElementById(\'county-dropdown\').style.display=\'none\';loadWells();">' + c + '</div>'
+      ).join('');
+      dropdown.style.display = 'block';
+    });
+    input.addEventListener('blur', () => { setTimeout(() => { dropdown.style.display = 'none'; }, 200); });
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { input.value = ''; if (hidden) hidden.value = ''; dropdown.style.display = 'none'; loadWells(); }
+      if (e.key === 'Enter') { dropdown.style.display = 'none'; loadWells(); }
+    });
+  })();
+
+  // Operator search-as-you-type
+  (function() {
+    const input = document.getElementById('filter-operator');
+    const hidden = document.getElementById('filter-operator-value');
+    const dropdown = document.getElementById('operator-dropdown');
+    if (!input || !dropdown) return;
+    let t;
+    input.addEventListener('input', function() {
+      const term = input.value.trim();
+      if (hidden) hidden.value = '';
+      clearTimeout(t);
+      if (term.length < 2) { dropdown.style.display = 'none'; renderWells(); return; }
+      t = setTimeout(async () => {
+        try {
+          const encoded = encodeURIComponent('%' + term + '%');
+          const resp = await fetch(SUPABASE_URL + '/rest/v1/operators?select=operator_name&operator_name=ilike.' + encoded + '&order=operator_name&limit=20', {
+            headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY }
+          });
+          const data = await resp.json();
+          if (!data || !data.length) { dropdown.style.display = 'none'; return; }
+          dropdown.innerHTML = data.map(r =>
+            '<div style="padding:8px 12px;cursor:pointer;font-size:0.85rem;color:var(--text);border-bottom:1px solid var(--border);" onmousedown="event.preventDefault()" onclick="document.getElementById(\'filter-operator\').value=this.textContent;document.getElementById(\'filter-operator-value\').value=this.textContent;document.getElementById(\'operator-dropdown\').style.display=\'none\';renderWells();">' + (r.operator_name || '') + '</div>'
+          ).join('');
+          dropdown.style.display = 'block';
+        } catch(e) { dropdown.style.display = 'none'; }
+      }, 300);
+    });
+    input.addEventListener('blur', () => { setTimeout(() => { dropdown.style.display = 'none'; }, 200); });
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { input.value = ''; if (hidden) hidden.value = ''; dropdown.style.display = 'none'; renderWells(); }
+      if (e.key === 'Enter') { dropdown.style.display = 'none'; renderWells(); }
+    });
+  })();
+
+  loadWells();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Production Analytics — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">M</div> MineralSearch</a>
+    <ul class="nav-links">
+      <li><a href="wells.html" class="active">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Breadcrumb & Sub-Nav -->
+    <div style="margin-bottom:8px;">
+      <a href="wells.html" style="color:var(--accent);font-size:0.85rem;text-decoration:none;font-weight:600;">Texas</a>
+      <span style="color:var(--text-muted);margin:0 8px;font-size:0.85rem;">&rsaquo;</span>
+      <span style="color:var(--text);font-size:0.85rem;font-weight:600;">Production</span>
+    </div>
+    <div class="texas-subnav" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;padding:12px 0;border-bottom:1px solid var(--border);">
+      <a href="wells.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Wells</a>
+      <a href="production.html" class="btn btn-primary btn-sm" style="font-size:0.8rem;">Production</a>
+      <a href="permits.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Permits</a>
+      <a href="runsheet.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Runsheet</a>
+      <a href="operators.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Operators</a>
+      <a href="map.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Map</a>
+      <a href="leases.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Leases</a>
+    </div>
+
+    <div class="page-header" style="padding-top:0;">
+      <h1>County Production Analytics</h1>
+      <p>Analyze monthly oil and gas production by county from real RRC data. Select a county to view production trends.</p>
+    </div>
+
+    <!-- County Selector -->
+    <div class="filters-bar mb-3">
+      <div class="filter-group" style="flex:1;min-width:200px;">
+        <label class="filter-label">Select County</label>
+        <select id="prod-county" class="filter-select">
+          <option value="">Loading counties...</option>
+        </select>
+      </div>
+      <div style="padding-top:16px;">
+        <button class="btn btn-primary btn-sm" id="load-prod-btn">Load Production</button>
+      </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div id="prod-summary" class="grid-4 mb-3" style="display:none;">
+      <div class="card" style="padding:20px;text-align:center;">
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Total Oil Produced</div>
+        <div id="summary-oil" style="font-size:1.4rem;font-weight:800;color:var(--green);">-</div>
+      </div>
+      <div class="card" style="padding:20px;text-align:center;">
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Total Gas Produced</div>
+        <div id="summary-gas" style="font-size:1.4rem;font-weight:800;color:var(--accent);">-</div>
+      </div>
+      <div class="card" style="padding:20px;text-align:center;">
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Peak Month (Oil)</div>
+        <div id="summary-peak" style="font-size:1.4rem;font-weight:800;color:var(--gold);">-</div>
+      </div>
+      <div class="card" style="padding:20px;text-align:center;">
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Months of Data</div>
+        <div id="summary-months" style="font-size:1.4rem;font-weight:800;color:var(--text);">-</div>
+      </div>
+    </div>
+
+    <!-- Production Chart -->
+    <div id="prod-chart-section" style="display:none;">
+      <div class="card mb-3" style="padding:20px;">
+        <h4 style="margin-bottom:12px;font-size:0.95rem;color:var(--text-secondary);">Monthly Production History</h4>
+        <div class="chart-wrapper" style="position:relative;height:400px;">
+          <canvas id="prodChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status message -->
+    <div id="prod-status" class="text-center text-muted" style="padding:40px;">Select a county above to view production data.</div>
+
+  </div>
+</div>
+
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jake Reynolds"></div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="jake@landmanpro.com"></div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+<script>
+(function() {
+  'use strict';
+
+  const SUPABASE_URL = 'https://bkyzxvetrguudtsqrvvq.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJreXp4dmV0cmd1dWR0c3FydnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4ODcyNTUsImV4cCI6MjA4OTQ2MzI1NX0.FE2YEIk9pu6P5EUdQY7S7YRfQK0Q7ckSGuJDnWxSks8';
+
+  function formatNumber(n){return n==null?'-':n.toLocaleString();}
+  function formatCompact(n){if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return String(n);}
+  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function formatCycleDate(val){if(!val||val.length<6)return val||'-';var y=val.substring(0,4),m=parseInt(val.substring(4,6),10);return(m>=1&&m<=12)?MONTHS[m-1]+' '+y:val;}
+
+  let prodChart = null;
+
+  const TX_COUNTIES = ["ANDERSON","ANDREWS","ANGELINA","ARANSAS","ARCHER","ARMSTRONG","ATASCOSA","AUSTIN","BAILEY","BANDERA","BASTROP","BAYLOR","BEE","BELL","BEXAR","BLANCO","BORDEN","BOSQUE","BOWIE","BRAZORIA","BRAZOS","BREWSTER","BRISCOE","BROOKS","BROWN","BURLESON","BURNET","CALDWELL","CALHOUN","CALLAHAN","CAMERON","CAMP","CARSON","CASS","CASTRO","CHAMBERS","CHEROKEE","CHILDRESS","CLAY","COCHRAN","COKE","COLEMAN","COLLIN","COLLINGSWORTH","COLORADO","COMAL","COMANCHE","CONCHO","COOKE","CORYELL","COTTLE","CRANE","CROCKETT","CROSBY","CULBERSON","DALLAM","DALLAS","DAWSON","DE WITT","DEAF SMITH","DELTA","DENTON","DICKENS","DIMMIT","DONLEY","DUVAL","EASTLAND","ECTOR","EDWARDS","EL PASO","ELLIS","ERATH","FALLS","FANNIN","FAYETTE","FISHER","FLOYD","FOARD","FORT BEND","FRANKLIN","FREESTONE","FRIO","GAINES","GALVESTON","GARZA","GILLESPIE","GLASSCOCK","GOLIAD","GONZALES","GRAY","GRAYSON","GREGG","GRIMES","GUADALUPE","HALE","HALL","HAMILTON","HANSFORD","HARDEMAN","HARDIN","HARRIS","HARRISON","HARTLEY","HASKELL","HAYS","HEMPHILL","HENDERSON","HIDALGO","HILL","HOCKLEY","HOOD","HOPKINS","HOUSTON","HOWARD","HUDSPETH","HUNT","HUTCHINSON","IRION","JACK","JACKSON","JASPER","JEFF DAVIS","JEFFERSON","JIM HOGG","JIM WELLS","JOHNSON","JONES","KARNES","KAUFMAN","KENDALL","KENEDY","KENT","KERR","KIMBLE","KING","KINNEY","KLEBERG","KNOX","LA SALLE","LAMAR","LAMB","LAMPASAS","LAVACA","LEE","LEON","LIBERTY","LIMESTONE","LIPSCOMB","LIVE OAK","LLANO","LOVING","LUBBOCK","LYNN","MADISON","MARION","MARTIN","MASON","MATAGORDA","MAVERICK","MCCULLOCH","MCLENNAN","MCMULLEN","MEDINA","MENARD","MIDLAND","MILAM","MILLS","MITCHELL","MONTAGUE","MONTGOMERY","MOORE","MORRIS","MOTLEY","NACOGDOCHES","NAVARRO","NEWTON","NOLAN","NUECES","OCHILTREE","OLDHAM","ORANGE","PALO PINTO","PANOLA","PARKER","PARMER","PECOS","POLK","POTTER","PRESIDIO","RAINS","RANDALL","REAGAN","REAL","RED RIVER","REEVES","REFUGIO","ROBERTS","ROBERTSON","ROCKWALL","RUNNELS","RUSK","SABINE","SAN AUGUSTINE","SAN JACINTO","SAN PATRICIO","SAN SABA","SCHLEICHER","SCURRY","SHACKELFORD","SHELBY","SHERMAN","SMITH","SOMERVELL","STARR","STEPHENS","STERLING","STONEWALL","SUTTON","SWISHER","TARRANT","TAYLOR","TERRELL","TERRY","THROCKMORTON","TITUS","TOM GREEN","TRAVIS","TRINITY","TYLER","UPSHUR","UPTON","UVALDE","VAL VERDE","VAN ZANDT","VICTORIA","WALKER","WALLER","WARD","WASHINGTON","WEBB","WHARTON","WHEELER","WICHITA","WILBARGER","WILLACY","WILLIAMSON","WILSON","WINKLER","WISE","WOOD","YOAKUM","YOUNG","ZAPATA","ZAVALA"];
+
+  async function loadCounties() {
+    const sel = document.getElementById('prod-county');
+    sel.innerHTML = '<option value="">-- Select a County --</option>' + TX_COUNTIES.map(c => '<option value="'+c+'">'+c+'</option>').join('');
+  }
+
+  async function loadProduction(countyName) {
+    const statusEl = document.getElementById('prod-status');
+    const summaryEl = document.getElementById('prod-summary');
+    const chartSection = document.getElementById('prod-chart-section');
+
+    statusEl.textContent = 'Loading production data for ' + countyName + '...';
+    statusEl.style.display = 'block';
+    summaryEl.style.display = 'none';
+    chartSection.style.display = 'none';
+
+    try {
+      const resp = await fetch(SUPABASE_URL + '/rest/v1/production_county?county_name=eq.' + encodeURIComponent(countyName) + '&order=cycle_year_month.desc&limit=120', {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY }
+      });
+      if (!resp.ok) throw new Error('Supabase ' + resp.status);
+      const data = await resp.json();
+      if (!data || data.length === 0) {
+        statusEl.textContent = 'No production data found for ' + countyName + '.';
+        return;
+      }
+
+      // Reverse to chronological order
+      const sorted = data.slice().sort((a,b) => (a.cycle_year_month || '').localeCompare(b.cycle_year_month || ''));
+
+      // Calculate summaries
+      let totalOil = 0, totalGas = 0, peakOilMonth = '', peakOilVal = 0;
+      sorted.forEach(r => {
+        const oil = r.oil_prod_vol || 0;
+        const gas = r.gas_prod_vol || 0;
+        totalOil += oil;
+        totalGas += gas;
+        if (oil > peakOilVal) {
+          peakOilVal = oil;
+          peakOilMonth = r.cycle_year_month || '';
+        }
+      });
+
+      document.getElementById('summary-oil').textContent = formatCompact(totalOil) + ' bbl';
+      document.getElementById('summary-gas').textContent = formatCompact(totalGas) + ' mcf';
+      document.getElementById('summary-peak').textContent = formatCycleDate(peakOilMonth);
+      document.getElementById('summary-months').textContent = sorted.length;
+      summaryEl.style.display = '';
+
+      // Render chart
+      const labels = sorted.map(r => formatCycleDate(r.cycle_year_month));
+      const oilData = sorted.map(r => r.oil_prod_vol || 0);
+      const gasData = sorted.map(r => r.gas_prod_vol || 0);
+
+      const ctx = document.getElementById('prodChart').getContext('2d');
+      if (prodChart) prodChart.destroy();
+
+      prodChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Oil Production (bbl)',
+              data: oilData,
+              borderColor: '#22c55e',
+              backgroundColor: 'rgba(34,197,94,0.1)',
+              fill: true,
+              tension: 0.3,
+              borderWidth: 2,
+              pointRadius: 1,
+              yAxisID: 'y'
+            },
+            {
+              label: 'Gas Production (mcf)',
+              data: gasData,
+              borderColor: '#3b82f6',
+              backgroundColor: 'transparent',
+              borderDash: [5,3],
+              tension: 0.3,
+              borderWidth: 2,
+              pointRadius: 1,
+              yAxisID: 'y1'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { labels: { color: '#94a3b8', font: { size: 11, family: 'Inter' } } },
+            title: { display: true, text: countyName + ' County Monthly Production', color: '#e2e8f0', font: { size: 14, family: 'Inter' } }
+          },
+          scales: {
+            x: { ticks: { color: '#64748b', font: { size: 9 }, maxTicksLimit: 12 }, grid: { color: 'rgba(30,42,66,0.5)' } },
+            y: { position: 'left', title: { display: true, text: 'Oil (bbl)', color: '#22c55e' }, ticks: { color: '#64748b' }, grid: { color: 'rgba(30,42,66,0.5)' } },
+            y1: { position: 'right', title: { display: true, text: 'Gas (mcf)', color: '#3b82f6' }, ticks: { color: '#64748b' }, grid: { display: false } }
+          }
+        }
+      });
+
+      chartSection.style.display = 'block';
+      statusEl.style.display = 'none';
+    } catch(e) {
+      console.error('[Production] Failed to load production:', e.message);
+      statusEl.textContent = 'Unable to load data. Please try again.';
+    }
+  }
+
+  document.getElementById('load-prod-btn').addEventListener('click', function() {
+    const county = document.getElementById('prod-county').value;
+    if (!county) { alert('Please select a county.'); return; }
+    loadProduction(county);
+  });
+
+  document.getElementById('prod-county').addEventListener('change', function() {
+    if (this.value) loadProduction(this.value);
+  });
+
+  // Modal & Nav
+  document.querySelectorAll('[data-modal-open]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.add('open')));
+  document.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.remove('open')));
+  document.getElementById('modal-overlay').addEventListener('click', e => { if (e.target.id==='modal-overlay') e.target.classList.remove('open'); });
+  const toggle = document.querySelector('.nav-mobile-toggle');
+  if (toggle) toggle.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+
+  loadCounties();
+})();
+</script>
+</body>
+</html>

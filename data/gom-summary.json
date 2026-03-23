@@ -1,0 +1,496 @@
+{
+  "generatedAt": "2026-03-18T22:34:04.052Z",
+  "source": "BSEE (Bureau of Safety and Environmental Enforcement)",
+  "wells": {
+    "total": 55446,
+    "statuses": {
+      "COM": 3913,
+      "PA": 30384,
+      "ST": 17060,
+      "TA": 2998,
+      "CNL": 974,
+      "APD": 28,
+      "AST": 21,
+      "DRL": 16,
+      "DSI": 50,
+      "VCW": 2
+    },
+    "wellClasses": {
+      "E": 19757,
+      "D": 35533,
+      "R": 38,
+      "C": 117,
+      "O": 1
+    },
+    "wellTypes": {
+      "STR": 13082,
+      "DIR": 40310,
+      "HOR": 1272,
+      "###": 424
+    },
+    "avgWaterDepthFt": 94,
+    "avgTotalDepthFt": 11025,
+    "withCoordinates": 55446,
+    "topOperators": [
+      {
+        "code": "G09372",
+        "name": "G09372",
+        "wells": 338
+      },
+      {
+        "code": "00310",
+        "name": "Marathon Pipe Line Company",
+        "wells": 301
+      },
+      {
+        "code": "00031",
+        "name": "Coral Drilling Company, Inc.",
+        "wells": 284
+      },
+      {
+        "code": "00694",
+        "name": "Scott 1977 Exploration No. 2 Limited Partnership",
+        "wells": 239
+      },
+      {
+        "code": "G01608",
+        "name": "G01608",
+        "wells": 233
+      },
+      {
+        "code": "G02280",
+        "name": "G02280",
+        "wells": 226
+      },
+      {
+        "code": "00025",
+        "name": "Texaco Seaboard Inc.",
+        "wells": 202
+      },
+      {
+        "code": "00026",
+        "name": "Deepwater Exploration Company",
+        "wells": 196
+      },
+      {
+        "code": "00385",
+        "name": "Kirby Exploration Company",
+        "wells": 176
+      },
+      {
+        "code": "00263",
+        "name": "Pennzoil Louisiana and Texas Offshore, Inc.",
+        "wells": 173
+      },
+      {
+        "code": "00034",
+        "name": "Louisiana Zone 2 Sale",
+        "wells": 169
+      },
+      {
+        "code": "00016",
+        "name": "Zapata Off-Shore Company",
+        "wells": 164
+      },
+      {
+        "code": "G01294",
+        "name": "G01294",
+        "wells": 163
+      },
+      {
+        "code": "G02115",
+        "name": "G02115",
+        "wells": 162
+      },
+      {
+        "code": "G00983",
+        "name": "G00983",
+        "wells": 151
+      },
+      {
+        "code": "00463",
+        "name": "Aminoil International, Inc.",
+        "wells": 149
+      },
+      {
+        "code": "00392",
+        "name": "Fairway Petroleum, Inc.",
+        "wells": 148
+      },
+      {
+        "code": "00035",
+        "name": "Kerr-McGee Oil Industries, Inc.",
+        "wells": 147
+      },
+      {
+        "code": "G02137",
+        "name": "G02137",
+        "wells": 144
+      },
+      {
+        "code": "G01316",
+        "name": "G01316",
+        "wells": 143
+      },
+      {
+        "code": "G01194",
+        "name": "G01194",
+        "wells": 132
+      },
+      {
+        "code": "00420",
+        "name": "Rutherford Oil Corporation",
+        "wells": 131
+      },
+      {
+        "code": "G00989",
+        "name": "G00989",
+        "wells": 130
+      },
+      {
+        "code": "G01870",
+        "name": "G01870",
+        "wells": 130
+      },
+      {
+        "code": "G01677",
+        "name": "G01677",
+        "wells": 125
+      },
+      {
+        "code": "G01084",
+        "name": "G01084",
+        "wells": 122
+      },
+      {
+        "code": "00133",
+        "name": "Highland Resources, Inc.",
+        "wells": 121
+      },
+      {
+        "code": "G01619",
+        "name": "G01619",
+        "wells": 121
+      },
+      {
+        "code": "00438",
+        "name": "Siboney Corporation",
+        "wells": 120
+      },
+      {
+        "code": "G01618",
+        "name": "G01618",
+        "wells": 120
+      },
+      {
+        "code": "G02625",
+        "name": "G02625",
+        "wells": 119
+      },
+      {
+        "code": "S01012",
+        "name": "S01012",
+        "wells": 119
+      },
+      {
+        "code": "G01146",
+        "name": "G01146",
+        "wells": 118
+      },
+      {
+        "code": "G02111",
+        "name": "G02111",
+        "wells": 118
+      },
+      {
+        "code": "00387",
+        "name": "Kewanee Oil Company",
+        "wells": 118
+      },
+      {
+        "code": "00049",
+        "name": "Signal Oil and Gas Company",
+        "wells": 117
+      },
+      {
+        "code": "00367",
+        "name": "New England Energy Incorporated",
+        "wells": 117
+      },
+      {
+        "code": "G01614",
+        "name": "G01614",
+        "wells": 116
+      },
+      {
+        "code": "G01101",
+        "name": "G01101",
+        "wells": 114
+      },
+      {
+        "code": "G01666",
+        "name": "G01666",
+        "wells": 114
+      },
+      {
+        "code": "00374",
+        "name": "Freeport Pipeline Company",
+        "wells": 114
+      },
+      {
+        "code": "G02118",
+        "name": "G02118",
+        "wells": 112
+      },
+      {
+        "code": "00064",
+        "name": "Hunt Oil Company",
+        "wells": 111
+      },
+      {
+        "code": "00828",
+        "name": "Cockrell Oil Corporation",
+        "wells": 111
+      },
+      {
+        "code": "G01220",
+        "name": "G01220",
+        "wells": 109
+      },
+      {
+        "code": "00353",
+        "name": "Eason Oil Company",
+        "wells": 109
+      },
+      {
+        "code": "00182",
+        "name": "TransOcean Oil, Inc.",
+        "wells": 108
+      },
+      {
+        "code": "G01083",
+        "name": "G01083",
+        "wells": 104
+      },
+      {
+        "code": "G01523",
+        "name": "G01523",
+        "wells": 103
+      },
+      {
+        "code": "G01874",
+        "name": "G01874",
+        "wells": 102
+      }
+    ],
+    "topAreas": [
+      {
+        "area": "EI",
+        "wells": 6073
+      },
+      {
+        "area": "SS",
+        "wells": 4130
+      },
+      {
+        "area": "WC",
+        "wells": 3798
+      },
+      {
+        "area": "WI",
+        "wells": 3773
+      },
+      {
+        "area": "HI",
+        "wells": 3591
+      },
+      {
+        "area": "MP",
+        "wells": 3491
+      },
+      {
+        "area": "VR",
+        "wells": 3341
+      },
+      {
+        "area": "ST",
+        "wells": 3288
+      },
+      {
+        "area": "SM",
+        "wells": 3118
+      },
+      {
+        "area": "WD",
+        "wells": 2930
+      },
+      {
+        "area": "SP",
+        "wells": 2722
+      },
+      {
+        "area": "EC",
+        "wells": 2364
+      },
+      {
+        "area": "GI",
+        "wells": 2269
+      },
+      {
+        "area": "MC",
+        "wells": 2043
+      },
+      {
+        "area": "GC",
+        "wells": 1541
+      },
+      {
+        "area": "BM",
+        "wells": 905
+      },
+      {
+        "area": "GB",
+        "wells": 684
+      },
+      {
+        "area": "MI",
+        "wells": 664
+      },
+      {
+        "area": "GA",
+        "wells": 563
+      },
+      {
+        "area": "VK",
+        "wells": 558
+      },
+      {
+        "area": "BA",
+        "wells": 519
+      },
+      {
+        "area": "PL",
+        "wells": 485
+      },
+      {
+        "area": "EW",
+        "wells": 449
+      },
+      {
+        "area": "MU",
+        "wells": 404
+      },
+      {
+        "area": "EB",
+        "wells": 362
+      },
+      {
+        "area": "WR",
+        "wells": 207
+      },
+      {
+        "area": "MO",
+        "wells": 189
+      },
+      {
+        "area": "AC",
+        "wells": 152
+      },
+      {
+        "area": "SA",
+        "wells": 142
+      },
+      {
+        "area": "TS",
+        "wells": 134
+      }
+    ]
+  },
+  "leases": {
+    "totalRecords": 255797,
+    "uniqueLeases": 29415
+  },
+  "pipelines": {
+    "total": 21235,
+    "statuses": {
+      "ABN": 10044,
+      "ACT": 3980,
+      "PABN": 518,
+      "COMB": 1107,
+      "REM": 1286,
+      "OUT": 1623,
+      "PREM": 136,
+      "CNCL": 1958,
+      "A/C": 187,
+      "PROP": 372,
+      "UNKNOWN": 23,
+      "DRFT": 1
+    },
+    "productTypes": {
+      "BLKG": 5222,
+      "BLKO": 5255,
+      "G/C": 1274,
+      "OIL": 1277,
+      "GAS": 2590,
+      "G/O": 286,
+      "INJ": 28,
+      "TEST": 148,
+      "LIFT": 2146,
+      "H2O": 378,
+      "SPLY": 381,
+      "O/W": 55,
+      "BLOH": 92,
+      "FLG": 295,
+      "METH": 87,
+      "COND": 80,
+      "GASH": 21,
+      "UMB": 330,
+      "BLGH": 57,
+      "SERV": 207,
+      "ACID": 2,
+      "SPRE": 21,
+      "AIR": 75,
+      "OILH": 10,
+      "SULF": 3,
+      "CHEM": 38,
+      "PWTR": 1,
+      "LPRO": 2,
+      "G/OH": 1,
+      "CSNG": 116,
+      "TOW": 9,
+      "CBLP": 22,
+      "CBLC": 134,
+      "UBEH": 252,
+      "UMBH": 192,
+      "UMBE": 46,
+      "UMBC": 27,
+      "G/CH": 2
+    }
+  },
+  "fields": {
+    "total": 6318,
+    "statuses": {
+      "T": 4025,
+      "UNKNOWN": 971,
+      "E": 429,
+      "R": 890,
+      "C": 3
+    }
+  },
+  "companies": {
+    "total": 5517
+  },
+  "rigs": {
+    "total": 131,
+    "types": {
+      "Barge Rig": 2,
+      "DP SEMISUBMERSIBLE": 12,
+      "DRILLSHIP": 46,
+      "PLATFORM": 43,
+      "JACKUP": 21,
+      "SEMISUBMERSIBLE": 5,
+      "SUBMERSIBLE": 1,
+      "LAND": 1
+    }
+  }
+}

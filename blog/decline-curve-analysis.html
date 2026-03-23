@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decline Curve Analysis for Oil & Gas Wells — Beginner's Guide | MineralSearch</title>
+  <meta name="description" content="Beginner's guide to decline curve analysis (DCA) for oil and gas wells. Learn about exponential, hyperbolic, and harmonic decline, type curves, and EUR estimation.">
+  <meta name="keywords" content="decline curve analysis, DCA oil gas, type curve analysis, EUR estimation, well decline rate">
+  <link rel="canonical" href="https://mineralsearch.io/blog/decline-curve-analysis.html">
+  <meta property="og:title" content="Decline Curve Analysis for Oil & Gas Wells — Beginner's Guide">
+  <meta property="og:description" content="Beginner's guide to decline curve analysis (DCA) for oil and gas wells. Learn about exponential, hyperbolic, and harmonic decline, type curves, and EUR estimation.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Decline Curve Analysis for Oil & Gas Wells — Beginner's Guide",
+    "description": "Beginner's guide to decline curve analysis (DCA) for oil and gas wells. Learn about exponential, hyperbolic, and harmonic decline, type curves, and EUR estimation.",
+    "datePublished": "2026-02-25",
+    "dateModified": "2026-02-25",
+    "author": { "@type": "Organization", "name": "MineralSearch" },
+    "publisher": { "@type": "Organization", "name": "MineralSearch", "url": "https://mineralsearch.io" },
+    "mainEntityOfPage": "https://mineralsearch.io/blog/decline-curve-analysis.html"
+  }
+  </script>
+  
+  <style>
+    :root{--bg-primary:#0a0e17;--bg-secondary:#0f1420;--bg-card:#131a2b;--border:#1e2a42;--accent:#00d4aa;--accent-dim:rgba(0,212,170,0.15);--text:#e2e8f0;--text-secondary:#94a3b8;--text-muted:#64748b;--radius:12px;--radius-sm:8px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .nav{background:rgba(10,14,23,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{display:flex;align-items:center;gap:10px;color:var(--text);font-weight:700;font-size:1.1rem;text-decoration:none}
+    .logo-icon{width:32px;height:32px;background:var(--accent);color:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+    .nav-links a{color:var(--text-secondary);font-size:0.9rem;font-weight:500;text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--text)}
+    .nav-cta{background:var(--accent)!important;color:#000!important;padding:8px 20px;border-radius:var(--radius-sm);font-weight:600!important}
+    article{max-width:760px;margin:0 auto;padding:40px 24px 80px}
+    .breadcrumb{font-size:0.85rem;color:var(--text-muted);margin-bottom:32px}.breadcrumb a{color:var(--text-secondary)}
+    .post-meta{color:var(--text-muted);font-size:0.9rem;margin-bottom:32px}
+    h1{font-size:2.2rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.2}
+    h2{font-size:1.5rem;font-weight:700;margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+    h3{font-size:1.2rem;font-weight:600;margin:28px 0 12px}
+    p{color:var(--text-secondary);margin-bottom:16px}
+    ul,ol{color:var(--text-secondary);margin:0 0 20px 24px}
+    li{margin-bottom:8px}
+    strong{color:var(--text)}
+    .callout{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius-sm);padding:16px 20px;margin:20px 0;color:var(--text-secondary)}
+    .callout strong{color:var(--accent)}
+    .cta-box{background:linear-gradient(135deg,rgba(0,212,170,0.1),rgba(0,212,170,0.03));border:1px solid rgba(0,212,170,0.3);border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0}
+    .cta-box h3{font-size:1.2rem;margin-bottom:8px;border:none;padding:0}.cta-box p{color:var(--text-secondary);margin-bottom:16px}
+    .cta-btn{display:inline-block;background:var(--accent);color:#000;padding:12px 28px;border-radius:var(--radius-sm);font-weight:700;text-decoration:none}.cta-btn:hover{opacity:0.9;text-decoration:none}
+    .related{margin-top:48px;padding-top:24px;border-top:1px solid var(--border)}
+    .related h3{border:none;padding:0;margin-bottom:16px}
+    .related ul{list-style:none;margin-left:0}.related li{margin-bottom:10px}
+    .footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;color:var(--text-muted);font-size:0.85rem}
+    @media(max-width:640px){h1{font-size:1.6rem}h2{font-size:1.3rem}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><div class="logo-icon">M</div> MineralSearch</a>
+    <ul class="nav-links">
+      <li><a href="../wells.html">Texas</a></li>
+      <li><a href="../gom.html">Gulf of Mexico</a></li>
+      <li><a href="../calculator.html">Tools</a></li>
+      <li><a href="../index.html#pricing">Pricing</a></li>
+      <li><a href="../login.html" class="nav-cta">Log In</a></li>
+    </ul>
+  </div></nav>
+  <article>
+    <div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="index.html">Blog</a> &rsaquo; Decline Curve Analysis for Oil & Gas Wells — Beginner's Guide</div>
+    <h1>Decline Curve Analysis for Oil &amp; Gas Wells &mdash; Beginner's Guide</h1>
+    <p class="post-meta">February 25, 2026 &bull; 7 min read</p>
+
+    <p>Decline curve analysis (DCA) is one of the most fundamental tools in petroleum engineering and reservoir evaluation. It uses historical production data to forecast future production and estimate the total recoverable reserves (EUR) from a well. Even if you are not an engineer, understanding the basics of DCA helps you evaluate well performance and mineral right valuations.</p>
+
+    <h2>The Basic Concept</h2>
+    <p>Oil and gas wells produce at their highest rate early in their life, then production declines over time as reservoir pressure drops. DCA fits a mathematical curve to the historical production data and projects it into the future. The area under the curve represents the estimated ultimate recovery (EUR).</p>
+
+    <h2>Types of Decline</h2>
+    <p>Arps' decline equations define three types of production decline:</p>
+
+    <h3>Exponential Decline (b = 0)</h3>
+    <p>Production declines at a constant percentage rate over time. This is the simplest model and is often used for the late-life portion of a well's production. An exponential decline of 10% per year means production drops by 10% of the current rate each year.</p>
+
+    <h3>Hyperbolic Decline (0 < b < 1)</h3>
+    <p>Production declines rapidly at first, then the rate of decline slows over time. This is the most common model for unconventional (shale) wells, where initial decline rates of 60-70% are typical but flatten out significantly over time. The "b-factor" determines how quickly the decline rate changes — higher b values mean slower flattening.</p>
+
+    <h3>Harmonic Decline (b = 1)</h3>
+    <p>A special case of hyperbolic decline where the decline rate is proportional to the production rate. Rarely used as a standalone model but serves as an upper bound on hyperbolic decline.</p>
+
+    <h2>Practical Application for Unconventional Wells</h2>
+    <p>Modern horizontal wells in the Permian Basin and Eagle Ford typically exhibit:</p>
+    <ul>
+      <li><strong>First-year decline: 60-75%</strong> — Production drops sharply in the first 12 months</li>
+      <li><strong>Second-year decline: 30-40%</strong> — The decline rate itself slows down</li>
+      <li><strong>Long tail production</strong> — Wells can produce low but steady volumes for 20-30+ years</li>
+    </ul>
+    <p>Most analysts use a "modified hyperbolic" model that starts with hyperbolic decline and switches to exponential decline at some point (often when the annual decline rate reaches 5-8%). This prevents the hyperbolic curve from overestimating long-term production.</p>
+
+    <h2>Estimating EUR</h2>
+    <p>EUR (estimated ultimate recovery) is the total cumulative production a well will produce over its economic life. To estimate EUR:</p>
+    <ol>
+      <li>Gather monthly production data for the well (available on <a href="../wells.html">MineralSearch</a> for Texas wells)</li>
+      <li>Fit a decline curve to the historical data</li>
+      <li>Project the curve forward until production reaches an economic limit (typically 5-10 bbl/d for oil wells)</li>
+      <li>Sum the historical cumulative production plus the projected future production</li>
+    </ol>
+    <p>For a typical Permian Basin horizontal well in 2026, EURs range from 500,000 to 1,500,000 barrels of oil equivalent (BOE), depending on location, lateral length, and formation.</p>
+
+    <h2>Using DCA for Valuation</h2>
+    <p>DCA is the foundation of cash flow-based mineral rights valuation. By projecting production, applying price assumptions, and discounting future cash flows, you can estimate the present value of a producing mineral interest. See our guide on <a href="how-to-value-mineral-rights.html">how to value mineral rights</a> for a complete walkthrough.</p>
+
+    <div class="cta-box">
+      <h3>Get Production Data for DCA</h3>
+      <p>Monthly production data for 1.31M Texas wells. Export for your decline curve analysis.</p>
+      <a href="../wells.html" class="cta-btn">Search Production Data</a>
+    </div>
+    <div class="related"><h3>Related Articles</h3><ul>
+        <li><a href="how-to-value-mineral-rights.html">How to Value Mineral Rights in Texas</a></li>
+        <li><a href="wolfcamp-production-data.html">Wolfcamp Production Data</a></li>
+        <li><a href="permian-basin-well-data.html">Permian Basin Well Data</a></li>
+        <li><a href="eagle-ford-well-data.html">Eagle Ford Well Data & Production</a></li>
+    </ul></div>
+  </article>
+  <footer class="footer"><p>&copy; 2026 MineralSearch. Data sourced from Texas Railroad Commission and public records.</p></footer>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineralSearch — Oil & Gas Data Platform</title>
+  <meta name="description" content="Every well, every lease, every owner. Texas onshore, Gulf of Mexico offshore, and more states coming soon. Built for landmen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO — Above the fold
+     ============================================ -->
+<section class="hp-hero">
+  <div class="hp-hero-bg"></div>
+  <div class="hp-container hp-hero-inner">
+
+    <div class="hp-hero-badge animate-in">
+      <span class="pulse"></span>
+      Live Data &mdash; Updated Monthly from RRC, BOEM &amp; BSEE
+    </div>
+
+    <h1 class="hp-hero-h1 animate-in animate-delay-1">1.3 Million Wells.<br>One Platform.</h1>
+
+    <p class="hp-hero-sub animate-in animate-delay-2">
+      Texas onshore and Gulf of Mexico offshore well data, production, permits, leases, and mineral ownership. Updated monthly from the Railroad Commission.
+    </p>
+
+    <!-- Search Bar -->
+    <div class="hp-search animate-in animate-delay-3">
+      <div class="hp-search-icon">&#128269;</div>
+      <input type="text" id="hero-search-input" placeholder="Search by county, operator, lease name, or API number...">
+      <button id="hero-search-btn">Search</button>
+    </div>
+
+    <!-- Stats Row — tight inline -->
+    <div class="hp-stats-row animate-in animate-delay-3">
+      <span class="hp-stat-item"><strong id="stat-wells">1,365,827</strong> Wells</span>
+      <span class="hp-stat-sep">&middot;</span>
+      <span class="hp-stat-item"><strong id="stat-producing">281,981</strong> Producing</span>
+      <span class="hp-stat-sep">&middot;</span>
+      <span class="hp-stat-item"><strong>275</strong> Counties</span>
+      <span class="hp-stat-sep">&middot;</span>
+      <span class="hp-stat-item"><strong id="stat-operators">41,209</strong> Operators</span>
+    </div>
+
+    <!-- Two big CTA buttons -->
+    <div class="hp-hero-ctas animate-in animate-delay-4">
+      <a href="wells.html" class="btn btn-primary btn-lg hp-cta-btn">Explore Texas &rarr;</a>
+      <a href="gom.html" class="btn btn-secondary btn-lg hp-cta-btn">Explore Gulf of Mexico &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     WHAT'S INSIDE — 3x2 feature grid
+     ============================================ -->
+<section class="hp-section hp-section--dark" id="features">
+  <div class="hp-container">
+    <div class="hp-section-head">
+      <h2>What's Inside</h2>
+      <p>Six data modules. One subscription. No more juggling spreadsheets and overpriced services.</p>
+    </div>
+    <div class="hp-features-grid">
+      <div class="hp-feat-card">
+        <div class="hp-feat-icon" style="background:var(--green-dim);color:var(--green);">&#9733;</div>
+        <div class="hp-feat-body">
+          <h3>Well Data</h3>
+          <p>1.3M wells with API, operator, county, depth, status, and type. Full RRC records.</p>
+        </div>
+      </div>
+      <div class="hp-feat-card">
+        <div class="hp-feat-icon" style="background:var(--accent-dim);color:var(--accent);">&#9881;</div>
+        <div class="hp-feat-body">
+          <h3>Production</h3>
+          <p>Monthly oil &amp; gas production history since 1993. Decline curves and IP rates.</p>
+        </div>
+      </div>
+      <div class="hp-feat-card">
+        <div class="hp-feat-icon" style="background:var(--blue-dim);color:var(--blue);">&#9889;</div>
+        <div class="hp-feat-body">
+          <h3>Drilling Permits</h3>
+          <p>Every permit filed with the RRC. Coordinates, operator, formation, and depth.</p>
+        </div>
+      </div>
+      <div class="hp-feat-card">
+        <div class="hp-feat-icon" style="background:var(--gold-dim);color:var(--gold);">&#9830;</div>
+        <div class="hp-feat-body">
+          <h3>Mineral Ownership</h3>
+          <p>CAD mineral interest records. Know who owns what before you knock on the door.</p>
+        </div>
+      </div>
+      <div class="hp-feat-card">
+        <div class="hp-feat-icon" style="background:rgba(139,92,246,0.15);color:#8b5cf6;">&#128196;</div>
+        <div class="hp-feat-body">
+          <h3>Lease Records</h3>
+          <p>County clerk oil &amp; gas leases, deeds, assignments, and memoranda.</p>
+        </div>
+      </div>
+      <div class="hp-feat-card">
+        <div class="hp-feat-icon" style="background:rgba(249,115,22,0.15);color:#f97316;">&#127754;</div>
+        <div class="hp-feat-body">
+          <h3>Offshore Data</h3>
+          <p>55K GOM wells, 255K lease records, pipelines, platforms, rigs, and fields.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     REGIONS — Two cards side by side
+     ============================================ -->
+<section class="hp-section" id="regions">
+  <div class="hp-container">
+    <div class="hp-regions-row">
+      <a href="wells.html" class="hp-region-card hp-region--tx">
+        <div class="hp-region-tag">Texas Onshore</div>
+        <h3>Texas Onshore</h3>
+        <div class="hp-region-nums">
+          <span><strong id="stat-onshore">1,310,381</strong> wells</span>
+          <span><strong>275</strong> counties</span>
+          <span><strong>281,981</strong> producing</span>
+        </div>
+        <p>Wells, production, permits, mineral ownership, leases, runsheets, operators, and interactive map.</p>
+        <span class="hp-region-cta">Explore Texas &rarr;</span>
+      </a>
+      <a href="gom.html" class="hp-region-card hp-region--gom">
+        <div class="hp-region-tag hp-region-tag--blue">Gulf of Mexico</div>
+        <h3>Gulf of Mexico</h3>
+        <div class="hp-region-nums">
+          <span><strong id="stat-offshore">55,446</strong> wells</span>
+          <span><strong>6,318</strong> fields</span>
+          <span><strong>255,797</strong> leases</span>
+        </div>
+        <p>Wells, lease owners, pipelines, platforms, active rigs, production rankings, and field data.</p>
+        <span class="hp-region-cta hp-region-cta--blue">Explore GOM &rarr;</span>
+      </a>
+    </div>
+    <!-- Coming Soon banner -->
+    <div class="hp-coming-banner">
+      <span class="hp-coming-label">Coming Soon</span>
+      <span class="hp-coming-states">New Mexico &middot; Oklahoma &middot; North Dakota &middot; Colorado &middot; Wyoming &middot; Louisiana</span>
+      <form class="hp-coming-form" onsubmit="event.preventDefault(); this.innerHTML='<span style=color:var(--accent);font-weight:600;>We\'ll notify you!</span>';">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">Notify Me</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHO IT'S FOR — 3 columns
+     ============================================ -->
+<section class="hp-section hp-section--dark" id="audience">
+  <div class="hp-container">
+    <div class="hp-section-head">
+      <h2>Who It's For</h2>
+    </div>
+    <div class="hp-audience-grid">
+      <div class="hp-audience-card">
+        <div class="hp-audience-icon">&#128221;</div>
+        <h3>Landmen</h3>
+        <p class="hp-audience-quote">"Run title in minutes, not days."</p>
+        <p>Search mineral ownership, lease records, and county clerk documents. Build runsheets without leaving your desk.</p>
+      </div>
+      <div class="hp-audience-card">
+        <div class="hp-audience-icon">&#9881;</div>
+        <h3>Operators</h3>
+        <p class="hp-audience-quote">"Find wells, track competition, monitor permits."</p>
+        <p>Track new drilling permits, monitor competitor activity, analyze production trends across your operating areas.</p>
+      </div>
+      <div class="hp-audience-card">
+        <div class="hp-audience-icon">&#128200;</div>
+        <h3>Investors</h3>
+        <p class="hp-audience-quote">"Evaluate acreage, analyze production, assess value."</p>
+        <p>Due diligence on mineral acquisitions, production decline analysis, and acreage evaluation in minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     COMPARE — Competitive positioning
+     ============================================ -->
+<section class="hp-section" id="compare">
+  <div class="hp-container">
+    <div class="hp-section-head">
+      <h2>Why MineralSearch vs. the Alternatives</h2>
+      <p>Enterprise-grade data at a fraction of the cost.</p>
+    </div>
+    <div class="hp-compare-table-wrap">
+      <table class="hp-compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="hp-compare-highlight">MineralSearch<br><span class="hp-compare-price">$299/mo</span></th>
+            <th>Enverus / DrillingInfo<br><span class="hp-compare-price hp-compare-price--alt">~$50,000/yr</span></th>
+            <th>Manual Research<br><span class="hp-compare-price hp-compare-price--alt">~$600/day</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Well data &amp; production</td>
+            <td class="hp-compare-highlight"><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check hp-check--slow">Slow</span></td>
+          </tr>
+          <tr>
+            <td>Drilling permits</td>
+            <td class="hp-compare-highlight"><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-x">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Mineral ownership</td>
+            <td class="hp-compare-highlight"><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check hp-check--slow">Slow</span></td>
+          </tr>
+          <tr>
+            <td>Lease records</td>
+            <td class="hp-compare-highlight"><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check hp-check--slow">Slow</span></td>
+          </tr>
+          <tr>
+            <td>GOM offshore data</td>
+            <td class="hp-compare-highlight"><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-x">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Data export (CSV)</td>
+            <td class="hp-compare-highlight"><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-x">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>No long-term contract</td>
+            <td class="hp-compare-highlight"><span class="hp-check">&#10003;</span></td>
+            <td><span class="hp-x">&#10007;</span></td>
+            <td><span class="hp-check">&#10003;</span></td>
+          </tr>
+          <tr class="hp-compare-total-row">
+            <td><strong>Annual cost</strong></td>
+            <td class="hp-compare-highlight"><strong class="text-accent">$3,588</strong></td>
+            <td><strong class="text-gold">$50,000+</strong></td>
+            <td><strong class="text-gold">$150,000+</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hp-compare-footnote">Save over <strong class="text-accent">$46,000/year</strong> compared to Enverus. Same data sources. Same results.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     PRICING — 3 tier cards
+     ============================================ -->
+<section class="hp-section hp-section--dark" id="pricing">
+  <div class="hp-container">
+    <div class="hp-section-head">
+      <h2>Simple, Transparent Pricing</h2>
+      <p>No contracts. No setup fees. 7-day free trial on every plan. Cancel anytime.</p>
+    </div>
+    <div class="hp-pricing-grid">
+      <!-- Basic -->
+      <div class="hp-price-card">
+        <div class="hp-price-tier">Basic</div>
+        <div class="hp-price-amount"><span class="hp-price-dollar">$</span>99<span class="hp-price-period">/mo</span></div>
+        <p class="hp-price-desc">Individual landmen working one county.</p>
+        <ul class="hp-price-features">
+          <li>Well data &amp; production history</li>
+          <li>Drilling permits &amp; completions</li>
+          <li>1 county included</li>
+          <li>Monthly data updates</li>
+          <li>Email support</li>
+          <li class="disabled">Mineral ownership data</li>
+          <li class="disabled">Lease records &amp; documents</li>
+          <li class="disabled">Data export (CSV/Excel)</li>
+        </ul>
+        <button class="btn btn-secondary btn-full" onclick="window.__subscribe('basic')">Start Free Trial</button>
+      </div>
+      <!-- Pro -->
+      <div class="hp-price-card hp-price-card--featured">
+        <div class="hp-price-badge">MOST POPULAR</div>
+        <div class="hp-price-tier">Pro</div>
+        <div class="hp-price-amount"><span class="hp-price-dollar">$</span>299<span class="hp-price-period">/mo</span></div>
+        <p class="hp-price-desc">Full access for serious land professionals.</p>
+        <ul class="hp-price-features">
+          <li>Everything in Basic</li>
+          <li>All 275 counties included</li>
+          <li>Mineral ownership &amp; deed history</li>
+          <li>Oil &amp; gas lease records</li>
+          <li>County clerk document search</li>
+          <li>FracFocus chemical data</li>
+          <li>Data export (CSV/Excel)</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="btn btn-primary btn-full" onclick="window.__subscribe('pro')">Start Free Trial</button>
+      </div>
+      <!-- Enterprise -->
+      <div class="hp-price-card">
+        <div class="hp-price-tier">Enterprise</div>
+        <div class="hp-price-amount"><span class="hp-price-dollar">$</span>999<span class="hp-price-period">/mo</span></div>
+        <p class="hp-price-desc">Land companies and brokerage firms.</p>
+        <ul class="hp-price-features">
+          <li>Everything in Pro</li>
+          <li>REST API access</li>
+          <li>White-label options</li>
+          <li>Custom county coverage</li>
+          <li>Dedicated account manager</li>
+          <li>Bulk data downloads</li>
+          <li>SSO &amp; team management</li>
+          <li>Custom integrations</li>
+        </ul>
+        <button class="btn btn-secondary btn-full" onclick="window.__subscribe('enterprise')">Start Free Trial</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section class="hp-section" id="testimonials">
+  <div class="hp-container">
+    <div class="hp-section-head">
+      <h2>Trusted by Land Professionals</h2>
+    </div>
+    <div class="hp-testimonials-grid">
+      <div class="hp-testimonial">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Replaced my Enverus subscription and saved <strong>$40K/year</strong>. The data is just as good for the work I do in the Permian Basin."</p>
+        <div class="hp-testimonial-author">
+          <div class="testimonial-avatar">JR</div>
+          <div>
+            <div class="testimonial-name">Jake Reynolds</div>
+            <div class="testimonial-role">Independent Landman, Midland TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="hp-testimonial">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"I can run title from my truck now. <strong>Game changer.</strong> Having ownership and lease data alongside production in one place saves me hours every day."</p>
+        <div class="hp-testimonial-author">
+          <div class="testimonial-avatar">SM</div>
+          <div>
+            <div class="testimonial-name">Sarah Mitchell</div>
+            <div class="testimonial-role">Senior Landman, Eagle Ford</div>
+          </div>
+        </div>
+      </div>
+      <div class="hp-testimonial">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Best <strong>$299</strong> I spend every month. The permit alerts alone have helped me get ahead of three lease plays this quarter."</p>
+        <div class="hp-testimonial-author">
+          <div class="testimonial-avatar">TC</div>
+          <div>
+            <div class="testimonial-name">Tyler Crawford</div>
+            <div class="testimonial-role">Land Manager, Permian Basin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA BANNER
+     ============================================ -->
+<section class="hp-cta-banner">
+  <div class="hp-container hp-cta-inner">
+    <h2>Start searching 1.3 million wells today.</h2>
+    <p>7-day free trial. No credit card required. Full Pro access.</p>
+    <a href="login.html?tab=signup" class="btn btn-primary btn-lg">Start Your Free Trial</a>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer hp-footer">
+  <div class="hp-container">
+    <div class="hp-footer-grid">
+      <div class="hp-footer-brand">
+        <div class="nav-logo" style="margin-bottom:4px;">
+          <div class="logo-icon">M</div>
+          MineralSearch
+        </div>
+        <p>Oil &amp; gas data for landmen. Texas, Gulf of Mexico, and more states coming soon.</p>
+      </div>
+      <div>
+        <h4>Regions</h4>
+        <ul>
+          <li><a href="wells.html?region=onshore">Texas Onshore</a></li>
+          <li><a href="gom.html">Gulf of Mexico</a></li>
+          <li><a href="wells.html?q=MIDLAND">Midland County</a></li>
+          <li><a href="wells.html?q=REEVES">Reeves County</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Texas</h4>
+        <ul>
+          <li><a href="wells.html">Wells</a></li>
+          <li><a href="production.html">Production</a></li>
+          <li><a href="permits.html">Permits</a></li>
+          <li><a href="runsheet.html">Runsheet</a></li>
+          <li><a href="operators.html">Operators</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="leases.html">Leases</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="calculator.html">Calculators</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Data Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+      <span>Data sourced from RRC, BOEM, BSEE, county clerks, GLO, FracFocus, and CADs.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Trial Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Jake Reynolds">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="jake@landmanpro.com">
+    </div>
+    <div class="form-group">
+      <label>Company (optional)</label>
+      <input type="text" placeholder="Reynolds Land Services">
+    </div>
+    <div class="form-group">
+      <label>Primary County</label>
+      <select class="filter-select" style="width:100%;">
+        <option>Midland</option><option>Ector</option><option>Reeves</option>
+        <option>Howard</option><option>Martin</option><option>Karnes</option>
+        <option>DeWitt</option><option>Webb</option><option>Dimmit</option>
+        <option>Loving</option><option>Ward</option><option>Pecos</option>
+      </select>
+    </div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+    <p class="text-muted text-center" style="margin-top:12px;font-size:0.78rem;">By signing up you agree to our Terms of Service and Privacy Policy.</p>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+</body>
+</html>

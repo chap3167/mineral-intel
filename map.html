@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <style>
+    .map-page { display: flex; height: calc(100vh - 64px); margin-top: 64px; }
+    .map-sidebar {
+      width: 320px; min-width: 280px; background: var(--bg-card); border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; overflow-y: auto; z-index: 500;
+    }
+    .map-sidebar-header { padding: 20px; border-bottom: 1px solid var(--border); }
+    .map-sidebar-header h2 { font-size: 1.2rem; margin-bottom: 4px; }
+    .map-sidebar-header p { font-size: 0.8rem; color: var(--text-muted); }
+    .map-filter-section { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .map-filter-section h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 10px; font-weight: 600; }
+    .map-filter-section select, .map-filter-section input {
+      width: 100%; padding: 8px 12px; background: var(--bg-input); border: 1px solid var(--border);
+      border-radius: var(--radius-xs); color: var(--text); font-size: 0.85rem; outline: none; margin-bottom: 8px;
+    }
+    .map-filter-section select:focus, .map-filter-section input:focus { border-color: var(--accent); }
+    .map-filter-section select option { background: var(--bg-card); color: var(--text); }
+    .layer-toggles { display: flex; flex-direction: column; gap: 8px; }
+    .layer-toggle { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.85rem; color: var(--text-secondary); }
+    .layer-toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
+    .layer-toggle .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .map-stats { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .map-stats .stat-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.82rem; }
+    .map-stats .stat-row .stat-label { color: var(--text-muted); }
+    .map-stats .stat-row .stat-val { font-weight: 600; font-family: 'JetBrains Mono', monospace; color: var(--accent); }
+    .map-legend { padding: 16px 20px; }
+    .map-legend h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 10px; font-weight: 600; }
+    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 6px; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    #map { flex: 1; z-index: 1; }
+    .leaflet-popup-content-wrapper { background: var(--bg-card) !important; color: var(--text) !important; border: 1px solid var(--border) !important; border-radius: var(--radius-sm) !important; box-shadow: var(--shadow-lg) !important; }
+    .leaflet-popup-tip { background: var(--bg-card) !important; border: 1px solid var(--border) !important; }
+    .leaflet-popup-content { margin: 14px 16px !important; font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; line-height: 1.5 !important; }
+    .popup-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: var(--text); }
+    .popup-row { display: flex; justify-content: space-between; gap: 12px; padding: 2px 0; }
+    .popup-label { color: var(--text-muted); font-size: 0.78rem; }
+    .popup-val { font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+    .popup-val.green { color: var(--green); }
+    .popup-val.accent { color: var(--accent); }
+    .popup-badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 0.7rem; font-weight: 600; margin-top: 4px; }
+    .leaflet-container { background: #0a0e17 !important; }
+    .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
+      background: rgba(0, 212, 170, 0.3) !important;
+    }
+    .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+      background: rgba(0, 212, 170, 0.7) !important; color: #000 !important; font-weight: 700 !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+    @media (max-width: 900px) {
+      .map-page { flex-direction: column; }
+      .map-sidebar { width: 100%; max-height: 280px; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); }
+      #map { min-height: 400px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html" class="active">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="map-page">
+  <!-- Sidebar -->
+  <div class="map-sidebar">
+    <div class="map-sidebar-header">
+      <div style="margin-bottom:10px;">
+        <a href="wells.html" style="color:var(--accent);font-size:0.8rem;text-decoration:none;font-weight:600;">Texas</a>
+        <span style="color:var(--text-muted);margin:0 6px;font-size:0.8rem;">&rsaquo;</span>
+        <span style="color:var(--text);font-size:0.8rem;font-weight:600;">Map</span>
+      </div>
+      <h2>Interactive Map</h2>
+      <p>90,000+ wells with real GPS coordinates across Texas.</p>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:10px;">
+        <a href="wells.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Wells</a>
+        <a href="production.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Production</a>
+        <a href="permits.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Permits</a>
+        <a href="map.html" class="btn btn-primary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Map</a>
+        <a href="leases.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Leases</a>
+      </div>
+    </div>
+
+    <div class="map-filter-section">
+      <h4>Layers</h4>
+      <div class="layer-toggles">
+        <label class="layer-toggle"><input type="checkbox" id="layer-wells" checked><span class="dot" style="background:var(--green);"></span> Wells</label>
+        <label class="layer-toggle"><input type="checkbox" id="layer-permits" checked><span class="dot" style="background:var(--gold);"></span> Permits</label>
+        <label class="layer-toggle"><input type="checkbox" id="layer-leases" checked><span class="dot" style="background:var(--blue);"></span> Leases</label>
+      </div>
+    </div>
+
+    <div class="map-filter-section">
+      <h4>Filters</h4>
+      <div style="position:relative;">
+        <input type="text" id="map-county" placeholder="Search counties..." autocomplete="off" style="width:100%;padding:8px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-size:0.85rem;outline:none;margin-bottom:8px;">
+        <input type="hidden" id="map-county-value">
+        <div id="map-county-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:200px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:600;margin-top:-6px;"></div>
+      </div>
+      <div style="position:relative;">
+        <input type="text" id="map-operator" placeholder="Search operators..." autocomplete="off" style="width:100%;padding:8px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-size:0.85rem;outline:none;margin-bottom:8px;">
+        <input type="hidden" id="map-operator-value">
+        <div id="map-operator-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:200px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:600;margin-top:-6px;"></div>
+      </div>
+<select id="map-status">
+        <option value="">All Statuses</option>
+        <option value="Producing">Producing</option>
+        <option value="Completed">Completed</option>
+        <option value="Permitted">Permitted</option>
+        <option value="Shut-in">Shut-in</option>
+        <option value="Plugged">Plugged</option>
+      </select>
+      <input type="text" id="map-search" placeholder="Search operator, lease...">
+      <button class="btn btn-primary btn-sm btn-full" onclick="applyMapFilters()" style="margin-top:4px;">Apply Filters</button>
+      <button class="btn btn-secondary btn-sm btn-full" onclick="resetMapFilters()" style="margin-top:4px;">Reset</button>
+    </div>
+
+    <div class="map-stats">
+      <h4 style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-muted);margin-bottom:10px;font-weight:600;">Map Stats</h4>
+      <div class="stat-row"><span class="stat-label">Visible Wells</span><span class="stat-val" id="map-well-count">0</span></div>
+      <div class="stat-row"><span class="stat-label">Producing</span><span class="stat-val" id="map-producing-count">0</span></div>
+      <div class="stat-row"><span class="stat-label">Total Oil (12mo)</span><span class="stat-val" id="map-total-oil">0</span></div>
+      <div class="stat-row"><span class="stat-label">Counties</span><span class="stat-val" id="map-county-count">0</span></div>
+    </div>
+
+    <div class="map-legend">
+      <h4>Legend</h4>
+      <div class="legend-item"><span class="legend-dot" style="background:#22c55e;"></span> Producing</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#f59e0b;"></span> Permitted</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#3b82f6;"></span> Completing</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#ef4444;"></span> Plugged</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8b5cf6;"></span> Shut-in</div>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="site.js?v=11"></script>
+</body>
+</html>

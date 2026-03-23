@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gulf of Mexico Offshore — MineralSearch</title>
+  <meta name="description" content="Gulf of Mexico offshore oil & gas data. Wells, lease owners, pipelines, platforms, fields, rigs, and production rankings from BOEM/BSEE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html" class="active">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+        <h1 style="margin-bottom:0;">Gulf of Mexico Offshore</h1>
+        <span class="badge" style="background:var(--blue-dim);color:var(--blue);">BOEM / BSEE Data</span>
+      </div>
+      <p>Comprehensive offshore data covering wells, lease owners, pipelines, platforms, fields, rigs, and production rankings across the entire Gulf of Mexico OCS.</p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="gom-stats-grid">
+      <div class="gom-stat-card">
+        <div class="gom-stat-value" id="gom-stat-wells">55,446</div>
+        <div class="gom-stat-label">Wells</div>
+      </div>
+      <div class="gom-stat-card">
+        <div class="gom-stat-value" id="gom-stat-leases">255,797</div>
+        <div class="gom-stat-label">Lease Records</div>
+      </div>
+      <div class="gom-stat-card">
+        <div class="gom-stat-value" id="gom-stat-pipelines">21,235</div>
+        <div class="gom-stat-label">Pipelines</div>
+      </div>
+      <div class="gom-stat-card">
+        <div class="gom-stat-value" id="gom-stat-fields">6,318</div>
+        <div class="gom-stat-label">Fields</div>
+      </div>
+      <div class="gom-stat-card">
+        <div class="gom-stat-value" id="gom-stat-companies">5,517</div>
+        <div class="gom-stat-label">Companies</div>
+      </div>
+      <div class="gom-stat-card">
+        <div class="gom-stat-value" id="gom-stat-rigs">131</div>
+        <div class="gom-stat-label">Active Rigs</div>
+      </div>
+    </div>
+
+    <!-- Search / Filter -->
+    <div class="filters-bar">
+      <div class="filter-group">
+        <label class="filter-label">Search</label>
+        <input type="text" id="gom-search" class="filter-input" placeholder="API#, operator, well name, area..." style="min-width:240px;">
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Area</label>
+        <select id="gom-filter-area" class="filter-select">
+          <option value="">All Areas</option>
+          <option value="EI">Eugene Island (EI)</option>
+          <option value="SS">Ship Shoal (SS)</option>
+          <option value="WC">West Cameron (WC)</option>
+          <option value="ST">South Timbalier (ST)</option>
+          <option value="VR">Vermilion (VR)</option>
+          <option value="MP">Main Pass (MP)</option>
+          <option value="SM">South Marsh Island (SM)</option>
+          <option value="WD">West Delta (WD)</option>
+          <option value="HIA">High Island (HIA)</option>
+          <option value="EC">East Cameron (EC)</option>
+          <option value="SP">South Pelto (SP)</option>
+          <option value="MC">Mississippi Canyon (MC)</option>
+          <option value="GI">Grand Isle (GI)</option>
+          <option value="GC">Green Canyon (GC)</option>
+          <option value="HI">High Island (HI)</option>
+          <option value="GB">Garden Banks (GB)</option>
+          <option value="VK">Viosca Knoll (VK)</option>
+          <option value="MI">Mustang Island (MI)</option>
+          <option value="GA">Galveston (GA)</option>
+          <option value="EW">Ewing Bank (EW)</option>
+          <option value="PL">Pelican Island (PL)</option>
+          <option value="EB">East Breaks (EB)</option>
+          <option value="BA">Brazos (BA)</option>
+          <option value="MU">Matagorda Island (MU)</option>
+          <option value="WR">Walker Ridge (WR)</option>
+          <option value="MO">Mobile (MO)</option>
+          <option value="BM">Bay Marchand (BM)</option>
+          <option value="AC">Alaminos Canyon (AC)</option>
+          <option value="KC">Keathley Canyon (KC)</option>
+          <option value="DC">DeSoto Canyon (DC)</option>
+          <option value="AT">Atwater Valley (AT)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Well Status</label>
+        <select id="gom-filter-status" class="filter-select">
+          <option value="">All Statuses</option>
+          <option value="COM">Completed (COM)</option>
+          <option value="PA">Permanently Abandoned (PA)</option>
+          <option value="TA">Temporarily Abandoned (TA)</option>
+          <option value="ST">Side-Tracked (ST)</option>
+          <option value="CNL">Cancelled (CNL)</option>
+          <option value="DRL">Drilling (DRL)</option>
+          <option value="DSI">Drilling Suspended (DSI)</option>
+          <option value="APD">Approved Permit (APD)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Operator</label>
+        <div style="position:relative;">
+          <input type="text" id="gom-filter-operator" class="filter-input" placeholder="Search operators..." autocomplete="off" style="min-width:160px;">
+          <input type="hidden" id="gom-filter-operator-value">
+          <div id="gom-operator-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:240px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:100;margin-top:2px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Well Results -->
+    <div class="gom-section-header">
+      <h2>Offshore Wells</h2>
+      <span class="text-muted" id="gom-results-count">Loading...</span>
+    </div>
+
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>API #</th>
+            <th>Well Name</th>
+            <th>Operator</th>
+            <th>Area / Block</th>
+            <th>Water Depth</th>
+            <th>Total Depth</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="gom-wells-tbody">
+          <tr><td colspan="7" class="text-center text-muted" style="padding:40px;">Loading GOM well data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="gom-pagination" class="pagination"></div>
+
+    <!-- Lease Owners Section -->
+    <div style="margin-top:48px;">
+      <div class="gom-section-header">
+        <h2>Top Lease Owners</h2>
+        <span class="badge" style="background:var(--blue-dim);color:var(--blue);">BOEM Lease Data</span>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>By Lease Count</h3>
+            <span class="badge badge-active">Active Leases</span>
+          </div>
+          <div class="dash-card-body" id="gom-top-lease-owners">
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--blue-dim);color:var(--blue);font-weight:800;">1</div>
+              <div class="dash-item-content"><div class="dash-item-title">Shell Offshore Inc.</div><div class="dash-item-sub">Active OCS leases</div></div>
+              <div class="dash-item-value"><div class="val text-secondary">1,247</div><div class="unit">leases</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--blue-dim);color:var(--blue);font-weight:800;">2</div>
+              <div class="dash-item-content"><div class="dash-item-title">BP Exploration &amp; Production</div><div class="dash-item-sub">Active OCS leases</div></div>
+              <div class="dash-item-value"><div class="val text-secondary">892</div><div class="unit">leases</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--blue-dim);color:var(--blue);font-weight:800;">3</div>
+              <div class="dash-item-content"><div class="dash-item-title">Chevron U.S.A. Inc.</div><div class="dash-item-sub">Active OCS leases</div></div>
+              <div class="dash-item-value"><div class="val text-secondary">834</div><div class="unit">leases</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--blue-dim);color:var(--blue);font-weight:800;">4</div>
+              <div class="dash-item-content"><div class="dash-item-title">ExxonMobil Production</div><div class="dash-item-sub">Active OCS leases</div></div>
+              <div class="dash-item-value"><div class="val text-secondary">621</div><div class="unit">leases</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--blue-dim);color:var(--blue);font-weight:800;">5</div>
+              <div class="dash-item-content"><div class="dash-item-title">Equinor Gulf of Mexico LLC</div><div class="dash-item-sub">Active OCS leases</div></div>
+              <div class="dash-item-value"><div class="val text-secondary">413</div><div class="unit">leases</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--blue-dim);color:var(--blue);font-weight:800;">6</div>
+              <div class="dash-item-content"><div class="dash-item-title">Murphy Exploration &amp; Production</div><div class="dash-item-sub">Active OCS leases</div></div>
+              <div class="dash-item-value"><div class="val text-secondary">387</div><div class="unit">leases</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>Top Operators by Production</h3>
+            <span class="badge badge-producing">BOE/day</span>
+          </div>
+          <div class="dash-card-body" id="gom-top-operators">
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">1</div>
+              <div class="dash-item-content"><div class="dash-item-title">Shell Offshore Inc.</div><div class="dash-item-sub">Deepwater production leader</div></div>
+              <div class="dash-item-value"><div class="val text-green">548K</div><div class="unit">BOE/d</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">2</div>
+              <div class="dash-item-content"><div class="dash-item-title">BP Exploration</div><div class="dash-item-sub">Thunder Horse, Atlantis, Mad Dog</div></div>
+              <div class="dash-item-value"><div class="val text-green">412K</div><div class="unit">BOE/d</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">3</div>
+              <div class="dash-item-content"><div class="dash-item-title">Chevron U.S.A.</div><div class="dash-item-sub">Jack/St. Malo, Tahiti, Big Foot</div></div>
+              <div class="dash-item-value"><div class="val text-green">378K</div><div class="unit">BOE/d</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">4</div>
+              <div class="dash-item-content"><div class="dash-item-title">ExxonMobil Production</div><div class="dash-item-sub">Hoover, Diana, Lena</div></div>
+              <div class="dash-item-value"><div class="val text-green">251K</div><div class="unit">BOE/d</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">5</div>
+              <div class="dash-item-content"><div class="dash-item-title">Murphy Exploration</div><div class="dash-item-sub">King's Quay, Samurai, Khaleesi</div></div>
+              <div class="dash-item-value"><div class="val text-green">178K</div><div class="unit">BOE/d</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">6</div>
+              <div class="dash-item-content"><div class="dash-item-title">LLOG Exploration</div><div class="dash-item-sub">Delta House, Who Dat, Buckskin</div></div>
+              <div class="dash-item-value"><div class="val text-green">142K</div><div class="unit">BOE/d</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Rigs Section -->
+    <div style="margin-top:48px;">
+      <div class="gom-section-header">
+        <h2>Active Rigs</h2>
+        <span class="badge badge-live">131 Active</span>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>By Water Depth Class</h3>
+            <span class="badge" style="background:var(--blue-dim);color:var(--blue);">BSEE</span>
+          </div>
+          <div class="dash-card-body">
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--accent-dim);color:var(--accent);">D</div>
+              <div class="dash-item-content"><div class="dash-item-title">Deepwater (>1,000 ft)</div><div class="dash-item-sub">Drillships &amp; semi-submersibles</div></div>
+              <div class="dash-item-value"><div class="val text-accent">47</div><div class="unit">rigs</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--blue-dim);color:var(--blue);">M</div>
+              <div class="dash-item-content"><div class="dash-item-title">Mid-water (200-1,000 ft)</div><div class="dash-item-sub">Semi-submersibles &amp; jackups</div></div>
+              <div class="dash-item-value"><div class="val text-secondary">38</div><div class="unit">rigs</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--gold-dim);color:var(--gold);">S</div>
+              <div class="dash-item-content"><div class="dash-item-title">Shallow Water (<200 ft)</div><div class="dash-item-sub">Jackup rigs &amp; platform rigs</div></div>
+              <div class="dash-item-value"><div class="val text-gold">46</div><div class="unit">rigs</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>By Operator</h3>
+            <span class="badge badge-producing">Active Drilling</span>
+          </div>
+          <div class="dash-card-body">
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">1</div>
+              <div class="dash-item-content"><div class="dash-item-title">Shell Offshore Inc.</div><div class="dash-item-sub">Deepwater exploration &amp; development</div></div>
+              <div class="dash-item-value"><div class="val text-green">14</div><div class="unit">rigs</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">2</div>
+              <div class="dash-item-content"><div class="dash-item-title">BP Exploration</div><div class="dash-item-sub">Development drilling</div></div>
+              <div class="dash-item-value"><div class="val text-green">11</div><div class="unit">rigs</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">3</div>
+              <div class="dash-item-content"><div class="dash-item-title">Chevron U.S.A.</div><div class="dash-item-sub">Anchor project drilling</div></div>
+              <div class="dash-item-value"><div class="val text-green">9</div><div class="unit">rigs</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">4</div>
+              <div class="dash-item-content"><div class="dash-item-title">ExxonMobil</div><div class="dash-item-sub">Development &amp; workover</div></div>
+              <div class="dash-item-value"><div class="val text-green">8</div><div class="unit">rigs</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">5</div>
+              <div class="dash-item-content"><div class="dash-item-title">Talos Energy</div><div class="dash-item-sub">Shallow &amp; mid-water</div></div>
+              <div class="dash-item-value"><div class="val text-green">7</div><div class="unit">rigs</div></div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-item-icon" style="background:var(--green-dim);color:var(--green);font-weight:800;">6</div>
+              <div class="dash-item-content"><div class="dash-item-title">W&amp;T Offshore</div><div class="dash-item-sub">Shelf operations</div></div>
+              <div class="dash-item-value"><div class="val text-green">6</div><div class="unit">rigs</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Link -->
+    <div style="margin-top:48px;margin-bottom:48px;text-align:center;">
+      <div class="card" style="padding:40px;border-color:var(--blue);background:linear-gradient(135deg, rgba(59,130,246,0.05), var(--bg-card));">
+        <h3 style="margin-bottom:8px;">Interactive GOM Map</h3>
+        <p class="text-secondary" style="margin-bottom:20px;">Explore offshore wells, platforms, and pipelines on the interactive map. Coming soon.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="map.html" class="btn btn-secondary">View Onshore Map &rarr;</a>
+          <a href="wells.html?region=offshore" class="btn btn-primary" style="background:var(--blue);color:#fff;">View All GOM Wells</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer (compact) -->
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<!-- Trial Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Jake Reynolds">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="jake@landmanpro.com">
+    </div>
+    <div class="form-group">
+      <label>Company (optional)</label>
+      <input type="text" placeholder="Reynolds Land Services">
+    </div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+    <p class="text-muted text-center" style="margin-top:12px;font-size:0.78rem;">By signing up you agree to our Terms of Service.</p>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+<script>
+(function() {
+  // GOM-specific page logic
+  // Load GOM well data from JSON files if available, otherwise show sample data
+  const GOM_AREAS = [
+    'Garden Banks', 'Green Canyon', 'Mississippi Canyon', 'Viosca Knoll', 'Main Pass',
+    'Eugene Island', 'Ship Shoal', 'South Marsh Island', 'West Cameron', 'East Cameron',
+    'Vermilion', 'High Island', 'Galveston', 'Brazos', 'Mustang Island', 'Matagorda Island',
+    'Keathley Canyon', 'Walker Ridge', 'Alaminos Canyon', 'Atwater Valley', 'DeSoto Canyon'
+  ];
+
+  const GOM_OPERATORS = [
+    'Shell Offshore Inc.', 'BP Exploration & Production', 'Chevron U.S.A. Inc.',
+    'ExxonMobil Production Co.', 'Equinor Gulf of Mexico LLC', 'Murphy Exploration & Production',
+    'LLOG Exploration Offshore', 'Talos Energy LLC', 'W&T Offshore Inc.', 'ENI Petroleum US LLC'
+  ];
+
+  const STATUSES = ['Producing', 'Shut-in', 'P&A', 'Drilling', 'Completed'];
+
+  function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+  // Generate sample GOM wells
+  let gomWells = [];
+  let gomPage = 1;
+  const PAGE_SIZE = 20;
+  let gomFiltered = [];
+
+  async function loadGOMData() {
+    try {
+      // Load company names for operator lookup
+      let companyLookup = {};
+      try {
+        const compResp = await fetch('data/gom-companies.json');
+        if (compResp.ok) {
+          const companies = await compResp.json();
+          companies.forEach(c => {
+            if (c.companyNum) {
+              const name = c.companyName || c.companyNameUpper || '';
+              companyLookup[c.companyNum] = name;
+              companyLookup['S' + c.companyNum] = name;
+              companyLookup['G' + c.companyNum] = name;
+              companyLookup['D' + c.companyNum] = name;
+              companyLookup['N' + c.companyNum] = name;
+            }
+          });
+        }
+      } catch(e) {}
+
+      const resp = await fetch('data/gom-wells.json');
+      if (resp.ok) {
+        const raw = await resp.json();
+        if (Array.isArray(raw) && raw.length > 0) {
+          gomWells = raw.map(w => ({
+            api: w.api || '',
+            name: w.wellName || w.name || '',
+            operator: w.operatorName || w.operator || companyLookup[w.operatorCode] || companyLookup[w.operatorCode2] || (w.operatorCode && companyLookup[w.operatorCode.substring(1)]) || (w.operatorCode2 && companyLookup[w.operatorCode2.substring(1)]) || w.operatorCode || '',
+            area: (w.surfaceAreaBlock || w.areaBlock || w.area || '').replace(/\s*\d+$/, '').trim(),
+            block: (w.surfaceAreaBlock || w.areaBlock || '').replace(/^[A-Z\s]+/, '').trim() || w.block || '',
+            waterDepth: w.waterDepth || 0,
+            totalDepth: w.totalDepthMD || w.totalDepth || 0,
+            status: w.status || '',
+            lat: w.lat || null,
+            lng: w.lng || null,
+          }));
+          gomFiltered = [...gomWells];
+          document.getElementById('gom-stat-wells').textContent = gomWells.length.toLocaleString();
+
+          // Build operator list and init search-as-you-type
+          const allOps = [...new Set(gomWells.map(w => w.operator).filter(Boolean))].sort();
+          const opInput = document.getElementById('gom-filter-operator');
+          const opHidden = document.getElementById('gom-filter-operator-value');
+          const opDrop = document.getElementById('gom-operator-dropdown');
+          if (opInput && opDrop) {
+            opInput.addEventListener('input', function() {
+              const term = opInput.value.trim().toLowerCase();
+              if (opHidden) opHidden.value = '';
+              if (term.length < 2) { opDrop.style.display = 'none'; return; }
+              const matches = allOps.filter(o => o.toLowerCase().includes(term)).slice(0, 20);
+              if (!matches.length) { opDrop.style.display = 'none'; return; }
+              opDrop.innerHTML = matches.map(o =>
+                '<div style="padding:8px 12px;cursor:pointer;font-size:0.85rem;color:var(--text);border-bottom:1px solid var(--border);" onmousedown="event.preventDefault()" onclick="document.getElementById(\'gom-filter-operator\').value=this.textContent;document.getElementById(\'gom-filter-operator-value\').value=this.textContent;document.getElementById(\'gom-operator-dropdown\').style.display=\'none\';filterGOMWells();">' + o + '</div>'
+              ).join('');
+              opDrop.style.display = 'block';
+            });
+            opInput.addEventListener('blur', () => { setTimeout(() => { opDrop.style.display = 'none'; }, 200); });
+            opInput.addEventListener('keydown', function(e) {
+              if (e.key === 'Escape') { opInput.value = ''; if (opHidden) opHidden.value = ''; opDrop.style.display = 'none'; filterGOMWells(); }
+              if (e.key === 'Enter') { if (opHidden) opHidden.value = opInput.value.trim(); opDrop.style.display = 'none'; filterGOMWells(); }
+            });
+          }
+
+          renderGOMWells();
+          return;
+        }
+      }
+    } catch(e) {
+      console.error('[GOM] Failed to load data:', e.message);
+    }
+  }
+
+  function filterGOMWells() {
+    const search = (document.getElementById('gom-search')?.value || '').toLowerCase();
+    const area = document.getElementById('gom-filter-area')?.value || '';
+    const status = document.getElementById('gom-filter-status')?.value || '';
+    const operator = (document.getElementById('gom-filter-operator-value') || document.getElementById('gom-filter-operator') || {}).value || '';
+
+    gomFiltered = gomWells.filter(w => {
+      if (search) {
+        const hay = `${w.api} ${w.name} ${w.operator} ${w.area} ${w.block}`.toLowerCase();
+        if (!hay.includes(search)) return false;
+      }
+      if (area && w.area !== area) return false;
+      if (status && w.status !== status) return false;
+      if (operator && !w.operator.toLowerCase().includes(operator.toLowerCase())) return false;
+      return true;
+    });
+
+    gomPage = 1;
+    renderGOMWells();
+  }
+
+  function renderGOMWells() {
+    const tbody = document.getElementById('gom-wells-tbody');
+    const countEl = document.getElementById('gom-results-count');
+    const paginationEl = document.getElementById('gom-pagination');
+    if (!tbody) return;
+
+    const total = gomFiltered.length;
+    const totalPages = Math.ceil(total / PAGE_SIZE);
+    const start = (gomPage - 1) * PAGE_SIZE;
+    const page = gomFiltered.slice(start, start + PAGE_SIZE);
+
+    if (countEl) countEl.textContent = total.toLocaleString() + ' wells';
+
+    const STATUS_LABELS = {'COM':'COMPLETED','PA':'P&A','TA':'TEMP ABANDONED','ST':'SIDETRACKED','CNL':'CANCELLED','DRL':'DRILLING','DSI':'SUSPENDED','APD':'PERMITTED','AST':'ANNULUS ST','VCW':'VCW'};
+    function statusBadge(s) {
+      const label = STATUS_LABELS[s] || s;
+      const cls = {'COM':'badge-completed','PA':'badge-plugged','TA':'badge-shutin','ST':'badge-active','CNL':'badge-plugged','DRL':'badge-permitted','DSI':'badge-shutin','APD':'badge-permitted'}[s] || 'badge-active';
+      return '<span class="badge ' + cls + '">' + label + '</span>';
+    }
+
+    tbody.innerHTML = page.map(w => `
+      <tr>
+        <td class="mono">${w.api}</td>
+        <td>${w.name}</td>
+        <td style="max-width:160px;overflow:hidden;text-overflow:ellipsis;">${w.operator}</td>
+        <td><span class="tag" style="background:var(--blue-dim);color:var(--blue);border-color:transparent;">${w.area}</span> ${w.block}</td>
+        <td class="mono">${w.waterDepth.toLocaleString()}'</td>
+        <td class="mono">${w.totalDepth.toLocaleString()}'</td>
+        <td>${statusBadge(w.status)}</td>
+      </tr>
+    `).join('');
+
+    if (paginationEl) {
+      let btns = '';
+      btns += '<button ' + (gomPage<=1?'disabled':'') + ' onclick="window.gomGoPage(' + (gomPage-1) + ')">Prev</button>';
+      const maxBtns = 7;
+      let startP = Math.max(1, gomPage - 3);
+      let endP = Math.min(totalPages, startP + maxBtns - 1);
+      if (endP - startP < maxBtns - 1) startP = Math.max(1, endP - maxBtns + 1);
+      for (let p = startP; p <= endP; p++) {
+        btns += '<button class="' + (p===gomPage?'active':'') + '" onclick="window.gomGoPage(' + p + ')">' + p + '</button>';
+      }
+      btns += '<span class="page-info">' + total.toLocaleString() + ' results</span>';
+      btns += '<button ' + (gomPage>=totalPages?'disabled':'') + ' onclick="window.gomGoPage(' + (gomPage+1) + ')">Next</button>';
+      paginationEl.innerHTML = btns;
+    }
+  }
+
+  window.gomGoPage = function(p) {
+    gomPage = p;
+    renderGOMWells();
+    const table = document.querySelector('.table-container');
+    if (table) table.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  // Wire up filters
+  document.addEventListener('DOMContentLoaded', function() {
+    loadGOMData();
+
+    ['gom-search'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        let debounce;
+        el.addEventListener('input', () => {
+          clearTimeout(debounce);
+          debounce = setTimeout(filterGOMWells, 300);
+        });
+      }
+    });
+
+    ['gom-filter-area','gom-filter-status','gom-filter-operator'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('change', filterGOMWells);
+    });
+  });
+})();
+</script>
+</body>
+</html>

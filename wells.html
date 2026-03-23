@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Well Search — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html" class="active">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper wells-page">
+  <div class="container">
+
+    <!-- Texas Hub Hero — compact -->
+    <div class="wells-hero">
+      <div class="wells-hero-top">
+        <div class="wells-hero-title">
+          <h1>Texas Onshore</h1>
+          <span class="badge" style="background:var(--green-dim);color:var(--green);font-size:0.75rem;padding:4px 10px;">Texas Onshore</span>
+          <span class="badge badge-live" style="font-size:0.75rem;padding:4px 10px;">RRC Data</span>
+        </div>
+        <div class="hp-stats-row wells-stats-row">
+          <span class="hp-stat-item"><strong>1.31M</strong> Wells</span>
+          <span class="hp-stat-sep">&middot;</span>
+          <span class="hp-stat-item"><strong>275</strong> Counties</span>
+          <span class="hp-stat-sep">&middot;</span>
+          <span class="hp-stat-item"><strong>281K</strong> Producing</span>
+          <span class="hp-stat-sep">&middot;</span>
+          <span class="hp-stat-item"><strong>28K</strong> Operators</span>
+        </div>
+      </div>
+
+      <!-- Texas Sub-Navigation — tight pills -->
+      <div class="wells-subnav">
+        <a href="wells.html" class="wells-pill active">Wells</a>
+        <a href="production.html" class="wells-pill">Production</a>
+        <a href="permits.html" class="wells-pill">Permits</a>
+        <a href="runsheet.html" class="wells-pill">Runsheet</a>
+        <a href="operators.html" class="wells-pill">Operators</a>
+        <a href="map.html" class="wells-pill">Map</a>
+        <a href="leases.html" class="wells-pill">Leases</a>
+      </div>
+    </div>
+
+    <!-- Compact search header + filters in one block -->
+    <div class="wells-controls">
+      <div class="wells-controls-header" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <span class="wells-controls-title">Well Search</span>
+        <span class="text-secondary" style="font-size:0.8rem;">1,365,827 wells &middot; <span id="results-count">...</span> shown</span>
+      </div>
+      <div class="wells-filters">
+        <input type="text" id="search-input" class="filter-input" placeholder="API#, operator, lease..." style="min-width:200px;">
+        <div style="position:relative;">
+          <input type="text" id="filter-county" class="filter-input" placeholder="Search counties..." autocomplete="off" style="min-width:160px;">
+          <input type="hidden" id="filter-county-value">
+          <div id="county-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:240px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:100;margin-top:2px;"></div>
+        </div>
+        <div style="position:relative;">
+          <input type="text" id="filter-operator" class="filter-input" placeholder="Search operators..." autocomplete="off" style="min-width:180px;">
+          <input type="hidden" id="filter-operator-value">
+          <div id="operator-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:240px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:100;margin-top:2px;"></div>
+        </div>
+        <select id="filter-type" class="filter-select">
+          <option value="">All Types</option>
+          <option value="O">Oil</option>
+          <option value="G">Gas</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Results Table -->
+    <div class="table-container">
+      <table class="data-table wells-table">
+        <thead>
+          <tr>
+            <th onclick="window.MI.setSort('api')">API # <span class="sort-arrow">&#9660;</span></th>
+            <th onclick="window.MI.setSort('operator')">Operator <span class="sort-arrow">&#9660;</span></th>
+            <th onclick="window.MI.setSort('county')">County <span class="sort-arrow">&#9660;</span></th>
+            <th onclick="window.MI.setSort('well_type')">Type <span class="sort-arrow">&#9660;</span></th>
+            <th onclick="window.MI.setSort('total_depth')">Depth <span class="sort-arrow">&#9660;</span></th>
+            <th onclick="window.MI.setSort('status')">Status <span class="sort-arrow">&#9660;</span></th>
+          </tr>
+        </thead>
+        <tbody id="wells-tbody">
+          <tr><td colspan="6" class="text-center text-muted" style="padding:24px;">Loading well data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="pagination"></div>
+
+  </div>
+</div>
+
+<!-- Footer (compact) -->
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<!-- Trial Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Jake Reynolds">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="jake@landmanpro.com">
+    </div>
+    <div class="form-group">
+      <label>Company (optional)</label>
+      <input type="text" placeholder="Reynolds Land Services">
+    </div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+    <p class="text-muted text-center" style="margin-top:12px;font-size:0.78rem;">By signing up you agree to our Terms of Service.</p>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+</body>
+</html>

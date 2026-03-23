@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chain of Title / Runsheet — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">M</div> MineralSearch</a>
+    <ul class="nav-links">
+      <li><a href="wells.html" class="active">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Breadcrumb & Sub-Nav -->
+    <div style="margin-bottom:8px;">
+      <a href="wells.html" style="color:var(--accent);font-size:0.85rem;text-decoration:none;font-weight:600;">Texas</a>
+      <span style="color:var(--text-muted);margin:0 8px;font-size:0.85rem;">&rsaquo;</span>
+      <span style="color:var(--text);font-size:0.85rem;font-weight:600;">Runsheet</span>
+    </div>
+    <div class="texas-subnav" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;padding:12px 0;border-bottom:1px solid var(--border);">
+      <a href="wells.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Wells</a>
+      <a href="production.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Production</a>
+      <a href="permits.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Permits</a>
+      <a href="runsheet.html" class="btn btn-primary btn-sm" style="font-size:0.8rem;">Runsheet</a>
+      <a href="operators.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Operators</a>
+      <a href="map.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Map</a>
+      <a href="leases.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Leases</a>
+    </div>
+
+    <div class="page-header" style="padding-top:0;">
+      <h1>Chain of Title / Runsheet Builder</h1>
+      <p>Build a complete chain of title with every deed transfer for a tract.</p>
+    </div>
+
+    <div style="text-align:center;padding:60px 20px;max-width:600px;margin:0 auto;">
+      <div style="font-size:4rem;margin-bottom:20px;">🔗</div>
+      <h2 style="font-size:1.6rem;margin-bottom:12px;color:var(--text);">Coming Soon</h2>
+      <p style="color:var(--text-muted);font-size:1rem;line-height:1.6;margin-bottom:24px;">
+        We're integrating county clerk deed records from Texas courthouses to build real chain of title runsheets.
+        This tool will allow you to trace mineral ownership back through every deed transfer — no more spending $600/day on manual courthouse research.
+      </p>
+      <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+        <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:8px;">What you'll get:</div>
+        <div style="display:flex;flex-direction:column;gap:8px;text-align:left;">
+          <div style="color:var(--text);font-size:0.9rem;">✓ Search by Section/Block/Survey or owner name</div>
+          <div style="color:var(--text);font-size:0.9rem;">✓ Complete chain of title timeline</div>
+          <div style="color:var(--text);font-size:0.9rem;">✓ Every deed, lease, and assignment</div>
+          <div style="color:var(--text);font-size:0.9rem;">✓ Export to PDF for clients</div>
+          <div style="color:var(--text);font-size:0.9rem;">✓ Starting with Permian Basin counties</div>
+        </div>
+      </div>
+      <p style="color:var(--accent);font-size:0.9rem;font-weight:600;">Want to be notified when this launches?</p>
+      <div style="display:flex;gap:8px;max-width:400px;margin:12px auto 0;">
+        <input type="email" placeholder="your@email.com" style="flex:1;height:44px;padding:0 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.9rem;outline:none;">
+        <button class="btn btn-primary" style="white-space:nowrap;">Notify Me</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jake Reynolds"></div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="jake@landmanpro.com"></div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+<script>
+// Runsheet page — Coming Soon, no demo data
+</script>
+<!--
+<script>
+(function() {
+  'use strict';
+
+  const COUNTIES_DISABLED = ['MIDLAND','ECTOR','REEVES','LOVING','WARD','PECOS','HOWARD','MARTIN','KARNES','DEWITT','WEBB','DIMMIT'];
+  const NAMES = ['Smith, John R.','Johnson, Mary L.','Williams, Robert T.','Brown, Patricia A.','Jones, Michael D.','Davis, Jennifer K.','Miller, William H.','Wilson, Barbara J.','Moore, James E.','Taylor, Linda S.','Anderson, Richard C.','Smith Family Trust','Johnson Living Trust','Estate of Wilson, Thomas H.','Martinez Family Trust','Bass Enterprises','Clayton Williams Energy','Texas General Land Office','University of Texas System','Railroad Commission of Texas'];
+  const DOC_TYPES = ['Patent from State','Warranty Deed','Mineral Deed','Royalty Deed','Oil and Gas Lease','Assignment of OGL','Quitclaim Deed','Correction Deed','Probate Transfer','Gift Deed'];
+  const INTERESTS = ['All minerals','1/2 minerals','1/4 minerals','1/8 NPRI','3/16 RI','1/16 ORRI','Surface & minerals','Undivided 1/2 interest','All oil, gas & other minerals','Executive rights only'];
+
+  function rand(min,max){return Math.floor(Math.random()*(max-min+1))+min;}
+  function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+
+  function generateChain(county, section, block) {
+    const chain = [];
+    const numTransfers = rand(6, 14);
+    let year = rand(1890, 1920);
+    let currentOwner = 'State of Texas';
+
+    for (let i = 0; i < numTransfers; i++) {
+      const grantee = i === 0 ? pick(['Texas General Land Office','University of Texas System', pick(NAMES)]) : pick(NAMES);
+      const docType = i === 0 ? 'Patent from State' : pick(DOC_TYPES.slice(1));
+      const date = year + '-' + String(rand(1,12)).padStart(2,'0') + '-' + String(rand(1,28)).padStart(2,'0');
+      const vol = rand(100, 2500);
+      const page = rand(1, 800);
+      const interest = i === 0 ? 'All minerals, surface & executive rights' : pick(INTERESTS);
+      const consideration = i === 0 ? 'Patent' : '$' + (rand(1,500) * (year > 2000 ? 100 : 1)).toLocaleString();
+
+      chain.push({
+        id: i + 1,
+        date: date,
+        grantor: currentOwner,
+        grantee: grantee,
+        docType: docType,
+        volume: vol,
+        page: page,
+        interest: interest,
+        consideration: consideration,
+        county: county || pick(COUNTIES),
+        legalDescription: 'Section ' + (section||rand(1,48)) + ', Block ' + (block||rand(1,45)) + ', T&P Ry. Co. Survey',
+        notes: Math.random() > 0.7 ? pick(['Subject to reservation of 1/16 NPRI','Subject to existing OGL','Correction instrument','Probate file #'+rand(1000,9999)]) : ''
+      });
+
+      currentOwner = grantee;
+      year += rand(2, 25);
+      if (year > 2026) year = 2026;
+    }
+
+    return chain.reverse(); // newest first
+  }
+
+  let currentChain = [];
+
+  window.searchRunsheet = function() {
+    const owner = document.getElementById('rs-owner').value.trim();
+    const section = document.getElementById('rs-section').value.trim();
+    const block = document.getElementById('rs-block').value.trim();
+    const survey = document.getElementById('rs-survey').value.trim();
+    const county = document.getElementById('rs-county').value;
+
+    if (!owner && !section && !block && !survey) {
+      alert('Please enter an owner name or legal description to search.');
+      return;
+    }
+
+    currentChain = generateChain(county, section || rand(1,48), block || rand(1,45));
+
+    document.getElementById('runsheet-results').style.display = 'block';
+    document.getElementById('runsheet-empty').style.display = 'none';
+
+    const legal = currentChain[0]?.legalDescription || 'Section '+section+', Block '+block;
+    const cty = county || currentChain[0]?.county || 'MIDLAND';
+    const currentOwnerName = currentChain[0]?.grantee || '-';
+
+    document.getElementById('rs-title').textContent = 'Chain of Title — ' + legal;
+    document.getElementById('rs-subtitle').textContent = cty + ' County, Texas';
+    document.getElementById('rs-legal').textContent = legal;
+    document.getElementById('rs-county-val').textContent = cty + ' County, TX';
+    document.getElementById('rs-current-owner').textContent = currentOwnerName;
+    document.getElementById('rs-transfer-count').textContent = currentChain.length + ' transfers';
+
+    renderTimeline(currentChain);
+  };
+
+  function renderTimeline(chain) {
+    const el = document.getElementById('rs-timeline');
+    el.innerHTML = chain.map((entry, idx) => {
+      const isFirst = idx === 0;
+      const year = entry.date.split('-')[0];
+      return '<div class="timeline-entry'+(isFirst?' timeline-current':'')+'" onclick="showDocDetail('+entry.id+')">'+
+        '<div class="timeline-node"><div class="timeline-dot'+(isFirst?' dot-current':'')+'"></div></div>'+
+        '<div class="timeline-card">'+
+          '<div class="timeline-date">'+entry.date+'</div>'+
+          '<div class="timeline-doc-type"><span class="badge '+(entry.docType.includes('Lease')?'badge-active':'badge-completed')+'">'+entry.docType+'</span></div>'+
+          '<div class="timeline-transfer">'+
+            '<div class="timeline-party"><span class="timeline-role">Grantor:</span> '+entry.grantor+'</div>'+
+            '<div class="timeline-arrow">&#8595;</div>'+
+            '<div class="timeline-party"><span class="timeline-role">Grantee:</span> <strong>'+entry.grantee+'</strong></div>'+
+          '</div>'+
+          '<div class="timeline-meta">'+
+            '<span>Vol. '+entry.volume+', Pg. '+entry.page+'</span>'+
+            '<span class="text-accent">'+entry.interest+'</span>'+
+          '</div>'+
+          (entry.notes ? '<div class="timeline-notes">'+entry.notes+'</div>' : '')+
+        '</div>'+
+      '</div>';
+    }).join('');
+  }
+
+  window.showDocDetail = function(id) {
+    const entry = currentChain.find(e => e.id === id);
+    if (!entry) return;
+    document.getElementById('doc-modal-title').textContent = entry.docType;
+    document.getElementById('doc-modal-body').innerHTML =
+      '<div class="well-detail-grid" style="grid-template-columns:1fr 1fr;">'+
+        '<div class="well-detail-item"><label>Date</label><div class="value">'+entry.date+'</div></div>'+
+        '<div class="well-detail-item"><label>Document Type</label><div class="value">'+entry.docType+'</div></div>'+
+        '<div class="well-detail-item"><label>Grantor</label><div class="value">'+entry.grantor+'</div></div>'+
+        '<div class="well-detail-item"><label>Grantee</label><div class="value text-accent">'+entry.grantee+'</div></div>'+
+        '<div class="well-detail-item"><label>Volume / Page</label><div class="value">Vol. '+entry.volume+', Pg. '+entry.page+'</div></div>'+
+        '<div class="well-detail-item"><label>Interest Transferred</label><div class="value">'+entry.interest+'</div></div>'+
+        '<div class="well-detail-item"><label>Consideration</label><div class="value">'+entry.consideration+'</div></div>'+
+        '<div class="well-detail-item"><label>County</label><div class="value">'+entry.county+' County, TX</div></div>'+
+        '<div class="well-detail-item" style="grid-column:span 2;"><label>Legal Description</label><div class="value">'+entry.legalDescription+'</div></div>'+
+        (entry.notes ? '<div class="well-detail-item" style="grid-column:span 2;"><label>Notes</label><div class="value text-gold">'+entry.notes+'</div></div>' : '')+
+      '</div>'+
+      '<div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">'+
+        '<p class="text-muted" style="font-size:0.8rem;">Document sourced from '+entry.county+' County Clerk records. For certified copies, contact the county clerk\'s office.</p>'+
+      '</div>';
+    document.getElementById('doc-modal').classList.add('open');
+  };
+
+  window.exportPDF = function() {
+    if (!currentChain.length) return;
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const legal = document.getElementById('rs-legal').textContent;
+    const county = document.getElementById('rs-county-val').textContent;
+
+    doc.setFontSize(16);
+    doc.text('Chain of Title / Runsheet', 14, 20);
+    doc.setFontSize(10);
+    doc.text(legal + ' — ' + county, 14, 28);
+    doc.text('Generated by MineralSearch on ' + new Date().toLocaleDateString(), 14, 34);
+    doc.line(14, 37, 196, 37);
+
+    let y = 44;
+    currentChain.forEach((entry, idx) => {
+      if (y > 270) { doc.addPage(); y = 20; }
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'bold');
+      doc.text(entry.date + ' — ' + entry.docType, 14, y);
+      y += 5;
+      doc.setFont(undefined, 'normal');
+      doc.text('Grantor: ' + entry.grantor, 18, y); y += 4;
+      doc.text('Grantee: ' + entry.grantee, 18, y); y += 4;
+      doc.text('Vol. ' + entry.volume + ', Pg. ' + entry.page + '  |  ' + entry.interest, 18, y); y += 4;
+      if (entry.notes) { doc.text('Note: ' + entry.notes, 18, y); y += 4; }
+      y += 4;
+    });
+
+    doc.save('runsheet-' + legal.replace(/[^a-zA-Z0-9]/g, '_') + '.pdf');
+  };
+
+  // Handle Enter key
+  ['rs-owner','rs-section','rs-block','rs-survey'].forEach(id => {
+    document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') searchRunsheet(); });
+  });
+
+  // Modal events
+  document.querySelectorAll('[data-modal-open]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.add('open')));
+  document.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.remove('open')));
+  document.getElementById('modal-overlay').addEventListener('click', e => { if (e.target.id === 'modal-overlay') e.target.classList.remove('open'); });
+  document.getElementById('doc-modal').addEventListener('click', e => { if (e.target.id === 'doc-modal') e.target.classList.remove('open'); });
+
+  const toggle = document.querySelector('.nav-mobile-toggle');
+  if (toggle) toggle.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+})();
+</script>
+-->
+</body>
+</html>

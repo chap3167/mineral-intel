@@ -1,0 +1,3210 @@
+{
+  "totalWells": 1310381,
+  "counties": [
+    {
+      "name": "ANDREWS",
+      "count": 34609
+    },
+    {
+      "name": "WICHITA",
+      "count": 31638
+    },
+    {
+      "name": "ECTOR",
+      "count": 31387
+    },
+    {
+      "name": "ARCHER",
+      "count": 20516
+    },
+    {
+      "name": "HOWARD",
+      "count": 20417
+    },
+    {
+      "name": "PECOS",
+      "count": 20329
+    },
+    {
+      "name": "MIDLAND",
+      "count": 19365
+    },
+    {
+      "name": "UPTON",
+      "count": 18512
+    },
+    {
+      "name": "YOUNG",
+      "count": 18354
+    },
+    {
+      "name": "CROCKETT",
+      "count": 17948
+    },
+    {
+      "name": "CRANE",
+      "count": 17523
+    },
+    {
+      "name": "GAINES",
+      "count": 17518
+    },
+    {
+      "name": "WEBB",
+      "count": 16826
+    },
+    {
+      "name": "WARD",
+      "count": 16227
+    },
+    {
+      "name": "JACK",
+      "count": 16188
+    },
+    {
+      "name": "REAGAN",
+      "count": 16049
+    },
+    {
+      "name": "MARTIN",
+      "count": 15472
+    },
+    {
+      "name": "DUVAL",
+      "count": 14898
+    },
+    {
+      "name": "SHACKELFORD",
+      "count": 14616
+    },
+    {
+      "name": "YOAKUM",
+      "count": 14090
+    },
+    {
+      "name": "HOCKLEY",
+      "count": 13499
+    },
+    {
+      "name": "REFUGIO",
+      "count": 13475
+    },
+    {
+      "name": "RUSK",
+      "count": 13316
+    },
+    {
+      "name": "PANOLA",
+      "count": 13201
+    },
+    {
+      "name": "WINKLER",
+      "count": 12717
+    },
+    {
+      "name": "GREGG",
+      "count": 12645
+    },
+    {
+      "name": "SCURRY",
+      "count": 12468
+    },
+    {
+      "name": "WISE",
+      "count": 12325
+    },
+    {
+      "name": "NUECES",
+      "count": 12054
+    },
+    {
+      "name": "BEXAR",
+      "count": 11945
+    },
+    {
+      "name": "EASTLAND",
+      "count": 11566
+    },
+    {
+      "name": "GLASSCOCK",
+      "count": 11371
+    },
+    {
+      "name": "REEVES",
+      "count": 11273
+    },
+    {
+      "name": "JACKSON",
+      "count": 11219
+    },
+    {
+      "name": "STEPHENS",
+      "count": 11048
+    },
+    {
+      "name": "MONTAGUE",
+      "count": 10672
+    },
+    {
+      "name": "HUTCHINSON",
+      "count": 10632
+    },
+    {
+      "name": "COOKE",
+      "count": 10395
+    },
+    {
+      "name": "STARR",
+      "count": 10373
+    },
+    {
+      "name": "SUTTON",
+      "count": 10103
+    },
+    {
+      "name": "CALLAHAN",
+      "count": 10000
+    },
+    {
+      "name": "WHARTON",
+      "count": 9850
+    },
+    {
+      "name": "DIMMIT",
+      "count": 9831
+    },
+    {
+      "name": "CALDWELL",
+      "count": 9389
+    },
+    {
+      "name": "MITCHELL",
+      "count": 9177
+    },
+    {
+      "name": "ZAPATA",
+      "count": 9088
+    },
+    {
+      "name": "NAVARRO",
+      "count": 9075
+    },
+    {
+      "name": "VICTORIA",
+      "count": 8910
+    },
+    {
+      "name": "THROCKMORTON",
+      "count": 8870
+    },
+    {
+      "name": "GRAY",
+      "count": 8795
+    },
+    {
+      "name": "IRION",
+      "count": 8758
+    },
+    {
+      "name": "HARRISON",
+      "count": 8575
+    },
+    {
+      "name": "COLEMAN",
+      "count": 8570
+    },
+    {
+      "name": "ATASCOSA",
+      "count": 8565
+    },
+    {
+      "name": "RUNNELS",
+      "count": 8557
+    },
+    {
+      "name": "CLAY",
+      "count": 8303
+    },
+    {
+      "name": "MCMULLEN",
+      "count": 8288
+    },
+    {
+      "name": "HARRIS",
+      "count": 8267
+    },
+    {
+      "name": "KARNES",
+      "count": 8218
+    },
+    {
+      "name": "HIDALGO",
+      "count": 8100
+    },
+    {
+      "name": "KLEBERG",
+      "count": 7983
+    },
+    {
+      "name": "BROWN",
+      "count": 7848
+    },
+    {
+      "name": "BRAZORIA",
+      "count": 7728
+    },
+    {
+      "name": "LA SALLE",
+      "count": 7728
+    },
+    {
+      "name": "PALO PINTO",
+      "count": 7722
+    },
+    {
+      "name": "GARZA",
+      "count": 7621
+    },
+    {
+      "name": "COCHRAN",
+      "count": 7493
+    },
+    {
+      "name": "SAN PATRICIO",
+      "count": 7478
+    },
+    {
+      "name": "JONES",
+      "count": 7465
+    },
+    {
+      "name": "LOVING",
+      "count": 7399
+    },
+    {
+      "name": "LIVE OAK",
+      "count": 7355
+    },
+    {
+      "name": "JIM WELLS",
+      "count": 7318
+    },
+    {
+      "name": "TARRANT",
+      "count": 7206
+    },
+    {
+      "name": "WILBARGER",
+      "count": 6958
+    },
+    {
+      "name": "CHAMBERS",
+      "count": 6768
+    },
+    {
+      "name": "HARDIN",
+      "count": 6724
+    },
+    {
+      "name": "TAYLOR",
+      "count": 6682
+    },
+    {
+      "name": "GOLIAD",
+      "count": 6577
+    },
+    {
+      "name": "FREESTONE",
+      "count": 6571
+    },
+    {
+      "name": "OCHILTREE",
+      "count": 6523
+    },
+    {
+      "name": "HEMPHILL",
+      "count": 6453
+    },
+    {
+      "name": "DE WITT",
+      "count": 6359
+    },
+    {
+      "name": "BROOKS",
+      "count": 6355
+    },
+    {
+      "name": "STONEWALL",
+      "count": 6203
+    },
+    {
+      "name": "GUADALUPE",
+      "count": 6101
+    },
+    {
+      "name": "STERLING",
+      "count": 6047
+    },
+    {
+      "name": "PARKER",
+      "count": 6023
+    },
+    {
+      "name": "LIPSCOMB",
+      "count": 5944
+    },
+    {
+      "name": "WHEELER",
+      "count": 5938
+    },
+    {
+      "name": "MILAM",
+      "count": 5907
+    },
+    {
+      "name": "MATAGORDA",
+      "count": 5894
+    },
+    {
+      "name": "FRIO",
+      "count": 5846
+    },
+    {
+      "name": "BEE",
+      "count": 5799
+    },
+    {
+      "name": "LIBERTY",
+      "count": 5572
+    },
+    {
+      "name": "NOLAN",
+      "count": 5560
+    },
+    {
+      "name": "BURLESON",
+      "count": 5510
+    },
+    {
+      "name": "MEDINA",
+      "count": 5465
+    },
+    {
+      "name": "LAVACA",
+      "count": 5430
+    },
+    {
+      "name": "DAWSON",
+      "count": 5399
+    },
+    {
+      "name": "WOOD",
+      "count": 5310
+    },
+    {
+      "name": "MOORE",
+      "count": 5286
+    },
+    {
+      "name": "CARSON",
+      "count": 5126
+    },
+    {
+      "name": "FORT BEND",
+      "count": 5117
+    },
+    {
+      "name": "JEFFERSON",
+      "count": 4901
+    },
+    {
+      "name": "GONZALES",
+      "count": 4799
+    },
+    {
+      "name": "DENTON",
+      "count": 4736
+    },
+    {
+      "name": "TOM GREEN",
+      "count": 4547
+    },
+    {
+      "name": "JOHNSON",
+      "count": 4505
+    },
+    {
+      "name": "FISHER",
+      "count": 4434
+    },
+    {
+      "name": "FAYETTE",
+      "count": 4417
+    },
+    {
+      "name": "ANDERSON",
+      "count": 4402
+    },
+    {
+      "name": "SCHLEICHER",
+      "count": 4331
+    },
+    {
+      "name": "COLORADO",
+      "count": 4290
+    },
+    {
+      "name": "BORDEN",
+      "count": 4227
+    },
+    {
+      "name": "KNOX",
+      "count": 4190
+    },
+    {
+      "name": "MAVERICK",
+      "count": 4123
+    },
+    {
+      "name": "NACOGDOCHES",
+      "count": 4086
+    },
+    {
+      "name": "WILSON",
+      "count": 3967
+    },
+    {
+      "name": "KING",
+      "count": 3921
+    },
+    {
+      "name": "LEE",
+      "count": 3824
+    },
+    {
+      "name": "HASKELL",
+      "count": 3794
+    },
+    {
+      "name": "BRAZOS",
+      "count": 3730
+    },
+    {
+      "name": "ZAVALA",
+      "count": 3708
+    },
+    {
+      "name": "ROBERTS",
+      "count": 3706
+    },
+    {
+      "name": "TERRY",
+      "count": 3679
+    },
+    {
+      "name": "MONTGOMERY",
+      "count": 3678
+    },
+    {
+      "name": "KENEDY",
+      "count": 3647
+    },
+    {
+      "name": "GRAYSON",
+      "count": 3571
+    },
+    {
+      "name": "SMITH",
+      "count": 3428
+    },
+    {
+      "name": "GALVESTON",
+      "count": 3405
+    },
+    {
+      "name": "COKE",
+      "count": 3391
+    },
+    {
+      "name": "CALHOUN",
+      "count": 3383
+    },
+    {
+      "name": "JIM HOGG",
+      "count": 3227
+    },
+    {
+      "name": "LEON",
+      "count": 3173
+    },
+    {
+      "name": "KENT",
+      "count": 3140
+    },
+    {
+      "name": "HANSFORD",
+      "count": 3057
+    },
+    {
+      "name": "LIMESTONE",
+      "count": 3040
+    },
+    {
+      "name": "CULBERSON",
+      "count": 2796
+    },
+    {
+      "name": "CROSBY",
+      "count": 2782
+    },
+    {
+      "name": "CONCHO",
+      "count": 2756
+    },
+    {
+      "name": "POTTER",
+      "count": 2528
+    },
+    {
+      "name": "VAN ZANDT",
+      "count": 2496
+    },
+    {
+      "name": "BAYLOR",
+      "count": 2390
+    },
+    {
+      "name": "ROBERTSON",
+      "count": 2167
+    },
+    {
+      "name": "HOUSTON",
+      "count": 2158
+    },
+    {
+      "name": "EDWARDS",
+      "count": 2121
+    },
+    {
+      "name": "UPSHUR",
+      "count": 2103
+    },
+    {
+      "name": "MADISON",
+      "count": 2049
+    },
+    {
+      "name": "WILLACY",
+      "count": 2039
+    },
+    {
+      "name": "SHELBY",
+      "count": 2034
+    },
+    {
+      "name": "SHERMAN",
+      "count": 2032
+    },
+    {
+      "name": "AUSTIN",
+      "count": 2014
+    },
+    {
+      "name": "HARDEMAN",
+      "count": 2007
+    },
+    {
+      "name": "WALLER",
+      "count": 1956
+    },
+    {
+      "name": "LUBBOCK",
+      "count": 1894
+    },
+    {
+      "name": "HOOD",
+      "count": 1877
+    },
+    {
+      "name": "BASTROP",
+      "count": 1869
+    },
+    {
+      "name": "CHEROKEE",
+      "count": 1858
+    },
+    {
+      "name": "POLK",
+      "count": 1811
+    },
+    {
+      "name": "COMANCHE",
+      "count": 1772
+    },
+    {
+      "name": "HENDERSON",
+      "count": 1762
+    },
+    {
+      "name": "MARION",
+      "count": 1746
+    },
+    {
+      "name": "TITUS",
+      "count": 1676
+    },
+    {
+      "name": "ORANGE",
+      "count": 1654
+    },
+    {
+      "name": "CASS",
+      "count": 1567
+    },
+    {
+      "name": "TERRELL",
+      "count": 1548
+    },
+    {
+      "name": "ARANSAS",
+      "count": 1527
+    },
+    {
+      "name": "ERATH",
+      "count": 1510
+    },
+    {
+      "name": "DICKENS",
+      "count": 1437
+    },
+    {
+      "name": "MENARD",
+      "count": 1416
+    },
+    {
+      "name": "NEWTON",
+      "count": 1321
+    },
+    {
+      "name": "FRANKLIN",
+      "count": 1312
+    },
+    {
+      "name": "WASHINGTON",
+      "count": 1304
+    },
+    {
+      "name": "TYLER",
+      "count": 1203
+    },
+    {
+      "name": "JASPER",
+      "count": 1140
+    },
+    {
+      "name": "MCCULLOCH",
+      "count": 1120
+    },
+    {
+      "name": "ELLIS",
+      "count": 1042
+    },
+    {
+      "name": "GRIMES",
+      "count": 936
+    },
+    {
+      "name": "FOARD",
+      "count": 935
+    },
+    {
+      "name": "VAL VERDE",
+      "count": 735
+    },
+    {
+      "name": "SAN JACINTO",
+      "count": 717
+    },
+    {
+      "name": "LYNN",
+      "count": 704
+    },
+    {
+      "name": "FALLS",
+      "count": 699
+    },
+    {
+      "name": "HOPKINS",
+      "count": 677
+    },
+    {
+      "name": "COTTLE",
+      "count": 663
+    },
+    {
+      "name": "SAN AUGUSTINE",
+      "count": 659
+    },
+    {
+      "name": "COLLINGSWORTH",
+      "count": 628
+    },
+    {
+      "name": "HALE",
+      "count": 607
+    },
+    {
+      "name": "HILL",
+      "count": 581
+    },
+    {
+      "name": "RED RIVER",
+      "count": 530
+    },
+    {
+      "name": "LAMB",
+      "count": 523
+    },
+    {
+      "name": "WILLIAMSON",
+      "count": 482
+    },
+    {
+      "name": "MATGRDA IS-LB",
+      "count": 476
+    },
+    {
+      "name": "HARTLEY",
+      "count": 461
+    },
+    {
+      "name": "ANGELINA",
+      "count": 457
+    },
+    {
+      "name": "BRAZOS-LB",
+      "count": 433
+    },
+    {
+      "name": "PRESIDIO",
+      "count": 418
+    },
+    {
+      "name": "CAMERON",
+      "count": 389
+    },
+    {
+      "name": "OLDHAM",
+      "count": 386
+    },
+    {
+      "name": "KAUFMAN",
+      "count": 380
+    },
+    {
+      "name": "MCLENNAN",
+      "count": 378
+    },
+    {
+      "name": "CAMP",
+      "count": 368
+    },
+    {
+      "name": "KIMBLE",
+      "count": 343
+    },
+    {
+      "name": "WALKER",
+      "count": 338
+    },
+    {
+      "name": "HIGH IS-LB",
+      "count": 335
+    },
+    {
+      "name": "SABINE",
+      "count": 330
+    },
+    {
+      "name": "TRINITY",
+      "count": 305
+    },
+    {
+      "name": "BRISCOE",
+      "count": 280
+    },
+    {
+      "name": "TRAVIS",
+      "count": 250
+    },
+    {
+      "name": "MATGRDA IS-SB",
+      "count": 247
+    },
+    {
+      "name": "MOTLEY",
+      "count": 232
+    },
+    {
+      "name": "BOWIE",
+      "count": 223
+    },
+    {
+      "name": "MUSTANG IS-SB",
+      "count": 197
+    },
+    {
+      "name": "SOMERVELL",
+      "count": 196
+    },
+    {
+      "name": "DALLAS",
+      "count": 189
+    },
+    {
+      "name": "GALVESTON-LB",
+      "count": 188
+    },
+    {
+      "name": "MUSTANG IS-LB",
+      "count": 185
+    },
+    {
+      "name": "HAMILTON",
+      "count": 157
+    },
+    {
+      "name": "BREWSTER",
+      "count": 143
+    },
+    {
+      "name": "GALVESTON-SB",
+      "count": 115
+    },
+    {
+      "name": "BRAZOS-SB",
+      "count": 112
+    },
+    {
+      "name": "HUDSPETH",
+      "count": 100
+    },
+    {
+      "name": "CHILDRESS",
+      "count": 92
+    },
+    {
+      "name": "HUNT",
+      "count": 90
+    },
+    {
+      "name": "RAINS",
+      "count": 85
+    },
+    {
+      "name": "LAMPASAS",
+      "count": 81
+    },
+    {
+      "name": "HIGH IS-SB",
+      "count": 81
+    },
+    {
+      "name": "S PADRE IS-LB",
+      "count": 79
+    },
+    {
+      "name": "FLOYD",
+      "count": 76
+    },
+    {
+      "name": "SAN SABA",
+      "count": 72
+    },
+    {
+      "name": "MILLS",
+      "count": 62
+    },
+    {
+      "name": "REAL",
+      "count": 57
+    },
+    {
+      "name": "BOSQUE",
+      "count": 53
+    },
+    {
+      "name": "UVALDE",
+      "count": 52
+    },
+    {
+      "name": "CORYELL",
+      "count": 51
+    },
+    {
+      "name": "SABINE PASS",
+      "count": 51
+    },
+    {
+      "name": "HALL",
+      "count": 49
+    },
+    {
+      "name": "KINNEY",
+      "count": 48
+    },
+    {
+      "name": "BELL",
+      "count": 47
+    },
+    {
+      "name": "RANDALL",
+      "count": 40
+    },
+    {
+      "name": "DALLAM",
+      "count": 38
+    },
+    {
+      "name": "SWISHER",
+      "count": 37
+    },
+    {
+      "name": "N PADRE IS-LB",
+      "count": 31
+    },
+    {
+      "name": "LAMAR",
+      "count": 31
+    },
+    {
+      "name": "BANDERA",
+      "count": 30
+    },
+    {
+      "name": "DONLEY",
+      "count": 30
+    },
+    {
+      "name": "KERR",
+      "count": 30
+    },
+    {
+      "name": "FANNIN",
+      "count": 28
+    },
+    {
+      "name": "MORRIS",
+      "count": 24
+    },
+    {
+      "name": "DELTA",
+      "count": 24
+    },
+    {
+      "name": "JEFF DAVIS",
+      "count": 23
+    },
+    {
+      "name": "COLLIN",
+      "count": 23
+    },
+    {
+      "name": "BAILEY",
+      "count": 20
+    },
+    {
+      "name": "DEAF SMITH",
+      "count": 18
+    },
+    {
+      "name": "ARMSTRONG",
+      "count": 16
+    },
+    {
+      "name": "S PADRE IS-SB",
+      "count": 13
+    },
+    {
+      "name": "HIGH IS-S",
+      "count": 12
+    },
+    {
+      "name": "PARMER",
+      "count": 11
+    },
+    {
+      "name": "KENDALL",
+      "count": 10
+    },
+    {
+      "name": "CASTRO",
+      "count": 10
+    },
+    {
+      "name": "HAYS",
+      "count": 9
+    },
+    {
+      "name": "HIGH IS-E S",
+      "count": 9
+    },
+    {
+      "name": "EL PASO",
+      "count": 7
+    },
+    {
+      "name": "ROCKWALL",
+      "count": 6
+    },
+    {
+      "name": "GILLESPIE",
+      "count": 6
+    },
+    {
+      "name": "BRAZOS-S",
+      "count": 6
+    },
+    {
+      "name": "N PADRE IS-SB",
+      "count": 4
+    },
+    {
+      "name": "BURNET",
+      "count": 3
+    },
+    {
+      "name": "MASON",
+      "count": 3
+    },
+    {
+      "name": "BLANCO",
+      "count": 2
+    },
+    {
+      "name": "HIGH IS-E",
+      "count": 2
+    },
+    {
+      "name": "S PADRE IS-E",
+      "count": 2
+    },
+    {
+      "name": "COMAL",
+      "count": 1
+    },
+    {
+      "name": "LLANO",
+      "count": 1
+    },
+    {
+      "name": "MUSTANG IS-E",
+      "count": 1
+    }
+  ],
+  "operators": [
+    {
+      "name": "",
+      "count": 208786
+    },
+    {
+      "name": "XTO ENERGY INC.",
+      "count": 27889
+    },
+    {
+      "name": "OCCIDENTAL PERMIAN LTD.",
+      "count": 21668
+    },
+    {
+      "name": "APACHE CORPORATION",
+      "count": 21363
+    },
+    {
+      "name": "EXXON CORP.",
+      "count": 15499
+    },
+    {
+      "name": "HILCORP ENERGY COMPANY",
+      "count": 13832
+    },
+    {
+      "name": "PIONEER NATURAL RES. USA  INC.",
+      "count": 13522
+    },
+    {
+      "name": "BASA RESOURCES  INC.",
+      "count": 12190
+    },
+    {
+      "name": "CHEVRON U. S. A. INC.",
+      "count": 11314
+    },
+    {
+      "name": "SCOUT ENERGY MANAGEMENT LLC",
+      "count": 10767
+    },
+    {
+      "name": "EOG RESOURCES  INC.",
+      "count": 10023
+    },
+    {
+      "name": "ENDEAVOR ENERGY RESOURCES L.P.",
+      "count": 9120
+    },
+    {
+      "name": "UPP OPERATING  LLC",
+      "count": 8491
+    },
+    {
+      "name": "SABINAL ENERGY OPERATING  LLC",
+      "count": 8141
+    },
+    {
+      "name": "BLACKBEARD OPERATING  LLC",
+      "count": 8066
+    },
+    {
+      "name": "FDL OPERATING  LLC",
+      "count": 7731
+    },
+    {
+      "name": "OXY USA WTP LP",
+      "count": 7170
+    },
+    {
+      "name": "KINDER MORGAN PRODUCTION CO LLC",
+      "count": 7066
+    },
+    {
+      "name": "FOUR CORNERS PETROLEUM II  LLC",
+      "count": 5689
+    },
+    {
+      "name": "OXY USA INC.",
+      "count": 5556
+    },
+    {
+      "name": "COG OPERATING LLC",
+      "count": 5327
+    },
+    {
+      "name": "TEXACO INC.",
+      "count": 4982
+    },
+    {
+      "name": "CONOCOPHILLIPS COMPANY",
+      "count": 4972
+    },
+    {
+      "name": "MERIT ENERGY COMPANY",
+      "count": 4846
+    },
+    {
+      "name": "LEGACY RESERVES OPERATING LP",
+      "count": 4435
+    },
+    {
+      "name": "BKV BARNETT  LLC",
+      "count": 4430
+    },
+    {
+      "name": "DIAMONDBACK E&P LLC",
+      "count": 4287
+    },
+    {
+      "name": "CHESAPEAKE OPERATING  L.L.C.",
+      "count": 4188
+    },
+    {
+      "name": "VINLAND TEXAS SERVICES LLC",
+      "count": 4066
+    },
+    {
+      "name": "DEVON ENERGY PRODUCTION CO  L.P.",
+      "count": 3735
+    },
+    {
+      "name": "DENBURY ONSHORE  LLC",
+      "count": 3654
+    },
+    {
+      "name": "AMOCO PRODUCTION COMPANY",
+      "count": 3562
+    },
+    {
+      "name": "CITATION OIL & GAS CORP.",
+      "count": 3312
+    },
+    {
+      "name": "EXXON MOBIL CORPORATION",
+      "count": 3115
+    },
+    {
+      "name": "EPIC PERMIAN OPERATING  LLC",
+      "count": 2942
+    },
+    {
+      "name": "ROVER PETROLEUM OPERATING  LLC",
+      "count": 2877
+    },
+    {
+      "name": "TEXAS PETROLEUM INVESTMENT CO.",
+      "count": 2846
+    },
+    {
+      "name": "TEXACO E & P INC.",
+      "count": 2825
+    },
+    {
+      "name": "MOBIL PRODUCING TX. & N.M. INC.",
+      "count": 2800
+    },
+    {
+      "name": "TEP BARNETT USA  LLC",
+      "count": 2798
+    },
+    {
+      "name": "OVINTIV USA INC.",
+      "count": 2773
+    },
+    {
+      "name": "LEWIS PETRO PROPERTIES  INC.",
+      "count": 2735
+    },
+    {
+      "name": "WALSH & WATTS  INC.",
+      "count": 2450
+    },
+    {
+      "name": "AGHORN OPERATING  INC.",
+      "count": 2439
+    },
+    {
+      "name": "UNION OIL COMPANY OF CALIFORNIA",
+      "count": 2317
+    },
+    {
+      "name": "MARATHON OIL EF LLC",
+      "count": 2185
+    },
+    {
+      "name": "GRIZZLY OP OF DELAWARE  LLC",
+      "count": 2168
+    },
+    {
+      "name": "SUN EXPLORATION & PRODUCTION CO.",
+      "count": 2165
+    },
+    {
+      "name": "SM ENERGY COMPANY",
+      "count": 2163
+    },
+    {
+      "name": "INDEPENDENCE RESOURCES MGMT  LLC",
+      "count": 2161
+    },
+    {
+      "name": "PARSLEY ENERGY OPERATIONS  LLC",
+      "count": 2150
+    },
+    {
+      "name": "MITCHELL ENERGY CORPORATION",
+      "count": 2118
+    },
+    {
+      "name": "SN EF MAVERICK  LLC",
+      "count": 2036
+    },
+    {
+      "name": "DISCOVERY NATURAL RESOURCES LLC",
+      "count": 2031
+    },
+    {
+      "name": "MAGNOLIA OIL & GAS OPERATING LLC",
+      "count": 2024
+    },
+    {
+      "name": "UNITEX OIL & GAS  L.L.C.",
+      "count": 1984
+    },
+    {
+      "name": "BRIDWELL OIL CO.",
+      "count": 1983
+    },
+    {
+      "name": "ARCO OIL & GAS CO.",
+      "count": 1972
+    },
+    {
+      "name": "FASKEN OIL AND RANCH  LTD.",
+      "count": 1936
+    },
+    {
+      "name": "TEXLAND PETROLEUM  L.P.",
+      "count": 1930
+    },
+    {
+      "name": "HUNT OIL COMPANY",
+      "count": 1923
+    },
+    {
+      "name": "PHILLIPS PETROLEUM COMPANY",
+      "count": 1921
+    },
+    {
+      "name": "4P ENERGY TEXAS  LLC",
+      "count": 1912
+    },
+    {
+      "name": "CHEVRON MIDCONTINENT  L.P.",
+      "count": 1892
+    },
+    {
+      "name": "BURLINGTON RESOURCES O & G CO LP",
+      "count": 1861
+    },
+    {
+      "name": "TXO PRODUCTION CORP.",
+      "count": 1847
+    },
+    {
+      "name": "URBAN OIL & GAS GROUP  LLC",
+      "count": 1832
+    },
+    {
+      "name": "SHELL OIL COMPANY",
+      "count": 1824
+    },
+    {
+      "name": "EAGLERIDGE OPERATING  LLC",
+      "count": 1796
+    },
+    {
+      "name": "BP AMERICA PRODUCTION COMPANY",
+      "count": 1756
+    },
+    {
+      "name": "STANOLIND PRODUCTION LLC",
+      "count": 1751
+    },
+    {
+      "name": "LAREDO PETROLEUM  INC.",
+      "count": 1749
+    },
+    {
+      "name": "SHERIDAN PRODUCTION CO III  LLC",
+      "count": 1742
+    },
+    {
+      "name": "CCI EAST TEXAS UPSTREAM LLC",
+      "count": 1739
+    },
+    {
+      "name": "ANADARKO E&P ONSHORE LLC",
+      "count": 1718
+    },
+    {
+      "name": "UNIT PETROLEUM COMPANY",
+      "count": 1693
+    },
+    {
+      "name": "PANTERA ENERGY COMPANY",
+      "count": 1676
+    },
+    {
+      "name": "CONOCOPHILLIPS CHITTIM OPER LLC",
+      "count": 1667
+    },
+    {
+      "name": "SUN EXPL. & PROD. CO.-CORPUS",
+      "count": 1660
+    },
+    {
+      "name": "WHITE ROCK OIL & GAS  LLC",
+      "count": 1656
+    },
+    {
+      "name": "SABINE OIL & GAS CORPORATION",
+      "count": 1653
+    },
+    {
+      "name": "CONOCO INC.",
+      "count": 1647
+    },
+    {
+      "name": "SABLE PERMIAN RESOURCES  LLC",
+      "count": 1643
+    },
+    {
+      "name": "GULF OIL CORP.",
+      "count": 1640
+    },
+    {
+      "name": "AVALON TX OPERATING  LLC",
+      "count": 1629
+    },
+    {
+      "name": "LARGE OPERATING LLC",
+      "count": 1625
+    },
+    {
+      "name": "STRONGHOLD ENERGY II OPER  LLC",
+      "count": 1614
+    },
+    {
+      "name": "R2Q OPERATING LLC",
+      "count": 1606
+    },
+    {
+      "name": "EP ENERGY E&P COMPANY  L.P.",
+      "count": 1604
+    },
+    {
+      "name": "HUMBLE OIL & REFINING CO.",
+      "count": 1600
+    },
+    {
+      "name": "MARATHON OIL COMPANY",
+      "count": 1562
+    },
+    {
+      "name": "KILLAM OIL CO.  LTD.",
+      "count": 1561
+    },
+    {
+      "name": "UNION PACIFIC RESOURCES COMPANY",
+      "count": 1539
+    },
+    {
+      "name": "PRESIDIO PETROLEUM LLC",
+      "count": 1532
+    },
+    {
+      "name": "JETTA OPERATING COMPANY  INC.",
+      "count": 1530
+    },
+    {
+      "name": "WAGNER OIL COMPANY",
+      "count": 1516
+    },
+    {
+      "name": "ROCKER A OPERATING COMPANY",
+      "count": 1506
+    },
+    {
+      "name": "ROCKCLIFF ENERGY OPERATING LLC",
+      "count": 1505
+    },
+    {
+      "name": "TEXAS OIL & GAS CORP.",
+      "count": 1479
+    },
+    {
+      "name": "MEWBOURNE OIL COMPANY",
+      "count": 1466
+    },
+    {
+      "name": "GREAT PLAINS RESOURCES  INC.",
+      "count": 1466
+    },
+    {
+      "name": "BEDROCK PRODUCTION  LLC",
+      "count": 1454
+    },
+    {
+      "name": "UNIDENTIFIED",
+      "count": 1438
+    },
+    {
+      "name": "ZARVONA ENERGY LLC",
+      "count": 1437
+    },
+    {
+      "name": "VALENCE OPERATING COMPANY",
+      "count": 1424
+    },
+    {
+      "name": "RING ENERGY  INC.",
+      "count": 1411
+    },
+    {
+      "name": "STEPHENS & JOHNSON OPERATING CO.",
+      "count": 1395
+    },
+    {
+      "name": "WHITE KNIGHT PRODUCTION LLC",
+      "count": 1392
+    },
+    {
+      "name": "CROSS TIMBERS ENERGY  LLC",
+      "count": 1371
+    },
+    {
+      "name": "GTG OPERATING  LLC",
+      "count": 1365
+    },
+    {
+      "name": "ATLANTIC RICHFIELD CO.",
+      "count": 1364
+    },
+    {
+      "name": "SUE-ANN OPERATING  L.C.",
+      "count": 1360
+    },
+    {
+      "name": "ORYX ENERGY COMPANY",
+      "count": 1355
+    },
+    {
+      "name": "MOBIL OIL CORPORATION",
+      "count": 1326
+    },
+    {
+      "name": "SHERIDAN PRODUCTION COMPANY  LLC",
+      "count": 1321
+    },
+    {
+      "name": "PRIME OPERATING COMPANY",
+      "count": 1316
+    },
+    {
+      "name": "CROWNQUEST OPERATING  LLC",
+      "count": 1304
+    },
+    {
+      "name": "SOUTHWEST ROYALTIES  INC.",
+      "count": 1278
+    },
+    {
+      "name": "BREITBURN OPERATING L.P.",
+      "count": 1267
+    },
+    {
+      "name": "ATLAS OPERATING LLC",
+      "count": 1258
+    },
+    {
+      "name": "CROSSROADS OPERATING  LLC",
+      "count": 1241
+    },
+    {
+      "name": "CHOLLA PETROLEUM  INC.",
+      "count": 1232
+    },
+    {
+      "name": "PONDEROSA TX OPERATING LLC",
+      "count": 1222
+    },
+    {
+      "name": "LATIGO PETROLEUM  LLC",
+      "count": 1209
+    },
+    {
+      "name": "QUATRO OIL AND GAS  INC.",
+      "count": 1195
+    },
+    {
+      "name": "SMITH PIPE OF ABILENE",
+      "count": 1187
+    },
+    {
+      "name": "BROWN  GEO. R PARTNERSHIP LP THE",
+      "count": 1166
+    },
+    {
+      "name": "WPX ENERGY PERMIAN  LLC",
+      "count": 1165
+    },
+    {
+      "name": "JAY MANAGEMENT COMPANY  LLC",
+      "count": 1163
+    },
+    {
+      "name": "SOJOURNER DRILLING CORPORATION",
+      "count": 1135
+    },
+    {
+      "name": "SHELL WESTERN E&P",
+      "count": 1134
+    },
+    {
+      "name": "L.C.S. PRODUCTION COMPANY",
+      "count": 1122
+    },
+    {
+      "name": "MCGOWAN WORKING PARTNERS  INC.",
+      "count": 1115
+    },
+    {
+      "name": "SHELL WESTERN E&P INC.",
+      "count": 1101
+    },
+    {
+      "name": "AMPLIFY ENERGY OPERATING LLC",
+      "count": 1094
+    },
+    {
+      "name": "WHITING OIL AND GAS CORPORATION",
+      "count": 1078
+    },
+    {
+      "name": "GINCO OPERATING CO.",
+      "count": 1077
+    },
+    {
+      "name": "LIME ROCK RESOURCES IV-A  L.P.",
+      "count": 1069
+    },
+    {
+      "name": "POLARIS OPERATING  LLC",
+      "count": 1059
+    },
+    {
+      "name": "T-C OIL COMPANY  LLC",
+      "count": 1058
+    },
+    {
+      "name": "QEP ENERGY COMPANY",
+      "count": 1053
+    },
+    {
+      "name": "MOMENTUM OPERATING CO.  INC.",
+      "count": 1052
+    },
+    {
+      "name": "TRINITY OPERATING (USG)  LLC",
+      "count": 1045
+    },
+    {
+      "name": "COMSTOCK OIL & GAS  LLC",
+      "count": 1022
+    },
+    {
+      "name": "ORLAND OIL & GAS LLC",
+      "count": 1016
+    },
+    {
+      "name": "SMITH PRODUCTION INC.",
+      "count": 1006
+    },
+    {
+      "name": "CALLON PETROLEUM OPERATING CO",
+      "count": 1003
+    },
+    {
+      "name": "TENNECO OIL CO.",
+      "count": 1003
+    },
+    {
+      "name": "PARALLEL PETROLEUM LLC",
+      "count": 1002
+    },
+    {
+      "name": "BAR L PRODUCERS",
+      "count": 999
+    },
+    {
+      "name": "DE3 OPERATING LLC",
+      "count": 994
+    },
+    {
+      "name": "WALSH PETROLEUM  INC.",
+      "count": 984
+    },
+    {
+      "name": "WHITE OAK OPERATING COMPANY LLC",
+      "count": 978
+    },
+    {
+      "name": "WINCHESTER OIL & GAS LLC",
+      "count": 973
+    },
+    {
+      "name": "SLANT OPERATING  LLC",
+      "count": 967
+    },
+    {
+      "name": "PEBA OIL & GAS  INC.",
+      "count": 961
+    },
+    {
+      "name": "MURPHY EXPL. & PROD. CO. - USA",
+      "count": 959
+    },
+    {
+      "name": "GETTY OIL CO.",
+      "count": 958
+    },
+    {
+      "name": "QUINTANA PET. CORP.",
+      "count": 953
+    },
+    {
+      "name": "SOUTH SAM OPERATING COMPANY  LLC",
+      "count": 950
+    },
+    {
+      "name": "DALLAS PRODUCTION  INC.",
+      "count": 949
+    },
+    {
+      "name": "THOMPSON  J. CLEO",
+      "count": 945
+    },
+    {
+      "name": "OCCIDENTAL W TX OVERTHRUST  INC.",
+      "count": 934
+    },
+    {
+      "name": "FAULCONER  VERNON E.  INC.",
+      "count": 932
+    },
+    {
+      "name": "DAYLIGHT PETROLEUM LLC",
+      "count": 929
+    },
+    {
+      "name": "FROSTWOOD ENERGY  LLC",
+      "count": 924
+    },
+    {
+      "name": "GREAT WESTERN DRILLING COMPANY",
+      "count": 915
+    },
+    {
+      "name": "T - C OIL COMPANY",
+      "count": 910
+    },
+    {
+      "name": "BPX OPERATING COMPANY",
+      "count": 905
+    },
+    {
+      "name": "CONTINENTAL OIL COMPANY",
+      "count": 905
+    },
+    {
+      "name": "SHALLOW PRODUCTION OPER  LLC",
+      "count": 899
+    },
+    {
+      "name": "PETEX",
+      "count": 897
+    },
+    {
+      "name": "PERDURE PETROLEUM LLC",
+      "count": 896
+    },
+    {
+      "name": "DELRAY OIL  INC.",
+      "count": 895
+    },
+    {
+      "name": "SURGE OPERATING  LLC",
+      "count": 892
+    },
+    {
+      "name": "TORRENT OIL LLC",
+      "count": 884
+    },
+    {
+      "name": "ANADARKO PETROLEUM CORPORATION",
+      "count": 884
+    },
+    {
+      "name": "D10 ENERGY LLC",
+      "count": 875
+    },
+    {
+      "name": "BJG OPERATING COMPANY",
+      "count": 873
+    },
+    {
+      "name": "SUN EXPL. & PROD. CO.-ABILENE",
+      "count": 873
+    },
+    {
+      "name": "BOAZ ENERGY II OPERATING  LLC",
+      "count": 872
+    },
+    {
+      "name": "SCHLACHTER OPERATING CORPORATION",
+      "count": 867
+    },
+    {
+      "name": "CHESAPEAKE OPERATING  INC.",
+      "count": 861
+    },
+    {
+      "name": "TEXAS SECONDARY OIL CORPORATION",
+      "count": 858
+    },
+    {
+      "name": "JO MILL OIL COMPANY LLC",
+      "count": 858
+    },
+    {
+      "name": "V & H OIL  L.P.",
+      "count": 852
+    },
+    {
+      "name": "TANOS EXPLORATION II  LLC",
+      "count": 851
+    },
+    {
+      "name": "CIMAREX ENERGY CO.",
+      "count": 851
+    },
+    {
+      "name": "JOHNSON & ERNST OPERATING CO.",
+      "count": 850
+    },
+    {
+      "name": "AZTECA PETROLEUM  LLC",
+      "count": 849
+    },
+    {
+      "name": "BURK ROYALTY COMPANY",
+      "count": 838
+    },
+    {
+      "name": "LINDER  JOHN OPERATING CO.  LLC",
+      "count": 822
+    },
+    {
+      "name": "COMPASS ENERGY OPERATING  LLC",
+      "count": 809
+    },
+    {
+      "name": "GAITHER PETROLEUM CORPORATION",
+      "count": 805
+    },
+    {
+      "name": "FELDERHOFF PRODUCTION COMPANY",
+      "count": 801
+    },
+    {
+      "name": "O RYAN OIL AND GAS",
+      "count": 797
+    },
+    {
+      "name": "SUMMIT PETROLEUM LLC",
+      "count": 797
+    },
+    {
+      "name": "ARCH OIL & GAS  LLC",
+      "count": 794
+    },
+    {
+      "name": "QUAIL CREEK OIL CORPORATION",
+      "count": 789
+    },
+    {
+      "name": "VAQUERO HUNTER INC.",
+      "count": 788
+    },
+    {
+      "name": "PRODUCTION RESOURCES  INC.",
+      "count": 784
+    },
+    {
+      "name": "CIMAREX ENERGY CO. OF COLORADO",
+      "count": 770
+    },
+    {
+      "name": "ROSETTA RESOURCES OPERATING LP",
+      "count": 759
+    },
+    {
+      "name": "BURLINGTON RESOURCES OIL&GAS CO.",
+      "count": 756
+    },
+    {
+      "name": "SEAGULL OPERATING CO.  INC.",
+      "count": 749
+    },
+    {
+      "name": "TREK RESOURCES  INC.",
+      "count": 749
+    },
+    {
+      "name": "NOBLE ENERGY INC",
+      "count": 747
+    },
+    {
+      "name": "RIDGE OIL COMPANY",
+      "count": 746
+    },
+    {
+      "name": "COX  JOHN L.",
+      "count": 744
+    },
+    {
+      "name": "PETROSAURUS  INC.",
+      "count": 742
+    },
+    {
+      "name": "ENSIGN OPERATING LLC",
+      "count": 741
+    },
+    {
+      "name": "STASNEY WELL SERVICE  LLC",
+      "count": 712
+    },
+    {
+      "name": "CALLON (EAGLE FORD) LLC",
+      "count": 710
+    },
+    {
+      "name": "BASTROP OIL & GAS  INC.",
+      "count": 710
+    },
+    {
+      "name": "APV MCCAMEY LLC",
+      "count": 707
+    },
+    {
+      "name": "ENRON OIL & GAS COMPANY",
+      "count": 701
+    },
+    {
+      "name": "MILLENNIUM RESOURCES  LP",
+      "count": 700
+    },
+    {
+      "name": "CCI GULF COAST UPSTREAM LLC",
+      "count": 699
+    },
+    {
+      "name": "PROLINE ENERGY RESOURCES INC",
+      "count": 698
+    },
+    {
+      "name": "REVERENCE OPERATING LLC",
+      "count": 669
+    },
+    {
+      "name": "WFW PRODUCTION COMPANY  INC.",
+      "count": 669
+    },
+    {
+      "name": "FOUNDATION ENERGY MANAGEMENT LLC",
+      "count": 660
+    },
+    {
+      "name": "VAN OPERATING  LTD.",
+      "count": 655
+    },
+    {
+      "name": "REPSOL OIL & GAS USA  LLC",
+      "count": 650
+    },
+    {
+      "name": "PETCO PETROLEUM CORP.",
+      "count": 648
+    },
+    {
+      "name": "MAGNUM PRODUCING  LP",
+      "count": 643
+    },
+    {
+      "name": "DP PERMIAN OPERATOR  LLC",
+      "count": 643
+    },
+    {
+      "name": "BETTIS  BOYLE & STOVALL",
+      "count": 641
+    },
+    {
+      "name": "REMORA OPERATING  LLC",
+      "count": 638
+    },
+    {
+      "name": "FOREST OIL CORPORATION",
+      "count": 638
+    },
+    {
+      "name": "AMERADA HESS CORPORATION",
+      "count": 638
+    },
+    {
+      "name": "SAGE ENERGY COMPANY",
+      "count": 636
+    },
+    {
+      "name": "MAVERICK ENERGY GROUP  INC.",
+      "count": 634
+    },
+    {
+      "name": "SUNDOWN ENERGY LP",
+      "count": 633
+    },
+    {
+      "name": "ASPEN OPERATING COMPANY  L.L.C.",
+      "count": 629
+    },
+    {
+      "name": "T & R OPERATING  LLC",
+      "count": 628
+    },
+    {
+      "name": "ACADIA OIL  LLC",
+      "count": 628
+    },
+    {
+      "name": "HEXP OPERATING  LLC",
+      "count": 627
+    },
+    {
+      "name": "OAKRIDGE OIL AND GAS  LP",
+      "count": 624
+    },
+    {
+      "name": "RIFE OIL PROPERTIES  INC.",
+      "count": 623
+    },
+    {
+      "name": "BUFFCO PRODUCTION INC.",
+      "count": 621
+    },
+    {
+      "name": "RELENTLESS PERMIAN OPERATING LLC",
+      "count": 621
+    },
+    {
+      "name": "PENN VIRGINIA OIL & GAS  L.P.",
+      "count": 618
+    },
+    {
+      "name": "4-SIGHT OPERATING COMPANY  LTD.",
+      "count": 613
+    },
+    {
+      "name": "WILLOWBEND INVESTMENTS  INC.",
+      "count": 612
+    },
+    {
+      "name": "JUNO OPERATING COMPANY III  LLC",
+      "count": 610
+    },
+    {
+      "name": "JONES ENERGY  LLC",
+      "count": 607
+    },
+    {
+      "name": "EAGLE FORD OIL CO.  INC.",
+      "count": 604
+    },
+    {
+      "name": "PARKER & PARSLEY DEVELOPMENT L.P",
+      "count": 604
+    },
+    {
+      "name": "MECO IV  LLC",
+      "count": 603
+    },
+    {
+      "name": "VIRTEX OPERATING COMPANY  INC.",
+      "count": 597
+    },
+    {
+      "name": "BURK ROYALTY CO.  LTD.",
+      "count": 594
+    },
+    {
+      "name": "FIREBIRD ENERGY LLC",
+      "count": 594
+    },
+    {
+      "name": "S.B. STREET OPERATING  INC.",
+      "count": 592
+    },
+    {
+      "name": "SN OPERATING  LLC",
+      "count": 592
+    },
+    {
+      "name": "COLUMBUS ENERGY  LLC",
+      "count": 590
+    },
+    {
+      "name": "BTA OIL PRODUCERS",
+      "count": 587
+    },
+    {
+      "name": "DELTA OIL & GAS LTD.",
+      "count": 582
+    },
+    {
+      "name": "VICEROY PETROLEUM  LP",
+      "count": 572
+    },
+    {
+      "name": "SARATOGA PRODUCTION COMPANY LLC",
+      "count": 572
+    },
+    {
+      "name": "CML EXPLORATION  LLC",
+      "count": 568
+    },
+    {
+      "name": "WELDER EXPLORATION & PROD.  INC.",
+      "count": 566
+    },
+    {
+      "name": "COURSON OIL & GAS  INC.",
+      "count": 564
+    },
+    {
+      "name": "DISCOVERY OPERATING  INC.",
+      "count": 563
+    },
+    {
+      "name": "WTG EXPLORATION",
+      "count": 562
+    },
+    {
+      "name": "KAISER-FRANCIS OIL COMPANY",
+      "count": 560
+    },
+    {
+      "name": "XOG OPERATING LLC",
+      "count": 556
+    },
+    {
+      "name": "EL DORADO GAS & OIL  INC.",
+      "count": 555
+    },
+    {
+      "name": "DEWBRE PETROLEUM CORPORATION",
+      "count": 553
+    },
+    {
+      "name": "CHAMPLIN PETROLEUM CO.",
+      "count": 546
+    },
+    {
+      "name": "STRAT LAND EXPLORATION COMPANY",
+      "count": 545
+    },
+    {
+      "name": "OILEX INT L INVESTMENTS  INC.",
+      "count": 543
+    },
+    {
+      "name": "FINA OIL & CHEMICAL COMPANY",
+      "count": 540
+    },
+    {
+      "name": "BRG LONE STAR LTD.",
+      "count": 537
+    },
+    {
+      "name": "CRESCENT PASS ENERGY  LLC",
+      "count": 536
+    },
+    {
+      "name": "KOVAR OPERATING  LLC",
+      "count": 536
+    },
+    {
+      "name": "NEG OPERATING LLC",
+      "count": 535
+    },
+    {
+      "name": "ABRAXAS PETROLEUM CORPORATION",
+      "count": 532
+    },
+    {
+      "name": "HNG OIL COMPANY",
+      "count": 532
+    },
+    {
+      "name": "SEM OPERATING COMPANY LLC",
+      "count": 530
+    },
+    {
+      "name": "NORTH RIDGE CORPORATION",
+      "count": 530
+    },
+    {
+      "name": "AMERICO ENERGY RESOURCES  LLC",
+      "count": 528
+    },
+    {
+      "name": "VESS OIL CORPORATION",
+      "count": 523
+    },
+    {
+      "name": "MAC 5 OPERATING  LLC",
+      "count": 520
+    },
+    {
+      "name": "SAGE NATURAL RESOURCES LLC",
+      "count": 520
+    },
+    {
+      "name": "OLSEN ENERGY INC.",
+      "count": 518
+    },
+    {
+      "name": "AMERICAN PETROFINA CO. OF TEX.",
+      "count": 518
+    },
+    {
+      "name": "ENHANCED ENERGY PARTNERS CORP",
+      "count": 509
+    },
+    {
+      "name": "HIGH RIVER RES OPERATING  LLC",
+      "count": 509
+    },
+    {
+      "name": "JACOBS  C. E.  CO.",
+      "count": 500
+    },
+    {
+      "name": "ANADARKO E&P COMPANY LP",
+      "count": 499
+    },
+    {
+      "name": "BAYLOR OPERATING  LLC",
+      "count": 497
+    },
+    {
+      "name": "THREE P OPERATING CO. GP  L.L.C.",
+      "count": 495
+    },
+    {
+      "name": "ACOCK/ANAQUA OPERATING CO.  LP",
+      "count": 494
+    },
+    {
+      "name": "HOUSTON OIL & MINERALS CORP.",
+      "count": 494
+    },
+    {
+      "name": "JUST OIL & GAS  INC.",
+      "count": 490
+    },
+    {
+      "name": "BRECK OPERATING CORP.",
+      "count": 488
+    },
+    {
+      "name": "CLEAR FORK  INCORPORATED",
+      "count": 486
+    },
+    {
+      "name": "JONES CO.",
+      "count": 486
+    },
+    {
+      "name": "BTA OIL PRODUCERS  LLC",
+      "count": 485
+    },
+    {
+      "name": "ECHO PRODUCTION  INC.",
+      "count": 483
+    },
+    {
+      "name": "ISKANDIA ENERGY OPERATING  INC.",
+      "count": 482
+    },
+    {
+      "name": "KERR-MCGEE OIL & GAS ONSHORE LLC",
+      "count": 482
+    },
+    {
+      "name": "PAN AMERICAN PETROLEUM CORP.",
+      "count": 480
+    },
+    {
+      "name": "B & B OIL  INC.",
+      "count": 478
+    },
+    {
+      "name": "EXTEX OPERATING COMPANY",
+      "count": 476
+    },
+    {
+      "name": "HAMMAN OIL & REFINING COMPANY",
+      "count": 475
+    },
+    {
+      "name": "BRAKA OPERATING  L.L.C.",
+      "count": 474
+    },
+    {
+      "name": "EXCO OPERATING COMPANY  LP",
+      "count": 473
+    },
+    {
+      "name": "FLINT OAK ENERGY  LLC",
+      "count": 473
+    },
+    {
+      "name": "GUNN OIL COMPANY",
+      "count": 468
+    },
+    {
+      "name": "GEOSOUTHERN ENERGY CORPORATION",
+      "count": 463
+    },
+    {
+      "name": "CENTENNIAL RESOURCE PROD  LLC",
+      "count": 462
+    },
+    {
+      "name": "WG OPERATING  INC.",
+      "count": 462
+    },
+    {
+      "name": "BLS PRODUCTION CO.  INC.",
+      "count": 460
+    },
+    {
+      "name": "SUPERIOR OIL COMPANY  THE",
+      "count": 460
+    },
+    {
+      "name": "KD ENERGY  LLC",
+      "count": 457
+    },
+    {
+      "name": "P.O.&G. OPERATING  LLC",
+      "count": 456
+    },
+    {
+      "name": "CADDO ENERGY CO.  INC.",
+      "count": 455
+    },
+    {
+      "name": "SHARP IMAGE ENERGY  INC.",
+      "count": 454
+    },
+    {
+      "name": "SAGA PETROLEUM LLC OF COLORADO",
+      "count": 454
+    },
+    {
+      "name": "TRIVISTA OPERATING LLC",
+      "count": 449
+    },
+    {
+      "name": "SEVEN CROSS OPERATING  LLC",
+      "count": 448
+    },
+    {
+      "name": "MAMMOTH EXPLORATION LLC",
+      "count": 447
+    },
+    {
+      "name": "ENERVEST OPERATING  L.L.C.",
+      "count": 447
+    },
+    {
+      "name": "KTC OIL ENTERPRISES  LLC",
+      "count": 441
+    },
+    {
+      "name": "BANNER OIL & GAS LLC",
+      "count": 437
+    },
+    {
+      "name": "ROMAC OIL COMPANY  INC.",
+      "count": 436
+    },
+    {
+      "name": "MASSIE OIL COMPANY",
+      "count": 434
+    },
+    {
+      "name": "LECLAIR OPERATING CO.  INC.",
+      "count": 434
+    },
+    {
+      "name": "CORSICANA CRUDE COMPANY  LLC",
+      "count": 432
+    },
+    {
+      "name": "VANCO OIL & GAS CORP.",
+      "count": 430
+    },
+    {
+      "name": "TAMARACK PETROLEUM COMPANY  INC.",
+      "count": 428
+    },
+    {
+      "name": "NEUMIN PRODUCTION COMPANY",
+      "count": 426
+    },
+    {
+      "name": "U. S. OPERATING  INC.",
+      "count": 425
+    },
+    {
+      "name": "STOUT ENERGY INC.",
+      "count": 424
+    },
+    {
+      "name": "UNION TEXAS PETROLEUM CORP.",
+      "count": 424
+    },
+    {
+      "name": "CITIES SERVICE OIL CO.",
+      "count": 424
+    },
+    {
+      "name": "GALVESTON BAY OPERATING CO LLC",
+      "count": 422
+    },
+    {
+      "name": "PITTS ENERGY CO.",
+      "count": 421
+    },
+    {
+      "name": "BIRCH OPERATIONS  INC.",
+      "count": 417
+    },
+    {
+      "name": "AMOCO PRODUCTION CO.-ANDREWS",
+      "count": 415
+    },
+    {
+      "name": "DIAMOND S ENERGY COMPANY",
+      "count": 413
+    },
+    {
+      "name": "HENRY PETROLEUM LLC",
+      "count": 413
+    },
+    {
+      "name": "SAMEDAN OIL CORPORATION",
+      "count": 413
+    },
+    {
+      "name": "TEXXOL OPERATING COMPANY  INC.",
+      "count": 412
+    },
+    {
+      "name": "OPERATOR P-5 NOT ON FILE",
+      "count": 412
+    },
+    {
+      "name": "TEMPLAR OPERATING LLC",
+      "count": 411
+    },
+    {
+      "name": "NEWFIELD EXPLORATION COMPANY",
+      "count": 411
+    },
+    {
+      "name": "CROWN CENTRAL PETROLEUM CORP.",
+      "count": 411
+    },
+    {
+      "name": "TEXAS PACIFIC OIL COMPANY  INC.",
+      "count": 407
+    },
+    {
+      "name": "HOPEWELL OPERATING  INC.",
+      "count": 406
+    },
+    {
+      "name": "BAKER OPERATING  INC.",
+      "count": 406
+    },
+    {
+      "name": "SWANNER PROPERTIES",
+      "count": 406
+    },
+    {
+      "name": "EL DORADO OIL & GAS INC.",
+      "count": 404
+    },
+    {
+      "name": "J. W. RESOURCES INC.",
+      "count": 402
+    },
+    {
+      "name": "ARMOR PETROLEUM  INC.",
+      "count": 402
+    },
+    {
+      "name": "PEARL  BILL H. PRODUCTIONS  INC.",
+      "count": 401
+    },
+    {
+      "name": "RED LINE COMPANY  LTD.",
+      "count": 401
+    },
+    {
+      "name": "ARROWHEAD PRODUCTIONS  LP",
+      "count": 400
+    },
+    {
+      "name": "DFG ENERGY COMPANY LLC",
+      "count": 399
+    },
+    {
+      "name": "TEXLAND-RECTOR & SCHUMACHER",
+      "count": 398
+    },
+    {
+      "name": "PENNZOIL EXPLORATION & PROD. CO.",
+      "count": 398
+    },
+    {
+      "name": "HAWKWOOD ENERGY OPERATING  LLC",
+      "count": 396
+    },
+    {
+      "name": "SILVERBOW RESOURCES OPER  LLC",
+      "count": 394
+    },
+    {
+      "name": "NEWMAN OPERATING COMPANY",
+      "count": 394
+    },
+    {
+      "name": "SEABOARD OPERATING CO.",
+      "count": 393
+    },
+    {
+      "name": "SULPHUR RIVER EXPLORATION  INC.",
+      "count": 392
+    },
+    {
+      "name": "BLACKBRUSH O & G  LLC",
+      "count": 391
+    },
+    {
+      "name": "DIAMOND CHEMICALS COMPANY",
+      "count": 391
+    },
+    {
+      "name": "RADCO OPERATIONS  L.P.",
+      "count": 390
+    },
+    {
+      "name": "W.T. WAGGONER ESTATE  INC.",
+      "count": 390
+    },
+    {
+      "name": "GUIDON ENERGY MGMT SERVICES LLC",
+      "count": 384
+    },
+    {
+      "name": "PENNZOIL PRODUCING CO.",
+      "count": 384
+    },
+    {
+      "name": "MEDDERS OIL COMPANY  INC.",
+      "count": 382
+    },
+    {
+      "name": "RICHEY  RAY MANAGEMENT CO.  INC.",
+      "count": 381
+    },
+    {
+      "name": "FINLEY RESOURCES  INC.",
+      "count": 377
+    },
+    {
+      "name": "SYNTHETIC ENERGY CORPORATION",
+      "count": 377
+    },
+    {
+      "name": "KEBO OIL & GAS  INC.",
+      "count": 375
+    },
+    {
+      "name": "KJ ENERGY  LLC",
+      "count": 375
+    },
+    {
+      "name": "CHARRO OPERATING  L.L.C.",
+      "count": 374
+    },
+    {
+      "name": "STOVALL OPERATING CO.",
+      "count": 373
+    },
+    {
+      "name": "ALLEGIANT RESOURCES  LLC",
+      "count": 373
+    },
+    {
+      "name": "MERCURY OPERATING  LLC",
+      "count": 369
+    },
+    {
+      "name": "SOUTHWEST GAS SYSTEMS  INC.",
+      "count": 367
+    },
+    {
+      "name": "PETROLEUM CORPORATION OF TEXAS",
+      "count": 367
+    },
+    {
+      "name": "RJD MANAGEMENT CO.  INC.",
+      "count": 366
+    },
+    {
+      "name": "COASTAL STATES GAS PROD. CO.",
+      "count": 366
+    },
+    {
+      "name": "ETX ENERGY  LLC",
+      "count": 363
+    },
+    {
+      "name": "ARCO PERMIAN",
+      "count": 363
+    },
+    {
+      "name": "COOPER OIL & GAS  LLC",
+      "count": 360
+    },
+    {
+      "name": "EAGLE OIL & GAS CO.",
+      "count": 358
+    },
+    {
+      "name": "SILVER CREEK OIL & GAS  LLC",
+      "count": 356
+    },
+    {
+      "name": "PARKER & PARSLEY DEVELOPMENT CO.",
+      "count": 356
+    },
+    {
+      "name": "PETROBAL OMEGA 1  LLC",
+      "count": 354
+    },
+    {
+      "name": "HADLEY OIL COMPANY  LLC",
+      "count": 354
+    },
+    {
+      "name": "BXP OPERATING  LLC",
+      "count": 353
+    },
+    {
+      "name": "FOUNDERS OIL & GAS OPERATING LLC",
+      "count": 353
+    },
+    {
+      "name": "DOMINION OKLAHOMA TEXAS E&P  INC",
+      "count": 353
+    },
+    {
+      "name": "PITCOCK  INC.",
+      "count": 352
+    },
+    {
+      "name": "HEADINGTON ENERGY PARTNERS  LLC",
+      "count": 350
+    },
+    {
+      "name": "COASTAL OIL & GAS CORPORATION",
+      "count": 350
+    },
+    {
+      "name": "COLOGNE PRODUCTION COMPANY",
+      "count": 350
+    },
+    {
+      "name": "RENEAU OIL CO.",
+      "count": 348
+    },
+    {
+      "name": "KERR-MCGEE CORPORATION",
+      "count": 345
+    },
+    {
+      "name": "QUANTUM RESOURCES MANAGEMENT LLC",
+      "count": 345
+    },
+    {
+      "name": "BORDERLINE OPERATING CORP.",
+      "count": 344
+    },
+    {
+      "name": "GEOMEG ENERGY OPERATING CO.  LLC",
+      "count": 344
+    },
+    {
+      "name": "WAGGONER  W. T.  ESTATE",
+      "count": 344
+    },
+    {
+      "name": "VENADO OPERATING COMPANY LLC",
+      "count": 343
+    },
+    {
+      "name": "EASTLAND OPERATING  L.L.C.",
+      "count": 343
+    },
+    {
+      "name": "SAMSON LONE STAR  LLC",
+      "count": 343
+    },
+    {
+      "name": "SEEKER OIL COMPANY  INCORPORATED",
+      "count": 339
+    },
+    {
+      "name": "WHITE MARLIN OPERATING CO  LLC",
+      "count": 339
+    },
+    {
+      "name": "RANGE PRODUCTION COMPANY",
+      "count": 339
+    },
+    {
+      "name": "STEPHENS  AUTRY C.",
+      "count": 338
+    },
+    {
+      "name": "BCE-MACH II LLC",
+      "count": 336
+    },
+    {
+      "name": "DJH OIL & GAS LLC",
+      "count": 335
+    },
+    {
+      "name": "ENERGY 2000  INC.",
+      "count": 335
+    },
+    {
+      "name": "REMORA MANAGEMENT  LLC",
+      "count": 334
+    },
+    {
+      "name": "UPHAM OIL & GAS COMPANY",
+      "count": 334
+    },
+    {
+      "name": "MILESTONE OPERATING  INC.",
+      "count": 332
+    },
+    {
+      "name": "AMINEX USA  INC.",
+      "count": 332
+    },
+    {
+      "name": "SAHARA OPERATING COMPANY",
+      "count": 331
+    },
+    {
+      "name": "CLARK OIL CO.",
+      "count": 331
+    },
+    {
+      "name": "CRD OPERATING  LLC",
+      "count": 328
+    },
+    {
+      "name": "LARIO OIL & GAS COMPANY",
+      "count": 327
+    },
+    {
+      "name": "BASS ENTERPRISES PRODUCTION CO.",
+      "count": 327
+    },
+    {
+      "name": "HUBER  J. M.  CORPORATION",
+      "count": 325
+    },
+    {
+      "name": "TEXACO PRODUCING INC.",
+      "count": 325
+    },
+    {
+      "name": "EXXON CORPORATION",
+      "count": 324
+    },
+    {
+      "name": "HIGHMOUNT EXPL & PROD TEXAS LLC",
+      "count": 321
+    },
+    {
+      "name": "COBRA OIL & GAS CORPORATION",
+      "count": 320
+    },
+    {
+      "name": "ROBERTSON RESOURCES  INC.",
+      "count": 318
+    },
+    {
+      "name": "G & F OIL  INC.",
+      "count": 318
+    },
+    {
+      "name": "DINERO OIL CORPORATION",
+      "count": 316
+    },
+    {
+      "name": "C & E OPERATING  INC.",
+      "count": 315
+    },
+    {
+      "name": "HIBERNIA RESOURCES III  LLC",
+      "count": 313
+    },
+    {
+      "name": "SONAT EXPLORATION COMPANY -TYLER",
+      "count": 312
+    },
+    {
+      "name": "OILWELL OPERATORS  INC.",
+      "count": 311
+    },
+    {
+      "name": "KERR-MCGEE OIL & GAS ONSHORE LP",
+      "count": 310
+    },
+    {
+      "name": "SOUTHEASTERN RESOURCES CORP.",
+      "count": 309
+    },
+    {
+      "name": "REMUDA OPERATING COMPANY",
+      "count": 307
+    },
+    {
+      "name": "MCCLURE OIL COMPANY  INC.",
+      "count": 307
+    },
+    {
+      "name": "TITAN ROCK E&P  LLC",
+      "count": 307
+    },
+    {
+      "name": "ROGERS  S. K. OIL  INC.",
+      "count": 306
+    },
+    {
+      "name": "WILLIAMS OIL COMPANY",
+      "count": 305
+    },
+    {
+      "name": "CMR ENERGY  L.P.",
+      "count": 305
+    },
+    {
+      "name": "BRAMMER PETROLEUM  INC.",
+      "count": 304
+    },
+    {
+      "name": "CENTURY PETROLEUM  INC.",
+      "count": 304
+    },
+    {
+      "name": "PELES  LLC",
+      "count": 301
+    },
+    {
+      "name": "MCDAY ENERGY CORP.",
+      "count": 300
+    },
+    {
+      "name": "THREE R OIL COMPANY",
+      "count": 298
+    },
+    {
+      "name": "WILLIAMS  CLAYTON ENERGY  INC.",
+      "count": 298
+    },
+    {
+      "name": "1849 ENERGY PARTNERS OPRTNG  LLC",
+      "count": 297
+    },
+    {
+      "name": "LONG TRUSTS  THE",
+      "count": 297
+    },
+    {
+      "name": "LONESTAR OPERATING  LLC",
+      "count": 296
+    },
+    {
+      "name": "RUTHERFORD OIL CORPORATION",
+      "count": 296
+    },
+    {
+      "name": "ERNEST OPERATING COMPANY",
+      "count": 295
+    },
+    {
+      "name": "WEATHERLY OIL & GAS  LLC",
+      "count": 295
+    },
+    {
+      "name": "R. LACY SERVICES  LTD.",
+      "count": 295
+    },
+    {
+      "name": "CODA ENERGY  INC.",
+      "count": 295
+    },
+    {
+      "name": "OVERTON PARK OIL & GAS LP",
+      "count": 294
+    },
+    {
+      "name": "EXXCEL PRODUCTION COMPANY",
+      "count": 294
+    },
+    {
+      "name": "HUNT CIMARRON LTD. PARTNERSHIP",
+      "count": 294
+    },
+    {
+      "name": "ATAPCO",
+      "count": 293
+    },
+    {
+      "name": "LINN OPERATING  INC.",
+      "count": 292
+    },
+    {
+      "name": "ENSERCH EXPLORATION  INC",
+      "count": 291
+    },
+    {
+      "name": "BRP ENERGY  LLC",
+      "count": 289
+    },
+    {
+      "name": "PRIMEXX OPERATING CORPORATION",
+      "count": 289
+    },
+    {
+      "name": "NORTH CENTRAL OIL CORP.",
+      "count": 289
+    },
+    {
+      "name": "VERDUN OIL & GAS LLC",
+      "count": 288
+    },
+    {
+      "name": "DYNAMIC PRODUCTION  INC.",
+      "count": 288
+    },
+    {
+      "name": "BRADLEY OPERATING CO.",
+      "count": 288
+    },
+    {
+      "name": "DURANGO RESOURCES CORP.",
+      "count": 287
+    },
+    {
+      "name": "ENRICH OIL CORPORATION",
+      "count": 287
+    },
+    {
+      "name": "OXBOW PETROLEUM  LLC",
+      "count": 287
+    },
+    {
+      "name": "THREE SPAN OIL & GAS  INC.",
+      "count": 285
+    },
+    {
+      "name": "GANADOR OPERATING  LLC",
+      "count": 284
+    },
+    {
+      "name": "MD AMERICA ENERGY  LLC",
+      "count": 283
+    },
+    {
+      "name": "PETROLEGACY ENERGY II  LLC",
+      "count": 283
+    },
+    {
+      "name": "NATIONAL LAND RESOURCES INC.",
+      "count": 283
+    },
+    {
+      "name": "CHAPARRAL ENERGY  L.L.C.",
+      "count": 282
+    },
+    {
+      "name": "TRIVIUM OPERATING  LLC",
+      "count": 281
+    },
+    {
+      "name": "GOLDKING PROD. CO.",
+      "count": 281
+    },
+    {
+      "name": "AETHON ENERGY OPERATING LLC",
+      "count": 280
+    },
+    {
+      "name": "BOPCO  L.P.",
+      "count": 280
+    },
+    {
+      "name": "UNKNOWN",
+      "count": 280
+    },
+    {
+      "name": "BROOKSTON ENERGY  INC.",
+      "count": 279
+    },
+    {
+      "name": "ANDERSON  JAMES K. INC.",
+      "count": 279
+    },
+    {
+      "name": "MATADOR PRODUCTION COMPANY",
+      "count": 278
+    },
+    {
+      "name": "STRAND ENERGY  L.C.",
+      "count": 278
+    },
+    {
+      "name": "RINCON PETROLEUM CORPORATION",
+      "count": 278
+    },
+    {
+      "name": "COX OIL & GAS  INC.",
+      "count": 278
+    },
+    {
+      "name": "WES-MOR DRILLING  INC.",
+      "count": 277
+    },
+    {
+      "name": "TERRA RESOURCES  INC.",
+      "count": 277
+    },
+    {
+      "name": "ARCADIA OPERATING  LLC",
+      "count": 276
+    },
+    {
+      "name": "S&G OIL LLC",
+      "count": 273
+    },
+    {
+      "name": "GRUY PETROLEUM MANAGEMENT CO.",
+      "count": 273
+    },
+    {
+      "name": "EP OPERATING COMPANY",
+      "count": 273
+    }
+  ],
+  "statuses": [
+    {
+      "name": "",
+      "count": 861433
+    },
+    {
+      "name": "PRODUCING",
+      "count": 281981
+    },
+    {
+      "name": "SHUT IN",
+      "count": 78437
+    },
+    {
+      "name": "INJECTION",
+      "count": 35414
+    },
+    {
+      "name": "TEMP ABANDONED",
+      "count": 28976
+    },
+    {
+      "name": "NO PRODUCTION",
+      "count": 10737
+    },
+    {
+      "name": "SWR-10-WELL",
+      "count": 5264
+    },
+    {
+      "name": "PARTIAL PLUG",
+      "count": 2711
+    },
+    {
+      "name": "WATER SUPPLY",
+      "count": 1332
+    },
+    {
+      "name": "NOT ELIGIBLE FOR ALLOWABLE",
+      "count": 972
+    },
+    {
+      "name": "OBSERVATION",
+      "count": 644
+    },
+    {
+      "name": "SHUT IN-MULTI-COMPL",
+      "count": 639
+    },
+    {
+      "name": "LPG STORAGE",
+      "count": 437
+    },
+    {
+      "name": "PROD FACTOR WELL",
+      "count": 357
+    },
+    {
+      "name": "GAS STRG-INJECTION",
+      "count": 271
+    },
+    {
+      "name": "DOMESTIC USE WELL",
+      "count": 233
+    },
+    {
+      "name": "GAS STRG-WITHDRAWAL",
+      "count": 169
+    },
+    {
+      "name": "BRINE MINING",
+      "count": 114
+    },
+    {
+      "name": "OTHER TYPE SERVICE",
+      "count": 106
+    },
+    {
+      "name": "ABANDONED",
+      "count": 86
+    },
+    {
+      "name": "GAS STRG-SALT FORMATION",
+      "count": 57
+    },
+    {
+      "name": ",",
+      "count": 7
+    },
+    {
+      "name": "GEOTHERMAL WELL",
+      "count": 2
+    },
+    {
+      "name": "TRAINING",
+      "count": 1
+    },
+    {
+      "name": "000000",
+      "count": 1
+    }
+  ],
+  "parsedAt": "2026-03-18T22:07:12.377Z"
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oil &amp; Gas Leases — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html" class="active">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Breadcrumb & Sub-Nav -->
+    <div style="margin-bottom:8px;">
+      <a href="wells.html" style="color:var(--accent);font-size:0.85rem;text-decoration:none;font-weight:600;">Texas</a>
+      <span style="color:var(--text-muted);margin:0 8px;font-size:0.85rem;">&rsaquo;</span>
+      <span style="color:var(--text);font-size:0.85rem;font-weight:600;">Leases</span>
+    </div>
+    <div class="texas-subnav" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;padding:12px 0;border-bottom:1px solid var(--border);">
+      <a href="wells.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Wells</a>
+      <a href="production.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Production</a>
+      <a href="permits.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Permits</a>
+      <a href="runsheet.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Runsheet</a>
+      <a href="operators.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Operators</a>
+      <a href="map.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Map</a>
+      <a href="leases.html" class="btn btn-primary btn-sm" style="font-size:0.8rem;">Leases</a>
+    </div>
+
+    <div class="page-header" style="padding-top:0;">
+      <h1>Oil &amp; Gas Lease Records</h1>
+      <p>RRC lease records from 1.1M+ Texas leases. Showing <span id="leases-count">...</span>.</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-bar">
+      <div class="filter-group">
+        <label class="filter-label">Search</label>
+        <input type="text" id="search-input" class="filter-input" placeholder="Lease name, operator, field..." style="min-width:220px;">
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">County</label>
+        <select id="filter-county" class="filter-select">
+          <option value="">All Counties</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Leases Table -->
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Oil/Gas</th>
+            <th>Lease Name</th>
+            <th>Operator</th>
+            <th>Field</th>
+            <th>District</th>
+            <th>Lease No</th>
+            <th>First Prod</th>
+            <th>Latest Prod</th>
+          </tr>
+        </thead>
+        <tbody id="leases-tbody">
+          <tr><td colspan="8" class="text-center text-muted" style="padding:40px;">Loading lease data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<!-- Trial Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jake Reynolds"></div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="jake@landmanpro.com"></div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+<script>
+(function() {
+  'use strict';
+
+  const SUPABASE_URL = 'https://bkyzxvetrguudtsqrvvq.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJreXp4dmV0cmd1dWR0c3FydnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4ODcyNTUsImV4cCI6MjA4OTQ2MzI1NX0.FE2YEIk9pu6P5EUdQY7S7YRfQK0Q7ckSGuJDnWxSks8';
+
+  let allLeases = [];
+  let countyList = [];
+
+  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function formatCycleDate(val) {
+    if (!val || val === '-' || val.length < 6) return val || '-';
+    const s = String(val);
+    const year = s.substring(0, 4);
+    const month = parseInt(s.substring(4, 6), 10);
+    if (month < 1 || month > 12) return s;
+    return MONTHS[month - 1] + ' ' + year;
+  }
+  let searchDebounce = null;
+
+  async function loadLeases() {
+    const tbody = document.getElementById('leases-tbody');
+    const search = (document.getElementById('search-input').value || '').trim();
+    const district = document.getElementById('filter-county').value;
+
+    const params = ['select=*', 'order=id.desc'];
+
+    if (district) params.push('district_no=eq.' + encodeURIComponent(district));
+    if (search) {
+      const encoded = encodeURIComponent('%' + search + '%');
+      params.push('or=(lease_name.ilike.' + encoded + ',operator_name.ilike.' + encoded + ',field_name.ilike.' + encoded + ')');
+    }
+
+    if (!district && !search) {
+      params.push('limit=100');
+    } else {
+      params.push('limit=500');
+    }
+
+    try {
+      const resp = await fetch(SUPABASE_URL + '/rest/v1/leases?' + params.join('&'), {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY }
+      });
+      if (!resp.ok) throw new Error('Supabase ' + resp.status);
+      const data = await resp.json();
+      allLeases = data || [];
+      renderLeases();
+    } catch(e) {
+      console.error('[Leases] Failed to load data:', e.message);
+      tbody.innerHTML = '<tr><td colspan="8" class="text-center text-muted" style="padding:40px;">Unable to load data. Please try again.</td></tr>';
+      document.getElementById('leases-count').textContent = '0 lease records';
+    }
+  }
+
+  async function loadCountyFilter() {
+    const RRC_DISTRICTS = [
+      {no:'01',name:'San Antonio'},
+      {no:'02',name:'Refugio'},
+      {no:'03',name:'Southeast Texas'},
+      {no:'04',name:'Deep South Texas'},
+      {no:'05',name:'East Central Texas'},
+      {no:'06',name:'East Texas'},
+      {no:'7B',name:'West Central Texas'},
+      {no:'7C',name:'San Angelo'},
+      {no:'8A',name:'Lubbock'},
+      {no:'08',name:'Midland'},
+      {no:'09',name:'North Texas'},
+      {no:'10',name:'Panhandle'},
+      {no:'11',name:'North Central Texas (Abilene)'},
+      {no:'12',name:'Southwest Texas (Midland)'},
+      {no:'13',name:'Southeast New Mexico (Hobbs)'},
+      {no:'14',name:'West Texas (El Paso)'}
+    ];
+    const sel = document.getElementById('filter-county');
+    sel.innerHTML = '<option value="">All Districts</option>' +
+      RRC_DISTRICTS.map(d => '<option value="'+d.no+'">District '+d.no+' — '+d.name+'</option>').join('');
+  }
+
+  function oilGasLabel(code) {
+    return {'O':'Oil','G':'Gas','B':'Both'}[code] || code || '-';
+  }
+
+  function renderLeases() {
+    const filtered = allLeases;
+    document.getElementById('leases-count').textContent = filtered.length + ' lease records';
+
+    const codeBadge = (c) => {
+      const cls = c === 'O' ? 'badge-producing' : c === 'G' ? 'badge-active' : 'badge-completed';
+      return '<span class="badge '+cls+'">'+oilGasLabel(c)+'</span>';
+    };
+
+    const tbody = document.getElementById('leases-tbody');
+    tbody.innerHTML = filtered.map(l =>
+      '<tr>'+
+        '<td>'+codeBadge(l.oil_gas_code)+'</td>'+
+        '<td>'+(l.lease_name || '-')+'</td>'+
+        '<td>'+(l.operator_name || '-')+'</td>'+
+        '<td>'+(l.field_name || '-')+'</td>'+
+        '<td class="mono">'+(l.district_no || '-')+'</td>'+
+        '<td class="mono">'+(l.lease_no || '-')+'</td>'+
+        '<td class="mono">'+formatCycleDate(l.cycle_min)+'</td>'+
+        '<td class="mono">'+formatCycleDate(l.cycle_max)+'</td>'+
+      '</tr>'
+    ).join('');
+
+    if (filtered.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="8" class="text-center text-muted" style="padding:40px;">No leases match your filters.</td></tr>';
+    }
+  }
+
+  document.getElementById('search-input').addEventListener('input', function() {
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(loadLeases, 400);
+  });
+  document.getElementById('filter-county').addEventListener('change', loadLeases);
+
+  loadCountyFilter();
+  loadLeases();
+})();
+</script>
+</body>
+</html>

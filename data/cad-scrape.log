@@ -1,0 +1,1508 @@
+[2026-03-20T15:22:13.322Z] =================================================================
+[2026-03-20T15:22:13.330Z] Texas CAD Mineral Ownership Scraper (SDS) — REAL DATA ONLY
+[2026-03-20T15:22:13.330Z] =================================================================
+[2026-03-20T15:22:13.330Z] Targeting 254 counties (start index: 0)
+[2026-03-20T15:22:13.330Z] Existing records: 0
+[2026-03-20T15:22:14.887Z] 
+[1/254] ======= ANDERSON County =======
+[2026-03-20T15:22:14.997Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ANDERSONCAD
+[2026-03-20T15:22:16.356Z]   No search form found — county may use different platform
+[2026-03-20T15:22:16.368Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:18.868Z] 
+[2/254] ======= ANDREWS County =======
+[2026-03-20T15:22:18.920Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ANDREWSCAD
+[2026-03-20T15:22:19.563Z]   No search form found — county may use different platform
+[2026-03-20T15:22:19.571Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:22.072Z] 
+[3/254] ======= ANGELINA County =======
+[2026-03-20T15:22:22.119Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ANGELINACAD
+[2026-03-20T15:22:22.868Z]   No search form found — county may use different platform
+[2026-03-20T15:22:22.876Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:25.377Z] 
+[4/254] ======= ARANSAS County =======
+[2026-03-20T15:22:25.426Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ARANSASCAD
+[2026-03-20T15:22:26.167Z]   No search form found — county may use different platform
+[2026-03-20T15:22:26.175Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:28.677Z] 
+[5/254] ======= ARCHER County =======
+[2026-03-20T15:22:28.725Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ARCHERCAD
+[2026-03-20T15:22:29.468Z]   No search form found — county may use different platform
+[2026-03-20T15:22:29.475Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:31.976Z] 
+[6/254] ======= ARMSTRONG County =======
+[2026-03-20T15:22:32.024Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ARMSTRONGCAD
+[2026-03-20T15:22:32.792Z]   No search form found — county may use different platform
+[2026-03-20T15:22:32.800Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:35.300Z] 
+[7/254] ======= ATASCOSA County =======
+[2026-03-20T15:22:35.349Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ATASCOSACAD
+[2026-03-20T15:22:36.105Z]   No search form found — county may use different platform
+[2026-03-20T15:22:36.113Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:38.614Z] 
+[8/254] ======= AUSTIN County =======
+[2026-03-20T15:22:38.663Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=AUSTINCAD
+[2026-03-20T15:22:39.415Z]   No search form found — county may use different platform
+[2026-03-20T15:22:39.422Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:41.924Z] 
+[9/254] ======= BAILEY County =======
+[2026-03-20T15:22:41.976Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BAILEYCAD
+[2026-03-20T15:22:42.716Z]   No search form found — county may use different platform
+[2026-03-20T15:22:42.724Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:45.225Z] 
+[10/254] ======= BANDERA County =======
+[2026-03-20T15:22:45.273Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BANDERACAD
+[2026-03-20T15:22:46.028Z]   No search form found — county may use different platform
+[2026-03-20T15:22:46.036Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:48.537Z] 
+[11/254] ======= BASTROP County =======
+[2026-03-20T15:22:48.591Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BASTROPCAD
+[2026-03-20T15:22:49.337Z]   No search form found — county may use different platform
+[2026-03-20T15:22:49.344Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:22:51.845Z] 
+[12/254] ======= BAYLOR County =======
+[2026-03-20T15:22:51.893Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BAYLORCAD
+[2026-03-20T15:22:55.302Z]   "ROYALTY": 2 results, 2 new
+[2026-03-20T15:23:00.043Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:23:04.606Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:23:09.282Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:23:11.796Z]   Result: 2 records [success]
+[2026-03-20T15:23:14.298Z] 
+[13/254] ======= BEE County =======
+[2026-03-20T15:23:14.347Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BEECAD
+[2026-03-20T15:23:15.074Z]   No search form found — county may use different platform
+[2026-03-20T15:23:15.081Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:17.583Z] 
+[14/254] ======= BELL County =======
+[2026-03-20T15:23:17.632Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BELLCAD
+[2026-03-20T15:23:18.587Z]   No search form found — county may use different platform
+[2026-03-20T15:23:18.595Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:21.096Z] 
+[15/254] ======= BEXAR County =======
+[2026-03-20T15:23:21.144Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BEXARCAD
+[2026-03-20T15:23:21.899Z]   No search form found — county may use different platform
+[2026-03-20T15:23:21.907Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:24.407Z] 
+[16/254] ======= BLANCO County =======
+[2026-03-20T15:23:24.455Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BLANCOCAD
+[2026-03-20T15:23:25.200Z]   No search form found — county may use different platform
+[2026-03-20T15:23:25.207Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:27.709Z] 
+[17/254] ======= BORDEN County =======
+[2026-03-20T15:23:27.758Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BORDENCAD
+[2026-03-20T15:23:28.511Z]   No search form found — county may use different platform
+[2026-03-20T15:23:28.518Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:31.020Z] 
+[18/254] ======= BOSQUE County =======
+[2026-03-20T15:23:31.070Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BOSQUECAD
+[2026-03-20T15:23:31.814Z]   No search form found — county may use different platform
+[2026-03-20T15:23:31.821Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:34.322Z] 
+[19/254] ======= BOWIE County =======
+[2026-03-20T15:23:34.372Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BOWIECAD
+[2026-03-20T15:23:35.119Z]   No search form found — county may use different platform
+[2026-03-20T15:23:35.126Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:37.628Z] 
+[20/254] ======= BRAZORIA County =======
+[2026-03-20T15:23:37.678Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BRAZORIACAD
+[2026-03-20T15:23:38.429Z]   No search form found — county may use different platform
+[2026-03-20T15:23:38.436Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:40.937Z] 
+[21/254] ======= BRAZOS County =======
+[2026-03-20T15:23:40.986Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BRAZOSCAD
+[2026-03-20T15:23:41.734Z]   No search form found — county may use different platform
+[2026-03-20T15:23:41.741Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:44.242Z] 
+[22/254] ======= BREWSTER County =======
+[2026-03-20T15:23:44.293Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BREWSTERCAD
+[2026-03-20T15:23:44.938Z]   No search form found — county may use different platform
+[2026-03-20T15:23:44.945Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:47.446Z] 
+[23/254] ======= BRISCOE County =======
+[2026-03-20T15:23:47.494Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BRISCOECAD
+[2026-03-20T15:23:48.242Z]   No search form found — county may use different platform
+[2026-03-20T15:23:48.249Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:50.751Z] 
+[24/254] ======= BROOKS County =======
+[2026-03-20T15:23:50.800Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BROOKSCAD
+[2026-03-20T15:23:51.546Z]   No search form found — county may use different platform
+[2026-03-20T15:23:51.554Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:54.055Z] 
+[25/254] ======= BROWN County =======
+[2026-03-20T15:23:54.106Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BROWNCAD
+[2026-03-20T15:23:54.858Z]   No search form found — county may use different platform
+[2026-03-20T15:23:54.865Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:23:57.366Z] 
+[26/254] ======= BURLESON County =======
+[2026-03-20T15:23:57.416Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BURLESONCAD
+[2026-03-20T15:23:58.162Z]   No search form found — county may use different platform
+[2026-03-20T15:23:58.169Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:00.670Z] 
+[27/254] ======= BURNET County =======
+[2026-03-20T15:24:00.720Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=BURNETCAD
+[2026-03-20T15:24:01.374Z]   No search form found — county may use different platform
+[2026-03-20T15:24:01.382Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:03.884Z] 
+[28/254] ======= CALDWELL County =======
+[2026-03-20T15:24:03.934Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CALDWELLCAD
+[2026-03-20T15:24:04.681Z]   No search form found — county may use different platform
+[2026-03-20T15:24:04.688Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:07.190Z] 
+[29/254] ======= CALHOUN County =======
+[2026-03-20T15:24:07.237Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CALHOUNCAD
+[2026-03-20T15:24:07.889Z]   No search form found — county may use different platform
+[2026-03-20T15:24:07.896Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:10.396Z] 
+[30/254] ======= CALLAHAN County =======
+[2026-03-20T15:24:10.442Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CALLAHANCAD
+[2026-03-20T15:24:13.955Z]   "ROYALTY": 18 results, 18 new
+[2026-03-20T15:24:18.645Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:24:23.319Z]   "PETROLEUM": 12 results, 12 new
+[2026-03-20T15:24:27.970Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:24:30.482Z]   Result: 30 records [success]
+[2026-03-20T15:24:32.984Z] 
+[31/254] ======= CAMERON County =======
+[2026-03-20T15:24:33.032Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CAMERONCAD
+[2026-03-20T15:24:33.778Z]   No search form found — county may use different platform
+[2026-03-20T15:24:33.784Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:36.286Z] 
+[32/254] ======= CAMP County =======
+[2026-03-20T15:24:36.334Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CAMPCAD
+[2026-03-20T15:24:37.082Z]   No search form found — county may use different platform
+[2026-03-20T15:24:37.089Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:39.601Z] 
+[33/254] ======= CARSON County =======
+[2026-03-20T15:24:39.726Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CARSONCAD
+[2026-03-20T15:24:40.528Z]   No search form found — county may use different platform
+[2026-03-20T15:24:40.536Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:43.036Z] 
+[34/254] ======= CASS County =======
+[2026-03-20T15:24:43.130Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CASSCAD
+[2026-03-20T15:24:43.889Z]   No search form found — county may use different platform
+[2026-03-20T15:24:43.899Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:46.401Z] 
+[35/254] ======= CASTRO County =======
+[2026-03-20T15:24:46.461Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CASTROCAD
+[2026-03-20T15:24:47.139Z]   No search form found — county may use different platform
+[2026-03-20T15:24:47.146Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:49.646Z] 
+[36/254] ======= CHAMBERS County =======
+[2026-03-20T15:24:49.714Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CHAMBERSCAD
+[2026-03-20T15:24:50.474Z]   No search form found — county may use different platform
+[2026-03-20T15:24:50.481Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:52.982Z] 
+[37/254] ======= CHEROKEE County =======
+[2026-03-20T15:24:53.054Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CHEROKEECAD
+[2026-03-20T15:24:53.816Z]   No search form found — county may use different platform
+[2026-03-20T15:24:53.823Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:56.323Z] 
+[38/254] ======= CHILDRESS County =======
+[2026-03-20T15:24:56.373Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CHILDRESSCAD
+[2026-03-20T15:24:57.128Z]   No search form found — county may use different platform
+[2026-03-20T15:24:57.137Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:24:59.637Z] 
+[39/254] ======= CLAY County =======
+[2026-03-20T15:24:59.687Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CLAYCAD
+[2026-03-20T15:25:00.442Z]   No search form found — county may use different platform
+[2026-03-20T15:25:00.449Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:02.951Z] 
+[40/254] ======= COCHRAN County =======
+[2026-03-20T15:25:02.999Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COCHRANCAD
+[2026-03-20T15:25:03.744Z]   No search form found — county may use different platform
+[2026-03-20T15:25:03.752Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:06.252Z] 
+[41/254] ======= COKE County =======
+[2026-03-20T15:25:06.301Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COKECAD
+[2026-03-20T15:25:07.046Z]   No search form found — county may use different platform
+[2026-03-20T15:25:07.054Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:09.556Z] 
+[42/254] ======= COLEMAN County =======
+[2026-03-20T15:25:09.617Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COLEMANCAD
+[2026-03-20T15:25:10.362Z]   No search form found — county may use different platform
+[2026-03-20T15:25:10.369Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:12.870Z] 
+[43/254] ======= COLLIN County =======
+[2026-03-20T15:25:12.934Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COLLINCAD
+[2026-03-20T15:25:13.690Z]   No search form found — county may use different platform
+[2026-03-20T15:25:13.697Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:16.199Z] 
+[44/254] ======= COLLINGSWORTH County =======
+[2026-03-20T15:25:16.251Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COLLINGSWORTHCAD
+[2026-03-20T15:25:16.998Z]   No search form found — county may use different platform
+[2026-03-20T15:25:17.005Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:19.506Z] 
+[45/254] ======= COLORADO County =======
+[2026-03-20T15:25:19.555Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COLORADOCAD
+[2026-03-20T15:25:20.299Z]   No search form found — county may use different platform
+[2026-03-20T15:25:20.306Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:22.807Z] 
+[46/254] ======= COMAL County =======
+[2026-03-20T15:25:22.855Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COMALCAD
+[2026-03-20T15:25:23.609Z]   No search form found — county may use different platform
+[2026-03-20T15:25:23.617Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:26.117Z] 
+[47/254] ======= COMANCHE County =======
+[2026-03-20T15:25:26.165Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COMANCHECAD
+[2026-03-20T15:25:26.912Z]   No search form found — county may use different platform
+[2026-03-20T15:25:26.921Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:29.423Z] 
+[48/254] ======= CONCHO County =======
+[2026-03-20T15:25:29.471Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CONCHOCAD
+[2026-03-20T15:25:32.474Z]   "ROYALTY": 2 results, 2 new
+[2026-03-20T15:25:37.162Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:25:41.819Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:25:46.505Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:25:49.016Z]   Result: 2 records [success]
+[2026-03-20T15:25:51.518Z] 
+[49/254] ======= COOKE County =======
+[2026-03-20T15:25:51.567Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COOKECAD
+[2026-03-20T15:25:52.310Z]   No search form found — county may use different platform
+[2026-03-20T15:25:52.318Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:54.818Z] 
+[50/254] ======= CORYELL County =======
+[2026-03-20T15:25:54.867Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CORYELLCAD
+[2026-03-20T15:25:55.608Z]   No search form found — county may use different platform
+[2026-03-20T15:25:55.615Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:25:58.117Z] 
+[51/254] ======= COTTLE County =======
+[2026-03-20T15:25:58.166Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=COTTLECAD
+[2026-03-20T15:25:58.924Z]   No search form found — county may use different platform
+[2026-03-20T15:25:58.931Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:01.433Z] 
+[52/254] ======= CRANE County =======
+[2026-03-20T15:26:01.483Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CRANECAD
+[2026-03-20T15:26:02.225Z]   No search form found — county may use different platform
+[2026-03-20T15:26:02.233Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:04.733Z] 
+[53/254] ======= CROCKETT County =======
+[2026-03-20T15:26:04.781Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CROCKETTCAD
+[2026-03-20T15:26:05.436Z]   No search form found — county may use different platform
+[2026-03-20T15:26:05.443Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:07.943Z] 
+[54/254] ======= CROSBY County =======
+[2026-03-20T15:26:07.990Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CROSBYCAD
+[2026-03-20T15:26:08.746Z]   No search form found — county may use different platform
+[2026-03-20T15:26:08.754Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:11.255Z] 
+[55/254] ======= CULBERSON County =======
+[2026-03-20T15:26:11.302Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=CULBERSONCAD
+[2026-03-20T15:26:12.054Z]   No search form found — county may use different platform
+[2026-03-20T15:26:12.061Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:14.561Z] 
+[56/254] ======= DALLAM County =======
+[2026-03-20T15:26:14.611Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DALLAMCAD
+[2026-03-20T15:26:15.361Z]   No search form found — county may use different platform
+[2026-03-20T15:26:15.370Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:17.872Z] 
+[57/254] ======= DALLAS County =======
+[2026-03-20T15:26:17.921Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DALLASCAD
+[2026-03-20T15:26:18.671Z]   No search form found — county may use different platform
+[2026-03-20T15:26:18.678Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:21.179Z] 
+[58/254] ======= DAWSON County =======
+[2026-03-20T15:26:21.229Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DAWSONCAD
+[2026-03-20T15:26:21.975Z]   No search form found — county may use different platform
+[2026-03-20T15:26:21.983Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:24.484Z] 
+[59/254] ======= DE WITT County =======
+[2026-03-20T15:26:24.534Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DEWITTCAD
+[2026-03-20T15:26:25.279Z]   No search form found — county may use different platform
+[2026-03-20T15:26:25.287Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:27.789Z] 
+[60/254] ======= DEAF SMITH County =======
+[2026-03-20T15:26:27.838Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DEAFSMITHCAD
+[2026-03-20T15:26:28.588Z]   No search form found — county may use different platform
+[2026-03-20T15:26:28.596Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:31.098Z] 
+[61/254] ======= DELTA County =======
+[2026-03-20T15:26:31.146Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DELTACAD
+[2026-03-20T15:26:31.887Z]   No search form found — county may use different platform
+[2026-03-20T15:26:31.894Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:34.396Z] 
+[62/254] ======= DENTON County =======
+[2026-03-20T15:26:34.443Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DENTONCAD
+[2026-03-20T15:26:35.086Z]   No search form found — county may use different platform
+[2026-03-20T15:26:35.093Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:37.594Z] 
+[63/254] ======= DICKENS County =======
+[2026-03-20T15:26:37.643Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DICKENSCAD
+[2026-03-20T15:26:38.389Z]   No search form found — county may use different platform
+[2026-03-20T15:26:38.397Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:40.898Z] 
+[64/254] ======= DIMMIT County =======
+[2026-03-20T15:26:40.947Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DIMMITCAD
+[2026-03-20T15:26:41.691Z]   No search form found — county may use different platform
+[2026-03-20T15:26:41.699Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:44.201Z] 
+[65/254] ======= DONLEY County =======
+[2026-03-20T15:26:44.249Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DONLEYCAD
+[2026-03-20T15:26:45.005Z]   No search form found — county may use different platform
+[2026-03-20T15:26:45.022Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:47.537Z] 
+[66/254] ======= DUVAL County =======
+[2026-03-20T15:26:47.581Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=DUVALCAD
+[2026-03-20T15:26:48.343Z]   No search form found — county may use different platform
+[2026-03-20T15:26:48.350Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:50.852Z] 
+[67/254] ======= EASTLAND County =======
+[2026-03-20T15:26:50.899Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=EASTLANDCAD
+[2026-03-20T15:26:51.545Z]   No search form found — county may use different platform
+[2026-03-20T15:26:51.553Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:54.055Z] 
+[68/254] ======= ECTOR County =======
+[2026-03-20T15:26:54.101Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ECTORCAD
+[2026-03-20T15:26:54.855Z]   No search form found — county may use different platform
+[2026-03-20T15:26:54.862Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:26:57.363Z] 
+[69/254] ======= EDWARDS County =======
+[2026-03-20T15:26:57.413Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=EDWARDSCAD
+[2026-03-20T15:26:58.170Z]   No search form found — county may use different platform
+[2026-03-20T15:26:58.177Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:27:00.679Z] 
+[70/254] ======= EL PASO County =======
+[2026-03-20T15:27:00.729Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ELPASOCAD
+[2026-03-20T15:27:01.493Z]   No search form found — county may use different platform
+[2026-03-20T15:27:01.501Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:27:04.002Z] 
+[71/254] ======= ELLIS County =======
+[2026-03-20T15:27:04.050Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ELLISCAD
+[2026-03-20T15:27:04.795Z]   No search form found — county may use different platform
+[2026-03-20T15:27:04.801Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:27:07.302Z] 
+[72/254] ======= ERATH County =======
+[2026-03-20T15:27:07.349Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ERATHCAD
+[2026-03-20T15:27:10.352Z]   "ROYALTY": 3 results, 3 new
+[2026-03-20T15:27:15.015Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:27:19.596Z]   "PETROLEUM": 1 results, 1 new
+[2026-03-20T15:27:24.248Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:27:26.760Z]   Result: 4 records [success]
+[2026-03-20T15:27:29.260Z] 
+[73/254] ======= FALLS County =======
+[2026-03-20T15:27:29.310Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FALLSCAD
+[2026-03-20T15:28:01.315Z]   "ROYALTY" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:28:32.492Z]   "MINERAL" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:29:03.684Z]   "PETROLEUM" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:29:34.881Z]   "MIN INT" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:29:34.893Z]   Result: 0 records [success]
+[2026-03-20T15:29:37.395Z] 
+[74/254] ======= FANNIN County =======
+[2026-03-20T15:29:37.447Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FANNINCAD
+[2026-03-20T15:29:40.450Z]   "ROYALTY": 0 results, 0 new
+[2026-03-20T15:29:45.132Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:29:49.814Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:29:54.412Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:29:56.926Z]   Result: 0 records [success]
+[2026-03-20T15:29:59.427Z] 
+[75/254] ======= FAYETTE County =======
+[2026-03-20T15:29:59.476Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FAYETTECAD
+[2026-03-20T15:30:00.350Z]   No search form found — county may use different platform
+[2026-03-20T15:30:00.358Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:02.860Z] 
+[76/254] ======= FISHER County =======
+[2026-03-20T15:30:02.908Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FISHERCAD
+[2026-03-20T15:30:03.655Z]   No search form found — county may use different platform
+[2026-03-20T15:30:03.662Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:06.162Z] 
+[77/254] ======= FLOYD County =======
+[2026-03-20T15:30:06.209Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FLOYDCAD
+[2026-03-20T15:30:09.207Z]   "ROYALTY": 0 results, 0 new
+[2026-03-20T15:30:13.891Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:30:18.542Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:30:23.184Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:30:25.696Z]   Result: 0 records [success]
+[2026-03-20T15:30:28.198Z] 
+[78/254] ======= FOARD County =======
+[2026-03-20T15:30:28.250Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FOARDCAD
+[2026-03-20T15:30:29.001Z]   No search form found — county may use different platform
+[2026-03-20T15:30:29.009Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:31.510Z] 
+[79/254] ======= FORT BEND County =======
+[2026-03-20T15:30:31.559Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FORTBENDCAD
+[2026-03-20T15:30:32.302Z]   No search form found — county may use different platform
+[2026-03-20T15:30:32.310Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:34.810Z] 
+[80/254] ======= FRANKLIN County =======
+[2026-03-20T15:30:34.858Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FRANKLINCAD
+[2026-03-20T15:30:35.601Z]   No search form found — county may use different platform
+[2026-03-20T15:30:35.609Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:38.109Z] 
+[81/254] ======= FREESTONE County =======
+[2026-03-20T15:30:38.158Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FREESTONECAD
+[2026-03-20T15:30:38.896Z]   No search form found — county may use different platform
+[2026-03-20T15:30:38.903Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:41.404Z] 
+[82/254] ======= FRIO County =======
+[2026-03-20T15:30:41.453Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=FRIOCAD
+[2026-03-20T15:30:42.201Z]   No search form found — county may use different platform
+[2026-03-20T15:30:42.209Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:44.710Z] 
+[83/254] ======= GAINES County =======
+[2026-03-20T15:30:44.757Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GAINESCAD
+[2026-03-20T15:30:45.500Z]   No search form found — county may use different platform
+[2026-03-20T15:30:45.507Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:48.008Z] 
+[84/254] ======= GALVESTON County =======
+[2026-03-20T15:30:48.058Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GALVESTONCAD
+[2026-03-20T15:30:48.799Z]   No search form found — county may use different platform
+[2026-03-20T15:30:48.805Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:51.306Z] 
+[85/254] ======= GARZA County =======
+[2026-03-20T15:30:51.356Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GARZACAD
+[2026-03-20T15:30:52.084Z]   No search form found — county may use different platform
+[2026-03-20T15:30:52.091Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:54.592Z] 
+[86/254] ======= GILLESPIE County =======
+[2026-03-20T15:30:54.641Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GILLESPIECAD
+[2026-03-20T15:30:55.382Z]   No search form found — county may use different platform
+[2026-03-20T15:30:55.389Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:30:57.889Z] 
+[87/254] ======= GLASSCOCK County =======
+[2026-03-20T15:30:57.937Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GLASSCOCKCAD
+[2026-03-20T15:30:58.681Z]   No search form found — county may use different platform
+[2026-03-20T15:30:58.688Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:01.189Z] 
+[88/254] ======= GOLIAD County =======
+[2026-03-20T15:31:01.237Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GOLIADCAD
+[2026-03-20T15:31:01.977Z]   No search form found — county may use different platform
+[2026-03-20T15:31:01.984Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:04.485Z] 
+[89/254] ======= GONZALES County =======
+[2026-03-20T15:31:04.540Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GONZALESCAD
+[2026-03-20T15:31:05.301Z]   No search form found — county may use different platform
+[2026-03-20T15:31:05.308Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:07.809Z] 
+[90/254] ======= GRAY County =======
+[2026-03-20T15:31:07.857Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GRAYCAD
+[2026-03-20T15:31:08.607Z]   No search form found — county may use different platform
+[2026-03-20T15:31:08.615Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:11.116Z] 
+[91/254] ======= GRAYSON County =======
+[2026-03-20T15:31:11.163Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GRAYSONCAD
+[2026-03-20T15:31:11.915Z]   No search form found — county may use different platform
+[2026-03-20T15:31:11.923Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:14.424Z] 
+[92/254] ======= GREGG County =======
+[2026-03-20T15:31:14.475Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GREGGCAD
+[2026-03-20T15:31:15.215Z]   No search form found — county may use different platform
+[2026-03-20T15:31:15.223Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:17.724Z] 
+[93/254] ======= GRIMES County =======
+[2026-03-20T15:31:17.772Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GRIMESCAD
+[2026-03-20T15:31:18.516Z]   No search form found — county may use different platform
+[2026-03-20T15:31:18.523Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:21.025Z] 
+[94/254] ======= GUADALUPE County =======
+[2026-03-20T15:31:21.073Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=GUADALUPECAD
+[2026-03-20T15:31:21.814Z]   No search form found — county may use different platform
+[2026-03-20T15:31:21.821Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:24.322Z] 
+[95/254] ======= HALE County =======
+[2026-03-20T15:31:24.370Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HALECAD
+[2026-03-20T15:31:25.206Z]   No search form found — county may use different platform
+[2026-03-20T15:31:25.214Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:27.714Z] 
+[96/254] ======= HALL County =======
+[2026-03-20T15:31:27.766Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HALLCAD
+[2026-03-20T15:31:28.404Z]   No search form found — county may use different platform
+[2026-03-20T15:31:28.412Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:30.914Z] 
+[97/254] ======= HAMILTON County =======
+[2026-03-20T15:31:30.961Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HAMILTONCAD
+[2026-03-20T15:31:31.724Z]   No search form found — county may use different platform
+[2026-03-20T15:31:31.732Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:34.233Z] 
+[98/254] ======= HANSFORD County =======
+[2026-03-20T15:31:34.285Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HANSFORDCAD
+[2026-03-20T15:31:35.028Z]   No search form found — county may use different platform
+[2026-03-20T15:31:35.035Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:37.537Z] 
+[99/254] ======= HARDEMAN County =======
+[2026-03-20T15:31:37.585Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HARDEMANCAD
+[2026-03-20T15:31:38.332Z]   No search form found — county may use different platform
+[2026-03-20T15:31:38.339Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:40.841Z] 
+[100/254] ======= HARDIN County =======
+[2026-03-20T15:31:40.887Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HARDINCAD
+[2026-03-20T15:31:41.635Z]   No search form found — county may use different platform
+[2026-03-20T15:31:41.642Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:44.144Z] 
+[101/254] ======= HARRIS County =======
+[2026-03-20T15:31:44.192Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HARRISCAD
+[2026-03-20T15:31:44.840Z]   No search form found — county may use different platform
+[2026-03-20T15:31:44.847Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:47.349Z] 
+[102/254] ======= HARRISON County =======
+[2026-03-20T15:31:47.399Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HARRISONCAD
+[2026-03-20T15:31:50.014Z]   No search form found — county may use different platform
+[2026-03-20T15:31:50.022Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:31:52.524Z] 
+[103/254] ======= HARTLEY County =======
+[2026-03-20T15:31:52.571Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HARTLEYCAD
+[2026-03-20T15:31:55.573Z]   "ROYALTY": 0 results, 0 new
+[2026-03-20T15:32:00.370Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:32:04.943Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:32:09.613Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:32:12.126Z]   Result: 0 records [success]
+[2026-03-20T15:32:14.627Z] 
+[104/254] ======= HASKELL County =======
+[2026-03-20T15:32:14.679Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HASKELLCAD
+[2026-03-20T15:32:15.430Z]   No search form found — county may use different platform
+[2026-03-20T15:32:15.438Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:32:17.938Z] 
+[105/254] ======= HAYS County =======
+[2026-03-20T15:32:17.986Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HAYSCAD
+[2026-03-20T15:32:18.730Z]   No search form found — county may use different platform
+[2026-03-20T15:32:18.737Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:32:21.240Z] 
+[106/254] ======= HEMPHILL County =======
+[2026-03-20T15:32:21.286Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HEMPHILLCAD
+[2026-03-20T15:32:24.699Z]   "ROYALTY": 57 results, 57 new
+[2026-03-20T15:32:29.393Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:32:34.062Z]   "PETROLEUM": 1 results, 1 new
+[2026-03-20T15:32:38.674Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:32:41.186Z]   Result: 58 records [success]
+[2026-03-20T15:32:43.688Z] 
+[107/254] ======= HENDERSON County =======
+[2026-03-20T15:32:43.735Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HENDERSONCAD
+[2026-03-20T15:32:46.741Z]   "ROYALTY": 21 results, 21 new
+[2026-03-20T15:32:51.420Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:32:56.009Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:33:00.697Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:33:03.210Z]   Result: 21 records [success]
+[2026-03-20T15:33:05.712Z] 
+[108/254] ======= HIDALGO County =======
+[2026-03-20T15:33:05.758Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HIDALGOCAD
+[2026-03-20T15:33:06.509Z]   No search form found — county may use different platform
+[2026-03-20T15:33:06.517Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:33:09.018Z] 
+[109/254] ======= HILL County =======
+[2026-03-20T15:33:09.067Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HILLCAD
+[2026-03-20T15:33:09.810Z]   No search form found — county may use different platform
+[2026-03-20T15:33:09.818Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:33:12.320Z] 
+[110/254] ======= HOCKLEY County =======
+[2026-03-20T15:33:12.367Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HOCKLEYCAD
+[2026-03-20T15:33:13.114Z]   No search form found — county may use different platform
+[2026-03-20T15:33:13.121Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:33:15.622Z] 
+[111/254] ======= HOOD County =======
+[2026-03-20T15:33:15.670Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HOODCAD
+[2026-03-20T15:33:18.673Z]   "ROYALTY": 2 results, 2 new
+[2026-03-20T15:33:23.368Z]   "MINERAL": 9 results, 9 new
+[2026-03-20T15:33:27.911Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:33:32.601Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:33:35.114Z]   Result: 11 records [success]
+[2026-03-20T15:33:37.616Z] 
+[112/254] ======= HOPKINS County =======
+[2026-03-20T15:33:37.665Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HOPKINSCAD
+[2026-03-20T15:33:40.664Z]   "ROYALTY": 1 results, 1 new
+[2026-03-20T15:33:45.347Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:33:50.050Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:33:54.649Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:33:57.162Z]   Result: 1 records [success]
+[2026-03-20T15:33:59.664Z] 
+[113/254] ======= HOUSTON County =======
+[2026-03-20T15:33:59.711Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HOUSTONCAD
+[2026-03-20T15:34:00.369Z]   No search form found — county may use different platform
+[2026-03-20T15:34:00.375Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:02.877Z] 
+[114/254] ======= HOWARD County =======
+[2026-03-20T15:34:02.927Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HOWARDCAD
+[2026-03-20T15:34:03.660Z]   No search form found — county may use different platform
+[2026-03-20T15:34:03.667Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:06.169Z] 
+[115/254] ======= HUDSPETH County =======
+[2026-03-20T15:34:06.216Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HUDSPETHCAD
+[2026-03-20T15:34:06.963Z]   No search form found — county may use different platform
+[2026-03-20T15:34:06.970Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:09.472Z] 
+[116/254] ======= HUNT County =======
+[2026-03-20T15:34:09.519Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HUNTCAD
+[2026-03-20T15:34:10.272Z]   No search form found — county may use different platform
+[2026-03-20T15:34:10.280Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:12.782Z] 
+[117/254] ======= HUTCHINSON County =======
+[2026-03-20T15:34:12.829Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=HUTCHINSONCAD
+[2026-03-20T15:34:13.577Z]   No search form found — county may use different platform
+[2026-03-20T15:34:13.585Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:16.087Z] 
+[118/254] ======= IRION County =======
+[2026-03-20T15:34:16.135Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=IRIONCAD
+[2026-03-20T15:34:16.875Z]   No search form found — county may use different platform
+[2026-03-20T15:34:16.883Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:19.383Z] 
+[119/254] ======= JACK County =======
+[2026-03-20T15:34:19.429Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JACKCAD
+[2026-03-20T15:34:20.171Z]   No search form found — county may use different platform
+[2026-03-20T15:34:20.178Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:22.681Z] 
+[120/254] ======= JACKSON County =======
+[2026-03-20T15:34:22.732Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JACKSONCAD
+[2026-03-20T15:34:23.476Z]   No search form found — county may use different platform
+[2026-03-20T15:34:23.483Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:25.986Z] 
+[121/254] ======= JASPER County =======
+[2026-03-20T15:34:26.032Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JASPERCAD
+[2026-03-20T15:34:26.780Z]   No search form found — county may use different platform
+[2026-03-20T15:34:26.787Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:29.289Z] 
+[122/254] ======= JEFF DAVIS County =======
+[2026-03-20T15:34:29.336Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JEFFDAVISCAD
+[2026-03-20T15:34:30.081Z]   No search form found — county may use different platform
+[2026-03-20T15:34:30.088Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:32.591Z] 
+[123/254] ======= JEFFERSON County =======
+[2026-03-20T15:34:32.642Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JEFFERSONCAD
+[2026-03-20T15:34:33.386Z]   No search form found — county may use different platform
+[2026-03-20T15:34:33.393Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:35.894Z] 
+[124/254] ======= JIM HOGG County =======
+[2026-03-20T15:34:35.944Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JIMHOGGCAD
+[2026-03-20T15:34:36.707Z]   No search form found — county may use different platform
+[2026-03-20T15:34:36.714Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:39.216Z] 
+[125/254] ======= JIM WELLS County =======
+[2026-03-20T15:34:39.263Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JIMWELLSCAD
+[2026-03-20T15:34:40.010Z]   No search form found — county may use different platform
+[2026-03-20T15:34:40.017Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:42.518Z] 
+[126/254] ======= JOHNSON County =======
+[2026-03-20T15:34:42.565Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JOHNSONCAD
+[2026-03-20T15:34:43.220Z]   No search form found — county may use different platform
+[2026-03-20T15:34:43.228Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:45.729Z] 
+[127/254] ======= JONES County =======
+[2026-03-20T15:34:45.779Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=JONESCAD
+[2026-03-20T15:34:46.425Z]   No search form found — county may use different platform
+[2026-03-20T15:34:46.431Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:48.933Z] 
+[128/254] ======= KARNES County =======
+[2026-03-20T15:34:49.002Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KARNESCAD
+[2026-03-20T15:34:49.759Z]   No search form found — county may use different platform
+[2026-03-20T15:34:49.767Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:52.268Z] 
+[129/254] ======= KAUFMAN County =======
+[2026-03-20T15:34:52.316Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KAUFMANCAD
+[2026-03-20T15:34:53.076Z]   No search form found — county may use different platform
+[2026-03-20T15:34:53.083Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:55.585Z] 
+[130/254] ======= KENDALL County =======
+[2026-03-20T15:34:55.631Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KENDALLCAD
+[2026-03-20T15:34:56.378Z]   No search form found — county may use different platform
+[2026-03-20T15:34:56.386Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:34:58.887Z] 
+[131/254] ======= KENEDY County =======
+[2026-03-20T15:34:58.935Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KENEDYCAD
+[2026-03-20T15:34:59.686Z]   No search form found — county may use different platform
+[2026-03-20T15:34:59.694Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:02.194Z] 
+[132/254] ======= KENT County =======
+[2026-03-20T15:35:02.246Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KENTCAD
+[2026-03-20T15:35:02.994Z]   No search form found — county may use different platform
+[2026-03-20T15:35:03.001Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:05.502Z] 
+[133/254] ======= KERR County =======
+[2026-03-20T15:35:05.561Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KERRCAD
+[2026-03-20T15:35:06.209Z]   No search form found — county may use different platform
+[2026-03-20T15:35:06.218Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:08.720Z] 
+[134/254] ======= KIMBLE County =======
+[2026-03-20T15:35:08.776Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KIMBLECAD
+[2026-03-20T15:35:09.523Z]   No search form found — county may use different platform
+[2026-03-20T15:35:09.530Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:12.030Z] 
+[135/254] ======= KING County =======
+[2026-03-20T15:35:12.095Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KINGCAD
+[2026-03-20T15:35:12.742Z]   No search form found — county may use different platform
+[2026-03-20T15:35:12.749Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:15.250Z] 
+[136/254] ======= KINNEY County =======
+[2026-03-20T15:35:15.304Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KINNEYCAD
+[2026-03-20T15:35:15.950Z]   No search form found — county may use different platform
+[2026-03-20T15:35:15.957Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:18.459Z] 
+[137/254] ======= KLEBERG County =======
+[2026-03-20T15:35:18.517Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KLEBERGCAD
+[2026-03-20T15:35:19.259Z]   No search form found — county may use different platform
+[2026-03-20T15:35:19.267Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:21.768Z] 
+[138/254] ======= KNOX County =======
+[2026-03-20T15:35:21.818Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=KNOXCAD
+[2026-03-20T15:35:24.845Z]   "ROYALTY": 3 results, 3 new
+[2026-03-20T15:35:29.595Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:35:34.292Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:35:38.908Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:35:41.421Z]   Result: 3 records [success]
+[2026-03-20T15:35:43.923Z] 
+[139/254] ======= LA SALLE County =======
+[2026-03-20T15:35:43.974Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LASALLECAD
+[2026-03-20T15:35:44.720Z]   No search form found — county may use different platform
+[2026-03-20T15:35:44.728Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:47.229Z] 
+[140/254] ======= LAMAR County =======
+[2026-03-20T15:35:47.278Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LAMARCAD
+[2026-03-20T15:35:48.031Z]   No search form found — county may use different platform
+[2026-03-20T15:35:48.039Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:50.540Z] 
+[141/254] ======= LAMB County =======
+[2026-03-20T15:35:50.588Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LAMBCAD
+[2026-03-20T15:35:51.340Z]   No search form found — county may use different platform
+[2026-03-20T15:35:51.347Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:53.847Z] 
+[142/254] ======= LAMPASAS County =======
+[2026-03-20T15:35:53.893Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LAMPASASCAD
+[2026-03-20T15:35:54.633Z]   No search form found — county may use different platform
+[2026-03-20T15:35:54.640Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:35:57.140Z] 
+[143/254] ======= LAVACA County =======
+[2026-03-20T15:35:57.189Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LAVACACAD
+[2026-03-20T15:35:57.936Z]   No search form found — county may use different platform
+[2026-03-20T15:35:57.943Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:00.443Z] 
+[144/254] ======= LEE County =======
+[2026-03-20T15:36:00.497Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LEECAD
+[2026-03-20T15:36:01.252Z]   No search form found — county may use different platform
+[2026-03-20T15:36:01.260Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:03.761Z] 
+[145/254] ======= LEON County =======
+[2026-03-20T15:36:03.809Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LEONCAD
+[2026-03-20T15:36:04.558Z]   No search form found — county may use different platform
+[2026-03-20T15:36:04.565Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:07.067Z] 
+[146/254] ======= LIBERTY County =======
+[2026-03-20T15:36:07.112Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LIBERTYCAD
+[2026-03-20T15:36:07.756Z]   No search form found — county may use different platform
+[2026-03-20T15:36:07.763Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:10.265Z] 
+[147/254] ======= LIMESTONE County =======
+[2026-03-20T15:36:10.358Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LIMESTONECAD
+[2026-03-20T15:36:11.111Z]   No search form found — county may use different platform
+[2026-03-20T15:36:11.118Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:13.620Z] 
+[148/254] ======= LIPSCOMB County =======
+[2026-03-20T15:36:13.666Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LIPSCOMBCAD
+[2026-03-20T15:36:16.672Z]   "ROYALTY": 32 results, 32 new
+[2026-03-20T15:36:21.330Z]   "MINERAL": 13 results, 13 new
+[2026-03-20T15:36:26.034Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:36:30.641Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:36:33.155Z]   Result: 45 records [success]
+[2026-03-20T15:36:35.658Z] 
+[149/254] ======= LIVE OAK County =======
+[2026-03-20T15:36:35.705Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LIVEOAKCAD
+[2026-03-20T15:36:36.388Z]   No search form found — county may use different platform
+[2026-03-20T15:36:36.397Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:38.899Z] 
+[150/254] ======= LLANO County =======
+[2026-03-20T15:36:38.947Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LLANOCAD
+[2026-03-20T15:36:39.701Z]   No search form found — county may use different platform
+[2026-03-20T15:36:39.708Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:42.209Z] 
+[151/254] ======= LOVING County =======
+[2026-03-20T15:36:42.258Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LOVINGCAD
+[2026-03-20T15:36:43.002Z]   No search form found — county may use different platform
+[2026-03-20T15:36:43.009Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:45.512Z] 
+[152/254] ======= LUBBOCK County =======
+[2026-03-20T15:36:45.558Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LUBBOCKCAD
+[2026-03-20T15:36:46.314Z]   No search form found — county may use different platform
+[2026-03-20T15:36:46.322Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:48.824Z] 
+[153/254] ======= LYNN County =======
+[2026-03-20T15:36:48.875Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=LYNNCAD
+[2026-03-20T15:36:49.628Z]   No search form found — county may use different platform
+[2026-03-20T15:36:49.635Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:52.137Z] 
+[154/254] ======= MADISON County =======
+[2026-03-20T15:36:52.188Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MADISONCAD
+[2026-03-20T15:36:52.990Z]   No search form found — county may use different platform
+[2026-03-20T15:36:52.997Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:55.497Z] 
+[155/254] ======= MARION County =======
+[2026-03-20T15:36:55.555Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MARIONCAD
+[2026-03-20T15:36:56.354Z]   No search form found — county may use different platform
+[2026-03-20T15:36:56.360Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:36:58.863Z] 
+[156/254] ======= MARTIN County =======
+[2026-03-20T15:36:58.910Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MARTINCAD
+[2026-03-20T15:36:59.657Z]   No search form found — county may use different platform
+[2026-03-20T15:36:59.665Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:02.166Z] 
+[157/254] ======= MASON County =======
+[2026-03-20T15:37:02.212Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MASONCAD
+[2026-03-20T15:37:02.862Z]   No search form found — county may use different platform
+[2026-03-20T15:37:02.869Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:05.370Z] 
+[158/254] ======= MATAGORDA County =======
+[2026-03-20T15:37:05.424Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MATAGORDACAD
+[2026-03-20T15:37:06.076Z]   No search form found — county may use different platform
+[2026-03-20T15:37:06.083Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:08.584Z] 
+[159/254] ======= MAVERICK County =======
+[2026-03-20T15:37:08.629Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MAVERICKCAD
+[2026-03-20T15:37:09.483Z]   No search form found — county may use different platform
+[2026-03-20T15:37:09.490Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:11.990Z] 
+[160/254] ======= MCCULLOCH County =======
+[2026-03-20T15:37:12.039Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MCCULLOCHCAD
+[2026-03-20T15:37:12.785Z]   No search form found — county may use different platform
+[2026-03-20T15:37:12.793Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:15.295Z] 
+[161/254] ======= MCLENNAN County =======
+[2026-03-20T15:37:15.341Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MCLENNANCAD
+[2026-03-20T15:37:16.082Z]   No search form found — county may use different platform
+[2026-03-20T15:37:16.090Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:18.591Z] 
+[162/254] ======= MCMULLEN County =======
+[2026-03-20T15:37:18.641Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MCMULLENCAD
+[2026-03-20T15:37:19.289Z]   No search form found — county may use different platform
+[2026-03-20T15:37:19.296Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:21.797Z] 
+[163/254] ======= MEDINA County =======
+[2026-03-20T15:37:21.843Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MEDINACAD
+[2026-03-20T15:37:22.598Z]   No search form found — county may use different platform
+[2026-03-20T15:37:22.605Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:25.108Z] 
+[164/254] ======= MENARD County =======
+[2026-03-20T15:37:25.157Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MENARDCAD
+[2026-03-20T15:37:25.906Z]   No search form found — county may use different platform
+[2026-03-20T15:37:25.913Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:28.415Z] 
+[165/254] ======= MIDLAND County =======
+[2026-03-20T15:37:28.463Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MIDLANDCAD
+[2026-03-20T15:37:31.820Z]   "ROYALTY": 1014 results, 1014 new
+[2026-03-20T15:37:36.507Z]   "MINERAL": 68 results, 68 new
+[2026-03-20T15:37:41.177Z]   "PETROLEUM": 24 results, 24 new
+[2026-03-20T15:37:45.818Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:37:48.332Z]   Result: 1106 records [success]
+[2026-03-20T15:37:50.836Z] 
+[166/254] ======= MILAM County =======
+[2026-03-20T15:37:50.885Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MILAMCAD
+[2026-03-20T15:37:51.663Z]   No search form found — county may use different platform
+[2026-03-20T15:37:51.670Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:54.173Z] 
+[167/254] ======= MILLS County =======
+[2026-03-20T15:37:54.222Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MILLSCAD
+[2026-03-20T15:37:54.855Z]   No search form found — county may use different platform
+[2026-03-20T15:37:54.863Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:37:57.366Z] 
+[168/254] ======= MITCHELL County =======
+[2026-03-20T15:37:57.436Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MITCHELLCAD
+[2026-03-20T15:37:58.108Z]   No search form found — county may use different platform
+[2026-03-20T15:37:58.118Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:38:00.621Z] 
+[169/254] ======= MONTAGUE County =======
+[2026-03-20T15:38:00.671Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MONTAGUECAD
+[2026-03-20T15:38:03.718Z]   "ROYALTY": 45 results, 45 new
+[2026-03-20T15:38:08.420Z]   "MINERAL": 14 results, 14 new
+[2026-03-20T15:38:13.092Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:38:17.762Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:38:20.273Z]   Result: 59 records [success]
+[2026-03-20T15:38:22.775Z] 
+[170/254] ======= MONTGOMERY County =======
+[2026-03-20T15:38:22.823Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MONTGOMERYCAD
+[2026-03-20T15:38:23.582Z]   No search form found — county may use different platform
+[2026-03-20T15:38:23.590Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:38:26.094Z] 
+[171/254] ======= MOORE County =======
+[2026-03-20T15:38:26.142Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MOORECAD
+[2026-03-20T15:38:26.893Z]   No search form found — county may use different platform
+[2026-03-20T15:38:26.900Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:38:29.404Z] 
+[172/254] ======= MORRIS County =======
+[2026-03-20T15:38:29.454Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MORRISCAD
+[2026-03-20T15:39:01.494Z]   "ROYALTY" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:39:32.705Z]   "MINERAL" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:40:04.042Z]   "PETROLEUM" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:40:35.264Z]   "MIN INT" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:40:35.277Z]   Result: 0 records [success]
+[2026-03-20T15:40:37.781Z] 
+[173/254] ======= MOTLEY County =======
+[2026-03-20T15:40:37.831Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=MOTLEYCAD
+[2026-03-20T15:40:41.467Z]   "ROYALTY": 0 results, 0 new
+[2026-03-20T15:40:46.152Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:40:50.816Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:40:55.410Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:40:57.923Z]   Result: 0 records [success]
+[2026-03-20T15:41:00.426Z] 
+[174/254] ======= NACOGDOCHES County =======
+[2026-03-20T15:41:00.476Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=NACOGDOCHESCAD
+[2026-03-20T15:41:01.220Z]   No search form found — county may use different platform
+[2026-03-20T15:41:01.228Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:41:03.730Z] 
+[175/254] ======= NAVARRO County =======
+[2026-03-20T15:41:03.780Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=NAVARROCAD
+[2026-03-20T15:41:35.742Z]   "ROYALTY" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:42:06.990Z]   "MINERAL" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:42:38.196Z]   "PETROLEUM" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:43:09.399Z]   "MIN INT" search error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T15:43:09.411Z]   Result: 0 records [success]
+[2026-03-20T15:43:11.914Z] 
+[176/254] ======= NEWTON County =======
+[2026-03-20T15:43:11.960Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=NEWTONCAD
+[2026-03-20T15:43:12.716Z]   No search form found — county may use different platform
+[2026-03-20T15:43:12.724Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:43:15.227Z] 
+[177/254] ======= NOLAN County =======
+[2026-03-20T15:43:15.275Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=NOLANCAD
+[2026-03-20T15:43:16.017Z]   No search form found — county may use different platform
+[2026-03-20T15:43:16.025Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:43:18.528Z] 
+[178/254] ======= NUECES County =======
+[2026-03-20T15:43:18.577Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=NUECESCAD
+[2026-03-20T15:43:19.331Z]   No search form found — county may use different platform
+[2026-03-20T15:43:19.338Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:43:21.843Z] 
+[179/254] ======= OCHILTREE County =======
+[2026-03-20T15:43:21.894Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=OCHILTREECAD
+[2026-03-20T15:43:22.541Z]   No search form found — county may use different platform
+[2026-03-20T15:43:22.549Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:43:25.050Z] 
+[180/254] ======= OLDHAM County =======
+[2026-03-20T15:43:25.099Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=OLDHAMCAD
+[2026-03-20T15:43:25.741Z]   No search form found — county may use different platform
+[2026-03-20T15:43:25.748Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:43:28.250Z] 
+[181/254] ======= ORANGE County =======
+[2026-03-20T15:43:28.298Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ORANGECAD
+[2026-03-20T15:43:29.045Z]   No search form found — county may use different platform
+[2026-03-20T15:43:29.051Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:43:31.555Z] 
+[182/254] ======= PALO PINTO County =======
+[2026-03-20T15:43:31.604Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=PALOPINTOCAD
+[2026-03-20T15:43:34.604Z]   "ROYALTY": 8 results, 8 new
+[2026-03-20T15:43:39.799Z]   "MINERAL": 62 results, 62 new
+[2026-03-20T15:43:44.475Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:43:49.132Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:43:51.645Z]   Result: 70 records [success]
+[2026-03-20T15:43:54.148Z] 
+[183/254] ======= PANOLA County =======
+[2026-03-20T15:43:54.194Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=PANOLACAD
+[2026-03-20T15:43:54.956Z]   No search form found — county may use different platform
+[2026-03-20T15:43:54.963Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:43:57.465Z] 
+[184/254] ======= PARKER County =======
+[2026-03-20T15:43:57.514Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=PARKERCAD
+[2026-03-20T15:44:00.505Z]   "ROYALTY": 9 results, 9 new
+[2026-03-20T15:44:05.178Z]   "MINERAL": 26 results, 26 new
+[2026-03-20T15:44:09.841Z]   "PETROLEUM": 1 results, 1 new
+[2026-03-20T15:44:14.427Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:44:16.940Z]   Result: 36 records [success]
+[2026-03-20T15:44:19.443Z] 
+[185/254] ======= PARMER County =======
+[2026-03-20T15:44:19.495Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=PARMERCAD
+[2026-03-20T15:44:20.227Z]   No search form found — county may use different platform
+[2026-03-20T15:44:20.234Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:22.738Z] 
+[186/254] ======= PECOS County =======
+[2026-03-20T15:44:22.788Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=PECOSCAD
+[2026-03-20T15:44:23.539Z]   No search form found — county may use different platform
+[2026-03-20T15:44:23.546Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:26.048Z] 
+[187/254] ======= POLK County =======
+[2026-03-20T15:44:26.095Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=POLKCAD
+[2026-03-20T15:44:26.834Z]   No search form found — county may use different platform
+[2026-03-20T15:44:26.842Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:29.345Z] 
+[188/254] ======= POTTER County =======
+[2026-03-20T15:44:29.394Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=POTTERCAD
+[2026-03-20T15:44:30.146Z]   No search form found — county may use different platform
+[2026-03-20T15:44:30.152Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:32.655Z] 
+[189/254] ======= PRESIDIO County =======
+[2026-03-20T15:44:32.707Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=PRESIDIOCAD
+[2026-03-20T15:44:33.343Z]   No search form found — county may use different platform
+[2026-03-20T15:44:33.351Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:35.854Z] 
+[190/254] ======= RAINS County =======
+[2026-03-20T15:44:35.902Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=RAINSCAD
+[2026-03-20T15:44:36.643Z]   No search form found — county may use different platform
+[2026-03-20T15:44:36.650Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:39.154Z] 
+[191/254] ======= RANDALL County =======
+[2026-03-20T15:44:39.208Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=RANDALLCAD
+[2026-03-20T15:44:39.962Z]   No search form found — county may use different platform
+[2026-03-20T15:44:39.969Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:42.473Z] 
+[192/254] ======= REAGAN County =======
+[2026-03-20T15:44:42.525Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=REAGANCAD
+[2026-03-20T15:44:43.265Z]   No search form found — county may use different platform
+[2026-03-20T15:44:43.272Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:45.775Z] 
+[193/254] ======= REAL County =======
+[2026-03-20T15:44:45.826Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=REALCAD
+[2026-03-20T15:44:46.563Z]   No search form found — county may use different platform
+[2026-03-20T15:44:46.571Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:49.074Z] 
+[194/254] ======= RED RIVER County =======
+[2026-03-20T15:44:49.123Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=REDRIVERCAD
+[2026-03-20T15:44:49.877Z]   No search form found — county may use different platform
+[2026-03-20T15:44:49.888Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:52.391Z] 
+[195/254] ======= REEVES County =======
+[2026-03-20T15:44:52.442Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=REEVESCAD
+[2026-03-20T15:44:53.072Z]   No search form found — county may use different platform
+[2026-03-20T15:44:53.079Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:55.582Z] 
+[196/254] ======= REFUGIO County =======
+[2026-03-20T15:44:55.629Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=REFUGIOCAD
+[2026-03-20T15:44:56.381Z]   No search form found — county may use different platform
+[2026-03-20T15:44:56.389Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:44:58.892Z] 
+[197/254] ======= ROBERTS County =======
+[2026-03-20T15:44:58.940Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ROBERTSCAD
+[2026-03-20T15:45:02.463Z]   "ROYALTY": 101 results, 101 new
+[2026-03-20T15:45:07.123Z]   "MINERAL": 1 results, 1 new
+[2026-03-20T15:45:11.779Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:45:16.399Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:45:18.912Z]   Result: 102 records [success]
+[2026-03-20T15:45:21.416Z] 
+[198/254] ======= ROBERTSON County =======
+[2026-03-20T15:45:21.465Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ROBERTSONCAD
+[2026-03-20T15:45:22.207Z]   No search form found — county may use different platform
+[2026-03-20T15:45:22.214Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:45:24.718Z] 
+[199/254] ======= ROCKWALL County =======
+[2026-03-20T15:45:24.767Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=ROCKWALLCAD
+[2026-03-20T15:45:25.423Z]   No search form found — county may use different platform
+[2026-03-20T15:45:25.430Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:45:27.933Z] 
+[200/254] ======= RUNNELS County =======
+[2026-03-20T15:45:27.983Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=RUNNELSCAD
+[2026-03-20T15:45:31.000Z]   "ROYALTY": 0 results, 0 new
+[2026-03-20T15:45:35.665Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:45:40.226Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:45:44.892Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:45:47.404Z]   Result: 0 records [success]
+[2026-03-20T15:45:49.906Z] 
+[201/254] ======= RUSK County =======
+[2026-03-20T15:45:49.958Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=RUSKCAD
+[2026-03-20T15:45:50.716Z]   No search form found — county may use different platform
+[2026-03-20T15:45:50.723Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:45:53.227Z] 
+[202/254] ======= SABINE County =======
+[2026-03-20T15:45:53.284Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SABINECAD
+[2026-03-20T15:45:56.280Z]   "ROYALTY": 0 results, 0 new
+[2026-03-20T15:46:00.939Z]   "MINERAL": 2 results, 2 new
+[2026-03-20T15:46:05.599Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:46:10.208Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:46:12.721Z]   Result: 2 records [success]
+[2026-03-20T15:46:15.224Z] 
+[203/254] ======= SAN AUGUSTINE County =======
+[2026-03-20T15:46:15.272Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SANAUGUSTINECAD
+[2026-03-20T15:46:16.008Z]   No search form found — county may use different platform
+[2026-03-20T15:46:16.017Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:18.520Z] 
+[204/254] ======= SAN JACINTO County =======
+[2026-03-20T15:46:18.568Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SANJACINTOCAD
+[2026-03-20T15:46:19.215Z]   No search form found — county may use different platform
+[2026-03-20T15:46:19.222Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:21.726Z] 
+[205/254] ======= SAN PATRICIO County =======
+[2026-03-20T15:46:21.771Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SANPATRICIOCAD
+[2026-03-20T15:46:22.508Z]   No search form found — county may use different platform
+[2026-03-20T15:46:22.514Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:25.017Z] 
+[206/254] ======= SAN SABA County =======
+[2026-03-20T15:46:25.066Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SANSABACAD
+[2026-03-20T15:46:25.811Z]   No search form found — county may use different platform
+[2026-03-20T15:46:25.818Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:28.321Z] 
+[207/254] ======= SCHLEICHER County =======
+[2026-03-20T15:46:28.386Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SCHLEICHERCAD
+[2026-03-20T15:46:29.132Z]   No search form found — county may use different platform
+[2026-03-20T15:46:29.139Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:31.642Z] 
+[208/254] ======= SCURRY County =======
+[2026-03-20T15:46:31.690Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SCURRYCAD
+[2026-03-20T15:46:32.426Z]   No search form found — county may use different platform
+[2026-03-20T15:46:32.434Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:34.937Z] 
+[209/254] ======= SHACKELFORD County =======
+[2026-03-20T15:46:34.985Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SHACKELFORDCAD
+[2026-03-20T15:46:35.725Z]   No search form found — county may use different platform
+[2026-03-20T15:46:35.733Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:38.235Z] 
+[210/254] ======= SHELBY County =======
+[2026-03-20T15:46:38.284Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SHELBYCAD
+[2026-03-20T15:46:38.921Z]   No search form found — county may use different platform
+[2026-03-20T15:46:38.929Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:41.433Z] 
+[211/254] ======= SHERMAN County =======
+[2026-03-20T15:46:41.481Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SHERMANCAD
+[2026-03-20T15:46:42.314Z]   No search form found — county may use different platform
+[2026-03-20T15:46:42.321Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:44.824Z] 
+[212/254] ======= SMITH County =======
+[2026-03-20T15:46:44.869Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SMITHCAD
+[2026-03-20T15:46:46.168Z]   No search form found — county may use different platform
+[2026-03-20T15:46:46.175Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:48.677Z] 
+[213/254] ======= SOMERVELL County =======
+[2026-03-20T15:46:48.728Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SOMERVELLCAD
+[2026-03-20T15:46:50.975Z]   No search form found — county may use different platform
+[2026-03-20T15:46:50.987Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:53.489Z] 
+[214/254] ======= STARR County =======
+[2026-03-20T15:46:53.536Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=STARRCAD
+[2026-03-20T15:46:54.688Z]   No search form found — county may use different platform
+[2026-03-20T15:46:54.695Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:46:57.198Z] 
+[215/254] ======= STEPHENS County =======
+[2026-03-20T15:46:57.250Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=STEPHENSCAD
+[2026-03-20T15:47:01.060Z]   "ROYALTY": 32 results, 32 new
+[2026-03-20T15:47:05.731Z]   "MINERAL": 9 results, 9 new
+[2026-03-20T15:47:10.850Z]   "PETROLEUM": 277 results, 277 new
+[2026-03-20T15:47:15.425Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:47:17.939Z]   Result: 318 records [success]
+[2026-03-20T15:47:20.442Z] 
+[216/254] ======= STERLING County =======
+[2026-03-20T15:47:20.487Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=STERLINGCAD
+[2026-03-20T15:47:21.230Z]   No search form found — county may use different platform
+[2026-03-20T15:47:21.236Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:23.739Z] 
+[217/254] ======= STONEWALL County =======
+[2026-03-20T15:47:23.790Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=STONEWALLCAD
+[2026-03-20T15:47:24.537Z]   No search form found — county may use different platform
+[2026-03-20T15:47:24.544Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:27.048Z] 
+[218/254] ======= SUTTON County =======
+[2026-03-20T15:47:27.097Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SUTTONCAD
+[2026-03-20T15:47:27.733Z]   No search form found — county may use different platform
+[2026-03-20T15:47:27.740Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:30.243Z] 
+[219/254] ======= SWISHER County =======
+[2026-03-20T15:47:30.289Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=SWISHERCAD
+[2026-03-20T15:47:31.042Z]   No search form found — county may use different platform
+[2026-03-20T15:47:31.049Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:33.554Z] 
+[220/254] ======= TARRANT County =======
+[2026-03-20T15:47:33.600Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=TARRANTCAD
+[2026-03-20T15:47:34.341Z]   No search form found — county may use different platform
+[2026-03-20T15:47:34.348Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:36.852Z] 
+[221/254] ======= TAYLOR County =======
+[2026-03-20T15:47:36.899Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=TAYLORCAD
+[2026-03-20T15:47:37.546Z]   No search form found — county may use different platform
+[2026-03-20T15:47:37.554Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:40.057Z] 
+[222/254] ======= TERRELL County =======
+[2026-03-20T15:47:40.105Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=TERRELLCAD
+[2026-03-20T15:47:40.832Z]   No search form found — county may use different platform
+[2026-03-20T15:47:40.839Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:43.342Z] 
+[223/254] ======= TERRY County =======
+[2026-03-20T15:47:43.389Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=TERRYCAD
+[2026-03-20T15:47:44.028Z]   No search form found — county may use different platform
+[2026-03-20T15:47:44.035Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:46.539Z] 
+[224/254] ======= THROCKMORTON County =======
+[2026-03-20T15:47:46.591Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=THROCKMORTONCAD
+[2026-03-20T15:47:47.343Z]   No search form found — county may use different platform
+[2026-03-20T15:47:47.351Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:49.854Z] 
+[225/254] ======= TITUS County =======
+[2026-03-20T15:47:49.901Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=TITUSCAD
+[2026-03-20T15:47:50.651Z]   No search form found — county may use different platform
+[2026-03-20T15:47:50.658Z]   Result: 0 records [no_search_form]
+[2026-03-20T15:47:53.161Z] 
+[226/254] ======= TOM GREEN County =======
+[2026-03-20T15:47:53.209Z]   Loading: https://www.southwestdatasolution.com/webindex.aspx?dbkey=TOMGREENCAD
+[2026-03-20T15:47:56.210Z]   "ROYALTY": 1 results, 1 new
+[2026-03-20T15:48:00.898Z]   "MINERAL": 0 results, 0 new
+[2026-03-20T15:48:05.594Z]   "PETROLEUM": 0 results, 0 new
+[2026-03-20T15:48:10.189Z]   "MIN INT": 0 results, 0 new
+[2026-03-20T15:48:12.701Z]   Result: 1 records [success]
+[2026-03-20T15:48:15.203Z] 
+[227/254] ======= TRAVIS County =======
+[2026-03-20T15:48:15.204Z]   FATAL ERROR on TRAVIS: Connection closed.
+[2026-03-20T15:48:17.708Z] 
+[228/254] ======= TRINITY County =======
+[2026-03-20T15:48:17.708Z]   FATAL ERROR on TRINITY: Connection closed.
+[2026-03-20T15:48:20.213Z] 
+[229/254] ======= TYLER County =======
+[2026-03-20T15:48:20.213Z]   FATAL ERROR on TYLER: Connection closed.
+[2026-03-20T15:48:22.717Z] 
+[230/254] ======= UPSHUR County =======
+[2026-03-20T15:48:22.717Z]   FATAL ERROR on UPSHUR: Connection closed.
+[2026-03-20T15:48:25.219Z] 
+[231/254] ======= UPTON County =======
+[2026-03-20T15:48:25.219Z]   FATAL ERROR on UPTON: Connection closed.
+[2026-03-20T15:48:27.723Z] 
+[232/254] ======= UVALDE County =======
+[2026-03-20T15:48:27.724Z]   FATAL ERROR on UVALDE: Connection closed.
+[2026-03-20T15:48:30.228Z] 
+[233/254] ======= VAL VERDE County =======
+[2026-03-20T15:48:30.228Z]   FATAL ERROR on VAL VERDE: Connection closed.
+[2026-03-20T15:48:32.732Z] 
+[234/254] ======= VAN ZANDT County =======
+[2026-03-20T15:48:32.732Z]   FATAL ERROR on VAN ZANDT: Connection closed.
+[2026-03-20T15:48:35.237Z] 
+[235/254] ======= VICTORIA County =======
+[2026-03-20T15:48:35.237Z]   FATAL ERROR on VICTORIA: Connection closed.
+[2026-03-20T15:48:37.741Z] 
+[236/254] ======= WALKER County =======
+[2026-03-20T15:48:37.741Z]   FATAL ERROR on WALKER: Connection closed.
+[2026-03-20T15:48:40.246Z] 
+[237/254] ======= WALLER County =======
+[2026-03-20T15:48:40.247Z]   FATAL ERROR on WALLER: Connection closed.
+[2026-03-20T15:48:42.752Z] 
+[238/254] ======= WARD County =======
+[2026-03-20T15:48:42.752Z]   FATAL ERROR on WARD: Connection closed.
+[2026-03-20T15:48:45.258Z] 
+[239/254] ======= WASHINGTON County =======
+[2026-03-20T15:48:45.258Z]   FATAL ERROR on WASHINGTON: Connection closed.
+[2026-03-20T15:48:47.763Z] 
+[240/254] ======= WEBB County =======
+[2026-03-20T15:48:47.763Z]   FATAL ERROR on WEBB: Connection closed.
+[2026-03-20T15:48:50.268Z] 
+[241/254] ======= WHARTON County =======
+[2026-03-20T15:48:50.269Z]   FATAL ERROR on WHARTON: Connection closed.
+[2026-03-20T15:48:52.772Z] 
+[242/254] ======= WHEELER County =======
+[2026-03-20T15:48:52.772Z]   FATAL ERROR on WHEELER: Connection closed.
+[2026-03-20T15:48:55.276Z] 
+[243/254] ======= WICHITA County =======
+[2026-03-20T15:48:55.276Z]   FATAL ERROR on WICHITA: Connection closed.
+[2026-03-20T15:48:57.781Z] 
+[244/254] ======= WILBARGER County =======
+[2026-03-20T15:48:57.782Z]   FATAL ERROR on WILBARGER: Connection closed.
+[2026-03-20T15:49:00.286Z] 
+[245/254] ======= WILLACY County =======
+[2026-03-20T15:49:00.286Z]   FATAL ERROR on WILLACY: Connection closed.
+[2026-03-20T15:49:02.791Z] 
+[246/254] ======= WILLIAMSON County =======
+[2026-03-20T15:49:02.792Z]   FATAL ERROR on WILLIAMSON: Connection closed.
+[2026-03-20T15:49:05.297Z] 
+[247/254] ======= WILSON County =======
+[2026-03-20T15:49:05.297Z]   FATAL ERROR on WILSON: Connection closed.
+[2026-03-20T15:49:07.801Z] 
+[248/254] ======= WINKLER County =======
+[2026-03-20T15:49:07.801Z]   FATAL ERROR on WINKLER: Connection closed.
+[2026-03-20T15:49:10.306Z] 
+[249/254] ======= WISE County =======
+[2026-03-20T15:49:10.307Z]   FATAL ERROR on WISE: Connection closed.
+[2026-03-20T15:49:12.811Z] 
+[250/254] ======= WOOD County =======
+[2026-03-20T15:49:12.812Z]   FATAL ERROR on WOOD: Connection closed.
+[2026-03-20T15:49:15.316Z] 
+[251/254] ======= YOAKUM County =======
+[2026-03-20T15:49:15.316Z]   FATAL ERROR on YOAKUM: Connection closed.
+[2026-03-20T15:49:17.820Z] 
+[252/254] ======= YOUNG County =======
+[2026-03-20T15:49:17.820Z]   FATAL ERROR on YOUNG: Connection closed.
+[2026-03-20T15:49:20.323Z] 
+[253/254] ======= ZAPATA County =======
+[2026-03-20T15:49:20.323Z]   FATAL ERROR on ZAPATA: Connection closed.
+[2026-03-20T15:49:22.828Z] 
+[254/254] ======= ZAVALA County =======
+[2026-03-20T15:49:22.829Z]   FATAL ERROR on ZAVALA: Connection closed.
+[2026-03-20T15:49:25.333Z] 
+=================================================================
+[2026-03-20T15:49:25.333Z] SCRAPE COMPLETE
+[2026-03-20T15:49:25.333Z] =================================================================
+[2026-03-20T15:49:25.333Z] Total records: 1871
+[2026-03-20T15:49:25.333Z] Counties succeeded: 26
+[2026-03-20T15:49:25.334Z] Counties failed: 200
+[2026-03-20T15:49:25.334Z] 
+Failed counties:
+[2026-03-20T15:49:25.334Z]   ANDERSON: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   ANDREWS: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   ANGELINA: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   ARANSAS: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   ARCHER: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   ARMSTRONG: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   ATASCOSA: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   AUSTIN: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BAILEY: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BANDERA: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BASTROP: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BEE: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BELL: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BEXAR: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BLANCO: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BORDEN: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BOSQUE: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BOWIE: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BRAZORIA: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BRAZOS: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BREWSTER: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BRISCOE: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BROOKS: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BROWN: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BURLESON: no_search_form — No search form
+[2026-03-20T15:49:25.334Z]   BURNET: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CALDWELL: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CALHOUN: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CAMERON: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CAMP: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CARSON: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CASS: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CASTRO: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CHAMBERS: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CHEROKEE: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CHILDRESS: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CLAY: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COCHRAN: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COKE: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COLEMAN: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COLLIN: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COLLINGSWORTH: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COLORADO: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COMAL: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COMANCHE: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COOKE: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CORYELL: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   COTTLE: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CRANE: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CROCKETT: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CROSBY: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   CULBERSON: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DALLAM: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DALLAS: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DAWSON: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DE WITT: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DEAF SMITH: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DELTA: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DENTON: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DICKENS: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DIMMIT: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DONLEY: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   DUVAL: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   EASTLAND: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   ECTOR: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   EDWARDS: no_search_form — No search form
+[2026-03-20T15:49:25.335Z]   EL PASO: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   ELLIS: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   FAYETTE: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   FISHER: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   FOARD: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   FORT BEND: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   FRANKLIN: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   FREESTONE: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   FRIO: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GAINES: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GALVESTON: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GARZA: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GILLESPIE: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GLASSCOCK: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GOLIAD: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GONZALES: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GRAY: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GRAYSON: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GREGG: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GRIMES: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   GUADALUPE: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HALE: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HALL: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HAMILTON: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HANSFORD: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HARDEMAN: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HARDIN: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HARRIS: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HARRISON: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HASKELL: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HAYS: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HIDALGO: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HILL: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HOCKLEY: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HOUSTON: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HOWARD: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HUDSPETH: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HUNT: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   HUTCHINSON: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   IRION: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   JACK: no_search_form — No search form
+[2026-03-20T15:49:25.336Z]   JACKSON: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   JASPER: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   JEFF DAVIS: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   JEFFERSON: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   JIM HOGG: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   JIM WELLS: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   JOHNSON: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   JONES: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KARNES: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KAUFMAN: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KENDALL: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KENEDY: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KENT: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KERR: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KIMBLE: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KING: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KINNEY: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   KLEBERG: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LA SALLE: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LAMAR: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LAMB: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LAMPASAS: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LAVACA: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LEE: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LEON: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LIBERTY: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LIMESTONE: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LIVE OAK: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LLANO: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LOVING: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LUBBOCK: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   LYNN: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MADISON: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MARION: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MARTIN: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MASON: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MATAGORDA: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MAVERICK: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MCCULLOCH: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MCLENNAN: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MCMULLEN: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MEDINA: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MENARD: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MILAM: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MILLS: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MITCHELL: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MONTGOMERY: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   MOORE: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   NACOGDOCHES: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   NEWTON: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   NOLAN: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   NUECES: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   OCHILTREE: no_search_form — No search form
+[2026-03-20T15:49:25.337Z]   OLDHAM: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   ORANGE: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   PANOLA: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   PARMER: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   PECOS: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   POLK: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   POTTER: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   PRESIDIO: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   RAINS: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   RANDALL: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   REAGAN: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   REAL: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   RED RIVER: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   REEVES: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   REFUGIO: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   ROBERTSON: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   ROCKWALL: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   RUSK: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SAN AUGUSTINE: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SAN JACINTO: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SAN PATRICIO: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SAN SABA: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SCHLEICHER: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SCURRY: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SHACKELFORD: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SHELBY: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SHERMAN: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SMITH: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SOMERVELL: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   STARR: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   STERLING: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   STONEWALL: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SUTTON: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   SWISHER: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   TARRANT: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   TAYLOR: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   TERRELL: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   TERRY: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   THROCKMORTON: no_search_form — No search form
+[2026-03-20T15:49:25.338Z]   TITUS: no_search_form — No search form
+[2026-03-20T15:49:25.338Z] 
+Output: /Users/cchapmn/mineral-intel/data/cad-minerals-real.json

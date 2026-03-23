@@ -1,0 +1,1648 @@
+[2026-03-20T16:41:21.164Z] =================================================================
+[2026-03-20T16:41:21.165Z] Texas CAD Mineral Scraper — ALL PLATFORMS — REAL DATA ONLY
+[2026-03-20T16:41:21.165Z] =================================================================
+[2026-03-20T16:41:21.165Z] Targeting 254 counties (start: 0)
+[2026-03-20T16:41:21.169Z] Existing records: 1871
+[2026-03-20T16:41:21.330Z] 
+[1/254] ======= ANDERSON County =======
+[2026-03-20T16:41:21.331Z]   Trying SDS...
+[2026-03-20T16:41:22.399Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:41:22.459Z]   No mineral data found on either platform
+[2026-03-20T16:41:24.964Z] 
+[2/254] ======= ANDREWS County =======
+[2026-03-20T16:41:24.964Z]   Trying SDS...
+[2026-03-20T16:41:25.738Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:41:52.737Z]     BIS "ROYALTY": 112 new records (2 pages)
+[2026-03-20T16:42:17.751Z]     BIS "MINERAL": 55 new records (1 pages)
+[2026-03-20T16:42:41.952Z]     BIS "PETROLEUM": 19 new records (1 pages)
+[2026-03-20T16:42:44.460Z]   SUCCESS: 186 records via bis
+[2026-03-20T16:42:46.963Z] 
+[3/254] ======= ANGELINA County =======
+[2026-03-20T16:42:46.963Z]   Trying SDS...
+[2026-03-20T16:42:47.758Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:43:51.918Z]     BIS "ROYALTY" error: Navigation timeout of 60000 ms exceeded
+[2026-03-20T16:44:51.921Z]     BIS "MINERAL" error: Navigation timeout of 60000 ms exceeded
+[2026-03-20T16:45:51.922Z]     BIS "PETROLEUM" error: Navigation timeout of 60000 ms exceeded
+[2026-03-20T16:45:51.926Z]   No mineral data found on either platform
+[2026-03-20T16:45:54.432Z] 
+[4/254] ======= ARANSAS County =======
+[2026-03-20T16:45:54.432Z]   Trying SDS...
+[2026-03-20T16:45:55.381Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:46:20.777Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T16:46:44.498Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T16:47:08.231Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:47:10.737Z]   No mineral data found on either platform
+[2026-03-20T16:47:13.242Z] 
+[5/254] ======= ARCHER County =======
+[2026-03-20T16:47:13.243Z]   Trying SDS...
+[2026-03-20T16:47:14.012Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:47:14.131Z]   No mineral data found on either platform
+[2026-03-20T16:47:16.667Z] 
+[6/254] ======= ARMSTRONG County =======
+[2026-03-20T16:47:16.667Z]   Trying SDS...
+[2026-03-20T16:47:17.337Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:47:17.395Z]   No mineral data found on either platform
+[2026-03-20T16:47:19.900Z] 
+[7/254] ======= ATASCOSA County =======
+[2026-03-20T16:47:19.900Z]   Trying SDS...
+[2026-03-20T16:47:20.662Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:47:20.721Z]   No mineral data found on either platform
+[2026-03-20T16:47:23.225Z] 
+[8/254] ======= AUSTIN County =======
+[2026-03-20T16:47:23.225Z]   Trying SDS...
+[2026-03-20T16:47:23.988Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:47:28.150Z]     BIS: no session token
+[2026-03-20T16:47:28.152Z]   No mineral data found on either platform
+[2026-03-20T16:47:30.656Z] 
+[9/254] ======= BAILEY County =======
+[2026-03-20T16:47:30.657Z]   Trying SDS...
+[2026-03-20T16:47:31.421Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:47:31.480Z]   No mineral data found on either platform
+[2026-03-20T16:47:33.984Z] 
+[10/254] ======= BANDERA County =======
+[2026-03-20T16:47:33.984Z]   Trying SDS...
+[2026-03-20T16:47:34.745Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:47:34.805Z]   No mineral data found on either platform
+[2026-03-20T16:47:37.309Z] 
+[11/254] ======= BASTROP County =======
+[2026-03-20T16:47:37.310Z]   Trying SDS...
+[2026-03-20T16:47:38.078Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:48:04.467Z]     BIS "ROYALTY": 2 new records (1 pages)
+[2026-03-20T16:48:28.319Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T16:48:52.040Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:48:54.547Z]   SUCCESS: 2 records via bis
+[2026-03-20T16:48:57.049Z] [12/254] BAYLOR — already scraped (2 records), skipping
+[2026-03-20T16:48:57.049Z] 
+[13/254] ======= BEE County =======
+[2026-03-20T16:48:57.049Z]   Trying SDS...
+[2026-03-20T16:48:57.808Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:49:23.477Z]     BIS "ROYALTY": 9 new records (1 pages)
+[2026-03-20T16:49:46.934Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T16:50:10.694Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:50:13.201Z]   SUCCESS: 9 records via bis
+[2026-03-20T16:50:15.705Z] 
+[14/254] ======= BELL County =======
+[2026-03-20T16:50:15.705Z]   Trying SDS...
+[2026-03-20T16:50:16.474Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:50:42.521Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T16:51:06.221Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T16:51:29.938Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:51:32.446Z]   No mineral data found on either platform
+[2026-03-20T16:51:34.949Z] 
+[15/254] ======= BEXAR County =======
+[2026-03-20T16:51:34.949Z]   Trying SDS...
+[2026-03-20T16:51:35.851Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:51:40.774Z]     BIS: no search form at https://esearch.bexarcad.org/
+[2026-03-20T16:51:40.776Z]   No mineral data found on either platform
+[2026-03-20T16:51:43.280Z] 
+[16/254] ======= BLANCO County =======
+[2026-03-20T16:51:43.280Z]   Trying SDS...
+[2026-03-20T16:51:43.943Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:51:44.003Z]   No mineral data found on either platform
+[2026-03-20T16:51:46.563Z] 
+[17/254] ======= BORDEN County =======
+[2026-03-20T16:51:46.564Z]   Trying SDS...
+[2026-03-20T16:51:47.335Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:51:51.400Z]     BIS: no session token
+[2026-03-20T16:51:51.401Z]   No mineral data found on either platform
+[2026-03-20T16:51:53.905Z] 
+[18/254] ======= BOSQUE County =======
+[2026-03-20T16:51:53.905Z]   Trying SDS...
+[2026-03-20T16:51:54.666Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:51:54.733Z]   No mineral data found on either platform
+[2026-03-20T16:51:57.237Z] 
+[19/254] ======= BOWIE County =======
+[2026-03-20T16:51:57.237Z]   Trying SDS...
+[2026-03-20T16:51:58.055Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:52:02.819Z]     BIS: no search form at https://esearch.bowiecad.org/
+[2026-03-20T16:52:02.821Z]   No mineral data found on either platform
+[2026-03-20T16:52:05.325Z] 
+[20/254] ======= BRAZORIA County =======
+[2026-03-20T16:52:05.325Z]   Trying SDS...
+[2026-03-20T16:52:06.084Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:52:31.722Z]     BIS "ROYALTY": 40 new records (1 pages)
+[2026-03-20T16:52:55.415Z]     BIS "MINERAL": 3 new records (1 pages)
+[2026-03-20T16:53:19.080Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:53:21.586Z]   SUCCESS: 43 records via bis
+[2026-03-20T16:53:24.090Z] 
+[21/254] ======= BRAZOS County =======
+[2026-03-20T16:53:24.090Z]   Trying SDS...
+[2026-03-20T16:53:24.755Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:53:50.571Z]     BIS "ROYALTY": 46 new records (1 pages)
+[2026-03-20T16:54:14.310Z]     BIS "MINERAL": 5 new records (1 pages)
+[2026-03-20T16:54:38.136Z]     BIS "PETROLEUM": 3 new records (1 pages)
+[2026-03-20T16:54:40.641Z]   SUCCESS: 54 records via bis
+[2026-03-20T16:54:43.147Z] 
+[22/254] ======= BREWSTER County =======
+[2026-03-20T16:54:43.147Z]   Trying SDS...
+[2026-03-20T16:54:43.913Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:54:44.046Z]   No mineral data found on either platform
+[2026-03-20T16:54:46.551Z] 
+[23/254] ======= BRISCOE County =======
+[2026-03-20T16:54:46.551Z]   Trying SDS...
+[2026-03-20T16:54:47.312Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:54:47.426Z]   No mineral data found on either platform
+[2026-03-20T16:54:49.932Z] 
+[24/254] ======= BROOKS County =======
+[2026-03-20T16:54:49.932Z]   Trying SDS...
+[2026-03-20T16:54:50.696Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:55:16.204Z]     BIS "ROYALTY": 2 new records (1 pages)
+[2026-03-20T16:55:39.776Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T16:56:03.444Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:56:05.950Z]   SUCCESS: 2 records via bis
+[2026-03-20T16:56:08.454Z] 
+[25/254] ======= BROWN County =======
+[2026-03-20T16:56:08.455Z]   Trying SDS...
+[2026-03-20T16:56:09.219Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:56:09.278Z]   No mineral data found on either platform
+[2026-03-20T16:56:11.782Z] 
+[26/254] ======= BURLESON County =======
+[2026-03-20T16:56:11.782Z]   Trying SDS...
+[2026-03-20T16:56:12.657Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:56:20.307Z]     BIS: no search form at https://esearch.burlesoncad.org/
+[2026-03-20T16:56:20.308Z]   No mineral data found on either platform
+[2026-03-20T16:56:22.812Z] 
+[27/254] ======= BURNET County =======
+[2026-03-20T16:56:22.813Z]   Trying SDS...
+[2026-03-20T16:56:23.574Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:56:28.692Z]     BIS: no search form at https://esearch.burnetcad.org/
+[2026-03-20T16:56:28.693Z]   No mineral data found on either platform
+[2026-03-20T16:56:31.198Z] 
+[28/254] ======= CALDWELL County =======
+[2026-03-20T16:56:31.198Z]   Trying SDS...
+[2026-03-20T16:56:31.868Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:56:58.758Z]     BIS "ROYALTY": 42 new records (1 pages)
+[2026-03-20T16:57:22.198Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T16:57:45.615Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:57:48.118Z]   SUCCESS: 42 records via bis
+[2026-03-20T16:57:50.622Z] 
+[29/254] ======= CALHOUN County =======
+[2026-03-20T16:57:50.622Z]   Trying SDS...
+[2026-03-20T16:57:51.397Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:58:16.880Z]     BIS "ROYALTY": 1 new records (1 pages)
+[2026-03-20T16:58:40.522Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T16:59:04.170Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T16:59:06.675Z]   SUCCESS: 1 records via bis
+[2026-03-20T16:59:09.180Z] [30/254] CALLAHAN — already scraped (30 records), skipping
+[2026-03-20T16:59:09.181Z] 
+[31/254] ======= CAMERON County =======
+[2026-03-20T16:59:09.181Z]   Trying SDS...
+[2026-03-20T16:59:09.950Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:59:10.082Z]   No mineral data found on either platform
+[2026-03-20T16:59:12.586Z] 
+[32/254] ======= CAMP County =======
+[2026-03-20T16:59:12.586Z]   Trying SDS...
+[2026-03-20T16:59:13.358Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T16:59:40.467Z]     BIS "ROYALTY": 13 new records (1 pages)
+[2026-03-20T17:00:04.121Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:00:27.845Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:00:30.350Z]   SUCCESS: 13 records via bis
+[2026-03-20T17:00:32.856Z] 
+[33/254] ======= CARSON County =======
+[2026-03-20T17:00:32.856Z]   Trying SDS...
+[2026-03-20T17:00:33.633Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:00:33.822Z]   No mineral data found on either platform
+[2026-03-20T17:00:36.325Z] 
+[34/254] ======= CASS County =======
+[2026-03-20T17:00:36.325Z]   Trying SDS...
+[2026-03-20T17:00:37.077Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:01:03.644Z]     BIS "ROYALTY": 13 new records (1 pages)
+[2026-03-20T17:01:27.336Z]     BIS "MINERAL": 5 new records (1 pages)
+[2026-03-20T17:01:50.953Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:01:53.459Z]   SUCCESS: 18 records via bis
+[2026-03-20T17:01:55.963Z] 
+[35/254] ======= CASTRO County =======
+[2026-03-20T17:01:55.963Z]   Trying SDS...
+[2026-03-20T17:01:56.726Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:02:22.026Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:02:45.664Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:03:09.336Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:03:11.838Z]   No mineral data found on either platform
+[2026-03-20T17:03:14.343Z] 
+[36/254] ======= CHAMBERS County =======
+[2026-03-20T17:03:14.343Z]   Trying SDS...
+[2026-03-20T17:03:15.110Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:03:15.226Z]   No mineral data found on either platform
+[2026-03-20T17:03:17.729Z] 
+[37/254] ======= CHEROKEE County =======
+[2026-03-20T17:03:17.729Z]   Trying SDS...
+[2026-03-20T17:03:18.494Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:03:23.298Z]     BIS: no search form at https://esearch.cherokeecad.org/
+[2026-03-20T17:03:23.300Z]   No mineral data found on either platform
+[2026-03-20T17:03:25.804Z] 
+[38/254] ======= CHILDRESS County =======
+[2026-03-20T17:03:25.804Z]   Trying SDS...
+[2026-03-20T17:03:26.567Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:03:26.627Z]   No mineral data found on either platform
+[2026-03-20T17:03:29.129Z] 
+[39/254] ======= CLAY County =======
+[2026-03-20T17:03:29.129Z]   Trying SDS...
+[2026-03-20T17:03:29.910Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:03:30.052Z]   No mineral data found on either platform
+[2026-03-20T17:03:32.554Z] 
+[40/254] ======= COCHRAN County =======
+[2026-03-20T17:03:32.554Z]   Trying SDS...
+[2026-03-20T17:03:33.329Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:03:33.389Z]   No mineral data found on either platform
+[2026-03-20T17:03:35.892Z] 
+[41/254] ======= COKE County =======
+[2026-03-20T17:03:35.892Z]   Trying SDS...
+[2026-03-20T17:03:36.655Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:03:40.584Z]     BIS: no session token
+[2026-03-20T17:03:40.585Z]   No mineral data found on either platform
+[2026-03-20T17:03:43.090Z] 
+[42/254] ======= COLEMAN County =======
+[2026-03-20T17:03:43.090Z]   Trying SDS...
+[2026-03-20T17:03:43.859Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:03:43.919Z]   No mineral data found on either platform
+[2026-03-20T17:03:46.422Z] 
+[43/254] ======= COLLIN County =======
+[2026-03-20T17:03:46.422Z]   Trying SDS...
+[2026-03-20T17:03:47.195Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:04:12.741Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:04:36.360Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:05:00.022Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:05:02.529Z]   No mineral data found on either platform
+[2026-03-20T17:05:05.037Z] 
+[44/254] ======= COLLINGSWORTH County =======
+[2026-03-20T17:05:05.037Z]   Trying SDS...
+[2026-03-20T17:05:05.801Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:05:05.861Z]   No mineral data found on either platform
+[2026-03-20T17:05:08.364Z] 
+[45/254] ======= COLORADO County =======
+[2026-03-20T17:05:08.364Z]   Trying SDS...
+[2026-03-20T17:05:09.127Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:05:35.734Z]     BIS "ROYALTY": 2 new records (1 pages)
+[2026-03-20T17:05:59.408Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:06:23.130Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:06:25.633Z]   SUCCESS: 2 records via bis
+[2026-03-20T17:06:28.137Z] 
+[46/254] ======= COMAL County =======
+[2026-03-20T17:06:28.137Z]   Trying SDS...
+[2026-03-20T17:06:28.913Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:06:28.977Z]   No mineral data found on either platform
+[2026-03-20T17:06:31.480Z] 
+[47/254] ======= COMANCHE County =======
+[2026-03-20T17:06:31.480Z]   Trying SDS...
+[2026-03-20T17:06:32.261Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:06:57.648Z]     BIS "ROYALTY": 2 new records (1 pages)
+[2026-03-20T17:07:00.149Z]     BIS "MINERAL" error: Attempted to use detached Frame '348F0C588201EB39FAAFFF3EC3E
+[2026-03-20T17:07:00.149Z]     BIS "PETROLEUM" error: Attempted to use detached Frame '348F0C588201EB39FAAFFF3EC3E
+[2026-03-20T17:07:00.149Z]   SUCCESS: 2 records via bis
+[2026-03-20T17:07:02.654Z] [48/254] CONCHO — already scraped (2 records), skipping
+[2026-03-20T17:07:02.654Z] 
+[49/254] ======= COOKE County =======
+[2026-03-20T17:07:02.654Z]   Trying SDS...
+[2026-03-20T17:07:02.654Z]   ERROR: Connection closed.
+[2026-03-20T17:07:05.279Z] 
+[50/254] ======= CORYELL County =======
+[2026-03-20T17:07:05.279Z]   Trying SDS...
+[2026-03-20T17:07:06.262Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:07:31.459Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:07:55.118Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:08:18.830Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:08:21.335Z]   No mineral data found on either platform
+[2026-03-20T17:08:23.840Z] 
+[51/254] ======= COTTLE County =======
+[2026-03-20T17:08:23.840Z]   Trying SDS...
+[2026-03-20T17:08:24.624Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:08:24.704Z]   No mineral data found on either platform
+[2026-03-20T17:08:27.207Z] 
+[52/254] ======= CRANE County =======
+[2026-03-20T17:08:27.207Z]   Trying SDS...
+[2026-03-20T17:08:27.984Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:08:28.096Z]   No mineral data found on either platform
+[2026-03-20T17:08:30.598Z] 
+[53/254] ======= CROCKETT County =======
+[2026-03-20T17:08:30.598Z]   Trying SDS...
+[2026-03-20T17:08:31.363Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:08:31.434Z]   No mineral data found on either platform
+[2026-03-20T17:08:33.939Z] 
+[54/254] ======= CROSBY County =======
+[2026-03-20T17:08:33.939Z]   Trying SDS...
+[2026-03-20T17:08:34.705Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:08:34.765Z]   No mineral data found on either platform
+[2026-03-20T17:08:37.268Z] 
+[55/254] ======= CULBERSON County =======
+[2026-03-20T17:08:37.268Z]   Trying SDS...
+[2026-03-20T17:08:38.030Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:08:38.090Z]   No mineral data found on either platform
+[2026-03-20T17:08:40.593Z] 
+[56/254] ======= DALLAM County =======
+[2026-03-20T17:08:40.593Z]   Trying SDS...
+[2026-03-20T17:08:41.251Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:09:06.421Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:09:30.068Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:09:53.708Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:09:56.216Z]   No mineral data found on either platform
+[2026-03-20T17:09:58.718Z] 
+[57/254] ======= DALLAS County =======
+[2026-03-20T17:09:58.718Z]   Trying SDS...
+[2026-03-20T17:09:59.571Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:10:03.703Z]     BIS: no search form at https://esearch.dallascad.org/
+[2026-03-20T17:10:03.704Z]   No mineral data found on either platform
+[2026-03-20T17:10:06.209Z] 
+[58/254] ======= DAWSON County =======
+[2026-03-20T17:10:06.209Z]   Trying SDS...
+[2026-03-20T17:10:06.862Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:10:06.978Z]   No mineral data found on either platform
+[2026-03-20T17:10:09.481Z] 
+[59/254] ======= DE WITT County =======
+[2026-03-20T17:10:09.481Z]   Trying SDS...
+[2026-03-20T17:10:10.240Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:10:10.352Z]   No mineral data found on either platform
+[2026-03-20T17:10:12.856Z] 
+[60/254] ======= DEAF SMITH County =======
+[2026-03-20T17:10:12.857Z]   Trying SDS...
+[2026-03-20T17:10:13.621Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:10:39.259Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:11:02.927Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:11:26.598Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:11:29.105Z]   No mineral data found on either platform
+[2026-03-20T17:11:31.609Z] 
+[61/254] ======= DELTA County =======
+[2026-03-20T17:11:31.609Z]   Trying SDS...
+[2026-03-20T17:11:32.369Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:11:32.429Z]   No mineral data found on either platform
+[2026-03-20T17:11:34.933Z] 
+[62/254] ======= DENTON County =======
+[2026-03-20T17:11:34.933Z]   Trying SDS...
+[2026-03-20T17:11:35.768Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:12:20.826Z]   No mineral data found on either platform
+[2026-03-20T17:12:23.329Z] 
+[63/254] ======= DICKENS County =======
+[2026-03-20T17:12:23.329Z]   Trying SDS...
+[2026-03-20T17:12:24.086Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:12:24.151Z]   No mineral data found on either platform
+[2026-03-20T17:12:26.655Z] 
+[64/254] ======= DIMMIT County =======
+[2026-03-20T17:12:26.655Z]   Trying SDS...
+[2026-03-20T17:12:27.417Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:12:27.483Z]   No mineral data found on either platform
+[2026-03-20T17:12:29.985Z] 
+[65/254] ======= DONLEY County =======
+[2026-03-20T17:12:29.985Z]   Trying SDS...
+[2026-03-20T17:12:30.644Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:12:30.703Z]   No mineral data found on either platform
+[2026-03-20T17:12:33.207Z] 
+[66/254] ======= DUVAL County =======
+[2026-03-20T17:12:33.207Z]   Trying SDS...
+[2026-03-20T17:12:33.972Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:13:00.434Z]     BIS "ROYALTY": 10 new records (1 pages)
+[2026-03-20T17:13:11.827Z]     BIS "MINERAL" error: Attempted to use detached Frame '82090A8F4D5C2B6A95D746A10B1
+[2026-03-20T17:13:11.827Z]     BIS "PETROLEUM" error: Attempted to use detached Frame '82090A8F4D5C2B6A95D746A10B1
+[2026-03-20T17:13:11.828Z]   SUCCESS: 10 records via bis
+[2026-03-20T17:13:14.336Z] 
+[67/254] ======= EASTLAND County =======
+[2026-03-20T17:13:14.336Z]   Trying SDS...
+[2026-03-20T17:13:14.336Z]   ERROR: Connection closed.
+[2026-03-20T17:13:17.010Z] 
+[68/254] ======= ECTOR County =======
+[2026-03-20T17:13:17.010Z]   Trying SDS...
+[2026-03-20T17:13:17.957Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:13:23.996Z]     BIS: no session token
+[2026-03-20T17:13:23.998Z]   No mineral data found on either platform
+[2026-03-20T17:13:26.503Z] 
+[69/254] ======= EDWARDS County =======
+[2026-03-20T17:13:26.503Z]   Trying SDS...
+[2026-03-20T17:13:27.171Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:13:52.326Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:14:16.065Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:14:39.722Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:14:42.230Z]   No mineral data found on either platform
+[2026-03-20T17:14:44.745Z] 
+[70/254] ======= EL PASO County =======
+[2026-03-20T17:14:44.745Z]   Trying SDS...
+[2026-03-20T17:14:45.526Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:14:45.589Z]   No mineral data found on either platform
+[2026-03-20T17:14:48.095Z] 
+[71/254] ======= ELLIS County =======
+[2026-03-20T17:14:48.095Z]   Trying SDS...
+[2026-03-20T17:14:48.864Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:14:48.926Z]   No mineral data found on either platform
+[2026-03-20T17:14:51.428Z] [72/254] ERATH — already scraped (4 records), skipping
+[2026-03-20T17:14:51.429Z] 
+[73/254] ======= FALLS County =======
+[2026-03-20T17:14:51.429Z]   Trying SDS...
+[2026-03-20T17:15:23.467Z]     SDS "ROYALTY" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:15:54.681Z]     SDS "MINERAL" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:16:25.853Z]     SDS "PETROLEUM" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:16:25.867Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:16:30.852Z]     BIS: no search form at https://esearch.fallscad.org/
+[2026-03-20T17:16:30.855Z]   No mineral data found on either platform
+[2026-03-20T17:16:33.366Z] 
+[74/254] ======= FANNIN County =======
+[2026-03-20T17:16:33.367Z]   Trying SDS...
+[2026-03-20T17:16:36.239Z]     SDS "ROYALTY": 0 results, 0 new
+[2026-03-20T17:16:40.651Z]     SDS "MINERAL": 0 results, 0 new
+[2026-03-20T17:16:45.053Z]     SDS "PETROLEUM": 0 results, 0 new
+[2026-03-20T17:16:47.555Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:16:51.338Z]     BIS: no session token
+[2026-03-20T17:16:51.339Z]   No mineral data found on either platform
+[2026-03-20T17:16:53.843Z] 
+[75/254] ======= FAYETTE County =======
+[2026-03-20T17:16:53.843Z]   Trying SDS...
+[2026-03-20T17:16:54.515Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:17:22.238Z]     BIS "ROYALTY": 29 new records (1 pages)
+[2026-03-20T17:17:46.027Z]     BIS "MINERAL": 2 new records (1 pages)
+[2026-03-20T17:18:09.827Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:18:12.336Z]   SUCCESS: 31 records via bis
+[2026-03-20T17:18:14.844Z] 
+[76/254] ======= FISHER County =======
+[2026-03-20T17:18:14.844Z]   Trying SDS...
+[2026-03-20T17:18:15.513Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:18:15.631Z]   No mineral data found on either platform
+[2026-03-20T17:18:18.135Z] 
+[77/254] ======= FLOYD County =======
+[2026-03-20T17:18:18.135Z]   Trying SDS...
+[2026-03-20T17:18:20.977Z]     SDS "ROYALTY": 0 results, 0 new
+[2026-03-20T17:18:25.393Z]     SDS "MINERAL": 0 results, 0 new
+[2026-03-20T17:18:29.777Z]     SDS "PETROLEUM": 0 results, 0 new
+[2026-03-20T17:18:32.281Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:18:32.458Z]   No mineral data found on either platform
+[2026-03-20T17:18:34.969Z] 
+[78/254] ======= FOARD County =======
+[2026-03-20T17:18:34.969Z]   Trying SDS...
+[2026-03-20T17:18:35.739Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:18:35.804Z]   No mineral data found on either platform
+[2026-03-20T17:18:38.331Z] 
+[79/254] ======= FORT BEND County =======
+[2026-03-20T17:18:38.352Z]   Trying SDS...
+[2026-03-20T17:18:39.277Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:18:46.464Z]     BIS: no search form at https://esearch.fortbendcad.org/
+[2026-03-20T17:18:46.469Z]   No mineral data found on either platform
+[2026-03-20T17:18:48.976Z] 
+[80/254] ======= FRANKLIN County =======
+[2026-03-20T17:18:48.976Z]   Trying SDS...
+[2026-03-20T17:18:49.753Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:18:49.817Z]   No mineral data found on either platform
+[2026-03-20T17:18:52.323Z] 
+[81/254] ======= FREESTONE County =======
+[2026-03-20T17:18:52.323Z]   Trying SDS...
+[2026-03-20T17:18:53.013Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:18:53.132Z]   No mineral data found on either platform
+[2026-03-20T17:18:55.635Z] 
+[82/254] ======= FRIO County =======
+[2026-03-20T17:18:55.635Z]   Trying SDS...
+[2026-03-20T17:18:56.402Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:18:56.520Z]   No mineral data found on either platform
+[2026-03-20T17:18:59.023Z] 
+[83/254] ======= GAINES County =======
+[2026-03-20T17:18:59.023Z]   Trying SDS...
+[2026-03-20T17:18:59.800Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:19:26.920Z]     BIS "ROYALTY": 53 new records (1 pages)
+[2026-03-20T17:19:52.007Z]     BIS "MINERAL": 19 new records (1 pages)
+[2026-03-20T17:20:17.180Z]     BIS "PETROLEUM": 40 new records (1 pages)
+[2026-03-20T17:20:19.687Z]   SUCCESS: 112 records via bis
+[2026-03-20T17:20:22.195Z] 
+[84/254] ======= GALVESTON County =======
+[2026-03-20T17:20:22.195Z]   Trying SDS...
+[2026-03-20T17:20:22.968Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:20:48.522Z]     BIS "ROYALTY": 3 new records (1 pages)
+[2026-03-20T17:21:11.951Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:21:35.632Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:21:38.135Z]   SUCCESS: 3 records via bis
+[2026-03-20T17:21:40.641Z] 
+[85/254] ======= GARZA County =======
+[2026-03-20T17:21:40.641Z]   Trying SDS...
+[2026-03-20T17:21:41.416Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:21:45.300Z]     BIS: no session token
+[2026-03-20T17:21:45.301Z]   No mineral data found on either platform
+[2026-03-20T17:21:47.805Z] 
+[86/254] ======= GILLESPIE County =======
+[2026-03-20T17:21:47.805Z]   Trying SDS...
+[2026-03-20T17:21:48.468Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:21:54.801Z]     BIS "ROYALTY" error: Attempted to use detached Frame '46B41944D820000EA1095C3F62F
+[2026-03-20T17:21:54.802Z]     BIS "MINERAL" error: Attempted to use detached Frame '46B41944D820000EA1095C3F62F
+[2026-03-20T17:21:54.802Z]     BIS "PETROLEUM" error: Attempted to use detached Frame '46B41944D820000EA1095C3F62F
+[2026-03-20T17:21:54.802Z]   No mineral data found on either platform
+[2026-03-20T17:21:57.308Z] 
+[87/254] ======= GLASSCOCK County =======
+[2026-03-20T17:21:57.308Z]   Trying SDS...
+[2026-03-20T17:21:57.308Z]   ERROR: Connection closed.
+[2026-03-20T17:21:59.948Z] 
+[88/254] ======= GOLIAD County =======
+[2026-03-20T17:21:59.949Z]   Trying SDS...
+[2026-03-20T17:22:00.856Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:22:01.061Z]   No mineral data found on either platform
+[2026-03-20T17:22:03.566Z] 
+[89/254] ======= GONZALES County =======
+[2026-03-20T17:22:03.566Z]   Trying SDS...
+[2026-03-20T17:22:04.477Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:22:04.614Z]   No mineral data found on either platform
+[2026-03-20T17:22:07.117Z] 
+[90/254] ======= GRAY County =======
+[2026-03-20T17:22:07.118Z]   Trying SDS...
+[2026-03-20T17:22:07.878Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:22:11.700Z]     BIS: no session token
+[2026-03-20T17:22:11.701Z]   No mineral data found on either platform
+[2026-03-20T17:22:14.206Z] 
+[91/254] ======= GRAYSON County =======
+[2026-03-20T17:22:14.207Z]   Trying SDS...
+[2026-03-20T17:22:14.978Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:22:15.113Z]   No mineral data found on either platform
+[2026-03-20T17:22:17.617Z] 
+[92/254] ======= GREGG County =======
+[2026-03-20T17:22:17.617Z]   Trying SDS...
+[2026-03-20T17:22:18.397Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:22:24.563Z]     BIS: no search form at https://esearch.greggcad.org/
+[2026-03-20T17:22:24.565Z]   No mineral data found on either platform
+[2026-03-20T17:22:27.070Z] 
+[93/254] ======= GRIMES County =======
+[2026-03-20T17:22:27.071Z]   Trying SDS...
+[2026-03-20T17:22:33.184Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:22:33.326Z]   No mineral data found on either platform
+[2026-03-20T17:22:35.832Z] 
+[94/254] ======= GUADALUPE County =======
+[2026-03-20T17:22:35.832Z]   Trying SDS...
+[2026-03-20T17:22:36.616Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:22:41.403Z]   No mineral data found on either platform
+[2026-03-20T17:22:43.908Z] 
+[95/254] ======= HALE County =======
+[2026-03-20T17:22:43.908Z]   Trying SDS...
+[2026-03-20T17:22:44.675Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:23:11.060Z]     BIS "ROYALTY": 7 new records (1 pages)
+[2026-03-20T17:23:34.811Z]     BIS "MINERAL": 3 new records (1 pages)
+[2026-03-20T17:23:59.152Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:24:01.660Z]   SUCCESS: 10 records via bis
+[2026-03-20T17:24:04.166Z] 
+[96/254] ======= HALL County =======
+[2026-03-20T17:24:04.166Z]   Trying SDS...
+[2026-03-20T17:24:04.948Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:24:05.009Z]   No mineral data found on either platform
+[2026-03-20T17:24:07.513Z] 
+[97/254] ======= HAMILTON County =======
+[2026-03-20T17:24:07.513Z]   Trying SDS...
+[2026-03-20T17:24:08.275Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:24:33.491Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:24:57.132Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:25:20.782Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:25:23.290Z]   No mineral data found on either platform
+[2026-03-20T17:25:25.799Z] 
+[98/254] ======= HANSFORD County =======
+[2026-03-20T17:25:25.800Z]   Trying SDS...
+[2026-03-20T17:25:26.478Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:25:26.541Z]   No mineral data found on either platform
+[2026-03-20T17:25:29.046Z] 
+[99/254] ======= HARDEMAN County =======
+[2026-03-20T17:25:29.046Z]   Trying SDS...
+[2026-03-20T17:25:29.811Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:25:29.877Z]   No mineral data found on either platform
+[2026-03-20T17:25:32.382Z] 
+[100/254] ======= HARDIN County =======
+[2026-03-20T17:25:32.382Z]   Trying SDS...
+[2026-03-20T17:25:33.158Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:25:33.219Z]   No mineral data found on either platform
+[2026-03-20T17:25:35.723Z] 
+[101/254] ======= HARRIS County =======
+[2026-03-20T17:25:35.723Z]   Trying SDS...
+[2026-03-20T17:25:36.489Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:25:56.882Z]   No mineral data found on either platform
+[2026-03-20T17:25:59.386Z] 
+[102/254] ======= HARRISON County =======
+[2026-03-20T17:25:59.386Z]   Trying SDS...
+[2026-03-20T17:26:01.980Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:26:02.068Z]   No mineral data found on either platform
+[2026-03-20T17:26:04.574Z] 
+[103/254] ======= HARTLEY County =======
+[2026-03-20T17:26:04.574Z]   Trying SDS...
+[2026-03-20T17:26:07.629Z]     SDS "ROYALTY": 0 results, 0 new
+[2026-03-20T17:26:12.032Z]     SDS "MINERAL": 0 results, 0 new
+[2026-03-20T17:26:16.479Z]     SDS "PETROLEUM": 0 results, 0 new
+[2026-03-20T17:26:18.980Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:26:23.137Z]     BIS: no session token
+[2026-03-20T17:26:23.138Z]   No mineral data found on either platform
+[2026-03-20T17:26:25.641Z] 
+[104/254] ======= HASKELL County =======
+[2026-03-20T17:26:25.641Z]   Trying SDS...
+[2026-03-20T17:26:26.403Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:26:26.464Z]   No mineral data found on either platform
+[2026-03-20T17:26:28.969Z] 
+[105/254] ======= HAYS County =======
+[2026-03-20T17:26:28.969Z]   Trying SDS...
+[2026-03-20T17:26:29.737Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:26:29.797Z]   No mineral data found on either platform
+[2026-03-20T17:26:32.301Z] [106/254] HEMPHILL — already scraped (58 records), skipping
+[2026-03-20T17:26:32.301Z] [107/254] HENDERSON — already scraped (21 records), skipping
+[2026-03-20T17:26:32.301Z] 
+[108/254] ======= HIDALGO County =======
+[2026-03-20T17:26:32.301Z]   Trying SDS...
+[2026-03-20T17:26:33.072Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:26:33.134Z]   No mineral data found on either platform
+[2026-03-20T17:26:35.638Z] 
+[109/254] ======= HILL County =======
+[2026-03-20T17:26:35.639Z]   Trying SDS...
+[2026-03-20T17:26:36.310Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:27:01.422Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:27:25.094Z]     BIS "MINERAL": 1 new records (1 pages)
+[2026-03-20T17:27:49.130Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:27:51.634Z]   SUCCESS: 1 records via bis
+[2026-03-20T17:27:54.141Z] 
+[110/254] ======= HOCKLEY County =======
+[2026-03-20T17:27:54.141Z]   Trying SDS...
+[2026-03-20T17:27:54.820Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:28:23.271Z]     BIS "ROYALTY": 11 new records (1 pages)
+[2026-03-20T17:28:46.985Z]     BIS "MINERAL": 1 new records (1 pages)
+[2026-03-20T17:29:10.709Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:29:13.214Z]   SUCCESS: 12 records via bis
+[2026-03-20T17:29:15.723Z] [111/254] HOOD — already scraped (11 records), skipping
+[2026-03-20T17:29:15.723Z] [112/254] HOPKINS — already scraped (1 records), skipping
+[2026-03-20T17:29:15.723Z] 
+[113/254] ======= HOUSTON County =======
+[2026-03-20T17:29:15.723Z]   Trying SDS...
+[2026-03-20T17:29:16.389Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:29:16.573Z]   No mineral data found on either platform
+[2026-03-20T17:29:19.078Z] 
+[114/254] ======= HOWARD County =======
+[2026-03-20T17:29:19.079Z]   Trying SDS...
+[2026-03-20T17:29:19.831Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:29:54.003Z]     BIS "ROYALTY": 137 new records (2 pages)
+[2026-03-20T17:30:17.880Z]     BIS "MINERAL": 3 new records (1 pages)
+[2026-03-20T17:30:46.030Z]     BIS "PETROLEUM": 100 new records (2 pages)
+[2026-03-20T17:30:48.534Z]   SUCCESS: 240 records via bis
+[2026-03-20T17:30:51.041Z] 
+[115/254] ======= HUDSPETH County =======
+[2026-03-20T17:30:51.042Z]   Trying SDS...
+[2026-03-20T17:30:51.897Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:31:17.306Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:31:40.956Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:32:04.599Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:32:07.103Z]   No mineral data found on either platform
+[2026-03-20T17:32:09.609Z] 
+[116/254] ======= HUNT County =======
+[2026-03-20T17:32:09.609Z]   Trying SDS...
+[2026-03-20T17:32:10.375Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:32:15.410Z]     BIS: no search form at https://esearch.huntcad.org/
+[2026-03-20T17:32:15.412Z]   No mineral data found on either platform
+[2026-03-20T17:32:17.917Z] 
+[117/254] ======= HUTCHINSON County =======
+[2026-03-20T17:32:17.917Z]   Trying SDS...
+[2026-03-20T17:32:18.682Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:32:18.796Z]   No mineral data found on either platform
+[2026-03-20T17:32:21.302Z] 
+[118/254] ======= IRION County =======
+[2026-03-20T17:32:21.302Z]   Trying SDS...
+[2026-03-20T17:32:22.063Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:32:22.125Z]   No mineral data found on either platform
+[2026-03-20T17:32:24.629Z] 
+[119/254] ======= JACK County =======
+[2026-03-20T17:32:24.629Z]   Trying SDS...
+[2026-03-20T17:32:25.390Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:32:25.451Z]   No mineral data found on either platform
+[2026-03-20T17:32:27.954Z] 
+[120/254] ======= JACKSON County =======
+[2026-03-20T17:32:27.954Z]   Trying SDS...
+[2026-03-20T17:32:28.738Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:32:33.175Z]     BIS: no session token
+[2026-03-20T17:32:33.179Z]   No mineral data found on either platform
+[2026-03-20T17:32:35.684Z] 
+[121/254] ======= JASPER County =======
+[2026-03-20T17:32:35.684Z]   Trying SDS...
+[2026-03-20T17:32:36.452Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:33:01.862Z]     BIS "ROYALTY": 4 new records (1 pages)
+[2026-03-20T17:33:25.655Z]     BIS "MINERAL": 3 new records (1 pages)
+[2026-03-20T17:33:50.282Z]     BIS "PETROLEUM": 1 new records (1 pages)
+[2026-03-20T17:33:52.785Z]   SUCCESS: 8 records via bis
+[2026-03-20T17:33:55.291Z] 
+[122/254] ======= JEFF DAVIS County =======
+[2026-03-20T17:33:55.292Z]   Trying SDS...
+[2026-03-20T17:33:56.498Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:33:56.558Z]   No mineral data found on either platform
+[2026-03-20T17:33:59.063Z] 
+[123/254] ======= JEFFERSON County =======
+[2026-03-20T17:33:59.063Z]   Trying SDS...
+[2026-03-20T17:33:59.819Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:33:59.879Z]   No mineral data found on either platform
+[2026-03-20T17:34:02.383Z] 
+[124/254] ======= JIM HOGG County =======
+[2026-03-20T17:34:02.383Z]   Trying SDS...
+[2026-03-20T17:34:03.060Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:03.121Z]   No mineral data found on either platform
+[2026-03-20T17:34:05.625Z] 
+[125/254] ======= JIM WELLS County =======
+[2026-03-20T17:34:05.625Z]   Trying SDS...
+[2026-03-20T17:34:06.287Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:06.349Z]   No mineral data found on either platform
+[2026-03-20T17:34:08.854Z] 
+[126/254] ======= JOHNSON County =======
+[2026-03-20T17:34:08.854Z]   Trying SDS...
+[2026-03-20T17:34:09.632Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:10.004Z]   No mineral data found on either platform
+[2026-03-20T17:34:12.509Z] 
+[127/254] ======= JONES County =======
+[2026-03-20T17:34:12.509Z]   Trying SDS...
+[2026-03-20T17:34:13.279Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:13.340Z]   No mineral data found on either platform
+[2026-03-20T17:34:15.844Z] 
+[128/254] ======= KARNES County =======
+[2026-03-20T17:34:15.844Z]   Trying SDS...
+[2026-03-20T17:34:23.925Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:23.987Z]   No mineral data found on either platform
+[2026-03-20T17:34:26.492Z] 
+[129/254] ======= KAUFMAN County =======
+[2026-03-20T17:34:26.492Z]   Trying SDS...
+[2026-03-20T17:34:27.158Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:27.219Z]   No mineral data found on either platform
+[2026-03-20T17:34:29.722Z] 
+[130/254] ======= KENDALL County =======
+[2026-03-20T17:34:29.722Z]   Trying SDS...
+[2026-03-20T17:34:30.796Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:30.939Z]   No mineral data found on either platform
+[2026-03-20T17:34:33.442Z] 
+[131/254] ======= KENEDY County =======
+[2026-03-20T17:34:33.443Z]   Trying SDS...
+[2026-03-20T17:34:34.222Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:34:59.611Z]     BIS "ROYALTY": 6 new records (1 pages)
+[2026-03-20T17:35:23.248Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:35:46.951Z]     BIS "PETROLEUM": 5 new records (1 pages)
+[2026-03-20T17:35:49.459Z]   SUCCESS: 11 records via bis
+[2026-03-20T17:35:51.966Z] 
+[132/254] ======= KENT County =======
+[2026-03-20T17:35:51.967Z]   Trying SDS...
+[2026-03-20T17:35:52.636Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:35:52.697Z]   No mineral data found on either platform
+[2026-03-20T17:35:55.203Z] 
+[133/254] ======= KERR County =======
+[2026-03-20T17:35:55.203Z]   Trying SDS...
+[2026-03-20T17:35:55.954Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:36:21.122Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:36:44.789Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:37:08.433Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:37:10.944Z]   No mineral data found on either platform
+[2026-03-20T17:37:13.453Z] 
+[134/254] ======= KIMBLE County =======
+[2026-03-20T17:37:13.453Z]   Trying SDS...
+[2026-03-20T17:37:14.230Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:37:23.823Z]     BIS "ROYALTY" error: Execution context was destroyed
+[2026-03-20T17:37:23.824Z]     BIS "MINERAL" error: Attempted to use detached Frame '5D21CD947A6893A6519F0E6D0AD
+[2026-03-20T17:37:23.824Z]     BIS "PETROLEUM" error: Attempted to use detached Frame '5D21CD947A6893A6519F0E6D0AD
+[2026-03-20T17:37:23.824Z]   No mineral data found on either platform
+[2026-03-20T17:37:26.354Z] 
+[135/254] ======= KING County =======
+[2026-03-20T17:37:26.354Z]   Trying SDS...
+[2026-03-20T17:37:26.354Z]   ERROR: Connection closed.
+[2026-03-20T17:37:29.055Z] 
+[136/254] ======= KINNEY County =======
+[2026-03-20T17:37:29.055Z]   Trying SDS...
+[2026-03-20T17:37:30.087Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:37:55.205Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:38:18.875Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:38:42.309Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:38:44.815Z]   No mineral data found on either platform
+[2026-03-20T17:38:47.322Z] 
+[137/254] ======= KLEBERG County =======
+[2026-03-20T17:38:47.322Z]   Trying SDS...
+[2026-03-20T17:38:47.996Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:38:48.058Z]   No mineral data found on either platform
+[2026-03-20T17:38:50.562Z] [138/254] KNOX — already scraped (3 records), skipping
+[2026-03-20T17:38:50.562Z] 
+[139/254] ======= LA SALLE County =======
+[2026-03-20T17:38:50.562Z]   Trying SDS...
+[2026-03-20T17:38:51.336Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:38:51.401Z]   No mineral data found on either platform
+[2026-03-20T17:38:53.909Z] 
+[140/254] ======= LAMAR County =======
+[2026-03-20T17:38:53.910Z]   Trying SDS...
+[2026-03-20T17:38:54.575Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:39:19.916Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:39:43.572Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:40:06.995Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:40:09.500Z]   No mineral data found on either platform
+[2026-03-20T17:40:12.014Z] 
+[141/254] ======= LAMB County =======
+[2026-03-20T17:40:12.014Z]   Trying SDS...
+[2026-03-20T17:40:12.784Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:40:39.139Z]     BIS "ROYALTY": 1 new records (1 pages)
+[2026-03-20T17:41:02.876Z]     BIS "MINERAL": 1 new records (1 pages)
+[2026-03-20T17:41:26.463Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:41:28.968Z]   SUCCESS: 2 records via bis
+[2026-03-20T17:41:31.474Z] 
+[142/254] ======= LAMPASAS County =======
+[2026-03-20T17:41:31.474Z]   Trying SDS...
+[2026-03-20T17:41:32.244Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:41:32.304Z]   No mineral data found on either platform
+[2026-03-20T17:41:34.808Z] 
+[143/254] ======= LAVACA County =======
+[2026-03-20T17:41:34.808Z]   Trying SDS...
+[2026-03-20T17:41:35.662Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:41:35.722Z]   No mineral data found on either platform
+[2026-03-20T17:41:38.227Z] 
+[144/254] ======= LEE County =======
+[2026-03-20T17:41:38.228Z]   Trying SDS...
+[2026-03-20T17:41:38.986Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:41:39.131Z]   No mineral data found on either platform
+[2026-03-20T17:41:41.635Z] 
+[145/254] ======= LEON County =======
+[2026-03-20T17:41:41.635Z]   Trying SDS...
+[2026-03-20T17:41:42.307Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:41:42.368Z]   No mineral data found on either platform
+[2026-03-20T17:41:44.873Z] 
+[146/254] ======= LIBERTY County =======
+[2026-03-20T17:41:44.873Z]   Trying SDS...
+[2026-03-20T17:41:45.647Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:41:50.076Z]     BIS: no search form at https://esearch.libertycad.org/
+[2026-03-20T17:41:50.078Z]   No mineral data found on either platform
+[2026-03-20T17:41:52.584Z] 
+[147/254] ======= LIMESTONE County =======
+[2026-03-20T17:41:52.584Z]   Trying SDS...
+[2026-03-20T17:41:53.252Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:41:53.312Z]   No mineral data found on either platform
+[2026-03-20T17:41:55.816Z] [148/254] LIPSCOMB — already scraped (45 records), skipping
+[2026-03-20T17:41:55.816Z] 
+[149/254] ======= LIVE OAK County =======
+[2026-03-20T17:41:55.816Z]   Trying SDS...
+[2026-03-20T17:41:56.571Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:41:56.632Z]   No mineral data found on either platform
+[2026-03-20T17:41:59.137Z] 
+[150/254] ======= LLANO County =======
+[2026-03-20T17:41:59.137Z]   Trying SDS...
+[2026-03-20T17:41:59.899Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:42:05.263Z]     BIS: no search form at https://esearch.llanocad.org/
+[2026-03-20T17:42:05.265Z]   No mineral data found on either platform
+[2026-03-20T17:42:07.771Z] 
+[151/254] ======= LOVING County =======
+[2026-03-20T17:42:07.772Z]   Trying SDS...
+[2026-03-20T17:42:08.435Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:42:08.497Z]   No mineral data found on either platform
+[2026-03-20T17:42:11.000Z] 
+[152/254] ======= LUBBOCK County =======
+[2026-03-20T17:42:11.000Z]   Trying SDS...
+[2026-03-20T17:42:11.762Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:42:11.833Z]   No mineral data found on either platform
+[2026-03-20T17:42:14.338Z] 
+[153/254] ======= LYNN County =======
+[2026-03-20T17:42:14.338Z]   Trying SDS...
+[2026-03-20T17:42:15.094Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:42:15.206Z]   No mineral data found on either platform
+[2026-03-20T17:42:17.710Z] 
+[154/254] ======= MADISON County =======
+[2026-03-20T17:42:17.711Z]   Trying SDS...
+[2026-03-20T17:42:18.387Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:42:45.197Z]     BIS "ROYALTY": 48 new records (1 pages)
+[2026-03-20T17:43:08.919Z]     BIS "MINERAL": 3 new records (1 pages)
+[2026-03-20T17:43:32.601Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:43:35.105Z]   SUCCESS: 51 records via bis
+[2026-03-20T17:43:37.615Z] 
+[155/254] ======= MARION County =======
+[2026-03-20T17:43:37.615Z]   Trying SDS...
+[2026-03-20T17:43:38.394Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:43:38.463Z]   No mineral data found on either platform
+[2026-03-20T17:43:40.970Z] 
+[156/254] ======= MARTIN County =======
+[2026-03-20T17:43:40.970Z]   Trying SDS...
+[2026-03-20T17:43:41.738Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:43:41.810Z]   No mineral data found on either platform
+[2026-03-20T17:43:44.315Z] 
+[157/254] ======= MASON County =======
+[2026-03-20T17:43:44.315Z]   Trying SDS...
+[2026-03-20T17:43:45.091Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:44:10.414Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:44:33.836Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:44:57.232Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:44:59.736Z]   No mineral data found on either platform
+[2026-03-20T17:45:02.242Z] 
+[158/254] ======= MATAGORDA County =======
+[2026-03-20T17:45:02.242Z]   Trying SDS...
+[2026-03-20T17:45:03.005Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:45:07.312Z]     BIS: no search form at https://esearch.matagordacad.org/
+[2026-03-20T17:45:07.313Z]   No mineral data found on either platform
+[2026-03-20T17:45:09.817Z] 
+[159/254] ======= MAVERICK County =======
+[2026-03-20T17:45:09.817Z]   Trying SDS...
+[2026-03-20T17:45:10.482Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:45:10.600Z]   No mineral data found on either platform
+[2026-03-20T17:45:13.106Z] 
+[160/254] ======= MCCULLOCH County =======
+[2026-03-20T17:45:13.107Z]   Trying SDS...
+[2026-03-20T17:45:13.879Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:45:14.063Z]   No mineral data found on either platform
+[2026-03-20T17:45:16.567Z] 
+[161/254] ======= MCLENNAN County =======
+[2026-03-20T17:45:16.567Z]   Trying SDS...
+[2026-03-20T17:45:17.229Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:45:17.352Z]   No mineral data found on either platform
+[2026-03-20T17:45:19.858Z] 
+[162/254] ======= MCMULLEN County =======
+[2026-03-20T17:45:19.858Z]   Trying SDS...
+[2026-03-20T17:45:20.621Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:45:47.247Z]     BIS "ROYALTY": 32 new records (1 pages)
+[2026-03-20T17:46:12.019Z]     BIS "MINERAL": 2 new records (1 pages)
+[2026-03-20T17:46:35.736Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:46:38.243Z]   SUCCESS: 34 records via bis
+[2026-03-20T17:46:40.753Z] 
+[163/254] ======= MEDINA County =======
+[2026-03-20T17:46:40.753Z]   Trying SDS...
+[2026-03-20T17:46:41.428Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:47:06.743Z]     BIS "ROYALTY": 1 new records (1 pages)
+[2026-03-20T17:47:30.177Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:47:53.821Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:47:56.325Z]   SUCCESS: 1 records via bis
+[2026-03-20T17:47:58.830Z] 
+[164/254] ======= MENARD County =======
+[2026-03-20T17:47:58.830Z]   Trying SDS...
+[2026-03-20T17:47:59.679Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:47:59.740Z]   No mineral data found on either platform
+[2026-03-20T17:48:02.245Z] [165/254] MIDLAND — already scraped (1106 records), skipping
+[2026-03-20T17:48:02.245Z] 
+[166/254] ======= MILAM County =======
+[2026-03-20T17:48:02.245Z]   Trying SDS...
+[2026-03-20T17:48:03.013Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:48:08.474Z]     BIS: no search form at https://esearch.milamcad.org/
+[2026-03-20T17:48:08.476Z]   No mineral data found on either platform
+[2026-03-20T17:48:10.981Z] 
+[167/254] ======= MILLS County =======
+[2026-03-20T17:48:10.981Z]   Trying SDS...
+[2026-03-20T17:48:11.736Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:48:15.901Z]     BIS: no session token
+[2026-03-20T17:48:15.902Z]   No mineral data found on either platform
+[2026-03-20T17:48:18.407Z] 
+[168/254] ======= MITCHELL County =======
+[2026-03-20T17:48:18.408Z]   Trying SDS...
+[2026-03-20T17:48:19.181Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:48:44.836Z]     BIS "ROYALTY": 41 new records (1 pages)
+[2026-03-20T17:49:08.644Z]     BIS "MINERAL": 39 new records (1 pages)
+[2026-03-20T17:49:32.096Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:49:34.599Z]   SUCCESS: 80 records via bis
+[2026-03-20T17:49:37.105Z] [169/254] MONTAGUE — already scraped (59 records), skipping
+[2026-03-20T17:49:37.105Z] 
+[170/254] ======= MONTGOMERY County =======
+[2026-03-20T17:49:37.105Z]   Trying SDS...
+[2026-03-20T17:49:37.868Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:49:38.777Z]   No mineral data found on either platform
+[2026-03-20T17:49:41.282Z] 
+[171/254] ======= MOORE County =======
+[2026-03-20T17:49:41.282Z]   Trying SDS...
+[2026-03-20T17:49:42.041Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:50:12.280Z]     BIS "ROYALTY": 23 new records (1 pages)
+[2026-03-20T17:50:36.101Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:50:59.894Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:51:02.398Z]   SUCCESS: 23 records via bis
+[2026-03-20T17:51:04.909Z] 
+[172/254] ======= MORRIS County =======
+[2026-03-20T17:51:04.909Z]   Trying SDS...
+[2026-03-20T17:51:37.096Z]     SDS "ROYALTY" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:52:08.295Z]     SDS "MINERAL" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:52:39.494Z]     SDS "PETROLEUM" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:52:39.496Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:52:39.642Z]   No mineral data found on either platform
+[2026-03-20T17:52:42.153Z] 
+[173/254] ======= MOTLEY County =======
+[2026-03-20T17:52:42.153Z]   Trying SDS...
+[2026-03-20T17:52:44.765Z]     SDS "ROYALTY": 0 results, 0 new
+[2026-03-20T17:52:49.184Z]     SDS "MINERAL": 0 results, 0 new
+[2026-03-20T17:52:53.600Z]     SDS "PETROLEUM": 0 results, 0 new
+[2026-03-20T17:52:56.102Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:52:56.245Z]   No mineral data found on either platform
+[2026-03-20T17:52:58.750Z] 
+[174/254] ======= NACOGDOCHES County =======
+[2026-03-20T17:52:58.750Z]   Trying SDS...
+[2026-03-20T17:52:59.492Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:52:59.551Z]   No mineral data found on either platform
+[2026-03-20T17:53:02.056Z] 
+[175/254] ======= NAVARRO County =======
+[2026-03-20T17:53:02.057Z]   Trying SDS...
+[2026-03-20T17:53:34.181Z]     SDS "ROYALTY" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:54:05.396Z]     SDS "MINERAL" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:54:36.572Z]     SDS "PETROLEUM" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T17:54:36.576Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:54:37.690Z]   No mineral data found on either platform
+[2026-03-20T17:54:40.201Z] 
+[176/254] ======= NEWTON County =======
+[2026-03-20T17:54:40.201Z]   Trying SDS...
+[2026-03-20T17:54:40.871Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:55:06.190Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:55:29.914Z]     BIS "MINERAL": 12 new records (1 pages)
+[2026-03-20T17:55:53.560Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:55:56.063Z]   SUCCESS: 12 records via bis
+[2026-03-20T17:55:58.569Z] 
+[177/254] ======= NOLAN County =======
+[2026-03-20T17:55:58.569Z]   Trying SDS...
+[2026-03-20T17:55:59.332Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:55:59.393Z]   No mineral data found on either platform
+[2026-03-20T17:56:01.900Z] 
+[178/254] ======= NUECES County =======
+[2026-03-20T17:56:01.900Z]   Trying SDS...
+[2026-03-20T17:56:02.706Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:56:07.431Z]     BIS: no search form at https://esearch.nuecescad.org/
+[2026-03-20T17:56:07.432Z]   No mineral data found on either platform
+[2026-03-20T17:56:09.938Z] 
+[179/254] ======= OCHILTREE County =======
+[2026-03-20T17:56:09.939Z]   Trying SDS...
+[2026-03-20T17:56:10.712Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:56:10.773Z]   No mineral data found on either platform
+[2026-03-20T17:56:13.277Z] 
+[180/254] ======= OLDHAM County =======
+[2026-03-20T17:56:13.278Z]   Trying SDS...
+[2026-03-20T17:56:13.951Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:56:17.794Z]     BIS: no session token
+[2026-03-20T17:56:17.795Z]   No mineral data found on either platform
+[2026-03-20T17:56:20.301Z] 
+[181/254] ======= ORANGE County =======
+[2026-03-20T17:56:20.302Z]   Trying SDS...
+[2026-03-20T17:56:21.065Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:56:21.127Z]   No mineral data found on either platform
+[2026-03-20T17:56:23.632Z] [182/254] PALO PINTO — already scraped (70 records), skipping
+[2026-03-20T17:56:23.633Z] 
+[183/254] ======= PANOLA County =======
+[2026-03-20T17:56:23.633Z]   Trying SDS...
+[2026-03-20T17:56:24.305Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:56:24.365Z]   No mineral data found on either platform
+[2026-03-20T17:56:26.870Z] [184/254] PARKER — already scraped (36 records), skipping
+[2026-03-20T17:56:26.870Z] 
+[185/254] ======= PARMER County =======
+[2026-03-20T17:56:26.870Z]   Trying SDS...
+[2026-03-20T17:56:27.644Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:56:53.112Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T17:57:16.553Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T17:57:39.996Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T17:57:42.501Z]   No mineral data found on either platform
+[2026-03-20T17:57:45.005Z] 
+[186/254] ======= PECOS County =======
+[2026-03-20T17:57:45.005Z]   Trying SDS...
+[2026-03-20T17:57:45.792Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:57:45.904Z]   No mineral data found on either platform
+[2026-03-20T17:57:48.409Z] 
+[187/254] ======= POLK County =======
+[2026-03-20T17:57:48.409Z]   Trying SDS...
+[2026-03-20T17:57:49.070Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:58:14.446Z]     BIS "ROYALTY": 3 new records (1 pages)
+[2026-03-20T17:58:38.319Z]     BIS "MINERAL": 2 new records (1 pages)
+[2026-03-20T17:59:02.233Z]     BIS "PETROLEUM": 1 new records (1 pages)
+[2026-03-20T17:59:04.737Z]   SUCCESS: 6 records via bis
+[2026-03-20T17:59:07.243Z] 
+[188/254] ======= POTTER County =======
+[2026-03-20T17:59:07.243Z]   Trying SDS...
+[2026-03-20T17:59:08.023Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:59:08.084Z]   No mineral data found on either platform
+[2026-03-20T17:59:10.588Z] 
+[189/254] ======= PRESIDIO County =======
+[2026-03-20T17:59:10.588Z]   Trying SDS...
+[2026-03-20T17:59:11.359Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T17:59:36.742Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T18:00:00.512Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:00:24.253Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:00:26.763Z]   No mineral data found on either platform
+[2026-03-20T18:00:29.268Z] 
+[190/254] ======= RAINS County =======
+[2026-03-20T18:00:29.268Z]   Trying SDS...
+[2026-03-20T18:00:29.941Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:00:55.351Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T18:01:18.986Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:01:43.022Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:01:45.529Z]   No mineral data found on either platform
+[2026-03-20T18:01:48.037Z] 
+[191/254] ======= RANDALL County =======
+[2026-03-20T18:01:48.038Z]   Trying SDS...
+[2026-03-20T18:01:48.896Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:01:48.956Z]   No mineral data found on either platform
+[2026-03-20T18:01:51.463Z] 
+[192/254] ======= REAGAN County =======
+[2026-03-20T18:01:51.463Z]   Trying SDS...
+[2026-03-20T18:01:52.231Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:01:52.290Z]   No mineral data found on either platform
+[2026-03-20T18:01:54.795Z] 
+[193/254] ======= REAL County =======
+[2026-03-20T18:01:54.795Z]   Trying SDS...
+[2026-03-20T18:01:55.558Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:02:20.874Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T18:02:45.530Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:03:09.204Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:03:11.707Z]   No mineral data found on either platform
+[2026-03-20T18:03:14.213Z] 
+[194/254] ======= RED RIVER County =======
+[2026-03-20T18:03:14.213Z]   Trying SDS...
+[2026-03-20T18:03:14.871Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:14.933Z]   No mineral data found on either platform
+[2026-03-20T18:03:17.437Z] 
+[195/254] ======= REEVES County =======
+[2026-03-20T18:03:17.437Z]   Trying SDS...
+[2026-03-20T18:03:18.181Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:18.242Z]   No mineral data found on either platform
+[2026-03-20T18:03:20.747Z] 
+[196/254] ======= REFUGIO County =======
+[2026-03-20T18:03:20.747Z]   Trying SDS...
+[2026-03-20T18:03:21.406Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:21.467Z]   No mineral data found on either platform
+[2026-03-20T18:03:23.972Z] [197/254] ROBERTS — already scraped (102 records), skipping
+[2026-03-20T18:03:23.972Z] 
+[198/254] ======= ROBERTSON County =======
+[2026-03-20T18:03:23.972Z]   Trying SDS...
+[2026-03-20T18:03:24.754Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:24.813Z]   No mineral data found on either platform
+[2026-03-20T18:03:27.317Z] 
+[199/254] ======= ROCKWALL County =======
+[2026-03-20T18:03:27.317Z]   Trying SDS...
+[2026-03-20T18:03:28.080Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:34.384Z]     BIS: no search form at https://esearch.rockwallcad.org/
+[2026-03-20T18:03:34.386Z]   No mineral data found on either platform
+[2026-03-20T18:03:36.889Z] 
+[200/254] ======= RUNNELS County =======
+[2026-03-20T18:03:36.889Z]   Trying SDS...
+[2026-03-20T18:03:39.574Z]     SDS "ROYALTY": 0 results, 0 new
+[2026-03-20T18:03:44.071Z]     SDS "MINERAL": 0 results, 0 new
+[2026-03-20T18:03:48.425Z]     SDS "PETROLEUM": 0 results, 0 new
+[2026-03-20T18:03:50.928Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:50.989Z]   No mineral data found on either platform
+[2026-03-20T18:03:53.494Z] 
+[201/254] ======= RUSK County =======
+[2026-03-20T18:03:53.495Z]   Trying SDS...
+[2026-03-20T18:03:54.277Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:54.419Z]   No mineral data found on either platform
+[2026-03-20T18:03:56.925Z] [202/254] SABINE — already scraped (2 records), skipping
+[2026-03-20T18:03:56.925Z] 
+[203/254] ======= SAN AUGUSTINE County =======
+[2026-03-20T18:03:56.925Z]   Trying SDS...
+[2026-03-20T18:03:57.680Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:03:57.741Z]   No mineral data found on either platform
+[2026-03-20T18:04:00.245Z] 
+[204/254] ======= SAN JACINTO County =======
+[2026-03-20T18:04:00.246Z]   Trying SDS...
+[2026-03-20T18:04:01.007Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:04:01.067Z]   No mineral data found on either platform
+[2026-03-20T18:04:03.572Z] 
+[205/254] ======= SAN PATRICIO County =======
+[2026-03-20T18:04:03.572Z]   Trying SDS...
+[2026-03-20T18:04:04.332Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:04:04.392Z]   No mineral data found on either platform
+[2026-03-20T18:04:06.895Z] 
+[206/254] ======= SAN SABA County =======
+[2026-03-20T18:04:06.896Z]   Trying SDS...
+[2026-03-20T18:04:07.557Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:04:07.729Z]   No mineral data found on either platform
+[2026-03-20T18:04:10.234Z] 
+[207/254] ======= SCHLEICHER County =======
+[2026-03-20T18:04:10.234Z]   Trying SDS...
+[2026-03-20T18:04:10.996Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:04:36.985Z]     BIS "ROYALTY": 6 new records (1 pages)
+[2026-03-20T18:05:00.666Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:05:24.397Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:05:26.901Z]   SUCCESS: 6 records via bis
+[2026-03-20T18:05:29.409Z] 
+[208/254] ======= SCURRY County =======
+[2026-03-20T18:05:29.410Z]   Trying SDS...
+[2026-03-20T18:05:30.087Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:05:30.146Z]   No mineral data found on either platform
+[2026-03-20T18:05:32.652Z] 
+[209/254] ======= SHACKELFORD County =======
+[2026-03-20T18:05:32.652Z]   Trying SDS...
+[2026-03-20T18:05:33.408Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:05:33.467Z]   No mineral data found on either platform
+[2026-03-20T18:05:35.972Z] 
+[210/254] ======= SHELBY County =======
+[2026-03-20T18:05:35.972Z]   Trying SDS...
+[2026-03-20T18:05:36.736Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:05:36.795Z]   No mineral data found on either platform
+[2026-03-20T18:05:39.300Z] 
+[211/254] ======= SHERMAN County =======
+[2026-03-20T18:05:39.300Z]   Trying SDS...
+[2026-03-20T18:05:40.061Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:05:40.127Z]   No mineral data found on either platform
+[2026-03-20T18:05:42.633Z] 
+[212/254] ======= SMITH County =======
+[2026-03-20T18:05:42.633Z]   Trying SDS...
+[2026-03-20T18:05:43.391Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:05:47.733Z]     BIS: no session token
+[2026-03-20T18:05:47.737Z]   No mineral data found on either platform
+[2026-03-20T18:05:50.242Z] 
+[213/254] ======= SOMERVELL County =======
+[2026-03-20T18:05:50.243Z]   Trying SDS...
+[2026-03-20T18:05:52.468Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:05:52.534Z]   No mineral data found on either platform
+[2026-03-20T18:05:55.039Z] 
+[214/254] ======= STARR County =======
+[2026-03-20T18:05:55.040Z]   Trying SDS...
+[2026-03-20T18:05:55.887Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:06:21.278Z]     BIS "ROYALTY": 7 new records (1 pages)
+[2026-03-20T18:06:45.052Z]     BIS "MINERAL": 21 new records (1 pages)
+[2026-03-20T18:07:08.466Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:07:10.969Z]   SUCCESS: 28 records via bis
+[2026-03-20T18:07:13.475Z] [215/254] STEPHENS — already scraped (318 records), skipping
+[2026-03-20T18:07:13.475Z] 
+[216/254] ======= STERLING County =======
+[2026-03-20T18:07:13.475Z]   Trying SDS...
+[2026-03-20T18:07:14.146Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:07:14.206Z]   No mineral data found on either platform
+[2026-03-20T18:07:16.712Z] 
+[217/254] ======= STONEWALL County =======
+[2026-03-20T18:07:16.712Z]   Trying SDS...
+[2026-03-20T18:07:17.375Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:07:17.435Z]   No mineral data found on either platform
+[2026-03-20T18:07:19.940Z] 
+[218/254] ======= SUTTON County =======
+[2026-03-20T18:07:19.940Z]   Trying SDS...
+[2026-03-20T18:07:20.706Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:07:20.766Z]   No mineral data found on either platform
+[2026-03-20T18:07:23.272Z] 
+[219/254] ======= SWISHER County =======
+[2026-03-20T18:07:23.272Z]   Trying SDS...
+[2026-03-20T18:07:23.942Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:07:24.002Z]   No mineral data found on either platform
+[2026-03-20T18:07:26.508Z] 
+[220/254] ======= TARRANT County =======
+[2026-03-20T18:07:26.509Z]   Trying SDS...
+[2026-03-20T18:07:27.275Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:07:32.327Z]     BIS: no search form at https://esearch.tarrantcad.org/
+[2026-03-20T18:07:32.329Z]   No mineral data found on either platform
+[2026-03-20T18:07:34.836Z] 
+[221/254] ======= TAYLOR County =======
+[2026-03-20T18:07:34.836Z]   Trying SDS...
+[2026-03-20T18:07:35.617Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:07:35.685Z]   No mineral data found on either platform
+[2026-03-20T18:07:38.191Z] 
+[222/254] ======= TERRELL County =======
+[2026-03-20T18:07:38.191Z]   Trying SDS...
+[2026-03-20T18:07:38.972Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:08:04.414Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T18:08:28.073Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:08:45.150Z]     BIS "PETROLEUM" error: Attempted to use detached Frame '9682BEB5235D2949E6B57E681C8
+[2026-03-20T18:08:45.151Z]   No mineral data found on either platform
+[2026-03-20T18:08:47.662Z] 
+[223/254] ======= TERRY County =======
+[2026-03-20T18:08:47.662Z]   Trying SDS...
+[2026-03-20T18:08:47.662Z]   ERROR: Connection closed.
+[2026-03-20T18:08:50.307Z] 
+[224/254] ======= THROCKMORTON County =======
+[2026-03-20T18:08:50.307Z]   Trying SDS...
+[2026-03-20T18:08:51.261Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:08:55.096Z]     BIS: no session token
+[2026-03-20T18:08:55.097Z]   No mineral data found on either platform
+[2026-03-20T18:08:57.601Z] 
+[225/254] ======= TITUS County =======
+[2026-03-20T18:08:57.602Z]   Trying SDS...
+[2026-03-20T18:08:58.272Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:08:58.334Z]   No mineral data found on either platform
+[2026-03-20T18:09:00.839Z] [226/254] TOM GREEN — already scraped (1 records), skipping
+[2026-03-20T18:09:00.840Z] 
+[227/254] ======= TRAVIS County =======
+[2026-03-20T18:09:00.840Z]   Trying SDS...
+[2026-03-20T18:09:01.620Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:09:01.680Z]   No mineral data found on either platform
+[2026-03-20T18:09:04.185Z] 
+[228/254] ======= TRINITY County =======
+[2026-03-20T18:09:04.185Z]   Trying SDS...
+[2026-03-20T18:09:04.963Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:09:05.024Z]   No mineral data found on either platform
+[2026-03-20T18:09:07.530Z] 
+[229/254] ======= TYLER County =======
+[2026-03-20T18:09:07.531Z]   Trying SDS...
+[2026-03-20T18:09:08.300Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:09:08.360Z]   No mineral data found on either platform
+[2026-03-20T18:09:10.865Z] 
+[230/254] ======= UPSHUR County =======
+[2026-03-20T18:09:10.865Z]   Trying SDS...
+[2026-03-20T18:09:11.641Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:09:11.702Z]   No mineral data found on either platform
+[2026-03-20T18:09:14.207Z] 
+[231/254] ======= UPTON County =======
+[2026-03-20T18:09:14.207Z]   Trying SDS...
+[2026-03-20T18:09:14.876Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:09:14.935Z]   No mineral data found on either platform
+[2026-03-20T18:09:17.441Z] 
+[232/254] ======= UVALDE County =======
+[2026-03-20T18:09:17.441Z]   Trying SDS...
+[2026-03-20T18:09:18.209Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:09:43.619Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T18:10:07.316Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:10:21.002Z]     BIS "PETROLEUM" error: Attempted to use detached Frame 'E96B0D90187C1F0AAEC3D7A22F9
+[2026-03-20T18:10:21.002Z]   No mineral data found on either platform
+[2026-03-20T18:10:23.508Z] 
+[233/254] ======= VAL VERDE County =======
+[2026-03-20T18:10:23.508Z]   Trying SDS...
+[2026-03-20T18:10:23.508Z]   ERROR: Connection closed.
+[2026-03-20T18:10:26.118Z] 
+[234/254] ======= VAN ZANDT County =======
+[2026-03-20T18:10:26.118Z]   Trying SDS...
+[2026-03-20T18:10:27.101Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:10:27.165Z]   No mineral data found on either platform
+[2026-03-20T18:10:29.671Z] 
+[235/254] ======= VICTORIA County =======
+[2026-03-20T18:10:29.671Z]   Trying SDS...
+[2026-03-20T18:10:30.441Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:10:55.818Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T18:11:19.255Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:11:42.697Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:11:45.201Z]   No mineral data found on either platform
+[2026-03-20T18:11:47.712Z] 
+[236/254] ======= WALKER County =======
+[2026-03-20T18:11:47.713Z]   Trying SDS...
+[2026-03-20T18:11:49.491Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:12:14.904Z]     BIS "ROYALTY": 2 new records (1 pages)
+[2026-03-20T18:12:38.663Z]     BIS "MINERAL": 1 new records (1 pages)
+[2026-03-20T18:13:02.324Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:13:04.830Z]   SUCCESS: 3 records via bis
+[2026-03-20T18:13:07.336Z] 
+[237/254] ======= WALLER County =======
+[2026-03-20T18:13:07.336Z]   Trying SDS...
+[2026-03-20T18:13:08.108Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:13:14.160Z]     BIS: no search form at https://esearch.wallercad.org/
+[2026-03-20T18:13:14.164Z]   No mineral data found on either platform
+[2026-03-20T18:13:16.668Z] 
+[238/254] ======= WARD County =======
+[2026-03-20T18:13:16.668Z]   Trying SDS...
+[2026-03-20T18:13:17.440Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:13:17.504Z]   No mineral data found on either platform
+[2026-03-20T18:13:20.009Z] 
+[239/254] ======= WASHINGTON County =======
+[2026-03-20T18:13:20.009Z]   Trying SDS...
+[2026-03-20T18:13:20.775Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:13:47.543Z]     BIS "ROYALTY": 20 new records (1 pages)
+[2026-03-20T18:14:11.380Z]     BIS "MINERAL": 2 new records (1 pages)
+[2026-03-20T18:14:35.556Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:14:38.064Z]   SUCCESS: 22 records via bis
+[2026-03-20T18:14:40.593Z] 
+[240/254] ======= WEBB County =======
+[2026-03-20T18:14:40.593Z]   Trying SDS...
+[2026-03-20T18:14:41.360Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:14:41.423Z]   No mineral data found on either platform
+[2026-03-20T18:14:43.927Z] 
+[241/254] ======= WHARTON County =======
+[2026-03-20T18:14:43.927Z]   Trying SDS...
+[2026-03-20T18:14:44.781Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:14:44.843Z]   No mineral data found on either platform
+[2026-03-20T18:14:47.347Z] 
+[242/254] ======= WHEELER County =======
+[2026-03-20T18:14:47.347Z]   Trying SDS...
+[2026-03-20T18:14:48.125Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:14:48.184Z]   No mineral data found on either platform
+[2026-03-20T18:14:50.690Z] 
+[243/254] ======= WICHITA County =======
+[2026-03-20T18:14:50.690Z]   Trying SDS...
+[2026-03-20T18:14:51.457Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:14:51.518Z]   No mineral data found on either platform
+[2026-03-20T18:14:54.022Z] 
+[244/254] ======= WILBARGER County =======
+[2026-03-20T18:14:54.022Z]   Trying SDS...
+[2026-03-20T18:14:54.795Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:14:54.857Z]   No mineral data found on either platform
+[2026-03-20T18:14:57.361Z] 
+[245/254] ======= WILLACY County =======
+[2026-03-20T18:14:57.361Z]   Trying SDS...
+[2026-03-20T18:14:58.128Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:15:23.239Z]     BIS "ROYALTY": 0 new records (1 pages)
+[2026-03-20T18:15:46.897Z]     BIS "MINERAL": 0 new records (1 pages)
+[2026-03-20T18:16:10.561Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:16:13.069Z]   No mineral data found on either platform
+[2026-03-20T18:16:15.581Z] 
+[246/254] ======= WILLIAMSON County =======
+[2026-03-20T18:16:15.581Z]   Trying SDS...
+[2026-03-20T18:16:16.350Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:16:21.129Z]     BIS: no search form at https://esearch.williamsoncad.org/
+[2026-03-20T18:16:21.131Z]   No mineral data found on either platform
+[2026-03-20T18:16:23.637Z] 
+[247/254] ======= WILSON County =======
+[2026-03-20T18:16:23.637Z]   Trying SDS...
+[2026-03-20T18:16:24.399Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:16:24.461Z]   No mineral data found on either platform
+[2026-03-20T18:16:26.967Z] 
+[248/254] ======= WINKLER County =======
+[2026-03-20T18:16:26.967Z]   Trying SDS...
+[2026-03-20T18:16:27.729Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:16:27.845Z]   No mineral data found on either platform
+[2026-03-20T18:16:30.350Z] 
+[249/254] ======= WISE County =======
+[2026-03-20T18:16:30.351Z]   Trying SDS...
+[2026-03-20T18:17:02.409Z]     SDS "ROYALTY" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T18:17:33.608Z]     SDS "MINERAL" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T18:18:04.786Z]     SDS "PETROLEUM" error: Navigation timeout of 30000 ms exceeded
+[2026-03-20T18:18:04.789Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:18:04.926Z]   No mineral data found on either platform
+[2026-03-20T18:18:07.432Z] 
+[250/254] ======= WOOD County =======
+[2026-03-20T18:18:07.432Z]   Trying SDS...
+[2026-03-20T18:18:08.323Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:18:08.697Z]   No mineral data found on either platform
+[2026-03-20T18:18:11.203Z] 
+[251/254] ======= YOAKUM County =======
+[2026-03-20T18:18:11.203Z]   Trying SDS...
+[2026-03-20T18:18:11.866Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:18:37.553Z]     BIS "ROYALTY": 82 new records (1 pages)
+[2026-03-20T18:19:07.274Z]     BIS "MINERAL": 24 new records (1 pages)
+[2026-03-20T18:19:31.049Z]     BIS "PETROLEUM": 6 new records (1 pages)
+[2026-03-20T18:19:33.557Z]   SUCCESS: 112 records via bis
+[2026-03-20T18:19:36.068Z] 
+[252/254] ======= YOUNG County =======
+[2026-03-20T18:19:36.068Z]   Trying SDS...
+[2026-03-20T18:19:36.844Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:20:03.418Z]     BIS "ROYALTY": 38 new records (1 pages)
+[2026-03-20T18:20:27.346Z]     BIS "MINERAL": 24 new records (1 pages)
+[2026-03-20T18:20:51.046Z]     BIS "PETROLEUM": 0 new records (1 pages)
+[2026-03-20T18:20:53.552Z]   SUCCESS: 62 records via bis
+[2026-03-20T18:20:56.059Z] 
+[253/254] ======= ZAPATA County =======
+[2026-03-20T18:20:56.059Z]   Trying SDS...
+[2026-03-20T18:20:56.905Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:20:56.964Z]   No mineral data found on either platform
+[2026-03-20T18:20:59.470Z] 
+[254/254] ======= ZAVALA County =======
+[2026-03-20T18:20:59.471Z]   Trying SDS...
+[2026-03-20T18:21:00.126Z]   SDS failed, trying BIS eSearch...
+[2026-03-20T18:21:00.186Z]   No mineral data found on either platform
+[2026-03-20T18:21:02.750Z] 
+=================================================================
+[2026-03-20T18:21:02.750Z] COMPLETE
+[2026-03-20T18:21:02.750Z] =================================================================
+[2026-03-20T18:21:02.750Z] Total records: 3125
+[2026-03-20T18:21:02.750Z] Counties with data: 54
+[2026-03-20T18:21:02.750Z] Counties without data: 200
+[2026-03-20T18:21:02.750Z] 
+Failed counties:
+[2026-03-20T18:21:02.750Z]   ANDERSON: no_data (none)
+[2026-03-20T18:21:02.750Z]   ANGELINA: no_data (none)
+[2026-03-20T18:21:02.750Z]   ARANSAS: no_data (none)
+[2026-03-20T18:21:02.750Z]   ARCHER: no_data (none)
+[2026-03-20T18:21:02.750Z]   ARMSTRONG: no_data (none)
+[2026-03-20T18:21:02.750Z]   ATASCOSA: no_data (none)
+[2026-03-20T18:21:02.750Z]   AUSTIN: no_data (none)
+[2026-03-20T18:21:02.750Z]   BAILEY: no_data (none)
+[2026-03-20T18:21:02.750Z]   BANDERA: no_data (none)
+[2026-03-20T18:21:02.751Z]   BELL: no_data (none)
+[2026-03-20T18:21:02.751Z]   BEXAR: no_data (none)
+[2026-03-20T18:21:02.751Z]   BLANCO: no_data (none)
+[2026-03-20T18:21:02.751Z]   BORDEN: no_data (none)
+[2026-03-20T18:21:02.751Z]   BOSQUE: no_data (none)
+[2026-03-20T18:21:02.751Z]   BOWIE: no_data (none)
+[2026-03-20T18:21:02.751Z]   BREWSTER: no_data (none)
+[2026-03-20T18:21:02.751Z]   BRISCOE: no_data (none)
+[2026-03-20T18:21:02.751Z]   BROWN: no_data (none)
+[2026-03-20T18:21:02.751Z]   BURLESON: no_data (none)
+[2026-03-20T18:21:02.751Z]   BURNET: no_data (none)
+[2026-03-20T18:21:02.751Z]   CAMERON: no_data (none)
+[2026-03-20T18:21:02.751Z]   CARSON: no_data (none)
+[2026-03-20T18:21:02.751Z]   CASTRO: no_data (none)
+[2026-03-20T18:21:02.751Z]   CHAMBERS: no_data (none)
+[2026-03-20T18:21:02.751Z]   CHEROKEE: no_data (none)
+[2026-03-20T18:21:02.751Z]   CHILDRESS: no_data (none)
+[2026-03-20T18:21:02.751Z]   CLAY: no_data (none)
+[2026-03-20T18:21:02.751Z]   COCHRAN: no_data (none)
+[2026-03-20T18:21:02.751Z]   COKE: no_data (none)
+[2026-03-20T18:21:02.751Z]   COLEMAN: no_data (none)
+[2026-03-20T18:21:02.751Z]   COLLIN: no_data (none)
+[2026-03-20T18:21:02.751Z]   COLLINGSWORTH: no_data (none)
+[2026-03-20T18:21:02.751Z]   COMAL: no_data (none)
+[2026-03-20T18:21:02.751Z]   COOKE: error (none)
+[2026-03-20T18:21:02.751Z]   CORYELL: no_data (none)
+[2026-03-20T18:21:02.751Z]   COTTLE: no_data (none)
+[2026-03-20T18:21:02.751Z]   CRANE: no_data (none)
+[2026-03-20T18:21:02.751Z]   CROCKETT: no_data (none)
+[2026-03-20T18:21:02.751Z]   CROSBY: no_data (none)
+[2026-03-20T18:21:02.751Z]   CULBERSON: no_data (none)
+[2026-03-20T18:21:02.751Z]   DALLAM: no_data (none)
+[2026-03-20T18:21:02.751Z]   DALLAS: no_data (none)
+[2026-03-20T18:21:02.751Z]   DAWSON: no_data (none)
+[2026-03-20T18:21:02.751Z]   DE WITT: no_data (none)
+[2026-03-20T18:21:02.751Z]   DEAF SMITH: no_data (none)
+[2026-03-20T18:21:02.751Z]   DELTA: no_data (none)
+[2026-03-20T18:21:02.751Z]   DENTON: no_data (none)
+[2026-03-20T18:21:02.751Z]   DICKENS: no_data (none)
+[2026-03-20T18:21:02.751Z]   DIMMIT: no_data (none)
+[2026-03-20T18:21:02.751Z]   DONLEY: no_data (none)
+[2026-03-20T18:21:02.751Z]   EASTLAND: error (none)
+[2026-03-20T18:21:02.751Z]   ECTOR: no_data (none)
+[2026-03-20T18:21:02.751Z]   EDWARDS: no_data (none)
+[2026-03-20T18:21:02.751Z]   EL PASO: no_data (none)
+[2026-03-20T18:21:02.751Z]   ELLIS: no_data (none)
+[2026-03-20T18:21:02.751Z]   FALLS: no_data (none)
+[2026-03-20T18:21:02.751Z]   FANNIN: no_data (none)
+[2026-03-20T18:21:02.751Z]   FISHER: no_data (none)
+[2026-03-20T18:21:02.751Z]   FLOYD: no_data (none)
+[2026-03-20T18:21:02.751Z]   FOARD: no_data (none)
+[2026-03-20T18:21:02.751Z]   FORT BEND: no_data (none)
+[2026-03-20T18:21:02.751Z]   FRANKLIN: no_data (none)
+[2026-03-20T18:21:02.751Z]   FREESTONE: no_data (none)
+[2026-03-20T18:21:02.751Z]   FRIO: no_data (none)
+[2026-03-20T18:21:02.751Z]   GARZA: no_data (none)
+[2026-03-20T18:21:02.751Z]   GILLESPIE: no_data (none)
+[2026-03-20T18:21:02.751Z]   GLASSCOCK: error (none)
+[2026-03-20T18:21:02.751Z]   GOLIAD: no_data (none)
+[2026-03-20T18:21:02.751Z]   GONZALES: no_data (none)
+[2026-03-20T18:21:02.751Z]   GRAY: no_data (none)
+[2026-03-20T18:21:02.752Z]   GRAYSON: no_data (none)
+[2026-03-20T18:21:02.752Z]   GREGG: no_data (none)
+[2026-03-20T18:21:02.752Z]   GRIMES: no_data (none)
+[2026-03-20T18:21:02.752Z]   GUADALUPE: no_data (none)
+[2026-03-20T18:21:02.752Z]   HALL: no_data (none)
+[2026-03-20T18:21:02.752Z]   HAMILTON: no_data (none)
+[2026-03-20T18:21:02.752Z]   HANSFORD: no_data (none)
+[2026-03-20T18:21:02.752Z]   HARDEMAN: no_data (none)
+[2026-03-20T18:21:02.752Z]   HARDIN: no_data (none)
+[2026-03-20T18:21:02.752Z]   HARRIS: no_data (none)
+[2026-03-20T18:21:02.752Z]   HARRISON: no_data (none)
+[2026-03-20T18:21:02.752Z]   HARTLEY: no_data (none)
+[2026-03-20T18:21:02.752Z]   HASKELL: no_data (none)
+[2026-03-20T18:21:02.752Z]   HAYS: no_data (none)
+[2026-03-20T18:21:02.752Z]   HIDALGO: no_data (none)
+[2026-03-20T18:21:02.752Z]   HOUSTON: no_data (none)
+[2026-03-20T18:21:02.752Z]   HUDSPETH: no_data (none)
+[2026-03-20T18:21:02.752Z]   HUNT: no_data (none)
+[2026-03-20T18:21:02.752Z]   HUTCHINSON: no_data (none)
+[2026-03-20T18:21:02.752Z]   IRION: no_data (none)
+[2026-03-20T18:21:02.752Z]   JACK: no_data (none)
+[2026-03-20T18:21:02.752Z]   JACKSON: no_data (none)
+[2026-03-20T18:21:02.752Z]   JEFF DAVIS: no_data (none)
+[2026-03-20T18:21:02.752Z]   JEFFERSON: no_data (none)
+[2026-03-20T18:21:02.752Z]   JIM HOGG: no_data (none)
+[2026-03-20T18:21:02.752Z]   JIM WELLS: no_data (none)
+[2026-03-20T18:21:02.752Z]   JOHNSON: no_data (none)
+[2026-03-20T18:21:02.752Z]   JONES: no_data (none)
+[2026-03-20T18:21:02.752Z]   KARNES: no_data (none)
+[2026-03-20T18:21:02.752Z]   KAUFMAN: no_data (none)
+[2026-03-20T18:21:02.752Z]   KENDALL: no_data (none)
+[2026-03-20T18:21:02.752Z]   KENT: no_data (none)
+[2026-03-20T18:21:02.752Z]   KERR: no_data (none)
+[2026-03-20T18:21:02.752Z]   KIMBLE: no_data (none)
+[2026-03-20T18:21:02.752Z]   KING: error (none)
+[2026-03-20T18:21:02.752Z]   KINNEY: no_data (none)
+[2026-03-20T18:21:02.752Z]   KLEBERG: no_data (none)
+[2026-03-20T18:21:02.752Z]   LA SALLE: no_data (none)
+[2026-03-20T18:21:02.752Z]   LAMAR: no_data (none)
+[2026-03-20T18:21:02.752Z]   LAMPASAS: no_data (none)
+[2026-03-20T18:21:02.752Z]   LAVACA: no_data (none)
+[2026-03-20T18:21:02.752Z]   LEE: no_data (none)
+[2026-03-20T18:21:02.752Z]   LEON: no_data (none)
+[2026-03-20T18:21:02.752Z]   LIBERTY: no_data (none)
+[2026-03-20T18:21:02.752Z]   LIMESTONE: no_data (none)
+[2026-03-20T18:21:02.752Z]   LIVE OAK: no_data (none)
+[2026-03-20T18:21:02.752Z]   LLANO: no_data (none)
+[2026-03-20T18:21:02.752Z]   LOVING: no_data (none)
+[2026-03-20T18:21:02.752Z]   LUBBOCK: no_data (none)
+[2026-03-20T18:21:02.752Z]   LYNN: no_data (none)
+[2026-03-20T18:21:02.752Z]   MARION: no_data (none)
+[2026-03-20T18:21:02.752Z]   MARTIN: no_data (none)
+[2026-03-20T18:21:02.752Z]   MASON: no_data (none)
+[2026-03-20T18:21:02.752Z]   MATAGORDA: no_data (none)
+[2026-03-20T18:21:02.752Z]   MAVERICK: no_data (none)
+[2026-03-20T18:21:02.752Z]   MCCULLOCH: no_data (none)
+[2026-03-20T18:21:02.752Z]   MCLENNAN: no_data (none)
+[2026-03-20T18:21:02.752Z]   MENARD: no_data (none)
+[2026-03-20T18:21:02.752Z]   MILAM: no_data (none)
+[2026-03-20T18:21:02.752Z]   MILLS: no_data (none)
+[2026-03-20T18:21:02.752Z]   MONTGOMERY: no_data (none)
+[2026-03-20T18:21:02.752Z]   MORRIS: no_data (none)
+[2026-03-20T18:21:02.752Z]   MOTLEY: no_data (none)
+[2026-03-20T18:21:02.752Z]   NACOGDOCHES: no_data (none)
+[2026-03-20T18:21:02.752Z]   NAVARRO: no_data (none)
+[2026-03-20T18:21:02.753Z]   NOLAN: no_data (none)
+[2026-03-20T18:21:02.753Z]   NUECES: no_data (none)
+[2026-03-20T18:21:02.753Z]   OCHILTREE: no_data (none)
+[2026-03-20T18:21:02.753Z]   OLDHAM: no_data (none)
+[2026-03-20T18:21:02.753Z]   ORANGE: no_data (none)
+[2026-03-20T18:21:02.753Z]   PANOLA: no_data (none)
+[2026-03-20T18:21:02.753Z]   PARMER: no_data (none)
+[2026-03-20T18:21:02.753Z]   PECOS: no_data (none)
+[2026-03-20T18:21:02.753Z]   POTTER: no_data (none)
+[2026-03-20T18:21:02.753Z]   PRESIDIO: no_data (none)
+[2026-03-20T18:21:02.753Z]   RAINS: no_data (none)
+[2026-03-20T18:21:02.753Z]   RANDALL: no_data (none)
+[2026-03-20T18:21:02.753Z]   REAGAN: no_data (none)
+[2026-03-20T18:21:02.753Z]   REAL: no_data (none)
+[2026-03-20T18:21:02.753Z]   RED RIVER: no_data (none)
+[2026-03-20T18:21:02.753Z]   REEVES: no_data (none)
+[2026-03-20T18:21:02.753Z]   REFUGIO: no_data (none)
+[2026-03-20T18:21:02.753Z]   ROBERTSON: no_data (none)
+[2026-03-20T18:21:02.753Z]   ROCKWALL: no_data (none)
+[2026-03-20T18:21:02.753Z]   RUNNELS: no_data (none)
+[2026-03-20T18:21:02.753Z]   RUSK: no_data (none)
+[2026-03-20T18:21:02.753Z]   SAN AUGUSTINE: no_data (none)
+[2026-03-20T18:21:02.753Z]   SAN JACINTO: no_data (none)
+[2026-03-20T18:21:02.753Z]   SAN PATRICIO: no_data (none)
+[2026-03-20T18:21:02.753Z]   SAN SABA: no_data (none)
+[2026-03-20T18:21:02.753Z]   SCURRY: no_data (none)
+[2026-03-20T18:21:02.753Z]   SHACKELFORD: no_data (none)
+[2026-03-20T18:21:02.753Z]   SHELBY: no_data (none)
+[2026-03-20T18:21:02.753Z]   SHERMAN: no_data (none)
+[2026-03-20T18:21:02.753Z]   SMITH: no_data (none)
+[2026-03-20T18:21:02.753Z]   SOMERVELL: no_data (none)
+[2026-03-20T18:21:02.753Z]   STERLING: no_data (none)
+[2026-03-20T18:21:02.753Z]   STONEWALL: no_data (none)
+[2026-03-20T18:21:02.753Z]   SUTTON: no_data (none)
+[2026-03-20T18:21:02.753Z]   SWISHER: no_data (none)
+[2026-03-20T18:21:02.753Z]   TARRANT: no_data (none)
+[2026-03-20T18:21:02.753Z]   TAYLOR: no_data (none)
+[2026-03-20T18:21:02.753Z]   TERRELL: no_data (none)
+[2026-03-20T18:21:02.753Z]   TERRY: error (none)
+[2026-03-20T18:21:02.753Z]   THROCKMORTON: no_data (none)
+[2026-03-20T18:21:02.753Z]   TITUS: no_data (none)
+[2026-03-20T18:21:02.753Z]   TRAVIS: no_data (none)
+[2026-03-20T18:21:02.753Z]   TRINITY: no_data (none)
+[2026-03-20T18:21:02.753Z]   TYLER: no_data (none)
+[2026-03-20T18:21:02.753Z]   UPSHUR: no_data (none)
+[2026-03-20T18:21:02.753Z]   UPTON: no_data (none)
+[2026-03-20T18:21:02.753Z]   UVALDE: no_data (none)
+[2026-03-20T18:21:02.753Z]   VAL VERDE: error (none)
+[2026-03-20T18:21:02.753Z]   VAN ZANDT: no_data (none)
+[2026-03-20T18:21:02.753Z]   VICTORIA: no_data (none)
+[2026-03-20T18:21:02.753Z]   WALLER: no_data (none)
+[2026-03-20T18:21:02.753Z]   WARD: no_data (none)
+[2026-03-20T18:21:02.753Z]   WEBB: no_data (none)
+[2026-03-20T18:21:02.753Z]   WHARTON: no_data (none)
+[2026-03-20T18:21:02.753Z]   WHEELER: no_data (none)
+[2026-03-20T18:21:02.753Z]   WICHITA: no_data (none)
+[2026-03-20T18:21:02.753Z]   WILBARGER: no_data (none)
+[2026-03-20T18:21:02.753Z]   WILLACY: no_data (none)
+[2026-03-20T18:21:02.753Z]   WILLIAMSON: no_data (none)
+[2026-03-20T18:21:02.753Z]   WILSON: no_data (none)
+[2026-03-20T18:21:02.753Z]   WINKLER: no_data (none)
+[2026-03-20T18:21:02.753Z]   WISE: no_data (none)
+[2026-03-20T18:21:02.753Z]   WOOD: no_data (none)
+[2026-03-20T18:21:02.753Z]   ZAPATA: no_data (none)
+[2026-03-20T18:21:02.753Z]   ZAVALA: no_data (none)

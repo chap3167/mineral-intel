@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator Directory — MineralSearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">M</div> MineralSearch</a>
+    <ul class="nav-links">
+      <li><a href="wells.html" class="active">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Breadcrumb & Sub-Nav -->
+    <div style="margin-bottom:8px;">
+      <a href="wells.html" style="color:var(--accent);font-size:0.85rem;text-decoration:none;font-weight:600;">Texas</a>
+      <span style="color:var(--text-muted);margin:0 8px;font-size:0.85rem;">&rsaquo;</span>
+      <span style="color:var(--text);font-size:0.85rem;font-weight:600;">Operators</span>
+    </div>
+    <div class="texas-subnav" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;padding:12px 0;border-bottom:1px solid var(--border);">
+      <a href="wells.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Wells</a>
+      <a href="production.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Production</a>
+      <a href="permits.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Permits</a>
+      <a href="runsheet.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Runsheet</a>
+      <a href="operators.html" class="btn btn-primary btn-sm" style="font-size:0.8rem;">Operators</a>
+      <a href="map.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Map</a>
+      <a href="leases.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Leases</a>
+    </div>
+
+    <div class="page-header" style="padding-top:0;">
+      <h1>Operator Directory</h1>
+      <p>All operators active in Texas, sourced from RRC data. Click any operator to see their producing wells.</p>
+    </div>
+
+    <div class="filters-bar mb-3">
+      <div class="filter-group" style="flex:1;min-width:200px;">
+        <label class="filter-label">Search Operator</label>
+        <input type="text" id="op-search" class="filter-input" placeholder="Operator name...">
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Status</label>
+        <select id="op-status" class="filter-select">
+          <option value="A">Active</option>
+          <option value="">All</option>
+          <option value="I">Inactive</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Operators Table -->
+    <div class="table-container mb-3">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Operator Name</th>
+            <th>Operator #</th>
+            <th>Status</th>
+            <th>Last Filed Date</th>
+          </tr>
+        </thead>
+        <tbody id="op-tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- Operator Detail Panel -->
+    <div id="op-detail" class="card mb-3" style="display:none;padding:0;">
+      <div class="dash-card-header" style="padding:20px;">
+        <div>
+          <h3 id="op-detail-name" style="font-size:1.2rem;color:var(--text);text-transform:none;letter-spacing:normal;">-</h3>
+          <p id="op-detail-sub" class="text-secondary" style="font-size:0.85rem;margin-top:4px;">-</p>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="closeOpDetail()">Close</button>
+      </div>
+      <div style="padding:20px;">
+        <div class="well-detail-grid mb-3" id="op-detail-stats"></div>
+
+        <h4 style="margin-bottom:12px;">Wells</h4>
+        <div class="table-container" style="max-height:400px;overflow-y:auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>API #</th><th>County</th><th>Type</th><th>Depth</th><th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="op-wells-tbody"></tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:20px;padding:16px;background:var(--bg-secondary);border-radius:var(--radius-sm);border:1px solid var(--border);">
+          <div class="flex-between">
+            <div>
+              <h4 style="font-size:0.9rem;">Contact Information</h4>
+              <p class="text-muted" style="font-size:0.82rem;">Operator contact details are available with a Pro subscription.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" data-modal-open>Request Contact Info</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="calculator.html">Tools</a></span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <h2>Start Your Free Trial</h2>
+    <p class="sub">7 days of full Pro access. No credit card required.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jake Reynolds"></div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="jake@landmanpro.com"></div>
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:16px;" onclick="alert('Trial activated! (Demo)');">Start Free Trial</button>
+  </div>
+</div>
+
+<script src="site.js?v=11"></script>
+<script>
+(function() {
+  'use strict';
+
+  const SUPABASE_URL = 'https://bkyzxvetrguudtsqrvvq.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJreXp4dmV0cmd1dWR0c3FydnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4ODcyNTUsImV4cCI6MjA4OTQ2MzI1NX0.FE2YEIk9pu6P5EUdQY7S7YRfQK0Q7ckSGuJDnWxSks8';
+
+  function formatNumber(n){return n==null?'-':n.toLocaleString();}
+  function wellTypeLabel(t){return{'O':'Oil','G':'Gas','B':'Both','':'--'}[t]||t;}
+
+  let allOperators = [];
+  let searchDebounce = null;
+
+  async function loadOperators() {
+    const tbody = document.getElementById('op-tbody');
+    const statusCode = document.getElementById('op-status').value;
+    try {
+      let url = SUPABASE_URL + '/rest/v1/operators?select=operator_no,operator_name,status_code,last_filed_date';
+      if (statusCode) url += '&status_code=eq.' + statusCode;
+      url += '&order=operator_name.asc&limit=100';
+
+      const resp = await fetch(url, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY }
+      });
+      if (!resp.ok) throw new Error('Supabase ' + resp.status);
+      const data = await resp.json();
+      if (!data || data.length === 0) throw new Error('No data returned');
+      allOperators = data;
+      renderOperators();
+    } catch(e) {
+      console.error('[Operators] Failed to load data:', e.message);
+      tbody.innerHTML = '<tr><td colspan="4" class="text-center text-muted" style="padding:40px;">Unable to load data. Please try again.</td></tr>';
+    }
+  }
+
+  async function searchOperators(term) {
+    const tbody = document.getElementById('op-tbody');
+    const statusCode = document.getElementById('op-status').value;
+    try {
+      const encoded = encodeURIComponent('%' + term + '%');
+      let url = SUPABASE_URL + '/rest/v1/operators?select=operator_no,operator_name,status_code,last_filed_date&operator_name=ilike.' + encoded;
+      if (statusCode) url += '&status_code=eq.' + statusCode;
+      url += '&order=operator_name.asc&limit=100';
+
+      const resp = await fetch(url, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY }
+      });
+      if (!resp.ok) throw new Error('Search failed');
+      const data = await resp.json();
+      allOperators = data || [];
+      renderOperators();
+    } catch(e) {
+      console.error('[Operators] Search error:', e.message);
+      tbody.innerHTML = '<tr><td colspan="4" class="text-center text-muted" style="padding:40px;">Unable to load data. Please try again.</td></tr>';
+    }
+  }
+
+  function statusLabel(code) {
+    return {'A':'Active','I':'Inactive'}[code] || code || '-';
+  }
+
+  function statusBadgeHTML(code) {
+    const cls = code === 'A' ? 'badge-producing' : code === 'I' ? 'badge-shutin' : 'badge-active';
+    return '<span class="badge '+cls+'">'+statusLabel(code)+'</span>';
+  }
+
+  function renderOperators() {
+    const tbody = document.getElementById('op-tbody');
+    if (allOperators.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4" class="text-center text-muted" style="padding:40px;">No operators found.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = allOperators.map(op =>
+      '<tr onclick="showOpDetail(\''+String(op.operator_name||'').replace(/'/g,"\\'").replace(/"/g,'&quot;')+'\')" style="cursor:pointer;">'+
+        '<td style="font-weight:600;">'+(op.operator_name || '-')+'</td>'+
+        '<td class="mono">'+(op.operator_no || '-')+'</td>'+
+        '<td>'+statusBadgeHTML(op.status_code)+'</td>'+
+        '<td class="mono">'+(op.last_filed_date || '-')+'</td>'+
+      '</tr>'
+    ).join('');
+  }
+
+  window.showOpDetail = async function(name) {
+    const op = allOperators.find(o => o.operator_name === name);
+    if (!op) return;
+
+    document.getElementById('op-detail').style.display = 'block';
+    document.getElementById('op-detail-name').textContent = op.operator_name || '-';
+    document.getElementById('op-detail-sub').textContent = 'Operator #' + (op.operator_no || '-') + ' | Status: ' + statusLabel(op.status_code) + ' | Last Filed: ' + (op.last_filed_date || '-');
+
+    document.getElementById('op-detail-stats').innerHTML =
+      '<div class="well-detail-item"><label>Operator #</label><div class="value">'+(op.operator_no || '-')+'</div></div>'+
+      '<div class="well-detail-item"><label>Status</label><div class="value">'+statusBadgeHTML(op.status_code)+'</div></div>'+
+      '<div class="well-detail-item"><label>Last Filed</label><div class="value">'+(op.last_filed_date || '-')+'</div></div>';
+
+    // Load wells for this operator
+    const wellsTbody = document.getElementById('op-wells-tbody');
+    wellsTbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted" style="padding:20px;">Loading wells...</td></tr>';
+
+    try {
+      const encoded = encodeURIComponent('%' + (op.operator_name || '') + '%');
+      const resp = await fetch(SUPABASE_URL + '/rest/v1/wells?select=api,county,well_type,total_depth,status&operator=ilike.' + encoded + '&limit=50', {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY }
+      });
+      if (!resp.ok) throw new Error('Failed to load wells');
+      const wells = await resp.json();
+
+      if (!wells || wells.length === 0) {
+        wellsTbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted" style="padding:20px;">No wells found for this operator.</td></tr>';
+      } else {
+        const wellStatusBadge = (s) => {
+          const st = (s||'').toUpperCase();
+          const cls = {'PRODUCING':'badge-producing','SHUT IN':'badge-shutin','INJECTION':'badge-active','PLUGGED':'badge-plugged','COMPLETED':'badge-completed'}[st]||'badge-active';
+          return '<span class="badge '+cls+'">'+(s||'-')+'</span>';
+        };
+        wellsTbody.innerHTML = wells.map(w =>
+          '<tr>'+
+            '<td class="mono">'+(w.api || '-')+'</td>'+
+            '<td><span class="tag tag-county">'+(w.county || '-')+'</span></td>'+
+            '<td>'+wellTypeLabel(w.well_type)+'</td>'+
+            '<td class="mono">'+(w.total_depth ? formatNumber(w.total_depth)+"'" : '-')+'</td>'+
+            '<td>'+wellStatusBadge(w.status)+'</td>'+
+          '</tr>'
+        ).join('');
+      }
+    } catch(e) {
+      console.error('[Operators] Failed to load wells:', e.message);
+      wellsTbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted" style="padding:20px;">Unable to load wells.</td></tr>';
+    }
+
+    document.getElementById('op-detail').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  window.closeOpDetail = function() {
+    document.getElementById('op-detail').style.display = 'none';
+  };
+
+  // Events
+  document.getElementById('op-search').addEventListener('input', function() {
+    clearTimeout(searchDebounce);
+    const val = this.value.trim();
+    if (val.length >= 2) {
+      searchDebounce = setTimeout(() => searchOperators(val), 400);
+    } else if (val.length === 0) {
+      searchDebounce = setTimeout(() => loadOperators(), 200);
+    }
+  });
+  document.getElementById('op-status').addEventListener('change', function() {
+    const searchVal = document.getElementById('op-search').value.trim();
+    if (searchVal.length >= 2) {
+      searchOperators(searchVal);
+    } else {
+      loadOperators();
+    }
+  });
+
+  document.querySelectorAll('[data-modal-open]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.add('open')));
+  document.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.remove('open')));
+  document.getElementById('modal-overlay').addEventListener('click', e => { if (e.target.id==='modal-overlay') e.target.classList.remove('open'); });
+  const toggle = document.querySelector('.nav-mobile-toggle');
+  if (toggle) toggle.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+
+  loadOperators();
+})();
+</script>
+</body>
+</html>
