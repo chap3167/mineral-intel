@@ -1,0 +1,9 @@
+# Local Netlify folder
+.netlify
+
+# Large data files (too big for GitHub)
+data/well-coordinates.json
+data/mineral-rolls/
+data/raw/
+data/*.zip
+data/pdfs/
