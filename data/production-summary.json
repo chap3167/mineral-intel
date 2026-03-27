@@ -1,0 +1,280 @@
+{
+  "source": "Texas Railroad Commission - Production Data Query (PDQ) Dump",
+  "source_url": "https://mft.rrc.texas.gov/link/1f5ddb8d-329a-4459-b7f8-177b4f5ee60d",
+  "format_doc": "https://www.rrc.texas.gov/media/50ypu2cg/pdq-dump-user-manual.pdf",
+  "generated_at": "2026-03-27T21:42:58.891Z",
+  "parse_time_seconds": 264,
+  "data_range": {
+    "oldest_month": "202403",
+    "newest_month": "202604",
+    "oldest_formatted": "Mar 2024",
+    "newest_formatted": "Apr 2026"
+  },
+  "totals": {
+    "total_production_records": 6182398,
+    "total_leases_with_production": 244076,
+    "leases_in_ndjson": 244076,
+    "recent_active_leases": 244076
+  },
+  "last_12_months": {
+    "period_start": "202503",
+    "period_start_formatted": "Mar 2025",
+    "total_oil_bbls": 1546573397,
+    "total_gas_mcf": 7157866844,
+    "total_condensate_bbls": 314459903,
+    "total_oil_formatted": "1,546,573,397 bbls",
+    "total_gas_formatted": "7,157,866,844 mcf"
+  },
+  "top_producing_counties_12mo": [
+    {
+      "rank": 1,
+      "county_no": "317",
+      "county_name": "MARTIN",
+      "oil_bbls": 233976306,
+      "gas_mcf": 3439265,
+      "condensate_bbls": 340457,
+      "oil_formatted": "233,976,306 bbls",
+      "gas_formatted": "3,439,265 mcf"
+    },
+    {
+      "rank": 2,
+      "county_no": "329",
+      "county_name": "MIDLAND",
+      "oil_bbls": 217989141,
+      "gas_mcf": 4958834,
+      "condensate_bbls": 732988,
+      "oil_formatted": "217,989,141 bbls",
+      "gas_formatted": "4,958,834 mcf"
+    },
+    {
+      "rank": 3,
+      "county_no": "461",
+      "county_name": "UPTON",
+      "oil_bbls": 99731685,
+      "gas_mcf": 4475544,
+      "condensate_bbls": 88958,
+      "oil_formatted": "99,731,685 bbls",
+      "gas_formatted": "4,475,544 mcf"
+    },
+    {
+      "rank": 4,
+      "county_no": "301",
+      "county_name": "LOVING",
+      "oil_bbls": 99241924,
+      "gas_mcf": 363770854,
+      "condensate_bbls": 57624264,
+      "oil_formatted": "99,241,924 bbls",
+      "gas_formatted": "363,770,854 mcf"
+    },
+    {
+      "rank": 5,
+      "county_no": "227",
+      "county_name": "HOWARD",
+      "oil_bbls": 82057077,
+      "gas_mcf": 506815,
+      "condensate_bbls": 2266,
+      "oil_formatted": "82,057,077 bbls",
+      "gas_formatted": "506,815 mcf"
+    },
+    {
+      "rank": 6,
+      "county_no": "389",
+      "county_name": "REEVES",
+      "oil_bbls": 75312959,
+      "gas_mcf": 851118740,
+      "condensate_bbls": 85073326,
+      "oil_formatted": "75,312,959 bbls",
+      "gas_formatted": "851,118,740 mcf"
+    },
+    {
+      "rank": 7,
+      "county_no": "255",
+      "county_name": "KARNES",
+      "oil_bbls": 73971611,
+      "gas_mcf": 100129945,
+      "condensate_bbls": 12622763,
+      "oil_formatted": "73,971,611 bbls",
+      "gas_formatted": "100,129,945 mcf"
+    },
+    {
+      "rank": 8,
+      "county_no": "383",
+      "county_name": "REAGAN",
+      "oil_bbls": 64491007,
+      "gas_mcf": 3202947,
+      "condensate_bbls": 22394,
+      "oil_formatted": "64,491,007 bbls",
+      "gas_formatted": "3,202,947 mcf"
+    },
+    {
+      "rank": 9,
+      "county_no": "003",
+      "county_name": "ANDREWS",
+      "oil_bbls": 58591059,
+      "gas_mcf": 12710226,
+      "condensate_bbls": 2353341,
+      "oil_formatted": "58,591,059 bbls",
+      "gas_formatted": "12,710,226 mcf"
+    },
+    {
+      "rank": 10,
+      "county_no": "173",
+      "county_name": "GLASSCOCK",
+      "oil_bbls": 48113002,
+      "gas_mcf": 1486210,
+      "condensate_bbls": 12738,
+      "oil_formatted": "48,113,002 bbls",
+      "gas_formatted": "1,486,210 mcf"
+    },
+    {
+      "rank": 11,
+      "county_no": "475",
+      "county_name": "WARD",
+      "oil_bbls": 46531928,
+      "gas_mcf": 66557652,
+      "condensate_bbls": 8965534,
+      "oil_formatted": "46,531,928 bbls",
+      "gas_formatted": "66,557,652 mcf"
+    },
+    {
+      "rank": 12,
+      "county_no": "283",
+      "county_name": "LA SALLE",
+      "oil_bbls": 32938900,
+      "gas_mcf": 267808880,
+      "condensate_bbls": 14339711,
+      "oil_formatted": "32,938,900 bbls",
+      "gas_formatted": "267,808,880 mcf"
+    },
+    {
+      "rank": 13,
+      "county_no": "013",
+      "county_name": "ATASCOSA",
+      "oil_bbls": 25378685,
+      "gas_mcf": 679411,
+      "condensate_bbls": 99059,
+      "oil_formatted": "25,378,685 bbls",
+      "gas_formatted": "679,411 mcf"
+    },
+    {
+      "rank": 14,
+      "county_no": "177",
+      "county_name": "GONZALES",
+      "oil_bbls": 23844379,
+      "gas_mcf": 3585292,
+      "condensate_bbls": 1080679,
+      "oil_formatted": "23,844,379 bbls",
+      "gas_formatted": "3,585,292 mcf"
+    },
+    {
+      "rank": 15,
+      "county_no": "123",
+      "county_name": "DE WITT",
+      "oil_bbls": 22941034,
+      "gas_mcf": 179356715,
+      "condensate_bbls": 22780644,
+      "oil_formatted": "22,941,034 bbls",
+      "gas_formatted": "179,356,715 mcf"
+    },
+    {
+      "rank": 16,
+      "county_no": "501",
+      "county_name": "YOAKUM",
+      "oil_bbls": 22519301,
+      "gas_mcf": 0,
+      "condensate_bbls": 0,
+      "oil_formatted": "22,519,301 bbls",
+      "gas_formatted": "0 mcf"
+    },
+    {
+      "rank": 17,
+      "county_no": "127",
+      "county_name": "DIMMIT",
+      "oil_bbls": 22043283,
+      "gas_mcf": 90129257,
+      "condensate_bbls": 10756724,
+      "oil_formatted": "22,043,283 bbls",
+      "gas_formatted": "90,129,257 mcf"
+    },
+    {
+      "rank": 18,
+      "county_no": "311",
+      "county_name": "MCMULLEN",
+      "oil_bbls": 20858993,
+      "gas_mcf": 150910791,
+      "condensate_bbls": 5598837,
+      "oil_formatted": "20,858,993 bbls",
+      "gas_formatted": "150,910,791 mcf"
+    },
+    {
+      "rank": 19,
+      "county_no": "371",
+      "county_name": "PECOS",
+      "oil_bbls": 20696317,
+      "gas_mcf": 21527213,
+      "condensate_bbls": 562479,
+      "oil_formatted": "20,696,317 bbls",
+      "gas_formatted": "21,527,213 mcf"
+    },
+    {
+      "rank": 20,
+      "county_no": "495",
+      "county_name": "WINKLER",
+      "oil_bbls": 20477137,
+      "gas_mcf": 29303429,
+      "condensate_bbls": 1565304,
+      "oil_formatted": "20,477,137 bbls",
+      "gas_formatted": "29,303,429 mcf"
+    },
+    {
+      "rank": 21,
+      "county_no": "115",
+      "county_name": "DAWSON",
+      "oil_bbls": 20222001,
+      "gas_mcf": 0,
+      "condensate_bbls": 0,
+      "oil_formatted": "20,222,001 bbls",
+      "gas_formatted": "0 mcf"
+    },
+    {
+      "rank": 22,
+      "county_no": "135",
+      "county_name": "ECTOR",
+      "oil_bbls": 17284018,
+      "gas_mcf": 1487926,
+      "condensate_bbls": 101499,
+      "oil_formatted": "17,284,018 bbls",
+      "gas_formatted": "1,487,926 mcf"
+    },
+    {
+      "rank": 23,
+      "county_no": "103",
+      "county_name": "CRANE",
+      "oil_bbls": 15794783,
+      "gas_mcf": 4252437,
+      "condensate_bbls": 37683,
+      "oil_formatted": "15,794,783 bbls",
+      "gas_formatted": "4,252,437 mcf"
+    },
+    {
+      "rank": 24,
+      "county_no": "165",
+      "county_name": "GAINES",
+      "oil_bbls": 15627487,
+      "gas_mcf": 98479,
+      "condensate_bbls": 1585,
+      "oil_formatted": "15,627,487 bbls",
+      "gas_formatted": "98,479 mcf"
+    },
+    {
+      "rank": 25,
+      "county_no": "033",
+      "county_name": "BORDEN",
+      "oil_bbls": 11261156,
+      "gas_mcf": 0,
+      "condensate_bbls": 0,
+      "oil_formatted": "11,261,156 bbls",
+      "gas_formatted": "0 mcf"
+    }
+  ]
+}
