@@ -1,6 +1,6 @@
 /**
  * site.js — MineralSearch Platform JavaScript
- * Queries Supabase REST API for well data. Falls back to demo data if unreachable.
+ * Queries Supabase REST API for well data. Shows nothing if Supabase is unreachable.
  * Supports multi-region: Texas Onshore + Gulf of Mexico Offshore.
  * Includes paywall, production data, mineral ownership, CSV export, and map integration.
  */
@@ -1379,12 +1379,11 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
     'ZAVALA': { latMin: 28.6406, latMax: 29.0913, lngMin: -100.1143, lngMax: -99.409 },
   };
 
+  // generateCoordinates removed — wells without real coordinates should not appear on the map.
+  // Only wells with real lat/lng from RRC or Supabase will be shown.
   function generateCoordinates(county) {
-    const bounds = COUNTY_BOUNDS[county] || COUNTY_BOUNDS['MIDLAND'];
-    return {
-      lat: bounds.latMin + Math.random() * (bounds.latMax - bounds.latMin),
-      lng: bounds.lngMin + Math.random() * (bounds.lngMax - bounds.lngMin)
-    };
+    // Return null — do not generate fake coordinates
+    return null;
   }
 
   // ============================================
@@ -1427,11 +1426,8 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
         const resp = await fetch(url, { headers: fetchHeaders });
         if (!resp.ok) return [];
         const data = await resp.json();
-        allWells = (data || []).map(w => {
-          if (w.lat && w.lng) return w;
-          const coord = generateCoordinates(w.county || 'MIDLAND');
-          return { ...w, lat: coord.lat, lng: coord.lng };
-        });
+        // Only include wells with real coordinates — do not generate fake positions
+        allWells = (data || []).filter(w => w.lat && w.lng);
       } else {
         // Paginate all wells with real coordinates
         let page = 0;

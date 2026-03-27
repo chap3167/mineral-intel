@@ -179,71 +179,19 @@ function main() {
   });
   console.log(`  Merged ${fracMatches} frac disclosure records`);
 
-  // Cross-reference ownership from county clerk deeds
+  // NOTE: Deed/lease cross-referencing removed.
+  // Previously this code randomly assigned deeds and leases to wells using Math.random(),
+  // creating fake linkages. Without real API-number-to-deed matching, we cannot create
+  // accurate ownership/lease associations. Wells will have empty ownership[] and leases[]
+  // arrays until real cross-reference data is available.
+
   const deedTypes = ['MINERAL DEED', 'ROYALTY DEED', 'MINERAL INTEREST CONVEYANCE'];
   const deeds = clerkRecords.filter(r => deedTypes.includes(r.documentType));
-  console.log(`  Processing ${deeds.length} mineral deeds for ownership data`);
-
-  // Attach deeds to wells by county (since deeds reference legal descriptions, not API numbers)
-  const wellsByCounty = new Map();
-  wellIndex.forEach((well) => {
-    if (!wellsByCounty.has(well.county)) wellsByCounty.set(well.county, []);
-    wellsByCounty.get(well.county).push(well);
-  });
-
-  deeds.forEach(deed => {
-    const countyWells = wellsByCounty.get(deed.county) || [];
-    // Assign each deed to 1-3 random wells in the same county (simulating section overlap)
-    const numWells = Math.min(countyWells.length, Math.floor(Math.random() * 3) + 1);
-    for (let i = 0; i < numWells; i++) {
-      const idx = Math.floor(Math.random() * countyWells.length);
-      countyWells[idx].ownership.push({
-        name: deed.grantee,
-        type: deed.documentType,
-        interest: deed.mineralInterest || 'Unknown',
-        dateFiled: deed.dateFiled,
-        instrumentNumber: deed.instrumentNumber
-      });
-    }
-  });
-
-  // Cross-reference leases from county clerk records
   const leaseRecords = clerkRecords.filter(r => r.documentType === 'OIL AND GAS LEASE');
-  console.log(`  Processing ${leaseRecords.length} lease records`);
 
-  leaseRecords.forEach(lease => {
-    const countyWells = wellsByCounty.get(lease.county) || [];
-    const numWells = Math.min(countyWells.length, Math.floor(Math.random() * 3) + 1);
-    for (let i = 0; i < numWells; i++) {
-      const idx = Math.floor(Math.random() * countyWells.length);
-      countyWells[idx].leases.push({
-        lessee: lease.grantee,
-        lessor: lease.grantor,
-        date: lease.dateFiled,
-        expirationDate: lease.expirationDate || null,
-        royaltyRate: lease.royaltyRate || null,
-        bonusPerAcre: lease.bonusPerAcre || null,
-        instrumentNumber: lease.instrumentNumber
-      });
-    }
-  });
-
-  // Also add GLO leases by county
-  gloLeases.forEach(glo => {
-    const countyWells = wellsByCounty.get(glo.county) || [];
-    if (countyWells.length === 0) return;
-    const idx = Math.floor(Math.random() * countyWells.length);
-    countyWells[idx].leases.push({
-      lessee: glo.lessee,
-      lessor: 'State of Texas (GLO)',
-      date: glo.leaseDate,
-      expirationDate: glo.expirationDate,
-      royaltyRate: glo.royaltyRate,
-      bonusPerAcre: `$${glo.bonusPerAcre}`,
-      leaseNumber: glo.leaseNumber,
-      source: 'GLO'
-    });
-  });
+  console.log(`  Found ${deeds.length} mineral deeds (not linked — no real cross-reference available)`);
+  console.log(`  Found ${leaseRecords.length} lease records (not linked — no real cross-reference available)`);
+  console.log(`  Found ${gloLeases.length} GLO leases (not linked — no real cross-reference available)`);
 
   // Convert to array and sort
   const masterDB = Array.from(wellIndex.values());

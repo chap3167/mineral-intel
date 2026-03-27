@@ -1,6 +1,6 @@
 /**
  * site.js — MineralSearch Platform JavaScript
- * Queries Supabase REST API for well data. Falls back to demo data if unreachable.
+ * Queries Supabase REST API for well data. Shows nothing if Supabase is unreachable.
  * Supports multi-region: Texas Onshore + Gulf of Mexico Offshore.
  * Includes paywall, production data, mineral ownership, CSV export, and map integration.
  */
@@ -971,12 +971,9 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
     'UPTON':    { latMin:31.10, latMax:31.45, lngMin:-102.10, lngMax:-101.70 },
   };
 
+  // generateCoordinates removed — wells without real coordinates should not appear on the map.
   function generateCoordinates(county) {
-    const bounds = COUNTY_BOUNDS[county] || COUNTY_BOUNDS['MIDLAND'];
-    return {
-      lat: bounds.latMin + Math.random() * (bounds.latMax - bounds.latMin),
-      lng: bounds.lngMin + Math.random() * (bounds.lngMax - bounds.lngMin)
-    };
+    return null;
   }
 
   // ============================================
@@ -996,10 +993,8 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
       if (!supabaseAvailable) await initSupabase();
       if (supabaseAvailable) {
         const { data } = await supabaseGet('wells?' + params.join('&'), false);
-        return (data || []).map(w => {
-          const coord = generateCoordinates(w.county || 'MIDLAND');
-          return { ...w, lat: coord.lat, lng: coord.lng };
-        });
+        // Only include wells with real coordinates
+        return (data || []).filter(w => w.lat && w.lng);
       }
     } catch (e) {
       console.log('[MineralSearch] Map Supabase fetch failed:', e.message);

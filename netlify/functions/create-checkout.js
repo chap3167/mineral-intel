@@ -3,7 +3,7 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const STRIPE_SECRET = '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';
+  const STRIPE_SECRET = process.env.STRIPE_SECRET_KEY;
 
   const PRICES = {
     basic: 'price_1TCXj01EkEHfEdsNAhKU3tg0',

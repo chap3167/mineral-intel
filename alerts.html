@@ -180,9 +180,15 @@
     <!-- Recent Alert Feed -->
     <div class="flex-between mb-2">
       <h3>Recent Alerts</h3>
-      <span class="badge badge-live" style="font-size:0.8rem;">Live Demo Feed</span>
     </div>
-    <div class="alert-feed" id="alert-feed"></div>
+    <div class="alert-feed" id="alert-feed">
+      <div class="alert-item" style="justify-content:center;padding:40px 20px;">
+        <div class="alert-item-content" style="text-align:center;">
+          <div class="alert-item-title" style="color:var(--text-muted);">No alerts</div>
+          <div class="alert-item-desc">Alerts will appear here when real data changes are detected in your monitored areas.</div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>
@@ -209,93 +215,9 @@
 (function() {
   'use strict';
 
-  function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
-  function rand(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
-
   window.toggleAlertType = function(el) {
     el.classList.toggle('selected');
   };
-
-  const OPERATORS = ['Pioneer Natural Resources','Diamondback Energy','ConocoPhillips','EOG Resources','Devon Energy','Apache Corporation','Occidental Petroleum','Chevron USA','ExxonMobil','Marathon Oil','Endeavor Energy Resources','CrownQuest Operating'];
-  const COUNTIES = ['Midland','Ector','Reeves','Loving','Ward','Pecos','Howard','Martin','Karnes','DeWitt','Webb','Dimmit'];
-  const FORMATIONS = ['Wolfcamp A','Wolfcamp B','Bone Spring','Spraberry','Lower Spraberry','Eagle Ford Shale','Austin Chalk','Delaware Sand'];
-  const NAMES = ['Smith, John R.','Johnson Family Trust','Bass Enterprises','Williams, Robert T.','Martinez Family Trust'];
-
-  const alertTemplates = [
-    { type: 'permit', icon: '&#9881;', iconBg: 'var(--blue-dim)', iconColor: 'var(--blue)', gen: () => {
-      const op = pick(OPERATORS), county = pick(COUNTIES), fm = pick(FORMATIONS);
-      return { title: 'New Permit Filed', desc: op+' filed a new drilling permit in '+county+' County targeting the '+fm+' formation. Proposed depth: '+rand(8000,13000)+"'.", tags: [county, fm, 'Permit'] };
-    }},
-    { type: 'lease', icon: '&#9830;', iconBg: 'var(--gold-dim)', iconColor: 'var(--gold)', gen: () => {
-      const op = pick(OPERATORS), county = pick(COUNTIES), owner = pick(NAMES);
-      return { title: 'New Lease Recorded', desc: op+' recorded a new oil and gas lease with '+owner+' in '+county+' County. Royalty rate: '+pick(['1/4','3/16','25%'])+'.', tags: [county, 'Lease', op.split(' ')[0]] };
-    }},
-    { type: 'production', icon: '&#9733;', iconBg: 'var(--green-dim)', iconColor: 'var(--green)', gen: () => {
-      const op = pick(OPERATORS), county = pick(COUNTIES);
-      const change = pick(['+35%','+50%','+120%','-40%','-25%']);
-      const dir = change.startsWith('+') ? 'increased' : 'decreased';
-      return { title: 'Production Change Detected', desc: op+' well in '+county+' County production '+dir+' by '+change.replace(/[+-]/,'')+' from previous month. Current rate: '+rand(200,2000)+' bbl/day.', tags: [county, change, 'Production'] };
-    }},
-    { type: 'completion', icon: '&#9889;', iconBg: 'var(--accent-dim)', iconColor: 'var(--accent)', gen: () => {
-      const op = pick(OPERATORS), county = pick(COUNTIES), fm = pick(FORMATIONS);
-      return { title: 'Well Completion Reported', desc: op+' completed a new horizontal well in '+county+' County. '+fm+' formation, '+rand(5000,12000)+"' lateral. IP: "+rand(500,2500)+' bbl/day.', tags: [county, fm, 'Completion'] };
-    }},
-    { type: 'ownership', icon: '&#128270;', iconBg: 'rgba(139,92,246,0.15)', iconColor: '#8b5cf6', gen: () => {
-      const county = pick(COUNTIES), owner1 = pick(NAMES), owner2 = pick(NAMES);
-      return { title: 'Deed Transfer Recorded', desc: 'Mineral deed recorded in '+county+' County from '+owner1+' to '+owner2+'. Section '+rand(1,48)+', Block '+rand(1,45)+'.', tags: [county, 'Mineral Deed'] };
-    }},
-    { type: 'shutin', icon: '&#9888;', iconBg: 'var(--gold-dim)', iconColor: 'var(--gold)', gen: () => {
-      const op = pick(OPERATORS), county = pick(COUNTIES);
-      return { title: 'Well Shut-In Reported', desc: op+' reported shut-in status for a well in '+county+' County. Previous production: '+rand(100,800)+' bbl/day. Reason: '+pick(['Mechanical issue','Pipeline maintenance','Offset frac protection','Low pressure'])+'.', tags: [county, 'Shut-in', op.split(' ')[0]] };
-    }}
-  ];
-
-  function generateAlerts() {
-    const now = new Date();
-    const alerts = [];
-    for (let i = 0; i < 20; i++) {
-      const template = pick(alertTemplates);
-      const data = template.gen();
-      const minutesAgo = rand(2, 4320); // up to 3 days
-      const time = new Date(now.getTime() - minutesAgo * 60000);
-      let timeStr;
-      if (minutesAgo < 60) timeStr = minutesAgo + ' min ago';
-      else if (minutesAgo < 1440) timeStr = Math.floor(minutesAgo/60) + ' hours ago';
-      else timeStr = Math.floor(minutesAgo/1440) + ' days ago';
-
-      alerts.push({
-        ...data,
-        icon: template.icon,
-        iconBg: template.iconBg,
-        iconColor: template.iconColor,
-        time: timeStr,
-        minutesAgo: minutesAgo,
-        isNew: minutesAgo < 120
-      });
-    }
-    return alerts.sort((a,b) => a.minutesAgo - b.minutesAgo);
-  }
-
-  function renderAlerts() {
-    const alerts = generateAlerts();
-    const feed = document.getElementById('alert-feed');
-    feed.innerHTML = alerts.map(a =>
-      '<div class="alert-item">'+
-        '<div class="alert-dot '+(a.isNew?'new':'read')+'"></div>'+
-        '<div class="alert-item-icon" style="background:'+a.iconBg+';color:'+a.iconColor+';">'+a.icon+'</div>'+
-        '<div class="alert-item-content">'+
-          '<div class="alert-item-title">'+a.title+'</div>'+
-          '<div class="alert-item-desc">'+a.desc+'</div>'+
-          '<div class="alert-item-meta">'+
-            '<span>'+a.time+'</span>'+
-            a.tags.map(t => '<span class="tag">'+t+'</span>').join('')+
-          '</div>'+
-        '</div>'+
-      '</div>'
-    ).join('');
-  }
-
-  renderAlerts();
 
   // Modal & Nav
   document.querySelectorAll('[data-modal-open]').forEach(el => el.addEventListener('click', () => document.getElementById('modal-overlay').classList.add('open')));

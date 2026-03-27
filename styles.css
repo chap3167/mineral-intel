@@ -2659,10 +2659,22 @@ a:hover { color: #33e0be; }
 }
 
 @media (max-width: 480px) {
-  .hp-hero-h1 { font-size: 1.8rem; }
+  .hp-hero-h1 { font-size: 1.6rem; }
+  .hp-hero-sub { font-size: 0.9rem; }
   .hp-coming-banner { flex-direction: column; align-items: flex-start; }
   .hp-coming-form { width: 100%; }
-  .hp-coming-form input { flex: 1; width: auto; }
+  .hp-coming-form input { flex: 1; width: auto; font-size: 16px; } /* Prevent iOS zoom */
+  .container { padding: 0 12px; }
+  .section-title { font-size: 1.4rem; }
+  .section-sub { font-size: 0.85rem; }
+  .card { padding: 16px; }
+  .btn { padding: 12px 20px; font-size: 0.9rem; width: 100%; justify-content: center; }
+  .btn-lg { padding: 14px; }
+  input, select, textarea { font-size: 16px !important; } /* Prevent iOS zoom */
+  .wells-table th { font-size: 0.65rem; padding: 6px 8px; }
+  .wells-table td { font-size: 0.75rem; padding: 6px 8px; }
+  .wells-pill { padding: 6px 10px; font-size: 0.72rem; }
+  .nav-links a { font-size: 1rem; padding: 12px 16px; }
 }
 
 /* ============================================

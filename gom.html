@@ -390,10 +390,7 @@
 
   const STATUSES = ['Producing', 'Shut-in', 'P&A', 'Drilling', 'Completed'];
 
-  function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-
-  // Generate sample GOM wells
+  // Load real GOM wells from data files
   let gomWells = [];
   let gomPage = 1;
   const PAGE_SIZE = 20;
