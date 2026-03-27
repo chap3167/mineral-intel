@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mineral Ownership Data — Texas County CAD Records | MineralSearch</title>
+  <meta name="description" content="Search 835,896 mineral ownership records across 6 Texas counties. Owner names, addresses, legal descriptions, operators, lease names, and decimal interests from county appraisal districts.">
+  <meta name="keywords" content="mineral ownership Texas, mineral rights data, CAD mineral records, Howard County minerals, Martin County minerals, Ector County minerals, mineral interest search, landman mineral data">
+  <meta property="og:title" content="Mineral Ownership Data — 835K+ Records | MineralSearch">
+  <meta property="og:description" content="Search mineral ownership records from Texas county appraisal districts. Owner names, legal descriptions, operators, and decimal interests.">
+  <meta property="og:url" content="https://mineralsearch.io/minerals.html">
+  <meta property="og:image" content="https://mineralsearch.io/og-image.png">
+  <link rel="canonical" href="https://mineralsearch.io/minerals.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4aa'/><text x='50' y='72' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL1SSEB6N1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TL1SSEB6N1');
+  </script>
+  <style>
+    .minerals-hero { padding: 100px 0 20px; }
+    .minerals-hero h1 { font-size: 2.2rem; margin-bottom: 8px; }
+    .minerals-stats { display: flex; gap: 24px; flex-wrap: wrap; margin: 16px 0 24px; }
+    .minerals-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 24px; text-align: center; min-width: 140px; }
+    .minerals-stat strong { display: block; font-size: 1.5rem; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+    .minerals-stat span { font-size: 0.8rem; color: var(--text-secondary); }
+
+    .county-selector { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+    .county-btn { padding: 10px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all var(--transition); font-family: inherit; }
+    .county-btn:hover { border-color: var(--accent); color: var(--text); }
+    .county-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+    .county-btn .count { display: block; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
+
+    .minerals-controls { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+    .minerals-controls .filter-input { flex: 1; min-width: 240px; }
+    .minerals-results-info { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px; }
+
+    .minerals-table-wrap { overflow-x: auto; margin-bottom: 24px; }
+    .minerals-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .minerals-table thead th { padding: 10px 12px; text-align: left; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); white-space: nowrap; background: var(--bg-secondary); position: sticky; top: 0; }
+    .minerals-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    .minerals-table tbody tr:hover { background: var(--bg-card-hover); }
+    .minerals-table .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+
+    .blurred-row td { filter: blur(5px); user-select: none; pointer-events: none; }
+
+    .paywall-banner { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--accent); border-radius: var(--radius); padding: 32px; text-align: center; margin: 24px 0; }
+    .paywall-banner h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .paywall-banner p { color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem; }
+    .paywall-banner .price { font-size: 2rem; font-weight: 800; color: var(--accent); }
+    .paywall-banner .price span { font-size: 1rem; font-weight: 400; color: var(--text-secondary); }
+
+    .minerals-pagination { display: flex; justify-content: center; gap: 8px; margin: 24px 0; flex-wrap: wrap; }
+    .minerals-pagination button { padding: 8px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xs); color: var(--text-secondary); font-size: 0.85rem; cursor: pointer; font-family: inherit; transition: all var(--transition); }
+    .minerals-pagination button:hover { border-color: var(--accent); color: var(--text); }
+    .minerals-pagination button.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+    .minerals-pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .loading-spinner { text-align: center; padding: 60px 0; color: var(--text-muted); }
+    .loading-spinner::after { content: ''; display: block; width: 40px; height: 40px; margin: 16px auto; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .source-note { font-size: 0.78rem; color: var(--text-muted); margin-top: 16px; padding: 12px 16px; background: var(--bg-card); border-radius: var(--radius-xs); border: 1px solid var(--border); }
+
+    @media (max-width: 768px) {
+      .minerals-hero h1 { font-size: 1.6rem; }
+      .minerals-stats { gap: 12px; }
+      .minerals-stat { min-width: 100px; padding: 12px 16px; }
+      .minerals-stat strong { font-size: 1.2rem; }
+      .county-btn { padding: 8px 14px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">M</div>
+      MineralSearch
+    </a>
+    <ul class="nav-links">
+      <li><a href="wells.html">Texas</a></li>
+      <li><a href="gom.html">Gulf of Mexico</a></li>
+      <li><a href="minerals.html" class="active">Minerals</a></li>
+      <li><a href="calculator.html">Tools</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="login.html" class="nav-cta">Log In</a></li>
+    </ul>
+    <button class="nav-mobile-toggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-wrapper" style="padding-top: 80px;">
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="minerals-hero">
+      <h1>Mineral Ownership Data</h1>
+      <p style="color:var(--text-secondary);font-size:1.05rem;margin-bottom:8px;">County appraisal district (CAD) mineral interest records across Texas. Owner names, legal descriptions, operators, leases, and decimal interests.</p>
+      <div class="minerals-stats">
+        <div class="minerals-stat"><strong>835,896</strong><span>Total Records</span></div>
+        <div class="minerals-stat"><strong>6</strong><span>Counties</span></div>
+        <div class="minerals-stat"><strong>2025</strong><span>Certified Rolls</span></div>
+        <div class="minerals-stat"><strong>Monthly</strong><span>Updates</span></div>
+      </div>
+    </div>
+
+    <!-- County Selector -->
+    <h3 style="margin-bottom:12px;font-size:1rem;">Select County <span style="font-size:0.75rem;color:var(--text-muted);font-weight:400;">(70 counties available)</span></h3>
+    <div style="margin-bottom:16px;">
+      <select id="county-select" onchange="if(this.value)loadCounty(this.value)" style="width:100%;max-width:400px;padding:10px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.9rem;outline:none;cursor:pointer;">
+        <option value="">-- Choose a county --</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;" id="top-counties">
+      <button class="county-btn" data-county="HOWARD" onclick="loadCounty('HOWARD')">Howard<span class="count">215,592</span></button>
+      <button class="county-btn" data-county="MARTIN" onclick="loadCounty('MARTIN')">Martin<span class="count">208,259</span></button>
+      <button class="county-btn" data-county="ECTOR" onclick="loadCounty('ECTOR')">Ector<span class="count">154,323</span></button>
+      <button class="county-btn" data-county="ANDREWS" onclick="loadCounty('ANDREWS')">Andrews<span class="count">108,814</span></button>
+      <button class="county-btn" data-county="WARD" onclick="loadCounty('WARD')">Ward<span class="count">75,959</span></button>
+      <button class="county-btn" data-county="DEWITT" onclick="loadCounty('DEWITT')">DeWitt<span class="count">72,949</span></button>
+      <button class="county-btn" data-county="MIDLAND" onclick="loadCounty('MIDLAND')">Midland<span class="count">1,106</span></button>
+    </div>
+
+    <!-- Search / Filter Controls -->
+    <div class="minerals-controls" id="minerals-controls" style="display:none;">
+      <input type="text" id="minerals-search" class="filter-input" placeholder="Search by owner name, operator, or lease name...">
+      <select id="minerals-type-filter" class="filter-select" style="min-width:160px;">
+        <option value="">All Types</option>
+        <option value="Royalty Interest">Royalty Interest</option>
+        <option value="Working Interest">Working Interest</option>
+        <option value="Mineral Interest">Mineral Interest</option>
+        <option value="Overriding Royalty">Overriding Royalty</option>
+      </select>
+      <button class="btn btn-secondary" onclick="clearFilters()" style="padding:10px 16px;font-size:0.85rem;">Clear</button>
+    </div>
+
+    <div id="minerals-results-info" class="minerals-results-info" style="display:none;"></div>
+
+    <!-- CTA Banner for non-subscribers -->
+    <div class="paywall-banner" id="paywall-banner" style="display:none;">
+      <h3>Unlock Full Mineral Ownership Data</h3>
+      <p>See complete owner names, mailing addresses, legal descriptions, operators, lease names, and decimal interests for all 835,896 records across 6 counties.</p>
+      <div class="price">$14.99<span>/mo</span></div>
+      <p style="color:var(--text-muted);font-size:0.85rem;margin:8px 0 16px;">Cancel anytime. No contracts. No setup fees.</p>
+      <a href="login.html?tab=signup" class="btn btn-primary btn-lg" style="display:inline-block;">Subscribe Now</a>
+    </div>
+
+    <!-- Data Table -->
+    <div class="minerals-table-wrap" id="table-wrap" style="display:none;">
+      <table class="minerals-table">
+        <thead>
+          <tr>
+            <th>Owner Name</th>
+            <th>Owner Address</th>
+            <th>Legal Description</th>
+            <th>Type</th>
+            <th>Operator</th>
+            <th>Lease Name</th>
+            <th>Decimal Interest</th>
+            <th>Appraised Value</th>
+          </tr>
+        </thead>
+        <tbody id="minerals-tbody">
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="minerals-pagination" id="minerals-pagination" style="display:none;"></div>
+
+    <!-- Loading state -->
+    <div class="loading-spinner" id="loading-spinner" style="display:none;">Loading mineral records...</div>
+
+    <!-- No county selected state -->
+    <div id="empty-state" style="text-align:center;padding:60px 0;color:var(--text-muted);">
+      <p style="font-size:1.1rem;margin-bottom:8px;">Select a county above to view mineral ownership records.</p>
+      <p style="font-size:0.9rem;">Data sourced from 2025 certified county appraisal district mineral rolls.</p>
+    </div>
+
+    <!-- Source note -->
+    <div class="source-note" id="source-note" style="display:none;">
+      Data sourced from <span id="source-text"></span>. Record counts reflect the full certified mineral roll for each county. MineralSearch does not alter or fabricate any records.
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer" style="padding:30px 0;">
+  <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+    <span>&copy; 2026 MineralSearch. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="wells.html">Texas</a> &middot; <a href="gom.html">GOM</a> &middot; <a href="minerals.html">Minerals</a> &middot; <a href="faq.html">FAQ</a></span>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // State
+  let allData = [];
+  let filteredData = [];
+  let currentCounty = null;
+  let currentPage = 1;
+  const PAGE_SIZE = 50;
+  const FREE_VISIBLE_ROWS = 10;
+
+  // Simulated access level — in production, check auth state
+  // For now, default to 'free' — the site.js auth system will override this
+  let accessLevel = 'free';
+
+  // Check if user has a subscription (look for stored auth)
+  try {
+    const stored = localStorage.getItem('mi_access');
+    if (stored === 'paid' || stored === 'pro' || stored === 'subscriber') {
+      accessLevel = 'paid';
+    }
+  } catch(e) {}
+
+  const countyMeta = {
+    HOWARD:{name:'Howard',records:215592},MARTIN:{name:'Martin',records:208259},ECTOR:{name:'Ector',records:154323},
+    ANDREWS:{name:'Andrews',records:108814},WARD:{name:'Ward',records:75959},DEWITT:{name:'DeWitt',records:72949},
+    STARR:{name:'Starr',records:2865},TERRELL:{name:'Terrell',records:2200},GALVESTON:{name:'Galveston',records:1642},
+    POLK:{name:'Polk',records:1519},MIDLAND:{name:'Midland',records:1106},MITCHELL:{name:'Mitchell',records:739},
+    JASPER:{name:'Jasper',records:715},ARANSAS:{name:'Aransas',records:406},MEDINA:{name:'Medina',records:318},
+    STEPHENS:{name:'Stephens',records:318},KIMBLE:{name:'Kimble',records:206},NEWTON:{name:'Newton',records:199},
+    HUDSPETH:{name:'Hudspeth',records:118},ROBERTS:{name:'Roberts',records:102},WALKER:{name:'Walker',records:100},
+    LAMB:{name:'Lamb',records:95},GAINES:{name:'Gaines',records:93},YOAKUM:{name:'Yoakum',records:88},
+    'PALO PINTO':{name:'Palo Pinto',records:70},MONTAGUE:{name:'Montague',records:59},HEMPHILL:{name:'Hemphill',records:58},
+    MADISON:{name:'Madison',records:48},LIPSCOMB:{name:'Lipscomb',records:45},YOUNG:{name:'Young',records:38},
+    PARKER:{name:'Parker',records:36},BRAZOS:{name:'Brazos',records:33},MCMULLEN:{name:'McMullen',records:32},
+    CALLAHAN:{name:'Callahan',records:30},BRAZORIA:{name:'Brazoria',records:28},FAYETTE:{name:'Fayette',records:27},
+    CALDWELL:{name:'Caldwell',records:25},MOORE:{name:'Moore',records:23},WASHINGTON:{name:'Washington',records:23},
+    HENDERSON:{name:'Henderson',records:21},CASS:{name:'Cass',records:18},CAMP:{name:'Camp',records:13},
+    HOCKLEY:{name:'Hockley',records:12},DUVAL:{name:'Duval',records:11},HOOD:{name:'Hood',records:11},
+    KENEDY:{name:'Kenedy',records:11},HALE:{name:'Hale',records:10},BEE:{name:'Bee',records:9},
+    RAINS:{name:'Rains',records:9},REAL:{name:'Real',records:9},PRESIDIO:{name:'Presidio',records:8},
+    BELL:{name:'Bell',records:6},PARMER:{name:'Parmer',records:6},SCHLEICHER:{name:'Schleicher',records:6},
+    ERATH:{name:'Erath',records:4},KNOX:{name:'Knox',records:3},VICTORIA:{name:'Victoria',records:3},
+    BASTROP:{name:'Bastrop',records:2},BAYLOR:{name:'Baylor',records:2},BROOKS:{name:'Brooks',records:2},
+    COLORADO:{name:'Colorado',records:2},COMANCHE:{name:'Comanche',records:2},CONCHO:{name:'Concho',records:2},
+    SABINE:{name:'Sabine',records:2},WILLACY:{name:'Willacy',records:2},CALHOUN:{name:'Calhoun',records:1},
+    HILL:{name:'Hill',records:1},HOPKINS:{name:'Hopkins',records:1},'TOM GREEN':{name:'Tom Green',records:1},
+    UVALDE:{name:'Uvalde',records:1}
+  };
+
+  // Populate county dropdown sorted by name
+  const sel = document.getElementById('county-select');
+  Object.entries(countyMeta).sort((a,b) => a[1].name.localeCompare(b[1].name)).forEach(([key, val]) => {
+    const opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = val.name + ' County (' + val.records.toLocaleString() + ' records)';
+    sel.appendChild(opt);
+  });
+
+  // Elements
+  const tbody = document.getElementById('minerals-tbody');
+  const tableWrap = document.getElementById('table-wrap');
+  const pagination = document.getElementById('minerals-pagination');
+  const controls = document.getElementById('minerals-controls');
+  const resultsInfo = document.getElementById('minerals-results-info');
+  const spinner = document.getElementById('loading-spinner');
+  const emptyState = document.getElementById('empty-state');
+  const paywallBanner = document.getElementById('paywall-banner');
+  const sourceNote = document.getElementById('source-note');
+  const sourceText = document.getElementById('source-text');
+  const searchInput = document.getElementById('minerals-search');
+  const typeFilter = document.getElementById('minerals-type-filter');
+
+  // Debounced search
+  let searchTimeout;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(applyFilters, 300);
+  });
+  typeFilter.addEventListener('change', applyFilters);
+
+  window.loadCounty = async function(county) {
+    if (currentCounty === county) return;
+    currentCounty = county;
+    currentPage = 1;
+    allData = [];
+    filteredData = [];
+
+    // Update active button
+    document.querySelectorAll('.county-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.county === county);
+    });
+
+    // Show loading
+    emptyState.style.display = 'none';
+    tableWrap.style.display = 'none';
+    pagination.style.display = 'none';
+    controls.style.display = 'none';
+    resultsInfo.style.display = 'none';
+    paywallBanner.style.display = 'none';
+    sourceNote.style.display = 'none';
+    spinner.style.display = 'block';
+
+    try {
+      const resp = await fetch('data/parsed-minerals/' + county + '.json');
+      if (!resp.ok) throw new Error('Failed to load data');
+      allData = await resp.json();
+      filteredData = allData;
+
+      // Reset search
+      searchInput.value = '';
+      typeFilter.value = '';
+
+      spinner.style.display = 'none';
+      controls.style.display = 'flex';
+      tableWrap.style.display = 'block';
+      pagination.style.display = 'flex';
+      resultsInfo.style.display = 'block';
+      sourceNote.style.display = 'block';
+
+      if (accessLevel === 'free') {
+        paywallBanner.style.display = 'block';
+      }
+
+      // Set source note
+      if (allData.length > 0 && allData[0].source) {
+        sourceText.textContent = allData[0].source;
+      } else {
+        sourceText.textContent = countyMeta[county].name + ' County CAD 2025 Certified Mineral Roll';
+      }
+
+      renderTable();
+    } catch(err) {
+      spinner.style.display = 'none';
+      emptyState.style.display = 'block';
+      emptyState.innerHTML = '<p style="font-size:1.1rem;color:var(--red);">Error loading data for ' + countyMeta[county].name + ' County.</p><p style="font-size:0.9rem;color:var(--text-muted);margin-top:8px;">Please try again later.</p>';
+    }
+  };
+
+  function applyFilters() {
+    const query = searchInput.value.trim().toUpperCase();
+    const typeVal = typeFilter.value;
+    currentPage = 1;
+
+    filteredData = allData.filter(function(row) {
+      if (typeVal && row.mineralType !== typeVal) return false;
+      if (query) {
+        const ownerMatch = row.ownerName && row.ownerName.toUpperCase().indexOf(query) !== -1;
+        const operatorMatch = row.operator && row.operator.toUpperCase().indexOf(query) !== -1;
+        const leaseMatch = row.leaseName && row.leaseName.toUpperCase().indexOf(query) !== -1;
+        const legalMatch = row.legalDescription && row.legalDescription.toUpperCase().indexOf(query) !== -1;
+        if (!ownerMatch && !operatorMatch && !leaseMatch && !legalMatch) return false;
+      }
+      return true;
+    });
+
+    renderTable();
+  }
+
+  window.clearFilters = function() {
+    searchInput.value = '';
+    typeFilter.value = '';
+    currentPage = 1;
+    filteredData = allData;
+    renderTable();
+  };
+
+  function renderTable() {
+    const totalRecords = filteredData.length;
+    const totalPages = Math.ceil(totalRecords / PAGE_SIZE);
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const pageData = filteredData.slice(start, start + PAGE_SIZE);
+
+    resultsInfo.textContent = totalRecords.toLocaleString() + ' records' + (searchInput.value.trim() ? ' matching "' + searchInput.value.trim() + '"' : '') + ' in ' + countyMeta[currentCounty].name + ' County — Page ' + currentPage + ' of ' + Math.max(totalPages, 1);
+
+    let html = '';
+    pageData.forEach(function(row, idx) {
+      const globalIdx = start + idx;
+      const isBlurred = accessLevel === 'free' && globalIdx >= FREE_VISIBLE_ROWS;
+      const rowClass = isBlurred ? 'blurred-row' : '';
+
+      html += '<tr class="' + rowClass + '">';
+      html += '<td>' + esc(row.ownerName || '—') + '</td>';
+      html += '<td style="font-size:0.8rem;">' + esc(row.ownerAddress || '—') + '</td>';
+      html += '<td style="font-size:0.8rem;max-width:220px;">' + esc(row.legalDescription || '—') + '</td>';
+      html += '<td><span class="badge" style="font-size:0.72rem;padding:3px 8px;background:var(--accent-dim);color:var(--accent);">' + esc(row.mineralType || '—') + '</span></td>';
+      html += '<td>' + esc(row.operator || '—') + '</td>';
+      html += '<td>' + esc(row.leaseName || '—') + '</td>';
+      html += '<td class="mono">' + (row.decimalInterest != null ? row.decimalInterest.toFixed(6) : '—') + '</td>';
+      html += '<td class="mono">$' + (row.appraiserValue != null ? row.appraiserValue.toLocaleString() : '—') + '</td>';
+      html += '</tr>';
+    });
+
+    if (pageData.length === 0) {
+      html = '<tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted);">No records found matching your search.</td></tr>';
+    }
+
+    tbody.innerHTML = html;
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages) {
+    if (totalPages <= 1) {
+      pagination.style.display = 'none';
+      return;
+    }
+    pagination.style.display = 'flex';
+
+    let html = '';
+    html += '<button ' + (currentPage === 1 ? 'disabled' : '') + ' onclick="window.__mineralsPage(' + (currentPage - 1) + ')">&laquo; Prev</button>';
+
+    // Show page numbers with ellipsis
+    const pages = [];
+    pages.push(1);
+    if (currentPage > 3) pages.push('...');
+    for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+      pages.push(i);
+    }
+    if (currentPage < totalPages - 2) pages.push('...');
+    if (totalPages > 1) pages.push(totalPages);
+
+    pages.forEach(function(p) {
+      if (p === '...') {
+        html += '<button disabled style="border:none;background:none;color:var(--text-muted);">...</button>';
+      } else {
+        html += '<button class="' + (p === currentPage ? 'active' : '') + '" onclick="window.__mineralsPage(' + p + ')">' + p + '</button>';
+      }
+    });
+
+    html += '<button ' + (currentPage === totalPages ? 'disabled' : '') + ' onclick="window.__mineralsPage(' + (currentPage + 1) + ')">Next &raquo;</button>';
+
+    pagination.innerHTML = html;
+  }
+
+  window.__mineralsPage = function(page) {
+    currentPage = page;
+    renderTable();
+    tableWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  function esc(str) {
+    if (!str) return '';
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // Mobile nav toggle
+  const mobileToggle = document.querySelector('.nav-mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  // Check URL params for auto-loading a county
+  const params = new URLSearchParams(window.location.search);
+  const countyParam = params.get('county');
+  if (countyParam && countyMeta[countyParam.toUpperCase()]) {
+    loadCounty(countyParam.toUpperCase());
+  }
+
+})();
+</script>
+
+</body>
+</html>
