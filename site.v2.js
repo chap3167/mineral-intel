@@ -630,7 +630,7 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
           <strong>Subscribe to unlock full data</strong>
           <span>Operator names, lease details, production data, mineral ownership, and CSV export.</span>
         </div>
-        <button class="btn btn-primary btn-sm" onclick="window.__subscribe('pro')">Unlock Pro — $299/mo</button>
+        <button class="btn btn-primary btn-sm" onclick="window.__subscribe('pro')">Subscribe — $14.99/mo</button>
       </div>
     `;
     container.parentNode.insertBefore(banner, container);
@@ -874,7 +874,7 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
             </div>
             <div class="paywall-section-overlay" onclick="window.__subscribe('pro')">
               <p>Subscribe for production data</p>
-              <button class="btn btn-primary btn-sm">Unlock Pro — $299/mo</button>
+              <button class="btn btn-primary btn-sm">Subscribe — $14.99/mo</button>
             </div>
           </div>
         </div>`;
@@ -1326,7 +1326,7 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
     const prefillEmail = (currentUser && currentUser.email) ? currentUser.email : '';
     const modal = document.createElement('div');
     modal.style.cssText = 'position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);';
-    const planNames = { basic: 'Basic ($99/mo)', pro: 'Pro ($299/mo)', enterprise: 'Enterprise ($999/mo)' };
+    const planNames = { basic: 'MineralSearch ($14.99/mo)', pro: 'MineralSearch ($14.99/mo)', enterprise: 'MineralSearch ($14.99/mo)' };
     modal.innerHTML = `
       <div style="background:#131a2b;border:1px solid #2a2d37;border-radius:16px;padding:40px;max-width:440px;width:90%;text-align:center;position:relative;">
         <button onclick="this.closest('div[style]').remove()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:#94a3b8;font-size:20px;cursor:pointer;">&times;</button>
