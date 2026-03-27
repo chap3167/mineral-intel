@@ -1,0 +1,104 @@
+name: Weekly Data Update
+
+on:
+  schedule:
+    # Every Monday at 7 AM CST (13:00 UTC)
+    - cron: '0 13 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Puppeteer browser
+        run: npx puppeteer browsers install chrome
+
+      # ---- Real data scrapers only ----
+
+      - name: Step 1 — Download RRC data files
+        run: node auto-download.js
+        continue-on-error: true
+
+      - name: Step 2 — Parse GOM data (BSEE)
+        run: node parse-gom.js
+        continue-on-error: true
+
+      - name: Step 3 — Scrape CAD mineral records
+        run: node scrape-cad-all.js
+        timeout-minutes: 40
+        continue-on-error: true
+
+      - name: Step 4 — Write status file
+        run: |
+          node -e "
+            const fs = require('fs');
+            const status = {
+              timestamp: new Date().toISOString(),
+              success: true,
+              source: 'weekly-update.yml',
+              datasets: {}
+            };
+            // Check each data file
+            const files = {
+              'gom-wells': 'data/gom-wells.json',
+              'well-coordinates': 'data/well-coordinates.json',
+              'cad-minerals': 'data/cad-minerals-real.json'
+            };
+            for (const [key, file] of Object.entries(files)) {
+              try {
+                const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+                const count = Array.isArray(data) ? data.length : (data.records || data.wells || data.properties || []).length;
+                status.datasets[key] = { file, records: count, exists: true };
+              } catch (e) {
+                status.datasets[key] = { file, records: 0, exists: false, error: e.message };
+              }
+            }
+            fs.writeFileSync('data/last-run.json', JSON.stringify(status, null, 2));
+            console.log(JSON.stringify(status, null, 2));
+          "
+
+      - name: Step 5 — Verify NO fake data
+        run: |
+          node -e "
+            const fs = require('fs');
+            const files = fs.readdirSync('data').filter(f => f.endsWith('.json'));
+            let fakeFound = false;
+            for (const f of files) {
+              try {
+                const raw = fs.readFileSync('data/' + f, 'utf8');
+                if (raw.match(/generateDemo|generateFake|generateSample|\"demo\"|\"fake\"|\"mock\"/i)) {
+                  console.error('FAKE DATA REFERENCE in data/' + f);
+                  fakeFound = true;
+                }
+              } catch (e) {}
+            }
+            if (fakeFound) { console.error('ABORTING: Fake data detected'); process.exit(1); }
+            console.log('VERIFIED: No fake data references in any data file');
+          "
+
+      - name: Step 6 — Commit updated data
+        run: |
+          git config user.name "MineralSearch Bot"
+          git config user.email "bot@mineralsearch.io"
+          git add data/
+          git diff --staged --quiet || git commit -m "Weekly data update: $(date +%Y-%m-%d)"
+          git push
+
+      - name: Step 7 — Deploy to Netlify
+        if: env.NETLIFY_AUTH_TOKEN != ''
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          npm install -g netlify-cli
+          netlify deploy --prod --dir=. --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN
