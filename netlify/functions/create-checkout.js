@@ -6,9 +6,9 @@ exports.handler = async (event) => {
   const STRIPE_SECRET = process.env.STRIPE_SECRET_KEY;
 
   const PRICES = {
-    basic: 'price_1TCXj01EkEHfEdsNAhKU3tg0',
-    pro: 'price_1TCXkn1EkEHfEdsNeFYCQ4Cd',
-    enterprise: 'price_1TCXli1EkEHfEdsNpWvK3sH6',
+    basic: 'price_1TFhH01EkEHfEdsNRGG2sMag',
+    pro: 'price_1TFhH01EkEHfEdsNRGG2sMag',
+    enterprise: 'price_1TFhH01EkEHfEdsNRGG2sMag',
   };
 
   try {
