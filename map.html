@@ -15,54 +15,106 @@
   <style>
     .map-page { display: flex; height: calc(100vh - 64px); margin-top: 64px; }
     .map-sidebar {
-      width: 320px; min-width: 280px; background: var(--bg-card); border-right: 1px solid var(--border);
+      width: 300px; min-width: 280px; background: var(--bg-card); border-right: 1px solid var(--border);
       display: flex; flex-direction: column; overflow-y: auto; z-index: 500;
     }
-    .map-sidebar-header { padding: 20px; border-bottom: 1px solid var(--border); }
-    .map-sidebar-header h2 { font-size: 1.2rem; margin-bottom: 4px; }
-    .map-sidebar-header p { font-size: 0.8rem; color: var(--text-muted); }
-    .map-filter-section { padding: 16px 20px; border-bottom: 1px solid var(--border); }
-    .map-filter-section h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 10px; font-weight: 600; }
+    .map-sidebar::-webkit-scrollbar { width: 3px; }
+    .map-sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+    .map-sidebar-header { padding: 16px 18px; border-bottom: 1px solid var(--border); }
+    .map-sidebar-header h2 { font-size: 1.1rem; margin-bottom: 2px; font-weight: 800; }
+    .map-sidebar-header p { font-size: 0.75rem; color: var(--text-muted); }
+    .map-filter-section { padding: 14px 18px; border-bottom: 1px solid var(--border); }
+    .map-filter-section h4 { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 10px; font-weight: 700; }
     .map-filter-section select, .map-filter-section input {
-      width: 100%; padding: 8px 12px; background: var(--bg-input); border: 1px solid var(--border);
-      border-radius: var(--radius-xs); color: var(--text); font-size: 0.85rem; outline: none; margin-bottom: 8px;
+      width: 100%; padding: 9px 12px; background: var(--bg-input); border: 1px solid var(--border);
+      border-radius: 8px; color: var(--text); font-size: 0.82rem; outline: none; margin-bottom: 6px;
+      transition: border-color 0.15s;
     }
-    .map-filter-section select:focus, .map-filter-section input:focus { border-color: var(--accent); }
+    .map-filter-section select:focus, .map-filter-section input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(0,212,170,0.1); }
     .map-filter-section select option { background: var(--bg-card); color: var(--text); }
-    .layer-toggles { display: flex; flex-direction: column; gap: 8px; }
-    .layer-toggle { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.85rem; color: var(--text-secondary); }
-    .layer-toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
-    .layer-toggle .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-    .map-stats { padding: 16px 20px; border-bottom: 1px solid var(--border); }
-    .map-stats .stat-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.82rem; }
-    .map-stats .stat-row .stat-label { color: var(--text-muted); }
-    .map-stats .stat-row .stat-val { font-weight: 600; font-family: 'JetBrains Mono', monospace; color: var(--accent); }
-    .map-legend { padding: 16px 20px; }
-    .map-legend h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 10px; font-weight: 600; }
-    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 6px; }
-    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* Toggle switches */
+    .layer-toggles { display: flex; flex-direction: column; gap: 6px; }
+    .layer-toggle { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.82rem; color: var(--text-secondary); user-select: none; }
+    .layer-toggle input { display: none; }
+    .toggle-track {
+      width: 32px; height: 17px; background: rgba(255,255,255,0.08); border-radius: 10px;
+      position: relative; transition: background 0.2s; flex-shrink: 0;
+    }
+    .toggle-track::after {
+      content: ''; position: absolute; width: 13px; height: 13px;
+      background: #475569; border-radius: 50%; top: 2px; left: 2px; transition: all 0.2s;
+    }
+    .layer-toggle input:checked + .toggle-track { background: var(--accent); }
+    .layer-toggle input:checked + .toggle-track::after { transform: translateX(15px); background: #fff; }
+    .layer-toggle .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    /* Stat cards */
+    .map-stats { padding: 14px 18px; border-bottom: 1px solid var(--border); }
+    .stat-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .stat-card-item {
+      background: var(--bg-input); border-radius: 8px; padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    .stat-card-item .stat-val {
+      font-size: 1.1rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; color: var(--accent);
+    }
+    .stat-card-item .stat-label {
+      font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 1px;
+    }
+
+    /* Legend */
+    .map-legend { padding: 14px 18px; }
+    .map-legend h4 { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 10px; font-weight: 700; }
+    .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--text-secondary); }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    /* Filter buttons */
+    .filter-actions { display: flex; gap: 6px; margin-top: 6px; }
+    .filter-actions .btn { flex: 1; font-size: 0.75rem; padding: 8px; border-radius: 8px; font-weight: 600; }
+
+    /* Map */
     #map { flex: 1; z-index: 1; }
-    .leaflet-popup-content-wrapper { background: var(--bg-card) !important; color: var(--text) !important; border: 1px solid var(--border) !important; border-radius: var(--radius-sm) !important; box-shadow: var(--shadow-lg) !important; }
+    .leaflet-container { background: #0a0e17 !important; }
+
+    /* Popups */
+    .leaflet-popup-content-wrapper {
+      background: var(--bg-card) !important; color: var(--text) !important;
+      border: 1px solid var(--border) !important; border-radius: 10px !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+    }
     .leaflet-popup-tip { background: var(--bg-card) !important; border: 1px solid var(--border) !important; }
-    .leaflet-popup-content { margin: 14px 16px !important; font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; line-height: 1.5 !important; }
-    .popup-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: var(--text); }
-    .popup-row { display: flex; justify-content: space-between; gap: 12px; padding: 2px 0; }
-    .popup-label { color: var(--text-muted); font-size: 0.78rem; }
-    .popup-val { font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+    .leaflet-popup-content { margin: 14px 16px !important; font-family: 'Inter', sans-serif !important; font-size: 0.82rem !important; line-height: 1.6 !important; }
+    .leaflet-popup-close-button { color: var(--text-muted) !important; font-size: 18px !important; }
+    .popup-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    .popup-row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; }
+    .popup-label { color: var(--text-muted); font-size: 0.75rem; }
+    .popup-val { font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
     .popup-val.green { color: var(--green); }
     .popup-val.accent { color: var(--accent); }
-    .popup-badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 0.7rem; font-weight: 600; margin-top: 4px; }
-    .leaflet-container { background: #0a0e17 !important; }
+    .popup-badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 0.65rem; font-weight: 600; margin-top: 4px; }
+
+    /* Clusters */
     .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
-      background: rgba(0, 212, 170, 0.3) !important;
+      background: rgba(0, 212, 170, 0.2) !important;
     }
     .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
-      background: rgba(0, 212, 170, 0.7) !important; color: #000 !important; font-weight: 700 !important;
-      font-family: 'Inter', sans-serif !important;
+      background: rgba(0, 212, 170, 0.75) !important; color: #000 !important; font-weight: 700 !important;
+      font-family: 'JetBrains Mono', monospace !important; font-size: 12px !important;
     }
+
+    /* Zoom controls */
+    .leaflet-control-zoom a {
+      background: var(--bg-card) !important; color: var(--text) !important;
+      border-color: var(--border) !important; width: 34px !important; height: 34px !important;
+      line-height: 34px !important; font-size: 16px !important; border-radius: 8px !important;
+    }
+    .leaflet-control-zoom { border: none !important; border-radius: 8px !important; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important; }
+
     @media (max-width: 900px) {
       .map-page { flex-direction: column; }
-      .map-sidebar { width: 100%; max-height: 280px; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); }
+      .map-sidebar { width: 100%; max-height: 260px; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); }
       #map { min-height: 400px; }
     }
   </style>
@@ -91,44 +143,28 @@
   <!-- Sidebar -->
   <div class="map-sidebar">
     <div class="map-sidebar-header">
-      <div style="margin-bottom:10px;">
-        <a href="wells.html" style="color:var(--accent);font-size:0.8rem;text-decoration:none;font-weight:600;">Texas</a>
-        <span style="color:var(--text-muted);margin:0 6px;font-size:0.8rem;">&rsaquo;</span>
-        <span style="color:var(--text);font-size:0.8rem;font-weight:600;">Map</span>
-      </div>
-      <h2>Interactive Map</h2>
-      <p>90,000+ wells with real GPS coordinates across Texas.</p>
-      <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:10px;">
-        <a href="wells.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Wells</a>
-        <a href="production.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Production</a>
-        <a href="permits.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Permits</a>
-        <a href="map.html" class="btn btn-primary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Map</a>
-        <a href="leases.html" class="btn btn-secondary btn-sm" style="font-size:0.7rem;padding:4px 8px;">Leases</a>
-      </div>
+      <h2>Texas Well Map</h2>
+      <p>90,000+ wells with real GPS coordinates</p>
     </div>
 
     <div class="map-filter-section">
-      <h4>Layers</h4>
-      <div class="layer-toggles">
-        <label class="layer-toggle"><input type="checkbox" id="layer-wells" checked><span class="dot" style="background:var(--green);"></span> Wells</label>
-        <label class="layer-toggle"><input type="checkbox" id="layer-permits" checked><span class="dot" style="background:var(--gold);"></span> Permits</label>
-        <label class="layer-toggle"><input type="checkbox" id="layer-leases" checked><span class="dot" style="background:var(--blue);"></span> Leases</label>
-      </div>
+      <h4>Search</h4>
+      <input type="text" id="map-search" placeholder="Operator, lease, county, API...">
     </div>
 
     <div class="map-filter-section">
       <h4>Filters</h4>
       <div style="position:relative;">
-        <input type="text" id="map-county" placeholder="Search counties..." autocomplete="off" style="width:100%;padding:8px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-size:0.85rem;outline:none;margin-bottom:8px;">
+        <input type="text" id="map-county" placeholder="County..." autocomplete="off">
         <input type="hidden" id="map-county-value">
-        <div id="map-county-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:200px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:600;margin-top:-6px;"></div>
+        <div id="map-county-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:200px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;z-index:600;margin-top:-4px;"></div>
       </div>
       <div style="position:relative;">
-        <input type="text" id="map-operator" placeholder="Search operators..." autocomplete="off" style="width:100%;padding:8px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-size:0.85rem;outline:none;margin-bottom:8px;">
+        <input type="text" id="map-operator" placeholder="Operator..." autocomplete="off">
         <input type="hidden" id="map-operator-value">
-        <div id="map-operator-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:200px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);z-index:600;margin-top:-6px;"></div>
+        <div id="map-operator-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:200px;overflow-y:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;z-index:600;margin-top:-4px;"></div>
       </div>
-<select id="map-status">
+      <select id="map-status">
         <option value="">All Statuses</option>
         <option value="Producing">Producing</option>
         <option value="Completed">Completed</option>
@@ -136,31 +172,55 @@
         <option value="Shut-in">Shut-in</option>
         <option value="Plugged">Plugged</option>
       </select>
-      <input type="text" id="map-search" placeholder="Search operator, lease...">
-      <button class="btn btn-primary btn-sm btn-full" onclick="applyMapFilters()" style="margin-top:4px;">Apply Filters</button>
-      <button class="btn btn-secondary btn-sm btn-full" onclick="resetMapFilters()" style="margin-top:4px;">Reset</button>
+      <div class="filter-actions">
+        <button class="btn btn-primary btn-sm" onclick="applyMapFilters()">Apply</button>
+        <button class="btn btn-secondary btn-sm" onclick="resetMapFilters()">Reset</button>
+      </div>
+    </div>
+
+    <div class="map-filter-section">
+      <h4>Layers</h4>
+      <div class="layer-toggles">
+        <label class="layer-toggle"><input type="checkbox" id="layer-wells" checked><span class="toggle-track"></span><span class="dot" style="background:var(--green);"></span> Wells</label>
+        <label class="layer-toggle"><input type="checkbox" id="layer-permits" checked><span class="toggle-track"></span><span class="dot" style="background:var(--gold);"></span> Permits</label>
+        <label class="layer-toggle"><input type="checkbox" id="layer-leases" checked><span class="toggle-track"></span><span class="dot" style="background:var(--blue);"></span> Leases</label>
+      </div>
     </div>
 
     <div class="map-stats">
-      <h4 style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-muted);margin-bottom:10px;font-weight:600;">Map Stats</h4>
-      <div class="stat-row"><span class="stat-label">Visible Wells</span><span class="stat-val" id="map-well-count">0</span></div>
-      <div class="stat-row"><span class="stat-label">Producing</span><span class="stat-val" id="map-producing-count">0</span></div>
-      <div class="stat-row"><span class="stat-label">Total Oil (12mo)</span><span class="stat-val" id="map-total-oil">0</span></div>
-      <div class="stat-row"><span class="stat-label">Counties</span><span class="stat-val" id="map-county-count">0</span></div>
+      <h4 style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:10px;font-weight:700;">Stats</h4>
+      <div class="stat-cards">
+        <div class="stat-card-item"><div class="stat-val" id="map-well-count">0</div><div class="stat-label">Wells</div></div>
+        <div class="stat-card-item"><div class="stat-val" id="map-county-count">0</div><div class="stat-label">Counties</div></div>
+        <div class="stat-card-item"><div class="stat-val" id="map-producing-count">0</div><div class="stat-label">Producing</div></div>
+        <div class="stat-card-item"><div class="stat-val" id="map-total-oil">-</div><div class="stat-label">Total Oil (12mo)</div></div>
+      </div>
     </div>
 
     <div class="map-legend">
       <h4>Legend</h4>
-      <div class="legend-item"><span class="legend-dot" style="background:#22c55e;"></span> Producing</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#f59e0b;"></span> Permitted</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#3b82f6;"></span> Completing</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#ef4444;"></span> Plugged</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#8b5cf6;"></span> Shut-in</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span class="legend-dot" style="background:#22c55e;"></span> Producing</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#f59e0b;"></span> Permitted</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#3b82f6;"></span> Completing</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#ef4444;"></span> Plugged</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#8b5cf6;"></span> Shut-in</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#475569;"></span> Other</div>
+      </div>
     </div>
   </div>
 
   <!-- Map Container -->
-  <div id="map"></div>
+  <div style="position:relative;flex:1;">
+    <div id="map-loading" style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:rgba(10,14,23,0.85);z-index:600;">
+      <div style="text-align:center;">
+        <div style="width:36px;height:36px;border:3px solid rgba(255,255,255,0.1);border-top-color:#00d4aa;border-radius:50%;animation:mapspin 0.7s linear infinite;margin:0 auto 12px;"></div>
+        <div style="color:#94a3b8;font-size:13px;">Loading 90,000+ wells...</div>
+      </div>
+      <style>@keyframes mapspin{to{transform:rotate(360deg)}}</style>
+    </div>
+    <div id="map" style="height:100%;"></div>
+  </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

@@ -1389,12 +1389,29 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
   // ============================================
   // Map: Fetch wells from Supabase for map (TASK 5)
   // ============================================
+  let _cachedMapWells = null;
+
   async function fetchWellsForMap(filters) {
     const hasFilters = (filters && (filters.county || filters.operator || filters.status));
+
+    // For unfiltered load, use static pre-built file (instant, one request)
+    if (!hasFilters) {
+      if (_cachedMapWells) return _cachedMapWells;
+      try {
+        console.log('[MineralSearch] Loading map wells from static file...');
+        const resp = await fetch('data/map-wells.json');
+        if (resp.ok) {
+          _cachedMapWells = await resp.json();
+          console.log('[MineralSearch] Loaded ' + _cachedMapWells.length + ' wells from static file');
+          return _cachedMapWells;
+        }
+      } catch (e) {
+        console.warn('[MineralSearch] Static file not available, falling back to Supabase');
+      }
+    }
+
     const baseParams = ['select=id,api,operator,county,well_type,total_depth,status,offshore,lease_name,field_name,well_number,district,lat,lng'];
 
-    // If no filters, only show wells with real coordinates (can't load 1.3M)
-    // If filters applied, show ALL matching wells with generated coords as fallback
     if (!hasFilters) {
       baseParams.push('lat=not.is.null');
       baseParams.push('lng=not.is.null');
@@ -1471,9 +1488,13 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
       attributionControl: false
     });
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    // Try CARTO dark tiles first, fallback to OSM
+    const tileUrl = window.location.hostname === 'localhost' || window.location.protocol === 'file:'
+      ? 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+      : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+    L.tileLayer(tileUrl, {
       maxZoom: 19,
-      subdomains: 'abcd'
+      subdomains: window.location.hostname === 'localhost' ? 'abc' : 'abcd'
     }).addTo(map);
 
     L.control.attribution({ position: 'bottomright', prefix: false })
@@ -1498,24 +1519,8 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
     });
     map.addLayer(markerClusterGroup);
 
-    // County labels
-    const COUNTY_CENTERS = {};
-    Object.keys(COUNTY_BOUNDS).forEach(c => {
-      const b = COUNTY_BOUNDS[c];
-      COUNTY_CENTERS[c] = { lat: (b.latMin + b.latMax) / 2, lng: (b.lngMin + b.lngMax) / 2 };
-    });
-    Object.keys(COUNTY_CENTERS).forEach(county => {
-      const c = COUNTY_CENTERS[county];
-      L.marker([c.lat, c.lng], {
-        icon: L.divIcon({
-          className: 'county-label',
-          html: '<span style="color:rgba(255,255,255,0.25);font-size:11px;font-weight:700;font-family:Inter,sans-serif;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;">' + county + '</span>',
-          iconSize: [80, 20],
-          iconAnchor: [40, 10]
-        }),
-        interactive: false
-      }).addTo(map);
-    });
+    // Texas bounds for filtering out bad coordinates
+    const TX_BOUNDS = { latMin: 25.8, latMax: 36.5, lngMin: -106.7, lngMax: -93.5 };
 
     const STATUS_COLORS = {
       'PRODUCING': '#22c55e', 'PERMITTED': '#f59e0b', 'COMPLETED': '#3b82f6',
@@ -1534,10 +1539,13 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
       const countiesSet = new Set();
 
       wells.forEach(w => {
+        // Skip wells outside Texas bounds (bad coordinates)
+        if (w.lat < TX_BOUNDS.latMin || w.lat > TX_BOUNDS.latMax || w.lng < TX_BOUNDS.lngMin || w.lng > TX_BOUNDS.lngMax) return;
+
         const statusKey = (w.status || '').toUpperCase();
         const color = STATUS_COLORS[statusKey] || '#22c55e';
         const marker = L.circleMarker([w.lat, w.lng], {
-          radius: 6, fillColor: color, color: 'rgba(0,0,0,0.5)', weight: 1, fillOpacity: 0.85
+          radius: 5, fillColor: color, color: 'rgba(255,255,255,0.15)', weight: 0.5, fillOpacity: 0.85
         });
 
         let popupContent = '<div class="popup-title">' + (w.api || '-') + '</div>';
@@ -1572,6 +1580,10 @@ console.log('[MineralSearch] site.js loaded at', new Date().toISOString());
       if (prodCountEl) prodCountEl.textContent = formatNumber(producing);
       if (oilEl) oilEl.textContent = '-';
       if (countyCountEl) countyCountEl.textContent = countiesSet.size;
+
+      // Hide loading spinner
+      const loadingEl = document.getElementById('map-loading');
+      if (loadingEl) loadingEl.style.display = 'none';
 
       return wells;
     }
