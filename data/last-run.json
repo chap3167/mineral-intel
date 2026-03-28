@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-03-27T22:00:00Z",
+  "success": true,
+  "source": "manual-deploy",
+  "datasets": {
+    "wells": { "records": 1300000, "source": "Supabase/RRC" },
+    "mineral-ownership": { "records": 849491, "source": "County CAD certified rolls", "counties": 70 },
+    "map-wells": { "records": 90716, "source": "Supabase GPS coordinates" }
+  }
+}

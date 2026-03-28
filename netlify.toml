@@ -3,3 +3,8 @@
 
 [functions]
   node_bundler = "esbuild"
+
+[[headers]]
+  for = "/data/last-run.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
